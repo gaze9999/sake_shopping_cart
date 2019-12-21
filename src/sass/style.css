@@ -1,5 +1,9 @@
-body * {
-  outline: 1px solid red;
+body {
+  background: #222;
+}
+
+ul, ol, dl {
+  list-style: none;
 }
 
 * {
@@ -7,11 +11,12 @@ body * {
 }
 
 .trans4s {
-  -webkit-transition: .2s;
-  transition: .2s;
+  -webkit-transition: .4s;
+  transition: .4s;
 }
 
 a, a:link, a:visited {
+  color: #fff;
   text-decoration: none;
 }
 

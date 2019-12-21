@@ -1,19 +1,23 @@
 @import 'custom'
   
 body
+  background: $darkerBackground
   *
-    outline: 1px solid red
+    // outline: 1px solid red
+
+ul,ol,dl
+  list-style: none
 
 * 
   font-family: 'Noto Sans TC', 'Roboto', sans-serif
 
 .trans4s
-  transition: .2s
+  transition: .4s
 
 a
   &, &:link, &:visited
-      // color: #666
-      text-decoration: none
+    color: #fff
+    text-decoration: none
 
 .clearfix::after 
   visibility: hidden
