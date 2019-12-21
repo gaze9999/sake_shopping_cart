@@ -1,0 +1,9 @@
+.nav_logo * {
+  margin: 0;
+  padding: 0;
+}
+
+.nav_logo img {
+  width: 48px;
+}
+/*# sourceMappingURL=nav.css.map */

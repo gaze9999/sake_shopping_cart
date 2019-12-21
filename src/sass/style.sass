@@ -1,0 +1,26 @@
+@import 'custom'
+  
+body
+  *
+    outline: 1px solid red
+
+* 
+  font-family: 'Noto Sans TC', 'Roboto', sans-serif
+
+.trans4s
+  transition: .2s
+
+a
+  &, &:link, &:visited
+      // color: #666
+      text-decoration: none
+
+.clearfix::after 
+  visibility: hidden
+  display: block
+  content: ""
+  clear: both
+
+.center-all 
+  justify-content: center
+  align-items: center

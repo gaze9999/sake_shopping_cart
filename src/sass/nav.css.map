@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,ACGA,SDHS,CACP,CAAC,CCEc,GAAG,CAAC;EACnB,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;CAAG;;ADLf,AAGE,SAHO,CAGP,GAAG,CAAC;EACF,KAAK,EAAE,IAAI;CAAG",
+    "sources": [
+        "nav.sass",
+        "_custom.sass"
+    ],
+    "names": [],
+    "file": "nav.css"
+}

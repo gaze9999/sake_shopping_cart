@@ -1,0 +1,33 @@
+body * {
+  outline: 1px solid red;
+}
+
+* {
+  font-family: 'Noto Sans TC', 'Roboto', sans-serif;
+}
+
+.trans4s {
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+a, a:link, a:visited {
+  text-decoration: none;
+}
+
+.clearfix::after {
+  visibility: hidden;
+  display: block;
+  content: "";
+  clear: both;
+}
+
+.center-all {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=style.css.map */
