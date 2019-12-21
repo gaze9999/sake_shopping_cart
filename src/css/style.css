@@ -1,0 +1,66 @@
+.itemListCard {
+    min-width: 150px;
+    width: 12vw;
+    max-height: 20rem;
+}
+
+.itemListImg {
+    height: 10vw;
+    min-width: 150px;
+    max-width: 12vw;
+    min-height: 10rem;
+    overflow: hidden;
+    background: #eee;
+    box-shadow: 0 2px 4px -2px #999;
+}
+
+.itemDetailImg {
+    padding: .5rem;
+}
+
+.itemDetailImg img {
+    width: 4rem;
+    height: 4rem;
+    overflow: hidden;
+}
+
+.itemListPrice {
+    font-size: 1rem;
+    color: #933;
+}
+
+/* .accDropdown {
+    
+} */
+
+.accBtn {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background: url(../../images/icons/user.svg) no-repeat center center;
+    margin: 0;
+    padding: 0;
+}
+
+.accMenu {
+    /* transform: translate3d(-309px, 40px, 0px) !important; */
+    top: 40px !important;
+    /* left: -267px !important; */
+    /* right: 267px !important; */
+    padding: 0;
+    margin: 0;
+}
+
+.accItem {
+    padding: 1rem 1.5rem;
+}
+
+.logBox {
+    width: 100%;
+}
+
+.aa {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}

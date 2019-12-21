@@ -1,0 +1,7 @@
+*.xlsx
+*.sql
+*.code-workspace
+
+.vscode/
+vendor/
+php/
