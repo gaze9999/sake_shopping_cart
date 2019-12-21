@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,eAAe,CAAC;EACd,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,IAAI;EACZ,QAAQ,EAAE,MAAM;EAChB,UAAU,EAAE,IAAI;EAChB,OAAO,EAAE,EAAE;EACX,OAAO,ECMkB,IAAI;CDDX;;AAXpB,AAOE,eAPa,AAOZ,OAAO,CAAC;EACP,QAAQ,EAAE,QAAQ;EAClB,OAAO,EAAE,EAAE;EACX,MAAM,EAAE,IAAI;EACZ,KAAK,EAAE,IAAI;CAAG",
+    "sources": [
+        "warning.sass",
+        "_custom.sass"
+    ],
+    "names": [],
+    "file": "warning.css"
+}
