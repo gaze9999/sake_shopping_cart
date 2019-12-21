@@ -69,6 +69,11 @@ a, a:link, a:visited {
           align-items: center;
 }
 
+.nav_logo * {
+  margin: 0;
+  padding: 0;
+}
+
 .page_main {
   color: #fff;
   padding: 68px 0 0;
@@ -120,6 +125,11 @@ a, a:link, a:visited {
           animation: hoverMoveUp .4s .2s both ease-in-out;
 }
 
+.nav_logo * {
+  margin: 0;
+  padding: 0;
+}
+
 .navbar {
   background: #222;
 }
@@ -138,6 +148,11 @@ a, a:link, a:visited {
 
 .nav_logo a * {
   margin: 0 .5rem 0;
+}
+
+.nav_logo * {
+  margin: 0;
+  padding: 0;
 }
 
 .footer {
@@ -168,6 +183,11 @@ a, a:link, a:visited {
 
 .footer_logo img {
   width: 50%;
+}
+
+.nav_logo * {
+  margin: 0;
+  padding: 0;
 }
 
 .footer_warning {

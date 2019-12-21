@@ -1,9 +1,11 @@
 {
     "version": 3,
-    "mappings": "AAEA,AAAA,eAAe,CAAC;EACd,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,IAAI;EACZ,QAAQ,EAAE,MAAM;EAChB,UAAU,EAAE,IAAI;EAChB,OAAO,EAAE,EAAE;EACX,OAAO,ECMkB,IAAI;CDDX;;AAXpB,AAOE,eAPa,AAOZ,OAAO,CAAC;EACP,QAAQ,EAAE,QAAQ;EAClB,OAAO,EAAE,EAAE;EACX,MAAM,EAAE,IAAI;EACZ,KAAK,EAAE,IAAI;CAAG",
+    "mappings": "AAIA,AAAA,eAAe,CAAC;EACd,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,IAAI;EACZ,QAAQ,EAAE,MAAM;EAChB,UAAU,EAAE,IAAI;EAChB,OAAO,EAAE,EAAE;EACX,OAAO,ECFkB,IAAI;CDOX;;AAXpB,AAOE,eAPa,AAOZ,OAAO,CAAC;EACP,QAAQ,EAAE,QAAQ;EAClB,OAAO,EAAE,EAAE;EACX,MAAM,EAAE,IAAI;EACZ,KAAK,EAAE,IAAI;CAAG",
     "sources": [
-        "../sass/warning.sass",
-        "../sass/_custom.sass"
+        "../sass/components/warning.sass",
+        "../sass/helpers/_variable.sass",
+        "../sass/helpers/_extended.sass",
+        "../sass/helpers/_mixin.sass"
     ],
     "names": [],
     "file": "warning.css"

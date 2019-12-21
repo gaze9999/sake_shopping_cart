@@ -1,0 +1,12 @@
+{
+    "version": 3,
+    "mappings": "AAIA,AAAA,IAAI,AAAC,CACH,UAAU,CCKO,IAAI,CDHnB,AAEJ,AAAA,EAAE,CAAC,EAAE,CAAC,EAAE,AAAC,CACP,UAAU,CAAE,IAAI,CAAG,AAErB,AAAA,CAAC,AAAC,CACA,WAAW,CAAE,oCAAoC,CAAG,AAEtD,AAAA,QAAQ,AAAC,CACP,UAAU,CAAE,GAAG,CAAG,AAEpB,AACE,CADD,CAAD,CAAC,AACK,KAAK,CADX,CAAC,AACa,QAAQ,AAAC,CACnB,KAAK,CAAE,IAAI,CACX,eAAe,CAAE,IAAI,CAAG,AAE5B,AAAA,SAAS,AAAA,OAAO,AAAC,CACf,UAAU,CAAE,MAAM,CAClB,OAAO,CAAE,KAAK,CACd,OAAO,CAAE,EAAE,CACX,KAAK,CAAE,IAAI,CAAG,AAEhB,AAAA,WAAW,AAAC,CACV,eAAe,CAAE,MAAM,CACvB,WAAW,CAAE,MAAM,CAAG",
+    "sources": [
+        "../../src/sass/components/customStyle.sass",
+        "../../src/sass/helpers/_variable.sass",
+        "../../src/sass/helpers/_extended.sass",
+        "../../src/sass/helpers/_mixin.sass"
+    ],
+    "names": [],
+    "file": "customStyle.min.css"
+}
