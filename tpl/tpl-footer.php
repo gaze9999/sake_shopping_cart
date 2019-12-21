@@ -1,4 +1,3 @@
-<link rel="stylesheet" href="./src/sass/footer.css">
 <footer class="footer">
   <div class="footer-container mx-5">
     <div class="row justify-content-center">

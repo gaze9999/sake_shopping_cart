@@ -1,4 +1,3 @@
-<link rel="stylesheet" href="./src/sass/nav.css">
 <nav class="navbar navbar-expand-lg fixed-top">
     <div class="nav_logo d-flex center-all">
         <header>

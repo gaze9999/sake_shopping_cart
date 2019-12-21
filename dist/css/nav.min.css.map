@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAKA,ACLA,SDKS,CAEP,CAAC,ACPc,CACf,MAAM,CAAE,CAAC,CACT,OAAO,CAAE,CAAC,CAAG,ADAf,AAAA,OAAO,AAAC,CACN,UAAU,CCaO,IAAI,CDbW,AAElC,AAAA,SAAS,AAAC,CACR,MAAM,CAAE,IAAI,CASgB,AAV9B,AAIE,SAJO,CAIP,EAAE,AAAC,CACD,SAAS,CAAE,IAAI,CAAG,AALtB,AAME,SANO,CAMP,GAAG,AAAC,CACF,KAAK,CAAE,IAAI,CAAG,AAPlB,AASI,SATK,CAQP,CAAC,CACC,CAAC,AAAC,CACA,MAAM,CAAE,SAAS,CAAG",
+    "sources": [
+        "../../src/sass/nav.sass",
+        "../../src/sass/_custom.sass"
+    ],
+    "names": [],
+    "file": "nav.min.css"
+}

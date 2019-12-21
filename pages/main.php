@@ -1,4 +1,3 @@
-<link rel="stylesheet" href="./src/sass/main.css">
 <main class="page_main my-5">
   <div class="container">
     <div class="row">
