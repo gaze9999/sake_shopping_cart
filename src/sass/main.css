@@ -1,0 +1,79 @@
+@-webkit-keyframes hoverScaleAdd {
+  100% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+
+@keyframes hoverScaleAdd {
+  100% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+
+@-webkit-keyframes hoverMoveUp {
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes hoverMoveUp {
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+.page_main {
+  color: #fff;
+  padding: 68px 0 0;
+}
+
+.page_main a {
+  color: white;
+}
+
+.item_list {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.item_list .item_card {
+  width: 12rem;
+  height: 20rem;
+  margin: 1rem;
+  overflow: hidden;
+}
+
+.item_list .item_card .card-img-top {
+  background: #eee;
+  height: 12rem;
+  overflow: hidden;
+  -webkit-box-shadow: 0 0 8px -2px #000 inset;
+          box-shadow: 0 0 8px -2px #000 inset;
+}
+
+.item_list .item_card .card-img-top .item_card_img {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+.item_list .item_card .card-img-top .item_card_img:hover {
+  -webkit-animation: hoverScaleAdd .4s .2s both ease-in-out;
+          animation: hoverScaleAdd .4s .2s both ease-in-out;
+}
+
+.item_list .item_card .card-body {
+  background: #fff;
+  color: #000;
+  -webkit-transform: translateY(5rem);
+          transform: translateY(5rem);
+}
+
+.item_list .item_card .card-body:hover {
+  -webkit-animation: hoverMoveUp .4s .2s both ease-in-out;
+          animation: hoverMoveUp .4s .2s both ease-in-out;
+}
+/*# sourceMappingURL=main.css.map */
