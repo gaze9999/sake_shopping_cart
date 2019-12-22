@@ -31,6 +31,12 @@
   padding: 0;
 }
 
+.warning_space, .footer_warning {
+  width: 100%;
+  height: 52px;
+  overflow: hidden;
+}
+
 body {
   background: #222;
 }
@@ -74,12 +80,17 @@ a, a:link, a:visited {
   padding: 0;
 }
 
-.page_main {
-  color: #fff;
+.warning_space, .footer_warning {
+  width: 100%;
+  height: 52px;
+  overflow: hidden;
+}
+
+main {
   padding: 68px 0 0;
 }
 
-.page_main a {
+main a {
   color: white;
 }
 
@@ -96,7 +107,6 @@ a, a:link, a:visited {
 }
 
 .item_list .item_card .card-img-top {
-  background: #eee;
   height: 12rem;
   overflow: hidden;
   -webkit-box-shadow: 0 0 8px -2px #000 inset;
@@ -109,20 +119,19 @@ a, a:link, a:visited {
 }
 
 .item_list .item_card .card-img-top .item_card_img:hover {
-  -webkit-animation: hoverScaleAdd .4s .2s both ease-in-out;
-          animation: hoverScaleAdd .4s .2s both ease-in-out;
+  -webkit-animation: hoverScaleAdd 0.4s 0.2s both ease-in-out;
+          animation: hoverScaleAdd 0.4s 0.2s both ease-in-out;
 }
 
 .item_list .item_card .card-body {
-  background: #fff;
   color: #000;
   -webkit-transform: translateY(5rem);
           transform: translateY(5rem);
 }
 
 .item_list .item_card .card-body:hover {
-  -webkit-animation: hoverMoveUp .4s .2s both ease-in-out;
-          animation: hoverMoveUp .4s .2s both ease-in-out;
+  -webkit-animation: hoverMoveUp 0.4s 0.2s both ease-in-out;
+          animation: hoverMoveUp 0.4s 0.2s both ease-in-out;
 }
 
 .nav_logo * {
@@ -130,15 +139,19 @@ a, a:link, a:visited {
   padding: 0;
 }
 
+.warning_space, .footer_warning {
+  width: 100%;
+  height: 52px;
+  overflow: hidden;
+}
+
 .navbar {
   background: #222;
+  z-index: 1070;
 }
 
 .nav_logo {
   height: 52px;
-}
-
-.nav_logo h1 {
   font-size: 2rem;
 }
 
@@ -146,13 +159,19 @@ a, a:link, a:visited {
   width: 40px;
 }
 
-.nav_logo a * {
+.nav_logo navbar-brand * {
   margin: 0 .5rem 0;
 }
 
 .nav_logo * {
   margin: 0;
   padding: 0;
+}
+
+.warning_space, .footer_warning {
+  width: 100%;
+  height: 52px;
+  overflow: hidden;
 }
 
 .footer {
@@ -166,7 +185,11 @@ a, a:link, a:visited {
 }
 
 .footer .footer-container {
-  height: 15rem;
+  height: 16rem;
+}
+
+.footer .row {
+  padding-top: 2rem;
 }
 
 .footer_sec {
@@ -177,12 +200,16 @@ a, a:link, a:visited {
   padding: 1rem 0;
 }
 
+.footer_sec dd {
+  margin-left: 1rem;
+}
+
 .footer_sec dd a {
   color: #4d4d4d;
 }
 
 .footer_logo img {
-  width: 50%;
+  width: 40%;
 }
 
 .nav_logo * {
@@ -190,19 +217,16 @@ a, a:link, a:visited {
   padding: 0;
 }
 
+.warning_space, .footer_warning {
+  width: 100%;
+  height: 52px;
+  overflow: hidden;
+}
+
 .footer_warning {
   color: white;
-  height: 48px;
-  overflow: hidden;
   background: #222;
   opacity: .8;
   z-index: 1070;
-}
-
-.footer_warning::after {
-  position: absolute;
-  content: "";
-  height: 100%;
-  width: 100%;
 }
 /*# sourceMappingURL=all.css.map */

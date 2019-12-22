@@ -2,9 +2,8 @@
 @import '../helpers/extended'
 @import '../helpers/mixin'
 
-.page_main
+main
   +linkColor(white)
-  color: #fff
   padding: 68px 0 0
 
 .item_list
@@ -15,17 +14,15 @@
     margin: 1rem
     overflow: hidden
     .card-img-top
-      background: #eee
       height: 12rem
       overflow: hidden
       box-shadow: 0 0 8px -2px #000 inset
       .item_card_img
         transform: scale(.8)
         &:hover
-          animation: hoverScaleAdd .4s .2s both ease-in-out
+          +anime420(hoverScaleAdd)
     .card-body
-      background: #fff
       color: #000
       transform: translateY(5rem)
       &:hover
-          animation: hoverMoveUp .4s .2s both ease-in-out
+          +anime420(hoverMoveUp)

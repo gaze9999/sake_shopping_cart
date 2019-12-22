@@ -1,9 +1,8 @@
-.page_main {
-  color: #fff;
+main {
   padding: 68px 0 0;
 }
 
-.page_main a {
+main a {
   color: white;
 }
 
@@ -20,7 +19,6 @@
 }
 
 .item_list .item_card .card-img-top {
-  background: #eee;
   height: 12rem;
   overflow: hidden;
   -webkit-box-shadow: 0 0 8px -2px #000 inset;
@@ -33,19 +31,18 @@
 }
 
 .item_list .item_card .card-img-top .item_card_img:hover {
-  -webkit-animation: hoverScaleAdd .4s .2s both ease-in-out;
-          animation: hoverScaleAdd .4s .2s both ease-in-out;
+  -webkit-animation: hoverScaleAdd 0.4s 0.2s both ease-in-out;
+          animation: hoverScaleAdd 0.4s 0.2s both ease-in-out;
 }
 
 .item_list .item_card .card-body {
-  background: #fff;
   color: #000;
   -webkit-transform: translateY(5rem);
           transform: translateY(5rem);
 }
 
 .item_list .item_card .card-body:hover {
-  -webkit-animation: hoverMoveUp .4s .2s both ease-in-out;
-          animation: hoverMoveUp .4s .2s both ease-in-out;
+  -webkit-animation: hoverMoveUp 0.4s 0.2s both ease-in-out;
+          animation: hoverMoveUp 0.4s 0.2s both ease-in-out;
 }
 /*# sourceMappingURL=main.css.map */
