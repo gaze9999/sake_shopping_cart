@@ -18,7 +18,7 @@
                 <a class="nav-link" href="">地圖</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="">商品列表</a>
+                <a class="nav-link" href="./itemList.php">商品列表</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="">清酒知識+</a>
