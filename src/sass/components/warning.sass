@@ -3,14 +3,8 @@
 @import '../helpers/mixin'
 
 .footer_warning
+  @extend %bar52px
   color: white
-  height: 48px
-  overflow: hidden
   background: #222
   opacity: .8
   z-index: $zindex-tooltip
-  &::after
-    position: absolute
-    content: ""
-    height: 100%
-    width: 100%
