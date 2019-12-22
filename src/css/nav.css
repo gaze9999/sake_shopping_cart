@@ -5,13 +5,11 @@
 
 .navbar {
   background: #222;
+  z-index: 1070;
 }
 
 .nav_logo {
   height: 52px;
-}
-
-.nav_logo h1 {
   font-size: 2rem;
 }
 
@@ -19,7 +17,7 @@
   width: 40px;
 }
 
-.nav_logo a * {
+.nav_logo navbar-brand * {
   margin: 0 .5rem 0;
 }
 /*# sourceMappingURL=nav.css.map */
