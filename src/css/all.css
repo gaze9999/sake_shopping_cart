@@ -5,11 +5,11 @@
 }
 
 body {
-  background: #222;
+  background: #F1F1EE;
 }
 
 ul, ol, dl {
-  color: #fff;
+  color: #0A0301;
   list-style: none;
 }
 
@@ -23,7 +23,7 @@ ul, ol, dl {
 }
 
 a, a:link, a:visited {
-  color: #fff;
+  color: #0A0301;
   text-decoration: none;
 }
 
@@ -44,7 +44,7 @@ a, a:link, a:visited {
 }
 
 .navbar {
-  background: #222;
+  background: transparent;
   z-index: 1070;
 }
 
@@ -73,7 +73,7 @@ a, a:link, a:visited {
 }
 
 .footer {
-  background-color: #f5f5f5;
+  background-color: #fff;
   z-index: 1030;
   bottom: 0;
 }
@@ -91,6 +91,7 @@ a, a:link, a:visited {
 }
 
 .footer_sec {
+  font-size: 1rem;
   height: 100%;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
@@ -106,8 +107,16 @@ a, a:link, a:visited {
   color: #4d4d4d;
 }
 
+.footer_logo h2 {
+  font-size: 2rem;
+}
+
 .footer_logo img {
   width: 40%;
+}
+
+.footer_logo address {
+  font-size: 1.1rem;
 }
 
 @-webkit-keyframes hoverScaleAdd {
@@ -138,42 +147,42 @@ a, a:link, a:visited {
   }
 }
 
-.item_list {
+.itemList_list {
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
 
-.item_list .item_card {
+.itemList_list .item_card {
   width: 12rem;
   height: 20rem;
   margin: 1rem;
   overflow: hidden;
 }
 
-.item_list .item_card .card-img-top {
+.itemList_list .item_card .card-img-top {
   height: 12rem;
   overflow: hidden;
   -webkit-box-shadow: 0 0 8px -2px #000 inset;
           box-shadow: 0 0 8px -2px #000 inset;
 }
 
-.item_list .item_card .card-img-top .item_card_img {
+.itemList_list .item_card .card-img-top .item_card_img {
   -webkit-transform: scale(0.8);
           transform: scale(0.8);
 }
 
-.item_list .item_card .card-img-top .item_card_img:hover {
+.itemList_list .item_card .card-img-top .item_card_img:hover {
   -webkit-animation: hoverScaleAdd 0.4s 0.2s both ease-in-out;
           animation: hoverScaleAdd 0.4s 0.2s both ease-in-out;
 }
 
-.item_list .item_card .card-body {
+.itemList_list .item_card .card-body {
   color: #000;
   -webkit-transform: translateY(5rem);
           transform: translateY(5rem);
 }
 
-.item_list .item_card .card-body:hover {
+.itemList_list .item_card .card-body:hover {
   -webkit-animation: hoverMoveUp 0.4s 0.2s both ease-in-out;
           animation: hoverMoveUp 0.4s 0.2s both ease-in-out;
 }
