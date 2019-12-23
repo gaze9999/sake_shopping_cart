@@ -6,8 +6,8 @@ require_once('./tpl/tpl-header.php');
 require_once("./tpl/func-buildTree.php");
 require_once("./tpl/func-getRecursiveCategoryIds.php"); 
 ?>
-<main class="page_itemlist">
-  <div class="container-fluid">
+<main class="my-5 main_frame">
+  <div class="container-fluid page_itemlist">
     <header class="row itemList_header">
       <section class="col-md-12 col-sm-12 list_info">
         
@@ -38,7 +38,7 @@ require_once("./tpl/func-getRecursiveCategoryIds.php");
     </div>
   </div>
   <script src="./src/js/itemlistRegions.js"></script>
-</main>
+<main>
 <?php
 require_once('./tpl/tpl-warning.php');
 require_once('./tpl/tpl-footer.php');

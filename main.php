@@ -1,5 +1,5 @@
-<main class="page_main my-5">
-  <div class="container">
+<main class="my-5 main_frame">
+  <div class="container page_main">
     <div class="row">
       <header class="col-sm-12 col-md-12 col-xl-12">
         <div class="page_main_title">

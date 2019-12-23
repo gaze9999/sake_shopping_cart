@@ -10,4 +10,4 @@
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Noto+Sans+TC|Roboto&display=swap">
     <link rel="stylesheet" href="./dist/css/all.min.css">
 </head>
-<body class="d-flex flex-column h-100">
+<body class="d-flex flex-column h-100" id="view_frame" name="view_frame">
