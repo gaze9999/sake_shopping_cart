@@ -4,4 +4,5 @@
 
 .vscode/
 vendor/
+src/compactCss/
 php/
