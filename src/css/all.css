@@ -43,9 +43,20 @@ a, a:link, a:visited {
           align-items: center;
 }
 
+.notfound_title {
+  font-size: 20rem;
+}
+
 .navbar {
   background: transparent;
   z-index: 1070;
+}
+
+.navbar .nav-link {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .nav_logo {
