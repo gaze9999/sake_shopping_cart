@@ -9,6 +9,7 @@ body {
 }
 
 ul, ol, dl {
+  color: #fff;
   list-style: none;
 }
 
