@@ -1,2 +1,2 @@
-.nav_logo *{margin:0;padding:0}.navbar{background:#222;z-index:1070}.nav_logo{height:52px;font-size:2rem}.nav_logo img{width:40px}.nav_logo navbar-brand *{margin:0 .5rem 0}
+.navbar{background:#222;z-index:1070}.navbar .nav_function a{color:#fff}.nav_logo{height:52px}.nav_logo h1{font-size:1.75rem !important}.nav_logo img{width:40px}.nav_logo .navbar-brand *{line-height:1.75rem;margin:0 .5rem 0}
 /*# sourceMappingURL=nav.min.css.map */

@@ -5,14 +5,16 @@
 .navbar
   background: $darkerBackground
   z-index: $zindex-tooltip
+  .nav_function
+    +linkColor(white)
 
 .nav_logo
   height: 52px
-  font-size: 2rem
-  *
-    @extend %noPaddingMargin
+  h1
+    font-size: $nav_logosize !important
   img
     width: 40px
-  navbar-brand
+  .navbar-brand
     *
+      line-height: $nav_logosize
       margin: 0 .5rem 0
