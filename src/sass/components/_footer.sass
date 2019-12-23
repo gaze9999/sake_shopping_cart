@@ -1,6 +1,6 @@
 .footer 
   +linkColor
-  background-color: #f5f5f5
+  background-color: #fff
   z-index: $zindex-fixed
   bottom: 0
   .footer-container
@@ -9,6 +9,7 @@
     padding-top: 2rem
 
 .footer_sec
+  font-size: $font_footerContent
   height: 100%
   flex-grow: 1
   padding: 1rem 0
@@ -18,8 +19,12 @@
       color: lighten(#000, 30%)
 
 .footer_logo
+  h2
+    font-size: $font_mintitle
   img
     width: 40%
+  address
+    font-size: $font_footerAddress
 
 .warning_space
   @extend %bar52px
