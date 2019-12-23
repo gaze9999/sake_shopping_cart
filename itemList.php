@@ -9,12 +9,12 @@ require_once("./tpl/func-getRecursiveCategoryIds.php");
 <main class="page_itemlist">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-12 col-sm-12">
-        <span class="input-group-text" id="list_searchbar">Search</span>
+      <div class="col-md-12 col-sm-12 list_info">
+        
       </div>
     </div>
     <div class="row">
-      <div class="col-md-2 col-sm-3"><?php buildTree($pdo, 0); ?></div>
+      <div class="col-md-2 col-sm-3"><?php buildTree($pdo, 1); ?></div>
       <div class="col-md-8 col-sm-6 d-flex flex-wrap item_list">
         <?php for($i=0;$i<20;$i++) {require('./tpl/tpl-itemcard.php'); }; ?>
       </div>

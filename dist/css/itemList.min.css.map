@@ -1,0 +1,12 @@
+{
+    "version": 3,
+    "mappings": "AAIA,AAAA,eAAe,AAAC,CACZ,KAAK,CAAE,KAAK,CAAG,AAEnB,AACI,cADU,CACV,GAAG,AAAC,CACA,KAAK,CAAE,KAAK,CAAG",
+    "sources": [
+        "../../src/sass/components/itemList.sass",
+        "../../src/sass/helpers/_variable.sass",
+        "../../src/sass/helpers/_extended.sass",
+        "../../src/sass/helpers/_mixin.sass"
+    ],
+    "names": [],
+    "file": "itemList.min.css"
+}
