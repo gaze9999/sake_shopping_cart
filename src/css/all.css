@@ -47,10 +47,6 @@ a, a:link, a:visited {
   z-index: 1070;
 }
 
-.navbar .nav_function a {
-  color: white;
-}
-
 .nav_logo {
   height: 52px;
 }
@@ -145,10 +141,6 @@ main {
   padding: 68px 0 0;
 }
 
-main a {
-  color: white;
-}
-
 .item_list {
   -ms-flex-pack: distribute;
       justify-content: space-around;
@@ -187,9 +179,5 @@ main a {
 .item_list .item_card .card-body:hover {
   -webkit-animation: hoverMoveUp 0.4s 0.2s both ease-in-out;
           animation: hoverMoveUp 0.4s 0.2s both ease-in-out;
-}
-
-.page_itemlist pre {
-  color: white;
 }
 /*# sourceMappingURL=all.css.map */
