@@ -7,7 +7,7 @@
         </div>
       </header>
       <section class="col-sm-12 col-md-12 col-xl-12 d-flex flex-wrap itemList_list">
-        <?php for($i=0;$i<20;$i++) {require('./tpl/tpl-itemcard.php'); }; ?>
+
       </section>
     </div>
   </div>
