@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg fixed-top">
     <div class="nav_logo d-flex center-all">
-        <header>
-            <a class="navbar-brand d-flex" href="./index.php">
+        <header class="h-100">
+            <a class="navbar-brand d-flex center-all h-100" href="./index.php">
                 <h1>本格の酒</h1>
                 <img class="img-fluid d-block" src="./img/icons/logo.svg">
             </a>
@@ -18,18 +18,27 @@
                 <a class="nav-link" href="">地圖</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" href="">酒造介紹</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="./itemList.php">商品列表</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="">清酒知識+</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" href="">新手專區</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="">關於我們</a>
             </li>
         </ul>
     </div>
+    <div class="nav_searchbar mx-5">
+        <span class="input-group-text" id="list_searchbar">Search</span>
+    </div>
     <div class="nav_function">
-        <button class="btn btn-light">購物車</button>
-        <button class="btn btn-light">登入</button>
+        <a class="nav_cart px-2" href="">購物車</a>
+        <a class="nav_account px-2" href="">登入</a>
     </div>
 </nav>
