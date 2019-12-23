@@ -3,26 +3,29 @@ session_start();
 require_once('./db.inc.php');
 require_once('./tpl/tpl-html-head.php');
 require_once('./tpl/tpl-header.php');
-require_once("./tpl/func-buildTree.php");
-require_once("./tpl/func-getRecursiveCategoryIds.php"); 
+require_once('./tpl/func-buildTree.php');
+// require_once('./tpl/func-getRecursiveCategoryIds.php'); 
 ?>
 <main class="my-5 main_frame">
   <div class="container-fluid page_itemlist">
     <header class="row itemList_header">
       <section class="col-md-12 col-sm-12 list_info">
-        
+        <!-- add title and breadcrumb here -->
       </section>
     </header>
     <div class="row itemList_frame">
 <!-- Catagory Tree -->
       <aside class="col-md-2 col-sm-3 itemList_tree">
-        <?php buildTree($pdo, 1); ?>
+        <?php TreeRegion($pdo, 1); ?>
+        <input type="hidden" class="tree_id" 
+        data-cId="<?php if (isset($_GET['cId'])) { echo $_GET['cId']; } else { echo "0";}; ?>"
+        data-pId="<?php if (isset($_GET['pId'])) { echo $_GET['pId']; } else { echo "0";}; ?>"
+        >
       </aside>
 
 <!-- main field -->
       <section class="col-md-8 col-sm-6 d-flex flex-wrap itemList_list">
         <?php require_once('./tpl/tpl-itemlist.php'); ?>
-        <!-- <?php for($i=0;$i<20;$i++) {require('./tpl/tpl-itemcard.php'); }; ?> -->
       </section>
 
 <!-- filter -->
@@ -37,10 +40,10 @@ require_once("./tpl/func-getRecursiveCategoryIds.php");
       </aside>
     </div>
   </div>
-  <script src="./src/js/itemlistRegions.js"></script>
-<main>
+</main>
 <?php
 require_once('./tpl/tpl-warning.php');
 require_once('./tpl/tpl-footer.php');
 require_once('./tpl/tpl-html-foot.php');
 ?>
+<script src="./src/js/itemlistGetlist.js"></script>
