@@ -8,24 +8,25 @@ require_once("./tpl/func-getRecursiveCategoryIds.php");
 ?>
 <main class="page_itemlist">
   <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-12 col-sm-12 list_info">
+    <header class="row itemList_header">
+      <section class="col-md-12 col-sm-12 list_info">
         
-      </div>
-    </div>
-    <div class="row">
+      </section>
+    </header>
+    <div class="row itemList_frame">
 <!-- Catagory Tree -->
-      <div class="col-md-2 col-sm-3">
+      <aside class="col-md-2 col-sm-3">
         <?php buildTree($pdo, 1); ?>
-      </div>
+      </aside>
 
 <!-- main field -->
-      <div class="col-md-8 col-sm-6 d-flex flex-wrap item_list">
-        <?php for($i=0;$i<20;$i++) {require('./tpl/tpl-itemcard.php'); }; ?>
-      </div>
+      <section class="col-md-8 col-sm-6 d-flex flex-wrap item_list">
+        <?php require_once('./tpl/tpl-itemlist.php'); ?>
+        <!-- <?php for($i=0;$i<20;$i++) {require('./tpl/tpl-itemcard.php'); }; ?> -->
+      </section>
 
 <!-- filter -->
-      <div class="col-md-2 col-sm-3">
+      <aside class="col-md-2 col-sm-3">
         <div class="input-group mb-3">
           <input type="text" class="form-control" placeholder="商品名稱" aria-label="itemName" aria-describedby="basic-addon1">
         </div>
@@ -33,11 +34,10 @@ require_once("./tpl/func-getRecursiveCategoryIds.php");
           <label for="amount">商品價格範圍:</label>
           <input type="text" id="amount" readonly placeholder="xxxxxxx">
         </p>
-        <div id="slider-range"></div>
-      </div>
-
+      </aside>
     </div>
   </div>
+  <script src="./src/js/itemlistRegions.js"></script>
 </main>
 <?php
 require_once('./tpl/tpl-warning.php');
