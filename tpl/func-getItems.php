@@ -31,15 +31,12 @@ if($stmt->rowCount() > 0) {
   $arr = $stmt->fetchAll(PDO::FETCH_ASSOC);
   // echo $stmt->rowCount();
   // for ($i=0;$i<$stmt->rowCount();$i++) {
-  //   echo "<pre>";
-  //   print_r($arr[$i]);
-  //   echo "</pre>";
+    // echo "<pre>";
+    // print_r($arr[$i]);
+    // echo "</pre>";
   // }
-  $forList = json_encode($arr);
+  $result = urldecode(json_encode($arr));
   
-  // echo "<pre>";
-  // print_r($forList);
-  // print_r($arr);
-  // echo "</pre>";
+  echo $result;
 }
 ?>

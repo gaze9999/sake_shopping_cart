@@ -1,6 +1,4 @@
 let treeId = $('.tree_id');
-let cId = treeId.data('cid')
-let pId = treeId.data('pid')
 
 // data = treeId.data()
 data = JSON.stringify(treeId.data())
@@ -9,7 +7,8 @@ data = JSON.stringify(treeId.data())
 function getItem() {
   fetch('./tpl/func-getItems.php', {
     method: "PUT",
-    headers: {'Content-Type': 'application/json'},
+    headers: {'Content-Type': 'application/json',
+              'Accept': 'text/html'},
     body: data
   }).then(res => {
     if (res.status >= 200 && res.status < 300) {
@@ -17,20 +16,18 @@ function getItem() {
       // return res.text();
       // return res.status;
       // return res;
+      // console.log(res.json())
     } else {
-      let error = new Error(response.statusText)
-      error.response = response;
+      let error = new Error(res.statusText);
+      error.response = res;
       throw error.Content-Type;
     }
 
   }).then(json => {
-    console.log(json);
-
-  }).then(data => {
-    console.log(data)
+    console.log(json)
 
   }).catch(error => {
-    // console.log('request failed', error);
+    console.log('request failed:', error);
     // return error.response.json();
 
   }).then(errorData => {
