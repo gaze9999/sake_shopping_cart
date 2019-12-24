@@ -19,6 +19,8 @@ if ($data['cid'] > 0) {
     $arr = $stmt->fetchAll(PDO::FETCH_ASSOC);
     $result = urldecode(json_encode($arr));
     echo $result;
+  } else {
+    echo "";
   }
 } else {
   $sql.= "WHERE r.`rId` = b.`rId` AND b.`bId` = i.`breId` 
@@ -32,6 +34,8 @@ if ($data['cid'] > 0) {
     $arr = $stmt->fetchAll(PDO::FETCH_ASSOC);
     $result = urldecode(json_encode($arr));
     echo $result;
+  } else {
+    echo "";
   }
 }
 ?>
