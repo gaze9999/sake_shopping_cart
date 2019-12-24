@@ -18,8 +18,8 @@ require_once('./tpl/func-buildTree.php');
       <aside class="col-md-2 col-sm-3 itemList_tree">
         <?php TreeRegion($pdo, 1); ?>
         <input type="hidden" class="tree_id" 
-        data-cId="<?php if (isset($_GET['cId'])) { echo $_GET['cId']; } else { echo "0";}; ?>"
-        data-pId="<?php if (isset($_GET['pId'])) { echo $_GET['pId']; } else { echo "0";}; ?>"
+        data-cId="<?php if (isset($_GET['cId'])) { echo $_GET['cId']; }; ?>"
+        data-pId="<?php if (isset($_GET['pId'])) { echo $_GET['pId']; }; ?>"
         >
       </aside>
 
