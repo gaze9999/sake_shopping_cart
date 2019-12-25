@@ -1,0 +1,19 @@
+// helpers/_mixin.sass
+  
+=linkColor($color:black)
+  a
+    color: $color
+    @content
+
+=noPaddingMargin
+  margin: 0
+  padding: 0
+  @content
+
+=whiteBg
+  background: #fff
+  @content
+
+=anime420($name, $a:.4, $b:.2)
+  animation: $name $a + s $b + s both ease-in-out
+  @content

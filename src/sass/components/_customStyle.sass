@@ -1,0 +1,32 @@
+body
+  background: $mainBgColor
+  *
+    // outline: 1px solid red
+
+ul,ol,dl
+  color: #0A0301
+  list-style: none
+
+* 
+  font-family: 'Noto Sans TC', 'Roboto', sans-serif
+
+.trans4s
+  transition: .4s
+
+a
+  &, &:link, &:visited
+    color: #0A0301
+    text-decoration: none
+
+.clearfix::after 
+  visibility: hidden
+  display: block
+  content: ""
+  clear: both
+
+.center-all 
+  justify-content: center
+  align-items: center
+
+.notfound_title
+  font-size: 20rem
