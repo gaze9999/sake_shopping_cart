@@ -1,17 +1,21 @@
 let itemList = $('.itemList_list'),
     itemTree = $('.itemList_tree'),
+    itemInfo = $('.list_info_title'),
     treeTotal = $('.tree_total'),
+    treeTotalData = $('.tree_totalData'),
     dataLength,
     regionName = [],
     itemName = [],
-    breName = [];
-function getItem(id) {
-  fetch('./tpl/func-getItems.php', {
-    method: "POST",
+    breName = [], 
+    sId = [];
+    
+function getItem(cid = "", pid = "") {
+  fetch('./func.php/func-getItems.php', {
+    method: "PUT",
     headers: {'Content-Type': 'application/json',
               'Accept': 'application/json'},
     body: [
-      JSON.stringify({'cid': id})
+      JSON.stringify({'cid': cid, 'pid': pid})
     ]
   }).then(res => {
     if (res.status >= 200 && res.status < 300) {
@@ -23,6 +27,7 @@ function getItem(id) {
     }
 
   }).then(json => {
+      itemList.html("")
       dataLength = json.length
       // console.log(dataLength)
     // json.forEach(e => {
@@ -30,24 +35,25 @@ function getItem(id) {
       regionName[i] = json[i]['regionName']
       itemName[i] = json[i]['itemName']
       breName[i] = json[i]['breName']
-
-      itemList.html('
+      sId[i] = json[i]['sId']      
+      itemInfo.html(regionName[i])
+      itemList.append(`
           <div class="card shadow-sm item_card">
-          <div class="card-img-top d-flex center-all">
-            <a class="" href="">
-              <img class="img-fluid item_card_img" src="<?php echo "./img/items/item_20191216030246.jpg"; ?>">
-            </a>
+            <div class="card-img-top d-flex center-all">
+              <a class="" href="./tpl-itemDetail.php?sId=${sId[i]}">
+                <img class="img-fluid item_card_img" src="./img/items/item_20191216030246.jpg">
+              </a>
+            </div>
+            <div class="card-body d-flex center-all flex-column">
+              <p class="card-text item_card_name">${itemName[i]}</p>
+              <p class="card-text item_card_bre">${breName[i]}</p>
+              <p class="card-text item_card_price"></p>
+            </div>
           </div>
-          <div class="card-body d-flex center-all flex-column">
-            <p class="card-text item_card_name"></p>
-            <p class="card-text item_card_price"></p>
-          </div>
-        </div>
-      ');
-      
+      `);
     };
-    treeTotal.text(dataLength);
-    treeTotal.data('total', dataLength)
+    treeTotalData.text(dataLength);
+    treeTotalData.data('total', dataLength)
       
   }).catch(error => {
     console.log('request failed:', error);
@@ -55,8 +61,10 @@ function getItem(id) {
   });
 }
 
+getItem()
+
 itemTree.on('mouseup', '.tree_btn', function() {
-  itemList.html("")
+  // itemList.html("")
   cid = $(this).data('cid')
   getItem(cid)
   for (i=0; i<dataLength; i++) {
@@ -64,7 +72,7 @@ itemTree.on('mouseup', '.tree_btn', function() {
 })
 
 function getAllItem() {
-  fetch('./tpl/func-getItems.php', {
+  fetch('./func.php/func-getItems.php', {
     method: "POST",
     headers: {'Content-Type': 'application/json',
               'Accept': 'application/json'}
@@ -81,14 +89,31 @@ function getAllItem() {
       dataLength = json.length
       // console.log(dataLength)
       for (i=0; i<json.length; i++) {
-      regionName[i] = json[i]['regionName']
-      itemName[i] = json[i]['itemName']
-      breName[i] = json[i]['breName']
-    };
+        regionName[i] = json[i]['regionName']
+        itemName[i] = json[i]['itemName']
+        breName[i] = json[i]['breName']
+        sId[i] = json[i]['sId']
+  
+        itemList.append(`
+            <div class="card shadow-sm item_card">
+              <div class="card-img-top d-flex center-all">
+                <a class="" href="./tpl-itemDetail.php?sId=${sId[i]}">
+                  <img class="img-fluid item_card_img" src="./img/items/item_20191216030246.jpg">
+                </a>
+              </div>
+              <div class="card-body d-flex center-all flex-column">
+                <p class="card-text item_card_name">${itemName[i]}</p>
+                <p class="card-text item_card_bre">${breName[i]}</p>
+                <p class="card-text item_card_price"></p>
+              </div>
+            </div>
+        `);
+        
+      };
       
   }).catch(error => {
     console.log('request failed:', error);
   });
 }
 
-getAllItem()
+// getAllItem()
