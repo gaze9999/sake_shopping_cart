@@ -9,15 +9,17 @@ function TreeRegion($pdo){
   if($stmt->rowCount() > 0) {
     echo "<dl>
           <dt>地方</dt>
-          <dd><a href='./itemList.php'>全部</a>
+          <dd><a class='tree_btn' href='./itemList.php'>全部</a>
           </dd>";
 
     $arr = $stmt->fetchAll(PDO::FETCH_ASSOC);
     for($i = 0; $i < count($arr); $i++) {
       echo "<dd>";
-      echo "<a href='./itemList.php?cId={$arr[$i]['rId']}'>{$arr[$i]['regionName']}</a>";
+      // echo "<a class='tree_btn' href='./itemList.php?cId={$arr[$i]['rId']}'>{$arr[$i]['regionName']}'></a>";
+      echo "<button class='btn tree_btn' data-cId='{$arr[$i]['rId']}'>{$arr[$i]['regionName']}</button>";
       echo "</dd>";
       // TreePref($pdo, $arr[$i]['rId']);
+      // echo "<input type='hidden' id='' data-cId='{$arr[$i]['rId']}' data-rName='{$arr[$i]['regionName']}'>";
     }
     echo "</dl>";
   }

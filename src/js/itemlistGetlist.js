@@ -1,17 +1,15 @@
-let treeId = $('.tree_id'), 
-    itemList = $('.itemList_list'),
+let itemList = $('.itemList_list .test'),
+    itemTree = $('.itemList_tree'),
     jsonData;
 
-// data = treeId.data()
-treeData = JSON.stringify(treeId.data())
-// console.log(data)
-
-function getItem() {
+function getItem(id) {
   fetch('./tpl/func-getItems.php', {
-    method: "PUT",
+    method: "POST",
     headers: {'Content-Type': 'application/json',
               'Accept': 'application/json'},
-    body: treeData
+    body: [
+      JSON.stringify({'cid': id})
+    ]
   }).then(res => {
     if (res.status >= 200 && res.status < 300) {
       return res.json();
@@ -22,11 +20,16 @@ function getItem() {
     }
 
   }).then(json => {
-    // console.log(json)
-    itemList.html(JSON.stringify(json))
-    jsonData = json
-    return jsonData
-  
+    // location.reload()
+    // console.log(json.length)
+    
+    // json.forEach(e => {
+      for (i=0; i<json.length; i++) {
+      // console.log(json[i])
+      sid = JSON.stringify(json[i]['itemName'])
+      itemList.append(`${i+1}: ${sid.slice(1, sid.length-1)}<br>`)
+    };
+      
   }).catch(error => {
     console.log('request failed:', error);
     // return error.response.json();
@@ -35,4 +38,12 @@ function getItem() {
 
 // getItem()
 
-console.log(getItem())
+// console.log(getItem())
+
+itemTree.on('mouseup', '.tree_btn', function() {
+  itemList.html("")
+  cid = $(this).data('cid')
+  // treeId.data('cid', cid)
+  // console.log(treeId.data())
+  getItem(cid)
+})

@@ -17,10 +17,6 @@ require_once('./tpl/func-buildTree.php');
 <!-- Catagory Tree -->
       <aside class="col-md-2 col-sm-3 itemList_tree">
         <?php TreeRegion($pdo, 1); ?>
-        <input type="hidden" class="tree_id" 
-        data-cId="<?php if (isset($_GET['cId'])) { echo $_GET['cId']; }; ?>"
-        data-pId="<?php if (isset($_GET['pId'])) { echo $_GET['pId']; }; ?>"
-        >
       </aside>
 
 <!-- main field -->
