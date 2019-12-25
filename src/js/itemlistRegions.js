@@ -1,7 +1,11 @@
-// let itemcId = $('.itemList_tree');
-// let itemList = $('.itemList_list');
+let itemList = $('.itemList_list .test'),
+    itemTree = $('.itemList_tree'),
+    treeTotal = $('.tree_total'),
+    dataLength,
+    regionName = [],
+    itemName = [],
+    breName = [];
 
-// itemcId.on('click', 'a', function(){
-//     getItem()
-//     itemList.html(getItem())
-// });
+function getItem(id) {
+    $.ajax()
+}
