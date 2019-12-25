@@ -7,7 +7,9 @@ function TreeRegion($pdo){
   $stmt->execute();
 
   if($stmt->rowCount() > 0) {
-    echo "<dl>
+    echo "
+          <div class='tree_total' data-total=''></div>
+          <dl>
           <dt>地方</dt>
           <dd><a class='tree_btn' href='./itemList.php'>全部</a>
           </dd>";

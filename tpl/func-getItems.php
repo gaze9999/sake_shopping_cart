@@ -3,8 +3,8 @@ require_once('../db.inc.php');
 
 $data = json_decode(file_get_contents('php://input'), true);
 
-$sql = "SELECT i.`sId`, i.`itemName`, i.`breId`, b.`bId`, b.`breName`, b.`rId`, r.`rId`, r.`regionName` 
-        FROM `sake_items` as i JOIN `sake_breweries` as b JOIN `sake_regions` as r ";
+$sql = "SELECT i.`sId`, i.`itemName`, i.`breId`, b.`bId`, b.`breName`, b.`rId`, r.`rId`, r.`regionName` ,  b.`pId`, p.`pId`, p.`prefName` 
+        FROM `sake_items` as i JOIN `sake_breweries` as b JOIN `sake_regions` as r JOIN `sake_prefectures` as p ";
 
 if ($data['cid'] > 0) {
   $sql.= "WHERE r.`rId` = ? AND b.`rId` = ? AND b.`bId` = i.`breId` 
@@ -23,7 +23,7 @@ if ($data['cid'] > 0) {
     echo "";
   }
 } else {
-  $sql.= "WHERE r.`rId` = b.`rId` AND b.`bId` = i.`breId` 
+  $sql.= "WHERE r.`rId` = b.`rId` AND b.`bId` = i.`breId` AND b.`pId` = p.`pId` 
           GROUP BY i.`itemName` 
           ORDER BY i.`sId` ";
 

@@ -5,8 +5,8 @@
     </a>
   </div>
   <div class="card-body d-flex center-all flex-column">
-    <p class="card-text"><?php echo $_POST['itemName']; ?></p>
-    <p class="card-text">價格：<?php echo $_POST['price']; ?></p>
+    <p class="card-text item_card_name"></p>
+    <p class="card-text item_card_price"></p>
     <!-- <small class="card-text">上架日期：1970-01-01</small> -->
   </div>
 </div>
