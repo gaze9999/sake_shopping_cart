@@ -7,14 +7,14 @@ function TreeRegion($pdo){
   $stmt->execute();
 
   if($stmt->rowCount() > 0) {
+    $arr = $stmt->fetchAll(PDO::FETCH_ASSOC);
     echo "
-          <div class='tree_total' data-total=''></div>
+          <div class='tree_total' data-total=''>商品數量：<p class='tree_totalData'></p></div>
           <dl>
           <dt>地方</dt>
-          <dd><a class='tree_btn' href='./itemList.php'>全部</a>
+          <dd><button class='btn tree_btn'>全部</button>
           </dd>";
-
-    $arr = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    
     for($i = 0; $i < count($arr); $i++) {
       echo "<dd>";
       // echo "<a class='tree_btn' href='./itemList.php?cId={$arr[$i]['rId']}'>{$arr[$i]['regionName']}'></a>";
