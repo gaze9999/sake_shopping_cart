@@ -1,0 +1,11 @@
+*.xlsx
+*.sql
+*.code-workspace
+
+package-lock.json
+
+.vscode/
+vendor/
+src/compactCss/
+php/
+node_modules/
