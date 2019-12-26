@@ -1,23 +1,26 @@
-.itemList_header
-  height: 10rem
-  .list_info
-    position: fixed
-  
-.itemList_frame
+.main_frame
   position: relative
-  overflow: hidden
-  .itemList_list
-    position: relative
-    right: 50%
-    left: 50%
-    transform: translateX(-50%)
+  background:  $mainBgColor
 
-.itemList_tree
-  left: 0
+.itemList_header
+  +noPaddingMargin
+  background:  $mainBgFadeBottom
+  .list_info
+    +noPaddingMargin
+  margin-top: 48px
+  height: 10rem
+
+.page_itemList
+  +noPaddingMargin
+  margin-top: 48px
+
 .itemList_navbar
-  right: 0
-  position: fixed
-    
+  position: sticky
+  top: 10rem
+  height: 100%
+  padding-top: 2rem
+  z-index: $zindex-modal-backdrop
+
 .itemList_list
   justify-content: space-around
   .item_card

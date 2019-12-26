@@ -6,6 +6,7 @@
 
 body {
   background: #F1F1EE;
+  position: relative;
 }
 
 ul, ol, dl {
@@ -48,7 +49,8 @@ a, a:link, a:visited {
 }
 
 .navbar {
-  background: transparent;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, #F1F1EE), color-stop(80%, rgba(95, 95, 93, 0)));
+  background: linear-gradient(to bottom, #F1F1EE 60%, rgba(95, 95, 93, 0) 80%);
   z-index: 1070;
 }
 
@@ -158,34 +160,38 @@ a, a:link, a:visited {
   }
 }
 
+.main_frame {
+  position: relative;
+  background: #F1F1EE;
+}
+
 .itemList_header {
+  margin: 0;
+  padding: 0;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, #F1F1EE), color-stop(80%, rgba(95, 95, 93, 0)));
+  background: linear-gradient(to bottom, #F1F1EE 60%, rgba(95, 95, 93, 0) 80%);
+  margin-top: 48px;
   height: 10rem;
 }
 
 .itemList_header .list_info {
-  position: fixed;
+  margin: 0;
+  padding: 0;
 }
 
-.itemList_frame {
-  position: relative;
-  overflow: hidden;
-}
-
-.itemList_frame .itemList_list {
-  position: relative;
-  right: 50%;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-}
-
-.itemList_tree {
-  left: 0;
+.page_itemList {
+  margin: 0;
+  padding: 0;
+  margin-top: 48px;
 }
 
 .itemList_navbar {
-  right: 0;
-  position: fixed;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 10rem;
+  height: 100%;
+  padding-top: 2rem;
+  z-index: 1040;
 }
 
 .itemList_list {
