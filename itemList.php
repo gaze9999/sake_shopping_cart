@@ -26,13 +26,8 @@ require_once('./func/func-buildVTree.php');
 
 <!-- filter -->
     <aside class="col-md-2 col-sm-2 itemList_filter itemList_navbar">
-      <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="商品名稱" aria-label="itemName" aria-describedby="basic-addon1">
-      </div>
-      <p>
-        <label for="amount">商品價格範圍:</label>
-        <!-- <input type="text" id="amount" readonly placeholder="xxxxxxx"> -->
-      </p>
+      <?php require_once('./func/func-filters.php'); ?>
+      <?php require_once('./tpl/tpl-filters.php'); ?>
     </aside>
   </div>
 </main>
@@ -42,3 +37,4 @@ require_once('./tpl/tpl-footer.php');
 require_once('./tpl/tpl-html-foot.php');
 ?>
 <script src="./src/js/itemlistGetVlist.js"></script>
+<script src="./src/js/filters.js"></script>
