@@ -29,24 +29,28 @@ function getItem(cid = "", pid = "") {
   }).then(json => {
       itemList.html("")
       dataLength = json.length
-      // console.log(dataLength)
+      // console.log(JSON.stringify(json))
     // json.forEach(e => {
       for (i=0; i<json.length; i++) {
       regionName[i] = json[i]['regionName']
       itemName[i] = json[i]['itemName']
       breName[i] = json[i]['breName']
-      sId[i] = json[i]['sId']      
-      itemInfo.html(regionName[i])
+      sId[i] = json[i]['sId']
+      if (cid == "") {
+        itemInfo.html(`日本清酒`)
+      } else {
+        itemInfo.html(regionName[i])
+      };
       itemList.append(`
           <div class="card shadow-sm item_card">
             <div class="card-img-top d-flex center-all">
-              <a class="" href="./tpl-itemDetail.php?sId=${sId[i]}">
+              <a class="" href="./itemDetails.php?id=${sId[i]}">
                 <img class="img-fluid item_card_img" src="./img/items/item_20191216030246.jpg">
               </a>
             </div>
             <div class="card-body d-flex center-all flex-column">
-              <p class="card-text item_card_name">${itemName[i]}</p>
               <p class="card-text item_card_bre">${breName[i]}</p>
+              <p class="card-text item_card_name">${itemName[i]}</p>
               <p class="card-text item_card_price"></p>
             </div>
           </div>
