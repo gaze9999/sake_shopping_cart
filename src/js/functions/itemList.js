@@ -11,7 +11,7 @@ function getItem(cid = "", pid = "") {
       return res.json();
     } else {
       let error = new Error(res.statusText);
-      error.response = res;
+      error.response = response;
       throw error.Content-Type;
     }
 
@@ -49,12 +49,10 @@ function getItem(cid = "", pid = "") {
     treeTotalData.data('total', dataLength)
       
   }).catch(error => {
-    console.log('request failed:', error);
-    return error.response.json();
+    console.log('getItem() request failed:', error);
+    // return error.response.json();
   });
 }
-
-
 
 function getVarieties(vid = "", cid = "", pid = "") {
   fetch('./func/func-getItems.php', {
@@ -69,7 +67,7 @@ function getVarieties(vid = "", cid = "", pid = "") {
       return res.json();
     } else {
       let error = new Error(res.statusText);
-      error.response = res;
+      error.response = response;
       throw error.Content-Type;
     }
   }).then(json => {
@@ -105,8 +103,8 @@ function getVarieties(vid = "", cid = "", pid = "") {
     treeTotalData.data('total', dataLength)
       
   }).catch(error => {
-    console.log('request failed:', error);
-    // return error.response.json();
+    console.log('getVarieties() request failed:', error);
+    console.log(error.response);
   });
 }
 
@@ -133,7 +131,7 @@ function filterItem(rid = "", pid = "", price = "") {
   }).then(json => {
 
   }).catch(error => {
-    console.log('request failed:', error);
-    return error.response.json();
+    console.log('filterItem() request failed:', error);
+    // return error.response.json();
   });
 }
