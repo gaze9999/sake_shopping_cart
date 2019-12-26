@@ -36,5 +36,6 @@ require_once('./tpl/tpl-warning.php');
 require_once('./tpl/tpl-footer.php');
 require_once('./tpl/tpl-html-foot.php');
 ?>
-<script src="./src/js/itemlistGetVlist.js"></script>
-<script src="./src/js/filters.js"></script>
+<script src="./src/js/functions/itemList.js"></script>
+<script src="./src/js/variables/itemList.js"></script>
+<script src="./src/js/itemlistBtn.js"></script>
