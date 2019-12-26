@@ -1,14 +1,17 @@
 getVarieties()
 
 itemTree.on('mouseup', '.tree_btn', function() {
-  // itemList.html("")
   vid = $(this).data('vid')
   getVarieties(vid)
-  for (let i in dataLength) {
-  }
 })
 
-filterR.on('mouseup', '.filter_btn', function() {
-  // console.log($(this).data('region'))
-  filterItem()
-}
+filterRCbox.on('change', function() {
+  $(this).toggleClass('checked')
+  let rids = ""
+  $('.filter_region .filter_checkbox.checked').each( function() {
+    let Selected = $(this).data('region')
+    rids += Selected + ", "
+  });
+  // console.log('rids: ' + rids)
+  // filterItem()
+})

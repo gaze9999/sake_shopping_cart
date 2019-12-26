@@ -1,5 +1,6 @@
 <?php
 require_once('./db.inc.php');
+
 function getRegions($pdo){
   $sql = "SELECT `rId`, `regionName`
           FROM `sake_regions` ";
@@ -14,9 +15,13 @@ function getRegions($pdo){
   <dd><button class='btn tree_btn'>全部</button>
   </dd>";
     for($i = 0; $i < count($arr); $i++) {
-      echo "<dd>";
-      echo "<button class='btn filter_btn' data-region='{$arr[$i]['rId']}'>{$arr[$i]['regionName']}</button>";
-      echo "</dd>";
+      echo "
+      <dd>
+        <div class='form-check filter_form'>
+          <input type='checkbox' class='form-check-input filter_checkbox'id='region-{$arr[$i]['regionName']}' data-region='{$arr[$i]['rId']}'>
+          <label class='form-check-label' for='region-{$arr[$i]['regionName']}'>{$arr[$i]['regionName']}</label>
+        </div>
+      </dd>";
     }
     echo "</dl>";
   }

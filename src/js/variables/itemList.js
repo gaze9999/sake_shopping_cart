@@ -4,10 +4,14 @@ let itemList = $('.itemList_list'),
     treeTotal = $('.tree_total'),
     treeTotalData = $('.tree_totalData'),
     filterR = $('.filter_region');
+    filterRCbox = $('.filter_region .filter_checkbox');
 
 let dataLength;
 
 let regionName = [],
+    varieties = [],
     itemName = [],
-    breName = [], 
-    sId = [];
+    breName = [],
+    vCatag = [],
+    sId = [],
+    vId = [];
