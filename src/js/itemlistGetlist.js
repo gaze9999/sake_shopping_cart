@@ -10,7 +10,7 @@ let itemList = $('.itemList_list'),
     sId = [];
     
 function getItem(cid = "", pid = "") {
-  fetch('./func.php/func-getItems.php', {
+  fetch('./func/func-getItems.php', {
     method: "PUT",
     headers: {'Content-Type': 'application/json',
               'Accept': 'application/json'},
@@ -72,7 +72,7 @@ itemTree.on('mouseup', '.tree_btn', function() {
 })
 
 function getAllItem() {
-  fetch('./func.php/func-getItems.php', {
+  fetch('./func/func-getItems.php', {
     method: "POST",
     headers: {'Content-Type': 'application/json',
               'Accept': 'application/json'}

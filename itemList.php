@@ -3,7 +3,7 @@ session_start();
 require_once('./db.inc.php');
 require_once('./tpl/tpl-html-head.php');
 require_once('./tpl/tpl-header.php');
-require_once('./func.php/func-buildTree.php');
+require_once('./func/func-buildTree.php');
 // require_once('./tpl/func-getRecursiveCategoryIds.php'); 
 ?>
 <main class="my-5 main_frame">
