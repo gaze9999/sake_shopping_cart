@@ -13,7 +13,7 @@ let itemList = $('.itemList_list'),
     vId = [];
 
 function getVarieties(vid = "", cid = "", pid = "") {
-  fetch('./func/func-getVarieties.php', {
+  fetch('./func/func-func-getItems.php', {
     method: "PUT",
     headers: {'Content-Type': 'application/json',
               'Accept': 'application/json'},
