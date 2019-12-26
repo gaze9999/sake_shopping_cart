@@ -193,7 +193,7 @@ a, a:link, a:visited {
   z-index: 1040;
 }
 
-.itemList_navbar .tree_btn {
+.itemList_navbar .tree_btn, .itemList_navbar .filter_btn {
   margin: 0;
   padding: 0;
 }
