@@ -7,5 +7,4 @@ require_once('./main.php');
 require_once('./tpl/tpl-warning.php');
 require_once('./tpl/tpl-footer.php');
 require_once('./tpl/tpl-html-foot.php');
-2019.12.26
 ?>
