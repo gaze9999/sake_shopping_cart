@@ -49,8 +49,7 @@ a, a:link, a:visited {
 }
 
 .navbar {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, #F1F1EE), color-stop(80%, rgba(95, 95, 93, 0)));
-  background: linear-gradient(to bottom, #F1F1EE 60%, rgba(95, 95, 93, 0) 80%);
+  background: #F1F1EE;
   z-index: 1070;
 }
 
@@ -192,6 +191,11 @@ a, a:link, a:visited {
   height: 100%;
   padding-top: 2rem;
   z-index: 1040;
+}
+
+.itemList_navbar .tree_btn {
+  margin: 0;
+  padding: 0;
 }
 
 .itemList_list {
