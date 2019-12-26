@@ -11,4 +11,4 @@
   <link rel="stylesheet" href="./dist/css/fontawesome-all.min.css">
   <link rel="stylesheet" href="./dist/css/all.min.css">
 </head>
-<body class="d-flex flex-column h-100" id="view_frame" name="view_frame">
+<body class="d-flex flex-column" id="view_frame" name="view_frame">
