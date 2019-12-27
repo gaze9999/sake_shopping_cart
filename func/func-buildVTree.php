@@ -1,56 +1,43 @@
 <?php
-// call vTree
-function vTree($pdo){
-  $sql = "SELECT `vId`, `varieties`, `vCatag`
-          FROM `sake_varieties` 
-          ORDER BY `vId` ";
-  $stmt = $pdo->prepare($sql);
-  $stmt->execute();
+require_once('../db.inc.php');
 
-  if($stmt->rowCount() > 0) {
-    $arr = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    echo "
-          <div class='tree_total' data-total=''>商品數量：<p class='tree_totalData'></p></div>
-          <dl>
-          <dt>分類</dt>
-          <dd><button class='btn tree_btn'>全部</button>
-          </dd>";
+$sql = "SELECT `vId`, `varieties`, `vCatId`, `vCatag`
+        FROM `sake_varieties` 
+        ORDER BY `vId` ";
+$stmt = $pdo->prepare($sql);
+$stmt->execute();
 
-    for($i = 0; $i < count($arr); $i++) {
-      echo "<dd>";
-      // echo "<a class='tree_btn' href='./itemList.php?cId={$arr[$i]['rId']}'>{$arr[$i]['regionName']}'></a>";
-      echo "<button class='btn tree_btn' data-vId='{$arr[$i]['vId']}'>{$arr[$i]['varieties']}</button>";
-      echo "</dd>";
-      // TreePref($pdo, $arr[$i]['rId']);
-      // echo "<input type='hidden' id='' data-cId='{$arr[$i]['rId']}' data-rName='{$arr[$i]['regionName']}'>";
-    }
-    echo "</dl>";
-  }
+$sql2 = "SELECT `vId`, `vCatId`, `vCatag`
+        FROM `sake_varieties` 
+        GROUP BY `vCatId` 
+        ORDER BY `vId` ";
+$stmt2 = $pdo->prepare($sql2);
+$stmt2->execute();
+
+if($stmt->rowCount() > 0) {
+  $arr  = $stmt->fetchAll(PDO::FETCH_ASSOC);
+  $arr2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
+  for ($i = )
+
+  echo "<pre>";
+  print_r($arr);
+  echo "</pre>";
+  echo "<pre>";
+  print_r($arr2);
+  echo "</pre>";
+
+  // for ($i = 0; $i < count($arr); $i++) {
+  //   // echo "<dt>
+  //   //         <button class='btn tree_btn' data-cId='{$arr[$i]['vId']}'>{$arr[$i]['vCatag']}</button>
+  //   //       </dt>";
+    $result = urldecode(json_encode($arr));
+    $result2 = urldecode(json_encode($arr2));
+    echo $result;
+    echo $result2;
+  // }
 }
 
-// call prefectures
-function TreePref($pdo, $prefId = 1){
-  $sql = "SELECT p.`pId` ,p.`prefName`,p.`rId` as prId , r.`rId` as rrId 
-          FROM `sake_prefectures` as p LEFT JOIN `sake_regions` as r 
-          ON p.`rId` = r.`rId` 
-          WHERE p.`rId` = ? ";
 
-  $stmt = $pdo->prepare($sql);
-  $arrParam = [$prefId];
-  $stmt->execute($arrParam);
-  // $arr = $stmt->fetchAll(PDO::FETCH_ASSOC);
-  // echo "<pre>";
-  // print_r($arr);
-  // echo "</pre>";
-  // exit;
 
-  if($stmt->rowCount() > 0) {        
-    $arr = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    for($i = 0; $i < count($arr); $i++) {
-      echo "<dd>";
-      echo "<a href='./itemList.php?cId={$arr[$i]['rrId']}&pId={$arr[$i]['pId']}'>{$arr[$i]['prefName']}</a>";
-      echo "</dd>";
-    }
-  }
-}
+
 ?>

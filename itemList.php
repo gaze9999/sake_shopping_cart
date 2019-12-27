@@ -3,7 +3,6 @@ session_start();
 require_once('./db.inc.php');
 require_once('./tpl/tpl-html-head.php');
 require_once('./tpl/tpl-header.php');
-require_once('./func/func-buildVTree.php');
 // require_once('./tpl/func-getRecursiveCategoryIds.php'); 
 ?>
 <main class="my-5 main_frame h-100 d-flex center-all">
@@ -16,7 +15,7 @@ require_once('./func/func-buildVTree.php');
   <div class="row w-100 page_itemList">
 <!-- Catagory Tree -->
     <aside class="col-md-2 col-sm-2 itemList_tree itemList_navbar">
-      <?php vTree($pdo); ?>
+      <?php require_once('./tpl/tpl-itemlist-tree.php'); ?>
     </aside>
 
 <!-- main field -->
@@ -37,5 +36,6 @@ require_once('./tpl/tpl-footer.php');
 require_once('./tpl/tpl-html-foot.php');
 ?>
 <script src="./src/js/functions/itemList.js"></script>
+<script src="./src/js/functions/itemListTree.js"></script>
 <script src="./src/js/variables/itemList.js"></script>
 <script src="./src/js/itemlistBtn.js"></script>
