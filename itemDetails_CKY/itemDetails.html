@@ -8,8 +8,9 @@
     <link rel="stylesheet" href="./nav-neal.css">
     <link rel="stylesheet" href="./itemDetails.css">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="./bootstrap.min.css">
 </head>
 
 <body>
@@ -80,12 +81,12 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="slider">
-                    <ul class="list-unstyled slide-pic d-flex">
+                    <ul class="list-unstyled slide-pic-ky d-flex ">
                         <li><img src="./images/items/slider1.jpg" alt=""></li>
-                        <li><img src="./images/items/slider2.jpg" alt=""></li>
-                        <li><img src="images/slide3.jpeg" alt=""></li>
-                        <li><img src="images/slide4.jpeg" alt=""></li>
-                        <li><img src="images/earth.jpg" alt=""></li>
+                        <li><img src="./images/items/slider4.png" alt=""></li>
+                        <li><img src="./images/items/slider1.jpg" alt=""></li>
+                        <li><img src="./images/items/slider1.jpg" alt=""></li>
+                        <li><img src="./images/items/slider1.jpg" alt=""></li>
                     </ul>
                     <ul class="list-unstyled pages d-flex">
                         <li></li>
@@ -96,8 +97,6 @@
                     </ul>
                     <a class="dir_btn dir_right" id="goNext"><i class="fas fa-chevron-right"></i></a>
                     <a class="dir_btn dir_left" id="goPrev"><i class="fas fa-chevron-left"></i></a>
-                    
-        
                 </div>
                 
             </div>
@@ -120,10 +119,10 @@
 <script>
     var slideIndex=0;
     var slideMove=0;
-    var slideWidth=800;
-    var slideCount=$(".slide-pic li").length;
+    var slideWidth=720;
+    var slideCount=$(".slide-pic-ky li").length;
     console.log(slideCount)
-    $(".slide-pic").css("width", slideCount*slideWidth)
+    $(".slide-pic-ky").css("width", slideCount*slideWidth)
     // $(".pages li:first").css("background", "#fff")
     $(".pages li").eq(0).css("background", "#fff")
 
@@ -175,8 +174,8 @@
 
     function goSlide(){
         console.log(slideIndex);
-        slideMove=0-800*slideIndex;
-        $(".slide-pic").css("left", slideMove)
+        slideMove=0-720*slideIndex;
+        $(".slide-pic-ky").css("left", slideMove)
         $(".pages li").eq(slideIndex).css("background", "#fff")
         .siblings().css("background", "none")
         console.log(slideIndex)

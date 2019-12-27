@@ -9,10 +9,11 @@ body{
 a:link{
     text-decoration: none;
     color: #838383;
+    
 }
 a:hover{
     text-decoration: none;
-    color: #838383;
+    color: #838383 !important;
 }
 a:valid{
     background: red;
@@ -42,22 +43,24 @@ nav{
 
 .slider{
     height: 613px;
-    background: #000;
+    /* background: #000; */
     overflow: hidden;
     position: relative;
 }
-.slide-pic{
+.slide-pic-ky{
     position: absolute;
     left: 0px;
     /* width: 3200px; */
     transition: .5s;
 }
-.slide-pic li{
-    /* height: 613px; */
+.slide-pic-ky li{
+    height: 613px;
     flex: 1 0 0;
 }
-.slide-pic li img{
-    width: 100%;
+.slide-pic-ky li img{
+    position: relative;
+    left:-50px;
+    display: block;
     height: 100%;
     object-fit: cover;
 }
@@ -69,13 +72,15 @@ nav{
     width: 100%;
 }
 .pages li{
-    width: 24px;
-    height: 8px;
-    border: 1px solid #fff;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    /* border: 1px solid #626262; */
     margin: 0 5px;
+    background:rgb(204, 204, 204) !important;
 }
 .pages li:hover{
-    background: #fff;
+    background-color: #626262 !important;
 }
 .dir_btn{
     position: absolute;
