@@ -17,7 +17,7 @@ function getItem(cid = "", pid = "") {
 
   }).then(json => {
       itemList.html("")
-      dataLength = json.length
+      let dataLength = json.length
       // console.log(JSON.stringify(json))
     // json.forEach(e => {
       for (i=0; i<json.length; i++) {
