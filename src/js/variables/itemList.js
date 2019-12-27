@@ -3,10 +3,12 @@ let itemList = $('.itemList_list'),
     itemInfo = $('.list_info_title'),
     treeTotal = $('.tree_total'),
     treeTotalData = $('.tree_totalData'),
-    filterR = $('.filter_region');
-    filterRCbox = $('.filter_region .filter_checkbox');
+    filterR = $('.filter_region'),
+    filterRCbox = $('.filter_region .filter_checkbox'),
+    treeList = $('.itemList_tree dl');
+    treeVCat = $('.itemList_tree dt');
 
-let dataLength;
+// let dataLength;
 
 let regionName = [],
     varieties = [],

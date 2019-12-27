@@ -1,8 +1,9 @@
-function getTree() {
+function getTree(vid) {
   fetch('./func/func-buildVTree.php', {
     method: "POST",
     headers: {'Content-Type': 'application/json',
-              'Accept': 'application/json'}
+              'Accept': 'application/json'},
+    body: [JSON.stringify({'vid': vid})]
   }).then(res => {
     if (res.status >= 200 && res.status < 300) {
       return res.json();
@@ -13,7 +14,29 @@ function getTree() {
     }
 
   }).then(json => {
-      // dataLength = json.length
+    console.log(json)
+    let vCat
+    if (!vid) {
+      for (let i in json) {
+        // console.log(json[i])
+        treeList.append(`
+          <dt>
+            <button class='btn tree_btn tree_vcat' data-vcat='${json[i]["vId"]}'}'>${json[i]["vCatag"]}</button>
+          </dt>
+        `);
+        vCat = json[i]['vId']
+        getTree(vCat)
+        console.log(vCat)
+      }
+    } else {
+      for (let i in json) {
+        treeList.append(`
+          <dd>
+            <button class='btn tree_btn tree_vitem' data-vcat='${json[i]["vCatId"]}' data-cid='${json[i]["vId"]}'>->${json[i]["varieties"]}</button>
+          </dd>
+        `);
+      }
+    }
 
   }).catch(error => {
     console.log('getTree() request failed:', error);
