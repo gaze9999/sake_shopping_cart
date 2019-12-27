@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>itemsDetails</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="./itemDetails.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- 選單列 -->
+    <div class="container-fluid">
+        <nav>NAV BAR</nav>
+    </div>
+
+    <!-- 麵包選單 & 酒造名稱 -->
+    <div class="container takahashi">
+        <div class="row">
+            <div class="col-md-6 bread">
+                <a href="">酒造地圖</a>
+                <em>›</em>
+                <a href="">岐阜縣</a>
+                <em>›</em>
+                <a href="">高橋酒造</a>
+            </div>
+            <div class="col-md-6 ">
+                <img class="title" src="./images/web/itemDetails/takahashi.svg" alt="高橋酒造" >
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="slider">
+                    <ul class="list-unstyled slide-pic d-flex">
+                        <li><img src="./images/items/slider1.jpg" alt=""></li>
+                        <li><img src="./images/items/slider2.jpg" alt=""></li>
+                        <li><img src="images/slide3.jpeg" alt=""></li>
+                        <li><img src="images/slide4.jpeg" alt=""></li>
+                        <li><img src="images/earth.jpg" alt=""></li>
+                    </ul>
+                    <ul class="list-unstyled pages d-flex">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <a class="dir_btn dir_right" id="goNext"><i class="fas fa-chevron-right"></i></a>
+                    <a class="dir_btn dir_left" id="goPrev"><i class="fas fa-chevron-left"></i></a>
+                    
+        
+                </div>
+                
+            </div>
+            <div class="col-md-6"></div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+
+<script>
+    var slideIndex=0;
+    var slideMove=0;
+    var slideWidth=800;
+    var slideCount=$(".slide-pic li").length;
+    console.log(slideCount)
+    $(".slide-pic").css("width", slideCount*slideWidth)
+    // $(".pages li:first").css("background", "#fff")
+    $(".pages li").eq(0).css("background", "#fff")
+
+
+    $(".pages li").hover(function(){
+        // console.log("hover") 
+        slideIndex=$(this).index(); //slide_index
+        // slideMove=0-800*slideIndex;
+        // console.log(slideMove)
+        // console.log($(this).index())
+        // console.log(slideIndex);
+
+        // $(".slide-pic").css("left", slideMove)
+        // $(this).css("background", "#fff")
+        // .siblings().css("background", "none")
+        goSlide()
+    })
+
+    $("#goNext").click(function(){
+        // slideIndex=slideIndex+1;
+        // slideIndex++;
+        ++slideIndex;
+        if(slideIndex>=slideCount){
+            slideIndex=0;
+        }
+        // slideMove=0-800*slideIndex;
+        // $(".slide-pic").css("left", slideMove)
+        // $(".pages li").eq(slideIndex).css("background", "#fff")
+        // .siblings().css("background", "none")
+        // console.log(slideIndex)
+        goSlide()
+    })
+    $("#goPrev").click(function(){
+        console.log("prev")
+        // slideIndex=slideIndex-1;
+        // slideIndex--;
+        --slideIndex;
+
+        if(slideIndex<0){
+            slideIndex=slideCount-1;
+        }
+        // slideMove=0-800*slideIndex;
+        // $(".slide-pic").css("left", slideMove)
+        // $(".pages li").eq(slideIndex).css("background", "#fff")
+        // .siblings().css("background", "none")
+        // console.log(slideIndex)
+        goSlide()
+    })
+
+    function goSlide(){
+        console.log(slideIndex);
+        slideMove=0-800*slideIndex;
+        $(".slide-pic").css("left", slideMove)
+        $(".pages li").eq(slideIndex).css("background", "#fff")
+        .siblings().css("background", "none")
+        console.log(slideIndex)
+    }
+</script>
+</body>
+
+</html>
