@@ -5,9 +5,9 @@ require_once('./tpl/tpl-html-head.php');
 require_once('./tpl/tpl-header.php');
 // require_once('./tpl/func-getRecursiveCategoryIds.php'); 
 ?>
-<main class="my-5 main_frame h-100 d-flex center-all">
-  <header class="row w-100 d-flex center-all fixed-top itemList_header">
-    <section class="col-md-12 col-sm-12 d-flex center-all list_info">
+<main class="my-5 main_frame h-100 d-flex center_all">
+  <header class="row w-100 d-flex center_all fixed-top itemList_header">
+    <section class="col-md-12 col-sm-12 d-flex center_all list_info">
       <h2 class="list_info_title"></h2>
       <!-- add title and breadcrumb here -->
     </section>

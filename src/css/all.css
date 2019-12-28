@@ -35,7 +35,7 @@ a, a:link, a:visited {
   clear: both;
 }
 
-.center-all {
+.center_all {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -49,8 +49,12 @@ a, a:link, a:visited {
 }
 
 .navbar {
-  background: #F1F1EE;
+  background: transparent !important;
   z-index: 1070;
+}
+
+.navbar .nav-item {
+  cursor: pointer;
 }
 
 .navbar .nav-link {
@@ -69,7 +73,10 @@ a, a:link, a:visited {
 }
 
 .nav_logo img {
-  width: 40px;
+  height: 50px;
+  width: 50px;
+  -webkit-filter: brightness(100);
+          filter: brightness(100);
 }
 
 .nav_logo .navbar-brand * {
@@ -120,7 +127,7 @@ a, a:link, a:visited {
 }
 
 .footer_logo h2 {
-  font-size: 2rem;
+  font-size: 1.2rem;
 }
 
 .footer_logo img {
@@ -239,5 +246,65 @@ a, a:link, a:visited {
 main {
   min-height: 100vh;
   padding: 68px 0 0;
+}
+
+.main_bg {
+  height: 250vh;
+  position: fixed;
+  background: url(../../img/bgs/section1_bg.jpg) center fixed no-repeat;
+}
+
+.main_frame {
+  background: transparent;
+  z-index: 1050;
+}
+
+.page_main {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+
+.page_main section {
+  min-height: 100vh;
+}
+
+.page_main .main_logoSec, .page_main .main_article_center {
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+}
+
+.main_logoSec {
+  min-height: 100vh;
+  text-shadow: white 0px 0px 20px;
+  padding-bottom: 200px;
+}
+
+.main_logoSec h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 3.5rem;
+}
+
+.main_logoSec figure {
+  margin: 0;
+  padding: 0;
+}
+
+.main_logoSec .main_logo {
+  max-width: 150px;
+  max-height: 150px;
+}
+
+.main_article_about {
+  font-size: 1.2rem;
+  letter-spacing: 0.15em;
+  line-height: 5.5;
+}
+
+.main_sec3 {
+  background: #F1F1EE;
+  color: #0A0301;
 }
 /*# sourceMappingURL=all.css.map */
