@@ -41,7 +41,7 @@
       </div>
       <div class="col-xs-12 col-md-4 col-xl-4 d-flex center-all">
         <section class="footer_logo">
-          <a class="d-flex center-all" href="./index.php">
+          <a class="d-flex center-all" href="./">
             <h2 class="w-100">本格の酒</h2>
             <img class="img-fluid d-block" src="./img/icons/logo.svg">
           </a>

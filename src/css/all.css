@@ -6,6 +6,7 @@
 
 body {
   background: #F1F1EE;
+  position: relative;
 }
 
 ul, ol, dl {
@@ -48,7 +49,7 @@ a, a:link, a:visited {
 }
 
 .navbar {
-  background: transparent;
+  background: #F1F1EE;
   z-index: 1070;
 }
 
@@ -158,6 +159,43 @@ a, a:link, a:visited {
   }
 }
 
+.main_frame {
+  position: relative;
+  background: #F1F1EE;
+}
+
+.itemList_header {
+  margin: 0;
+  padding: 0;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, #F1F1EE), color-stop(80%, rgba(95, 95, 93, 0)));
+  background: linear-gradient(to bottom, #F1F1EE 60%, rgba(95, 95, 93, 0) 80%);
+  margin-top: 48px;
+  height: 10rem;
+}
+
+.itemList_header .list_info {
+  margin: 0;
+  padding: 0;
+}
+
+.page_itemList {
+  margin: 0;
+  padding: 0;
+  margin-top: 48px;
+}
+
+.itemList_navbar {
+  top: 10rem;
+  height: 100%;
+  padding-top: 2rem;
+  z-index: 1040;
+}
+
+.itemList_navbar .tree_btn, .itemList_navbar .filter_btn {
+  margin: 0;
+  padding: 0;
+}
+
 .itemList_list {
   -ms-flex-pack: distribute;
       justify-content: space-around;
@@ -199,6 +237,7 @@ a, a:link, a:visited {
 }
 
 main {
+  min-height: 100vh;
   padding: 68px 0 0;
 }
 /*# sourceMappingURL=all.css.map */
