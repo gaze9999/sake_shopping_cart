@@ -14,19 +14,20 @@ function getTree(vid) {
     }
 
   }).then(json => {
-    // console.log(json)    
     for (let i in json) {
       let vCat = json[i]['vCatId']
       if  (vCat == 0) {
         treeList.append(`
           <dt>
-            <button class='btn tree_btn tree_vcat' data-vcat='${json[i]["vId"]}'}'>${json[i]["vCatag"]}</button>
+            <button class='btn tree_btn tree_vcat' data-vcat='${json[i]["vId"]}'>${json[i]["vCatag"]}</button>
           </dt>
         `);
       }
       treeList.append(`
         <dd>
-          <button class='btn tree_btn tree_vitem' data-vcat='${json[i]["vCatId"]}' data-cid='${json[i]["vId"]}'>->${json[i]["varieties"]}</button>
+          <button class='btn tree_btn tree_vitem'
+           data-vcat='${json[i]["vCatId"] == 0 ? vcId = json[i]["vId"] : vcId = json[i]["vCatId"]}'
+           data-vid='${json[i]["vId"]}'>->${json[i]["varieties"]}</button>
         </dd>
       `);
     }

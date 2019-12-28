@@ -6,7 +6,6 @@ let itemList = $('.itemList_list'),
     filterR = $('.filter_region'),
     filterRCbox = $('.filter_region .filter_checkbox'),
     treeList = $('.itemList_tree dl');
-    treeVCat = $('.itemList_tree dt');
 
 // let dataLength;
 

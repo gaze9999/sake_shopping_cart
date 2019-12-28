@@ -3,7 +3,8 @@ getTree()
 
 itemTree.on('mouseup', '.tree_btn', function() {
   vid = $(this).data('vid')
-  getVarieties(vid)
+  vcat = $(this).data('vcat')
+  getVarieties(vcat, vid)
 })
 
 filterRCbox.on('change', function() {
