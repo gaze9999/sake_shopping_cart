@@ -185,8 +185,6 @@ a, a:link, a:visited {
 }
 
 .itemList_navbar {
-  position: -webkit-sticky;
-  position: sticky;
   top: 10rem;
   height: 100%;
   padding-top: 2rem;
@@ -239,6 +237,7 @@ a, a:link, a:visited {
 }
 
 main {
+  min-height: 100vh;
   padding: 68px 0 0;
 }
 /*# sourceMappingURL=all.css.map */
