@@ -30,12 +30,12 @@ function getVarieties( cid = "", vid = "", pid = "") {
       vid == "" ? itemInfo.html(`日本清酒`) : itemInfo.html(varieties[i]);
       itemList.append(`
           <div class="card shadow-sm item_card">
-            <div class="card-img-top d-flex center-all">
+            <div class="card-img-top d-flex center_all">
               <a class="" href="./itemDetails.php?id=${sId[i]}">
                 <img class="img-fluid item_card_img" src="./img/items/item_20191216030246.jpg">
               </a>
             </div>
-            <div class="card-body d-flex center-all flex-column">
+            <div class="card-body d-flex center_all flex-column">
               <p class="card-text item_card_bre">${breName[i]}</p>
               <p class="card-text item_card_name">${itemName[i]}</p>
               <p class="card-text item_card_price"></p>
