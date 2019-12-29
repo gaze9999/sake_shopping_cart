@@ -26,7 +26,7 @@ nav{
     background: rgb(95, 93, 93);
 }
 .takahashi{
-    padding-top: 74px;
+    padding-top: 5em;
     position: relative;
 }
 .bread{
@@ -42,7 +42,8 @@ nav{
 
 
 .slider{
-    height: 613px;
+    height: 400px;
+    width: 350px;
     /* background: #000; */
     overflow: hidden;
     position: relative;
@@ -50,11 +51,10 @@ nav{
 .slide-pic-ky{
     position: absolute;
     left: 0px;
-    /* width: 3200px; */
     transition: .5s;
 }
 .slide-pic-ky li{
-    height: 613px;
+    height: 400px;
     flex: 1 0 0;
 }
 .slide-pic-ky li img{
@@ -65,21 +65,17 @@ nav{
     object-fit: cover;
 }
 .pages{
-    position: absolute;
-    bottom:0;
     justify-content: center;
-    left:0;
-    width: 100%;
+    width: 350px;
 }
 .pages li{
     width: 13px;
     height: 13px;
     border-radius: 50%;
-    /* border: 1px solid #626262; */
     margin: 0 5px;
     background:rgb(204, 204, 204) !important;
 }
-.pages li:hover{
+ul>li.action_li_cky{
     background-color: #626262 !important;
 }
 .dir_btn{
@@ -104,4 +100,38 @@ nav{
 }
 .dir_right{
     right:0;
+}
+.items-cky{
+    padding-top: 10em;
+}
+
+.items_name-cky>img{
+    position: absolute;
+    left: 35%;
+    width: 10em;
+}
+.items_name-cky>p{
+    position: absolute;
+    top:10em; 
+}
+.price-cky{
+    font-size: 3em;
+    color: #D8AD73;
+    display: inline;
+}
+.input-cky{
+    border:#D8AD73 1px solid;
+    width: 3em;
+}
+.add-cky{
+    color:#D8AD73;
+}
+.movePrice-cky{
+    position: absolute;
+    top:80%;
+    left: 20%;
+}
+.moveAdd-cky{
+    display: inline;
+    padding-left:100px;
 }
