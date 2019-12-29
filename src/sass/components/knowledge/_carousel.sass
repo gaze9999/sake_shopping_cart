@@ -1,0 +1,26 @@
+.know_carousel_content
+  *
+    +noPaddingMargin
+  display: flex
+  flex-direction: column
+  text-align: center
+  width: 80%
+  margin: 3rem 2rem
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2)
+  .know_carousel_title
+    +flexColumn
+    height: 6rem
+  .carousel_title_btn
+    padding: .2rem 0
+    width: 6rem
+    text-align: center
+    background: $mouseIconColor
+
+.owl-nav
+  & [class*='owl-']:hover, .owl_nav_btn
+    background: transparent !important
+    color: #112 !important
+    transition: .2s
+  .owl_nav_btn
+    color: #626262 !important
+    font-size: 2rem !important

@@ -816,6 +816,19 @@ main {
   background-size: cover;
 }
 
+.know_frame > section {
+  min-height: 100vh;
+  padding: 4rem 0;
+}
+
+.know_frame .know_btn {
+  border: none;
+  border-radius: 2rem;
+  font-size: 1rem;
+  font-family: 'Noto Sans TC', sans-serif;
+  cursor: pointer;
+}
+
 .know_header {
   color: #fff;
   min-height: 150vh;
@@ -851,5 +864,60 @@ main {
   margin: 0;
   padding: 0;
   padding: 2rem 0;
+}
+
+.know_carousel_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  width: 80%;
+  margin: 3rem 2rem;
+  -webkit-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+}
+
+.know_carousel_content * {
+  margin: 0;
+  padding: 0;
+}
+
+.know_carousel_content .know_carousel_title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 6rem;
+}
+
+.know_carousel_content .carousel_title_btn {
+  padding: .2rem 0;
+  width: 6rem;
+  text-align: center;
+  background: #BC9691;
+}
+
+.owl-nav [class*='owl-']:hover, .owl-nav .owl_nav_btn {
+  background: transparent !important;
+  color: #112 !important;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.owl-nav .owl_nav_btn {
+  color: #626262 !important;
+  font-size: 2rem !important;
 }
 /*# sourceMappingURL=all.css.map */
