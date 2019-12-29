@@ -6,18 +6,24 @@ require_once('./tpl/tpl-header.php');
 ?>
 <header class="know_header know_bg">
   <div class="d-flex flex-column know_title" data-aos="fade-up" data-aos-delay="100">
-    <div class="d-flex flex-column center_all">
+    <hgroup class="d-flex flex-column center_all">
       <h3>本格清酒專家</h3>
-      <h1>給您滿滿的知識大平台</h1>    
-    </div>
+      <h1>給您滿滿的知識大平台</h1>   
+    </hgroup>
     <div class="d-flex flex-column center_all know_mouse">
       <p class="know_mousep">Scroll</p>
       <i class="know_mouseIcon"></i>
     </div>
   </div>
 </header>
-<main class="know_frame">
-  <?php require_once('./tpl/tpl-knowledge-carousel.php'); ?>
+<main class="container know_frame">
+  <section class="row know_carousel">
+    <?php require_once('./tpl/knowledge/tpl-knowledge-carousel.php'); ?>
+  </section>
+  <section class="row know_contents">
+    <?php require_once('./tpl/knowledge/tpl-knowledge-content.php'); ?>
+    <?php require_once('./tpl/knowledge/tpl-knowledge-aside.php'); ?>
+  </section>
 </main>
 
 <?php
