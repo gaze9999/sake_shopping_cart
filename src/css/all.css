@@ -176,7 +176,6 @@ a, a:link, a:visited {
   padding: 0;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, #F1F1EE), color-stop(80%, rgba(95, 95, 93, 0)));
   background: linear-gradient(to bottom, #F1F1EE 60%, rgba(95, 95, 93, 0) 80%);
-  margin-top: 48px;
   height: 10rem;
 }
 
