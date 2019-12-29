@@ -17,3 +17,7 @@
 =anime420($name, $a:.4, $b:.2)
   animation: $name $a + s $b + s both ease-in-out
   @content
+
+=mouseAnime($name, $easing:linear)
+  animation: $name 5s infinite $easing
+  @content
