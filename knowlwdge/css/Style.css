@@ -1,9 +1,9 @@
 
-@import url('../css/fonts.css');
+/* @import url('../css/fonts.css'); */
 
 
 html, body{
-	background: url(/img/bg001.gif);
+	background: url(../img/bg001.gif);
     margin: 0%;
     box-sizing: border-box;
 	overflow-x: hidden;
@@ -75,7 +75,7 @@ p{
 
 /* --- Site title --- */
 main .site-title{
-    background: url('/img/fuji002.png');
+    background: url('../img/fuji002.png');
     background-size: cover;
     height: 150vh;
     display: flex;
@@ -358,7 +358,7 @@ main section .mouse:after{
 /* --- start Carousel --- */
 
 main .blog-hyh{
-    background: url('/img/colorp.png');
+    background: url('../img/colorp.png');
     background-repeat: no-repeat;
     background-position: right;
     height: 140vh;
@@ -424,7 +424,7 @@ section .container-hyh .owl-nav{
 /* --- Site Content ---*/
 
 main .site-content{
-    background: url('/img/color02p.png');
+    background: url('../img/color02p.png');
     background-repeat:no-repeat;
     display: grid;
     grid-template-columns: 70% 30%;
