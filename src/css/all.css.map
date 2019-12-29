@@ -13,7 +13,8 @@
         "../sass/components/_footer.sass",
         "../sass/components/_main.sass",
         "../sass/components/_itemList.sass",
-        "../sass/components/_knowledge.sass"
+        "../sass/components/_knowledge.sass",
+        "../sass/components/knowledge/_carousel.sass"
     ],
     "names": [],
     "file": "all.css"

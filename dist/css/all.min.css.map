@@ -13,7 +13,8 @@
         "../../src/sass/components/_footer.sass",
         "../../src/sass/components/_main.sass",
         "../../src/sass/components/_itemList.sass",
-        "../../src/sass/components/_knowledge.sass"
+        "../../src/sass/components/_knowledge.sass",
+        "../../src/sass/components/knowledge/_carousel.sass"
     ],
     "names": [],
     "file": "all.min.css"

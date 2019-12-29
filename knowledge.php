@@ -16,7 +16,7 @@ require_once('./tpl/tpl-header.php');
     </div>
   </div>
 </header>
-<main class="main_frame">
+<main class="know_frame">
   <?php require_once('./tpl/tpl-knowledge-carousel.php'); ?>
 </main>
 
