@@ -25,14 +25,17 @@
       <li class="nav-item">
         <a class="nav-link" data-page="itemList" href="./itemList.php">商品列表</a>
       </li>
-      <li class="nav-item dropdown">
+      <li class="nav-item">
+        <a class="nav-link" data-page="knowledge" href="./knowledge.php">清酒知識+</a>
+      </li>
+      <!-- <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle text-white" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">清酒知識+</a>
         <div class="dropdown-menu" aria-labelledby="dropdown03">
           <a class="dropdown-item" data-page="sakeSource">清酒起源</a>
           <a class="dropdown-item" data-page="sakeVarieties">清酒分類</a>
           <a class="dropdown-item" data-page="sakeDrinking">清酒喝法</a>
         </div>
-      </li>
+      </li> -->
     </ul>
   <!-- <div class="nav_searchbar mx-5">
     <input class="header_searchbar" placeholder="Search"></input>
