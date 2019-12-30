@@ -13,6 +13,9 @@
     font-size: 1rem
     font-family: 'Noto Sans TC', sans-serif
     cursor: pointer
+  .know_post_btn, .sub_form_btn
+    +knowledgeBtn
+    background: $mouseIconColor
   
 .know_header
   color: #fff
@@ -43,3 +46,8 @@
   +noPaddingMargin
   padding: 2rem 0
   @extend %mouseText
+
+hr
+  border: .5px solid #ccc
+  width: 100%
+  margin: 2rem 0

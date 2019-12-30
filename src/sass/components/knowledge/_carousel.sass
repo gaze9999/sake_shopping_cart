@@ -17,10 +17,11 @@
     background: $mouseIconColor
 
 .owl-nav
-  & [class*='owl-']:hover, .owl_nav_btn
+  & [class*='owl-']:hover, [class*='owl-']:focus, .owl_nav_btn
     background: transparent !important
     color: #112 !important
     transition: .2s
+    outline: none
   .owl_nav_btn
     color: #626262 !important
     font-size: 2rem !important
