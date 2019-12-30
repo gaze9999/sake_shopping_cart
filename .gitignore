@@ -3,6 +3,7 @@
 *.code-workspace
 
 package-lock.json
+webpack.config.js
 
 .vscode/
 vendor/
