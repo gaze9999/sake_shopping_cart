@@ -1,6 +1,6 @@
 <footer class="footer">
   <div class="footer-container mx-5">
-    <div class="row center-all">
+    <div class="row center_all">
       <div class="col-xs-12 col-md-8 col-xl-8 d-flex">
         <section class="footer_sec">
           <dl>
@@ -39,9 +39,9 @@
           </dl>
         </section>
       </div>
-      <div class="col-xs-12 col-md-4 col-xl-4 d-flex center-all">
+      <div class="col-xs-12 col-md-4 col-xl-4 d-flex center_all">
         <section class="footer_logo">
-          <a class="d-flex center-all" href="./index.php">
+          <a class="d-flex center_all" href="./">
             <h2 class="w-100">本格の酒</h2>
             <img class="img-fluid d-block" src="./img/icons/logo.svg">
           </a>

@@ -1,0 +1,53 @@
+.know_bg
+  position: relative
+  background: url(../../img/bgs/fuji002.png) no-repeat center center
+  background-size: cover
+
+.know_frame
+  &>section
+    min-height: 100vh
+    padding: 4rem 0
+  .know_btn
+    border: none
+    border-radius: 2rem
+    font-size: 1rem
+    font-family: 'Noto Sans TC', sans-serif
+    cursor: pointer
+  .know_post_btn, .sub_form_btn
+    +knowledgeBtn
+    background: $mouseIconColor
+  
+.know_header
+  color: #fff
+  min-height: 150vh
+  .know_title
+    min-height: 100vh
+    justify-content: space-around
+    &::before, &::after
+      content: ''
+
+.know_mouseIcon
+  @extend %mouseIcon
+  &::before, &::after
+    @extend %beforeAfterMiddle
+  &::before
+    width: 46px
+    height: 82px
+    background: $mouseIconColor
+    border-radius: 100px
+  &::after
+    background: #fff
+    width: 10px
+    height: 10px
+    border-radius: 100%
+    +mouseAnime(trackBallSlide)
+
+.know_mousep
+  +noPaddingMargin
+  padding: 2rem 0
+  @extend %mouseText
+
+hr
+  border: .5px solid #ccc
+  width: 100%
+  margin: 2rem 0
