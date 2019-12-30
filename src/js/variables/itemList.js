@@ -7,7 +7,10 @@ let itemList = $('.itemList_list'),
     filterRCbox = $('.filter_region .filter_checkbox'),
     treeList = $('.itemList_tree dl');
 
-// let dataLength;
+let dataLength,
+    vid,
+    vcat,
+    rids;
 
 let regionName = [],
     varieties = [],

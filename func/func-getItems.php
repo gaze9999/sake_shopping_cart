@@ -7,6 +7,26 @@ $sql = "SELECT i.`sId`, i.`itemName`, i.`breId`, i.`vId`, b.`bId`, b.`breName`, 
         FROM `sake_items` as i JOIN `sake_breweries` as b JOIN `sake_regions` as r JOIN `sake_prefectures` as p JOIN `sake_varieties` as v 
         ON i.`breId` = b.`bId` AND i.`vId` = v.`vId` AND b.`rId` = r.`rId` AND p.`pId` = b.`pId` ";
 
+// if ($data['rid'] > 0) {
+//   if ($data['cid'] > 0) {
+
+//   }
+// }
+
+// try try
+
+
+
+
+
+
+
+
+
+
+
+
+
 if ($data['cid'] > 0) {
   $sql.= "WHERE v.`vId` = ? OR v.`vCatId` = ? 
           GROUP BY i.`itemName` 

@@ -2,9 +2,17 @@ getVarieties()
 getTree()
 
 itemTree.on('mouseup', '.tree_btn', function() {
-  vid = $(this).data('vid')
+  vid  = ""
+  vcat = ""
+  rids = ""
+  vid  = $(this).data('vid')
   vcat = $(this).data('vcat')
-  getVarieties(vcat, vid)
+  $('.filter_region .filter_checkbox.checked').each( function() {
+    let Selected = $(this).data('region')
+    rids += Selected + ", "
+  });
+  rids = rids.substring(0, rids.length-2)
+  getVarieties(vcat, vid, "", rids)
 })
 
 filterRCbox.on('change', function() {
@@ -14,6 +22,6 @@ filterRCbox.on('change', function() {
     let Selected = $(this).data('region')
     rids += Selected + ", "
   });
-  // console.log('rids: ' + rids)
-  // filterItem()
+  rids = rids.substring(0, rids.length-2)
+  filterItem(vcat, vid, "", rids)
 })
