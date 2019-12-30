@@ -1,2 +1,42 @@
 main
+  min-height: 100vh
   padding: 68px 0 0
+
+.main_bg
+  height: 250vh
+  position: fixed
+  background: url(../../img/bgs/section1_bg.jpg) center fixed no-repeat
+
+.main_frame
+  background: transparent
+  z-index: $zindex-modal
+
+.page_main
+  +noPaddingMargin
+  color: #fff
+  section
+    min-height: 100vh
+  .main_logoSec,.main_article_center
+    writing-mode: vertical-rl
+
+.main_logoSec
+  min-height: 100vh
+  text-shadow: white 0px 0px 20px
+  padding-bottom: 200px
+  h1
+    +noPaddingMargin
+    font-size: $font_title
+  figure
+    +noPaddingMargin
+  .main_logo
+    max-width: 150px
+    max-height: 150px
+
+.main_article_about
+    font-size: $font_mintitle
+    letter-spacing: 0.15em
+    line-height: 5.5
+
+.main_sec3
+  background: $mainBgColor
+  color: $titleColor

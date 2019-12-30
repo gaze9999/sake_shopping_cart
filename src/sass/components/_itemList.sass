@@ -1,6 +1,31 @@
 .itemList_frame
-  
-  
+  position: relative
+  background:  $mainBgColor
+
+.hidden_obj
+  display: none
+
+.itemList_header
+  +noPaddingMargin
+  background:  $mainBgFadeBottom
+  .list_info
+    +noPaddingMargin
+  // margin-top: 48px
+  height: 10rem
+
+.page_itemList
+  +noPaddingMargin
+  margin-top: 48px
+
+.itemList_navbar
+  // position: sticky
+  top: 10rem
+  height: 100%
+  padding-top: 2rem
+  z-index: $zindex-modal-backdrop
+  .tree_btn, .filter_btn
+    +noPaddingMargin
+
 .itemList_list
   justify-content: space-around
   .item_card
