@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>年齡確認</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<!-- ---fonts--- -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+<!-- --- style css--- -->
+    <link rel="stylesheet" href="age_confirm_style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="hero-text w-100 text-white px-2 px-sm-0">
+                <h1 class="display-4">Welocme</h1>
+                    <p class="lead mb-4">帶給您前所未有的清酒世界</p>
+                    <a class="age-btn-hyh px-5 mr-2" href="https://www.google.com.tw/">未滿18歲</a>
+                    <a href="#" onmousedown="yoo.play()" class="age-btn-hyh px-5 ml-2" href="#">已滿18歲</a>
+            </div>
+        </div>
+    </header>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<!-- ---$ 已滿18歲點擊音效設定--- -->
+<script>
+    var yoo = new Audio();
+    yoo.src="./audio/yoo_119.mp3";
+</script>
+
+</body>
+</html>
