@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>itemsDetails</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="./nav-neal.css">
+    <link rel="stylesheet" href="./itemDetails.css">
+    <link rel="stylesheet" href="./fontawesome-free-5.11.2-web/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="./bootstrap_itemDetails.min.css">
+</head>
+
+<body>
+    <!-- 選單列 -->
+    <nav class="navbar fixed-top navbar-expand-sm navbar-white">
+
+        <a class="navbar-brand d-flex center-all h-100" href="#">
+            <h3 class="center-all">本格の酒</h3>
+        </a>
+        <a class="navbar-brand d-flex center-all h-100" href="#">
+            <img class="img-fluid d-block neal-nav-icon" src="./images/icons/sake-icon.svg">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample03"
+            aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExample03">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="./index.html">地圖 <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="./index.html">關於我們 <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="./index.html">新手選酒 <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="./index.html">商品列表 <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">清酒知識+</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown03">
+                        <a class="dropdown-item" href="#">清酒起源</a>
+                        <a class="dropdown-item" href="#">清酒分類</a>
+                        <dir_btn a class="dropdown-item" href="#">清酒喝法</dir_btn a>
+                    </div>
+                </li>
+            </ul>
+            <ul class="navbar-nav my-2 my-md-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="./index.html">購物車 <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="./index.html">登入 <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 麵包選單 & 酒造名稱 -->
+    <div class="container takahashi">
+        <div class="row">
+            <div class="col-md-6 bread">
+                <a href="">酒造地圖</a>
+                <em>›</em>
+                <a href="">岐阜縣</a>
+                <em>›</em>
+                <a href="">高橋酒造</a>
+            </div>
+            <div class="col-md-6 ">
+                <img class="title" src="./images/web/itemDetails/takahashi.svg" alt="高橋酒造">
+            </div>
+        </div>
+    </div>
+    <!-- 產品 -->
+    <div class="container items-cky">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="slider">
+                    <ul class="list-unstyled slide-pic-ky d-flex ">
+                        <li><img src="./images/items/slider01.png" alt=""></li>
+                        <li><img src="./images/items/slider02.png" alt=""></li>
+                    </ul>
+
+                    <a class="dir_btn dir_right" id="goNext"><i class="fas fa-chevron-right"></i></a>
+                    <a class="dir_btn dir_left" id="goPrev"><i class="fas fa-chevron-left"></i></a>
+                </div>
+                <ul class="list-unstyled pages d-flex">
+                    <li class="action_li_cky"></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <div class="items_name-cky">
+                    <img src="./images/web/itemDetails/items_name.svg" alt="">
+                    <p>華麗及奔放的花果香，在入口前就能充份感受到，是一支能有似葡萄酒香氣的酒款，入口能感受到酸口感，平衡了口中酒體，順口又帶有豐富的口感讓人不會忘記。一度被譽為「十四代接班人」的飛露喜，在國際競賽中屢獲殊榮，更於今年
+                        IWC 中大放異彩獲得金賞殊榮！許多人對於飛露喜的印象就是「極難入手」。</p>
+                </div>
+
+                <div class="movePrice-cky">
+                    <div class="price-cky">$9999</div>
+                    <div class="moveAdd-cky">
+                        <i class="fas fa-plus add-cky"></i>
+                        <input type="number" class="input-cky" min="1" max="6">
+                        <i class="fas fa-minus add-cky"></i>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+
+    <script>
+        var slideIndex = 0;
+        var slideMove = 0;
+        var slideWidth = 720;
+        var slideCount = $(".slide-pic-ky li").length;
+        console.log(slideCount)
+        $(".slide-pic-ky").css("width", slideCount * slideWidth)
+        // $(".pages li:first").css("background", "#fff")
+        $(".pages li").eq(0).css("background", "#fff")
+
+
+        $(".pages li").hover(function () {
+            // console.log("hover") 
+            slideIndex = $(this).index(); //slide_index
+            // slideMove=0-800*slideIndex;
+            // console.log(slideMove)
+            // console.log($(this).index())
+            // console.log(slideIndex);
+
+            $(".slide-pic-ky").css("left", slideMove)
+            $(this).css("background", "#626262")
+                .siblings().css("background", "none")
+            goSlide()
+        })
+
+        $("#goNext").click(function () {
+            // slideIndex=slideIndex+1;
+            // slideIndex++;
+            ++slideIndex;
+            if (slideIndex >= slideCount) {
+                slideIndex = 0;
+            }
+            // slideMove=0-800*slideIndex;
+            // $(".slide-pic").css("left", slideMove)
+            // $(".pages li").eq(slideIndex).css("background", "#fff")
+            // .siblings().css("background", "none")
+            // console.log(slideIndex)
+            goSlide()
+        })
+        $("#goPrev").click(function () {
+            console.log("prev")
+                // slideIndex=slideIndex-1;
+                // slideIndex--;
+                --slideIndex;
+
+            if (slideIndex < 0) {
+                slideIndex = slideCount - 1;
+            }
+            // slideMove=0-800*slideIndex;
+            // $(".slide-pic").css("left", slideMove)
+            // $(".pages li").eq(slideIndex).css("background", "#fff")
+            // .siblings().css("background", "none")
+            // console.log(slideIndex)
+            goSlide()
+        })
+        // 移動距離
+        function goSlide() {
+            console.log(slideIndex);
+            slideMove = 0 - 650 * slideIndex;
+            $(".slide-pic-ky").css("left", slideMove)
+            $(".pages li").eq(slideIndex).css("background", "#626262")
+                .siblings().css("background", "none")
+            console.log(slideIndex)
+        }
+    </script>
+</body>
+
+</html>
