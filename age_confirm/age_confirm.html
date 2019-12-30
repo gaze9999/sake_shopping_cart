@@ -19,10 +19,17 @@
                 <h1 class="display-4">Welocme</h1>
                     <p class="lead mb-4">帶給您前所未有的清酒世界</p>
                     <a class="age-btn-hyh px-5 mr-2" href="https://www.google.com.tw/">未滿18歲</a>
-                <a class="age-btn-hyh px-5 ml-2" href="#">已滿18歲</a>
+                    <a href="#" onmousedown="yoo.play()" class="age-btn-hyh px-5 ml-2" href="#">已滿18歲</a>
             </div>
         </div>
     </header>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<!-- ---$ 已滿18歲點擊音效設定--- -->
+<script>
+    var yoo = new Audio();
+    yoo.src="./audio/yoo_119.mp3";
+</script>
+
 </body>
 </html>
