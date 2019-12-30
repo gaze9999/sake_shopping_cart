@@ -41,11 +41,7 @@
       </div>
       <div class="col-xs-12 col-md-4 col-xl-4 d-flex center_all">
         <section class="footer_logo">
-<<<<<<< HEAD
-          <a class="d-flex center-all" href="./">
-=======
           <a class="d-flex center_all" href="./">
->>>>>>> 932eaa08699dd043d57b6af682180d1ee7b2b396
             <h2 class="w-100">本格の酒</h2>
             <img class="img-fluid d-block" src="./img/icons/logo.svg">
           </a>
