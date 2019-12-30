@@ -536,6 +536,10 @@ body {
   position: relative;
 }
 
+body * {
+  outline: none;
+}
+
 ul, ol, dl {
   color: #0A0301;
   list-style: none;
@@ -609,6 +613,11 @@ a, a:link, a:visited {
 .nav_logo .navbar-brand * {
   line-height: 1.75rem;
   margin: 0 .5rem 0;
+}
+
+.nav_black {
+  height: 100vh;
+  background: #000 !important;
 }
 
 .footer_warning {
@@ -732,7 +741,7 @@ main {
 
 .itemList_frame {
   position: relative;
-  background: #F1F1EE;
+  background: transparent;
 }
 
 .hidden_obj {
@@ -742,8 +751,7 @@ main {
 .itemList_header {
   margin: 0;
   padding: 0;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, #F1F1EE), color-stop(80%, rgba(95, 95, 93, 0)));
-  background: linear-gradient(to bottom, #F1F1EE 60%, rgba(95, 95, 93, 0) 80%);
+  background: transparent;
   height: 10rem;
 }
 

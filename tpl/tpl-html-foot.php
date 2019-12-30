@@ -4,6 +4,8 @@
 <script async src="./dist/js/fontawesome-all.min.js"></script>
 <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script defer src="./src/js/AosInclude.js"></script>
+<script src="./src/js/variables/navbar.js"></script>
+<script src="./src/js/navbarFilter.js"></script>
 <!-- <script src="./src/js/changePage.js"></script> -->
 <!-- <script src="./src/js/itemlistRegions.js"></script> -->
 </body>
