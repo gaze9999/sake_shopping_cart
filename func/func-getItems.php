@@ -20,6 +20,11 @@ function getAll() {
   pdoExec(); 
 }
 
+
+// add function id checks
+// if rid or cid or vid
+
+
 function ridPost($rid, $cid, $vid) {
   global $data, $pdo, $sql, $arrParam, $rid, $vid, $cid;
   cidPost($cid, $vid);
