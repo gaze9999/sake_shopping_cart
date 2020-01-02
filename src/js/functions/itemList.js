@@ -61,3 +61,12 @@ function getVarieties(cid = "", vid = "", pid = "", rid = "",price = "") {
 function filterItem(cid = "", vid = "", pid = "", rid = "",price = "") {
   filterItems = new getVarieties(vcat, vid, "", rid)
 }
+
+function filterCheckbox() {
+  let rids = [];
+  $('.filter_region .filter_checkbox.checked').each( function() {
+    let Selected = $(this).data('region')
+    rids.push(Selected)
+  });
+  filterItem(vcat, vid, "", rids)
+}
