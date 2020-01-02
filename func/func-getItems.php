@@ -7,102 +7,104 @@ $rid = $data['rid'];
 $cid = $data['cid'];
 $vid = $data['vid'];
 
-print_r($rid);
-
 $sql = "SELECT i.`sId`, i.`itemName`, i.`breId`, i.`vId`, b.`bId`, b.`breName`, b.`rId`, r.`rId`, r.`regionName`, b.`pId`, p.`pId`, p.`prefName`, v.`vId`, v.`varieties`, v.`vCatId`, v.`vCatag`, v.`vcId`
         FROM `sake_items` as i JOIN `sake_breweries` as b JOIN `sake_regions` as r JOIN `sake_prefectures` as p JOIN `sake_varieties` as v 
         ON i.`breId` = b.`bId` AND i.`vId` = v.`vId` AND b.`rId` = r.`rId` AND p.`pId` = b.`pId` ";
 
-getAll();
+getAll($rid, $cid, $vid);
 
-function getAll() {
-  // global $sql, $arrParam, $rid, $vid, $cid;
-  // cidPost($cid, $vid);
-  pdoExec(); 
+// pdoExec();
+
+function getAll($rid, $cid, $vid) {
+  global $arr, $pdo, $sql;
+  $sql.= "GROUP BY i.`itemName` 
+          ORDER BY i.`sId` ";
+  $stmt = $pdo->prepare($sql);
+  $stmt->execute();
+  
+  if($stmt->rowCount() > 0) {
+    $arr = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    if (empty($rid)) {
+    } else if (!empty($rid)) {
+      $arr = ridFilter($rid, $arr);
+    }
+    if (empty($cid)) {
+    } else if (!empty($cid)) {
+      $arr = cidFilter($cid, $arr);
+    }
+    if (empty($vid)) {
+    } else if (!empty($vid)) {
+      $arr = vidFilter($vid, $arr);
+    }
+  };
+  
+  $result = urldecode(json_encode($arr));
+  echo $result;
 }
 
-function ridFilter($arr) {
-  global $data;
-  if ($data['rid'] > 0) {
+
+function ridFilter($rid, $arr) {
+  global $data, $ridArr;
+  $ridArr = array();
+  if (!empty($data['rid'])) {
     foreach ($arr as $k => $v) {
-      if (in_array($arr[$k]['rId'], $data['rid'])) {
-        print_r($v);
+      if (in_array($arr[$k]['rId'], $rid)) {
+        array_push($ridArr, $v);
       }
-    }   
+    }
+    return $ridArr;
+  } else {
+    return $arr;
   }
 }
 
-// add function id checks
-// if rid or cid or vid
-
-
-function ridPost($rid, $cid, $vid) {
-  global $data, $pdo, $sql, $arrParam, $rid, $vid, $cid;
-  cidPost($cid, $vid);
-  if ($data['cid'] > 0) {
-    global $data, $pdo, $sql, $arrParam;
-    $sql.= "AND r.`rId` IN (?) ";
-    array_push($arrParam, $data['rid']);
+function cidFilter($cid, $arr) {
+  global $data, $cidArr;
+  $cidArr = array();
+  if (!empty($data['cid'])) {
+    foreach ($arr as $k => $v) {
+      if ($arr[$k]['vcId'] == $cid) {
+        array_push($cidArr, $v);
+      }
+    }
+    return $cidArr;
   } else {
-    $sql.= "WHERE r.`rId` IN (?) ";
-    $arrParam = [$data['rid']];
+    return $arr;
   }
-  pdoExec();
 }
 
-// if ($data['rid'] > 0) {
-//   global $data, $pdo, $sql, $arrParam;
-//   cidPost($data['cid'], $data['vid']);
-//   if ($data['cid'] > 0) {
-//     global $data, $pdo, $sql, $arrParam;
-//     $sql.= "AND r.`rId` IN (?) ";
-//     array_push($arrParam, $data['rid']);
-//   } else {
-//     $sql.= "WHERE r.`rId` IN (?) ";
-//     $arrParam = [$data['rid']];
-//   }
-//   pdoExec();
-// } else {
-//   global $data, $pdo, $sql, $arrParam;
-//   cidPost($data['cid'], $data['vid']);
-//   pdoExec();
-// }
-
-function cidPost($cid, $vid) {
-  global $data, $sql, $arrParam;
-  if ($cid > 0) {
-    $sql.= "WHERE v.`vcId` = ? ";
-    $arrParam = [$data['cid']];
-    vidPost($vid);
+function vidFilter($vid, $arr) {
+  global $data, $vidArr;
+  $vidArr = array();
+  if (!empty($data['vid'])) {
+    foreach ($arr as $k => $v) {
+      if ($arr[$k]['vId'] == $vid) {
+        array_push($vidArr, $v);
+      }
+    }
+    return $vidArr;
   } else {
-    $arrParam = [];
-    vidPost($vid);
+    return $arr;
   }
-};
-
-function vidPost($vid) {
-  global $data, $sql, $arrParam;
-  if ($vid > 0) {
-    $sql.= "AND i.`vId` = ? AND i.`vId` = v.`vId` ";
-    array_push($arrParam, $data['vid']);
-  }
-};
+}
 
 function pdoExec() {
-  global $pdo, $sql, $arrParam;
+  global $pdo, $sql, $arrParam, $rid;
   $sql.= "GROUP BY i.`itemName` 
           ORDER BY i.`sId` ";
   $stmt = $pdo->prepare($sql);
 
-  $stmt->execute();
-  $arr = $stmt->fetchAll(PDO::FETCH_ASSOC);
-  echo "<pre>";
-  // print_r($arrParam);
-  // print_r($stmt);
-  ridFilter($arr);
+  // $stmt->execute();
+  // $arr = $stmt->fetchAll(PDO::FETCH_ASSOC);
+  // echo "<pre>";
+
+  // ridFilter($rid, $arr);
+  // print_r(ridFilter($rid, $arr));
+
   // print_r($arr);
-  echo "</pre>";
-  exit;
+  // echo "</pre>";
+  // exit;
 
   if (isset($arrParam)) {
     $stmt->execute($arrParam);
