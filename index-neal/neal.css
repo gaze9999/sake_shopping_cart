@@ -1,3 +1,14 @@
+body{
+    overflow-x: hidden;
+}
+
+.absolute_neal{
+    position: absolute;
+}
+.relative_neal{
+    position: relative;
+}
+
 .navbar{
   background: transparent !important;
   z-index: 1070;
@@ -60,7 +71,7 @@ nav>a>h3{
 .section1-neal{
     background: url(./img/section1_bg.jpg);
     /* background: black; */
-    height: 250vh;
+    height: 220vh;
     width: 100%;
     /* object-fit: cover; */
     background-size: cover;
@@ -68,17 +79,11 @@ nav>a>h3{
 }
 
 .article_center_neal{
-    position: absolute;
     width: 100%;
-
     top: 125vh;
-    display: flex;
-    justify-content: center;
 }
 .about-neal{
     font-family: 'Noto Serif TC', serif;
-    /* display: flex; */
-    /* justify-content: center; */
     height: 90vh;
     color: white;
     /* writing-mode: sideways-rl; */
@@ -100,7 +105,189 @@ nav>a>h3{
 /* } */
 
 
-.section3-neal{
+.section3_neal{
+    background: url(./img/bg001.gif);
+    min-height: 65vh;
+}
+
+.title_neal{
+    position: relative;
+    font-family: 'Noto Serif TC', serif;
+    display: flex;
+    justify-content: center;
+    height: 200px;
+    /* background: url(./img/sake-icon.svg) no-repeat center; */
+}
+
+.title_neal img{
+    filter: opacity(.1);
+    /* position: absolute; */
+    /* top: 5%; */
+}
+
+.title_neal h2{
+    font-size: 3rem;
+    height: 100%;
+    position: absolute;
+    top: 35%;
+    filter: opacity(.8);
+}
+
+.news_pic_neal{
+    /* flex-basis: 50px; */
+}
+.news_pic_neal div{
+    /* flex-basis: 300px; */
+    /* width: 50px; */
+    flex-direction: column;
+    /* padding-top: 5rem; */
+}
+.news_pic_neal div article{
+    /* margin: 1rem 0; */
+    font-family: 'Noto Serif TC', serif;
+    font-size: .8rem;
+    /* height: 10px; */
+}
+
+.pic_fit_neal{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.section4_neal{
     background: url(./img/bg001.gif);
     height: 100vh;
+}
+
+.sake_knowledge_neal{
+    /* margin-top: 10rem ; */
+}
+.sake_knowledge_neal figure{
+    padding: 0;
+    height: 75vh;
+}
+
+
+.y_title_neal{
+    font-family: 'Noto Serif TC', serif;
+    top: -14%;
+    right: 0%;
+    writing-mode: vertical-lr;
+}
+.y_title_neal h2{
+    font-size: 3rem;
+}
+
+.klg_info_neal{
+    background: white;
+    max-height: 60vh;
+    top: 35%;
+    overflow: hidden;
+}
+.klg_info_neal article{
+    font-family: 'Noto Serif TC', serif;
+    font-size: 0.75rem;
+    width: 70%;
+    /* overflow: hidden; */
+}
+
+.know_line_neal{
+    width: 25%;
+    height: 10px;
+    background: url(./img/more_arr.svg) no-repeat;
+}
+
+.sec4_bg_neal{
+    width: 40vh;
+    height: 60vh;
+    top: 25%;
+    left: 10%;
+}
+
+.sec4_bg_neal img{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.section5_neal{
+    background: url(./img/bg001.gif);
+    min-height: 100vh;
+}
+
+.howtodrink_neal{
+    color: white;
+    padding: 0;
+    margin: 0;
+}
+.howtodrink_neal img{
+    border-radius: 10px;
+    filter: brightness(.7);
+}
+.howtodrink_neal figure{
+    margin: 2rem 0;
+    width: 20vh;
+    height: 20vh;
+    border-radius: 50%;
+}
+
+.howtodrink_neal h3{
+    font-family: 'Noto Serif TC', serif;
+}
+
+.row{
+    margin: 0;
+}
+
+.howtodrink_row{
+    flex-wrap: wrap;
+}
+
+.cloud_bg_big{
+    background: url(./img/seigaiwa.svg) no-repeat;
+    background-size: contain;
+    background-position: left;
+}
+.cloud_bg_sm{
+    background: url(./img/seigaiwa-sm.svg) no-repeat;
+    background-size: contain;
+    background-position: left;
+}
+
+.cloud_1{
+    top: 20%;
+    left: -40%;
+    width: 100%;
+    height: 10%;
+}
+.cloud_2{
+    top: 30%;
+    left: -30%;
+    width: 100%;
+    height: 25%;
+}
+.cloud_3{
+    top: 0%;
+    left: 70%;
+    width: 100%;
+    height: 20%;
+}
+.cloud_4{
+    top: 20%;
+    left: 80%;
+    width: 100%;
+    height: 10%;
+}
+.cloud_5{
+    top: 50%;
+    left: 70%;
+    width: 100%;
+    height: 20%;
+}
+
+.section6_map{
+    background: url(./img/bg001.gif);
+    min-height: 100vh;
 }
