@@ -6,7 +6,8 @@ global $data, $pdo, $sql, $arrParam, $rid, $vid, $cid;
 $rid = $data['rid'];
 $cid = $data['cid'];
 $vid = $data['vid'];
-  
+
+print_r($rid);
 
 $sql = "SELECT i.`sId`, i.`itemName`, i.`breId`, i.`vId`, b.`bId`, b.`breName`, b.`rId`, r.`rId`, r.`regionName`, b.`pId`, p.`pId`, p.`prefName`, v.`vId`, v.`varieties`, v.`vCatId`, v.`vCatag`, v.`vcId`
         FROM `sake_items` as i JOIN `sake_breweries` as b JOIN `sake_regions` as r JOIN `sake_prefectures` as p JOIN `sake_varieties` as v 
@@ -20,6 +21,16 @@ function getAll() {
   pdoExec(); 
 }
 
+function ridFilter($arr) {
+  global $data;
+  if ($data['rid'] > 0) {
+    foreach ($arr as $k => $v) {
+      if (in_array($arr[$k]['rId'], $data['rid'])) {
+        print_r($v);
+      }
+    }   
+  }
+}
 
 // add function id checks
 // if rid or cid or vid
@@ -86,9 +97,10 @@ function pdoExec() {
   $stmt->execute();
   $arr = $stmt->fetchAll(PDO::FETCH_ASSOC);
   echo "<pre>";
-  print_r($arrParam);
-  print_r($stmt);
-  print_r($arr);
+  // print_r($arrParam);
+  // print_r($stmt);
+  ridFilter($arr);
+  // print_r($arr);
   echo "</pre>";
   exit;
 
