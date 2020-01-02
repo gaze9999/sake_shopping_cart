@@ -8,21 +8,23 @@ main
   background: url(../../img/bgs/section1_bg.jpg) center fixed no-repeat
 
 .main_frame
-  background: transparent
   z-index: $zindex-modal
 
 .page_main
   +noPaddingMargin
   color: #fff
   section
+    background: $mainBgColor
     min-height: 100vh
   .main_logoSec,.main_article_center
+    background: transparent
     writing-mode: vertical-rl
 
 .main_logoSec
   min-height: 100vh
   text-shadow: white 0px 0px 20px
   padding-bottom: 200px
+  animation: mainTitle 2s infinite alternate both ease-out !important
   h1
     +noPaddingMargin
     font-size: $font_title
@@ -33,10 +35,24 @@ main
     max-height: 150px
 
 .main_article_about
-    font-size: $font_mintitle
-    letter-spacing: 0.15em
-    line-height: 5.5
+  font-size: $font_mintitle
+  letter-spacing: 0.15em
+  line-height: 5.5
 
-.main_sec3
+.main_news
+  *
+    font-family: 'Noto Serif TC', serif
+    font-size: $font_tinyContent
+  h2
+    font-size: $font_subtitle
+    font-weight: 500
+  min-height: 50vh !important
+  height: 65vh
   background: $mainBgColor
   color: $titleColor
+  +contentSpaceAround
+
+.main_news_items
+  +contentSpaceAround
+  .news_card
+    max-width: 100%
