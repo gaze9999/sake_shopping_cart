@@ -43,10 +43,10 @@
         <section class="footer_logo">
           <a class="d-flex center_all" href="./">
             <h2 class="w-100">本格の酒</h2>
-            <img class="img-fluid d-block" src="./img/icons/logo.svg">
+            <img class="img-fluid d-block" src="./img/icons/main_icon.svg">
           </a>
           <address class="py-3 m-0">台北市大安區安和路三段87號</address>
-        </section>
+        </section> 
       </div>
     </div>
   </div>

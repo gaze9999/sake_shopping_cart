@@ -1,10 +1,16 @@
-function getVarieties( cid = "", vid = "", pid = "") {
+function getVarieties(cid = "", vid = "", pid = "", rid = "",price = "") {
   fetch('./func/func-getItems.php', {
     method: "PUT",
     headers: {'Content-Type': 'application/json',
               'Accept': 'application/json'},
     body: [
-      JSON.stringify({'vid': vid, 'cid': cid, 'pid': pid})
+      JSON.stringify({
+        'vid': vid,
+        'cid': cid,
+        'pid': pid,
+        'rid': rid,
+        'pri': price
+      })
     ]
   }).then(res => {
     if (res.status >= 200 && res.status < 300) {
@@ -29,7 +35,7 @@ function getVarieties( cid = "", vid = "", pid = "") {
       vId[i] = json[i]['vId']
       vid == "" ? itemInfo.html(`日本清酒`) : itemInfo.html(varieties[i]);
       itemList.append(`
-          <div class="card shadow-sm item_card">
+          <div class="card shadow-sm item_card" data-aos="fade-up">
             <div class="card-img-top d-flex center_all">
               <a class="" href="./itemDetails.php?id=${sId[i]}">
                 <img class="img-fluid item_card_img" src="./img/items/item_20191216030246.jpg">
@@ -52,30 +58,15 @@ function getVarieties( cid = "", vid = "", pid = "") {
   });
 }
 
+function filterItem(cid = "", vid = "", pid = "", rid = "",price = "") {
+  filterItems = new getVarieties(vcat, vid, "", rid)
+}
 
-
-function filterItem(rid = "", pid = "", price = "") {
-  fetch('./func/func-filters.php', {
-    method: "PUT",
-    headers: {'Content-Type': 'application/json',
-              'Accept': 'application/json'},
-    body: [
-      JSON.stringify({'rid': rid, 'pid': pid, 'price': price})
-    ]
-
-  }).then(res => {
-    if (res.status >= 200 && res.status < 300) {
-      return res.json();
-    } else {
-      let error = new Error(res.statusText);
-      error.response = res;
-      throw error.Content-Type;
-    }
-
-  }).then(json => {
-
-  }).catch(error => {
-    console.log('filterItem() request failed:', error);
-    // return error.response.json();
+function filterCheckbox() {
+  let rids = [];
+  $('.filter_region .filter_checkbox.checked').each( function() {
+    let Selected = $(this).data('region')
+    rids.push(Selected)
   });
+  filterItem(vcat, vid, "", rids)
 }
