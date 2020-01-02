@@ -24,7 +24,7 @@
       </section>
 
       <section class="col-sm-12 col-md-12 col-xl-12 w-100 d-flex flex-column center_all main_knowledge">
-        <!-- <?php require_once('./tpl/main/tpl-main-knowledge.php'); ?> -->
+        <?php require_once('./tpl/main/tpl-main-knowledge.php'); ?>
       </section>
     </div>
   </div>
