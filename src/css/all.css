@@ -692,6 +692,61 @@ a, a:link, a:visited {
   font-size: 1.1rem;
 }
 
+.page_ac {
+  height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(16, 29, 44, 0.85)));
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(16, 29, 44, 0.85));
+  z-index: 1060;
+}
+
+.ac_header h2 {
+  color: #c69963;
+}
+
+.ac_checkBtn {
+  color: #fff;
+}
+
+.ac_checkBtn > * {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.ac_btn {
+  width: 100px;
+  position: relative;
+  padding: 5px 0;
+  border: 2px solid #c69963;
+  cursor: pointer;
+  -webkit-transition: 1s all ease;
+  transition: 1s all ease;
+  overflow: hidden;
+}
+
+.ac_btn::before {
+  content: '';
+  background: #c69963;
+  width: 50%;
+  height: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: -1;
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
+}
+
+.ac_btn:hover::before {
+  height: 100%;
+  width: 100%;
+  -webkit-transition-delay: 1ms;
+          transition-delay: 1ms;
+}
+
 main {
   min-height: 100vh;
   padding: 68px 0 0;
