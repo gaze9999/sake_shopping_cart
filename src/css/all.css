@@ -715,6 +715,7 @@ main {
 }
 
 .page_main .row > section {
+  overflow: hidden;
   background: #F1F1EE;
   min-height: 100vh;
 }
@@ -792,7 +793,6 @@ main {
 }
 
 .main_knowledge {
-  overflow: hidden;
   color: #000;
 }
 
