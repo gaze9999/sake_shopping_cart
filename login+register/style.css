@@ -1,0 +1,231 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Noto Sans TC', sans-serif;
+    
+  }
+
+  body {
+    overflow-x: hidden;
+    /* overflow-y: hidden; */
+    height: 110vh;
+    font-size: 120%;
+    background:url(img/bg001.gif);
+  }
+  
+  .header {
+    width: 600px;
+    margin: 3vw auto 0px;
+    color: #000;
+    background:url(img/bg001.gif);
+    text-align: center;
+    /* border: 1px solid #B0C4DE; */
+    border-bottom: none;
+    border-radius: 10px 10px 0px 0px;
+    top: 0px;
+  }
+
+  section header h2{
+    letter-spacing: 3px;
+    justify-content: center;
+    position: absolute;
+    filter: opacity(0.5);
+  }
+
+  /* ---圖片微動畫設定--- */
+  .bg-wgr-hyh{
+    left: -50px;
+    position: absolute;
+    max-width: 200px;
+    max-height: 450px;
+    display: initial;
+    z-index: -5;
+    animation: upin 2s both;
+  }
+
+  @keyframes upin{
+    0%{
+      left: -200px;
+    }
+    100%{
+      left:-50px;
+    }
+  }
+
+  .bg-wgr-hyh02{
+    margin-top: -30%;
+    padding-left: 80%;
+    position: absolute;
+    max-width: 200px;
+    max-height: 450px;
+    z-index: -5;
+    animation: upin2 2s both;
+  }
+
+  @keyframes upin2{
+    0%{
+      left: 500px;
+    }
+    100%{
+      left:100px;
+    }
+  }
+  /* ----------------- */
+
+  .mainlogo-hyh{
+    mix-blend-mode: darken;
+    filter: opacity(0.3);
+    z-index: 30;
+    margin-top: -40%;
+  }
+
+  form, .content {
+    width: 600px;
+    margin: 0px auto;
+    padding: 20px;
+    /* border: 1px solid #B0C4DE; */
+    /* background: white; */
+    border-radius: 0px 0px 10px 10px;
+  }
+
+  .input-group-hyh {
+    margin: 10px 0px 10px 0px;
+  }
+
+  .input-group-hyh label {
+    display: block;
+    text-align: left;
+    margin: 3px;
+    margin-left: 10vw;
+  }
+
+  .input-group-hyh input {
+    height: 30px;
+    width: 55%;
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    margin-left: 10vw;
+  }
+
+  .btn-hyh {
+    cursor: pointer;
+    margin-left: 10vw;
+    width: 59%;
+    padding: 10px;
+    font-size: 14px;
+    color: white;
+    background: #bcab91;
+    border: none;
+    border-radius: 5px;
+    transition: 0.5s;
+  }
+  .btn-hyh:hover{
+    background: #8a7658;
+  }
+
+  .error {
+    width: 60%; 
+    margin: 0px auto; 
+    padding: 10px; 
+    border: 1px solid #ffb5ac; 
+    color: #a94442; 
+    background: #f2dede; 
+    border-radius: 5px; 
+    text-align: left;
+  }
+
+  .success {
+    color: #a06bcc; 
+    background: #dff0d8; 
+    border: 1px solid #a06bcc;
+    margin-bottom: 20px;
+  }
+
+  section form a{
+    text-align: center;
+    color: black;
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+    width: 56%;
+    display: block;
+    margin-left: 10vw;
+    background: #ffb5ac;
+    border: none;
+    border-radius: 5px;
+    transition: 0.5s;
+    padding: 10px;
+  }
+
+  section form a:hover{
+    background: #c56457;
+  }
+
+
+/* ---RWD--- */
+@media only screen and (max-width: 375px){
+
+  section h2{
+
+    margin-left: 15px;
+  }
+
+  .mainlogo-hyh{
+    margin-left: 15px;
+  }
+
+  body{
+    max-height: 500px;
+  }
+
+
+  form, .content{
+      max-width: 300px;
+      margin: 0px auto;
+      height: auto;
+  }
+
+  .header{
+    max-width: 300px;
+    margin: 0px auto;
+  }
+
+  .btn-hyh{
+    margin-left: 12vw;
+    width: 80%;
+  }
+
+  section form a{
+    margin-left: 70px;
+  }
+
+  label{
+    font-size: 14px;
+    margin: 0px 0px 2px 0px;
+  }
+
+  .input-group-hyh input {
+    height: 20px;
+    width: 80%;
+    padding: 5px 5px;
+    font-size: 12px;
+    border: 1px solid gray;
+  }
+
+  .error {
+    width: 60%; 
+    margin: 0px auto; 
+    padding: 5px; 
+    background: #f2dede; 
+    border-radius: 5px; 
+    text-align: left;
+    font-size: 12px;
+  }
+
+  section form a{
+    width: 73%;
+    margin-left: 12vw;
+  }
+}
