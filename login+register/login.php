@@ -9,7 +9,7 @@
     <title>User System</title>
 </head>
 <body>
-
+<?php require_once('./server.php'); ?>
 <!-- ---這頁想說是登入頁不要放微動畫的設定 所以code比較少沒有太多註解--- -->	 
 <section>
   <div class="header">
