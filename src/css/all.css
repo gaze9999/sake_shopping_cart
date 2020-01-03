@@ -494,6 +494,24 @@
   }
 }
 
+@-webkit-keyframes mainTitle {
+  0% {
+    text-shadow: 0px 0px 10px #fff;
+  }
+  100% {
+    text-shadow: 0px 0px 30px #fff;
+  }
+}
+
+@keyframes mainTitle {
+  0% {
+    text-shadow: 0px 0px 10px #fff;
+  }
+  100% {
+    text-shadow: 0px 0px 30px #fff;
+  }
+}
+
 .footer_warning, .warning_space {
   width: 100%;
   height: 52px;
@@ -686,35 +704,47 @@ main {
 }
 
 .main_frame {
-  background: transparent;
   z-index: 1050;
 }
 
 .page_main {
   margin: 0;
   padding: 0;
+  font-family: 'Noto Serif TC', serif;
   color: #fff;
 }
 
-.page_main section {
+.page_main .row > section {
+  overflow: hidden;
+  background: #F1F1EE;
   min-height: 100vh;
 }
 
 .page_main .main_logoSec, .page_main .main_article_center {
+  background: transparent !important;
+  font-family: 'Noto Sans TC', serif;
   -webkit-writing-mode: vertical-rl;
       -ms-writing-mode: tb-rl;
           writing-mode: vertical-rl;
+}
+
+.main_subtitle {
+  font-size: 3rem;
+  font-weight: 500;
 }
 
 .main_logoSec {
   min-height: 100vh;
   text-shadow: white 0px 0px 20px;
   padding-bottom: 200px;
+  -webkit-animation: mainTitle 2s infinite alternate both ease-out;
+          animation: mainTitle 2s infinite alternate both ease-out;
 }
 
 .main_logoSec h1 {
   margin: 0;
   padding: 0;
+  width: 75px;
   font-size: 3.5rem;
 }
 
@@ -723,7 +753,7 @@ main {
   padding: 0;
 }
 
-.main_logoSec .main_logo {
+.main_logo {
   max-width: 150px;
   max-height: 150px;
 }
@@ -734,9 +764,163 @@ main {
   line-height: 5.5;
 }
 
-.main_sec3 {
-  background: #F1F1EE;
+.main_news {
+  min-height: 65vh !important;
+  height: 100vh;
   color: #0A0301;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main_news_items {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.main_news_items::before, .main_news_items::after {
+  content: '';
+}
+
+.main_news_items * {
+  font-size: 0.8rem;
+}
+
+.main_news_items .news_card {
+  max-width: 20rem;
+}
+
+@media screen and (max-width: 768px) {
+  .main_news_items {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.main_knowledge {
+  color: #000;
+}
+
+.main_knowledge .main_seigaiwa {
+  left: 10%;
+  bottom: 10%;
+}
+
+.main_know_title {
+  right: 0%;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  z-index: 1070;
+}
+
+.main_know_imgs {
+  right: 0;
+  top: 4rem;
+  height: 75vh;
+}
+
+.main_know_imgs .main_know_img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.main_know_card {
+  background: #fff;
+  padding: 1.5rem;
+  left: 0;
+  bottom: 25%;
+}
+
+.main_know_card > * {
+  margin: .5rem;
+}
+
+.main_know_card .main_know_cardContent {
+  margin: 1.5rem;
+  font-size: 0.8rem;
+}
+
+.main_know_card .main_know_cardMore > * {
+  margin: .5rem;
+}
+
+.main_recommand {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #000;
+}
+
+.main_recommand .main_rec_card {
+  min-width: 10rem;
+  max-width: 15rem;
+  color: #fff;
+}
+
+.main_recommand .main_rec_card img {
+  min-width: 10rem;
+  max-width: 15rem;
+  height: 10rem;
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+  -webkit-filter: brightness(0.5);
+          filter: brightness(0.5);
+}
+
+.main_recommand .main_rec_card figure {
+  margin: 0;
+  padding: 0;
+  max-width: 20rem;
+  max-height: 20rem;
+}
+
+.cloud_bg_big {
+  background: url("../../img/bgs/seigaiwa.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left;
+}
+
+.cloud_bg_sm {
+  background: url("../../img/bgs/seigaiwa-sm.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left;
+}
+
+.cloud_1, .cloud_2, .cloud_3, .cloud_4, .cloud_5 {
+  top: 20%;
+  left: -40%;
+  width: 100%;
+  height: 10%;
+}
+
+.cloud_2 {
+  top: 30%;
+  left: -30%;
+  height: 25%;
+}
+
+.cloud_3 {
+  top: 0%;
+  left: 70%;
+  height: 20%;
+}
+
+.cloud_4 {
+  left: 80%;
+}
+
+.cloud_5 {
+  top: 50%;
+  left: 70%;
+  height: 20%;
 }
 
 .itemList_frame {

@@ -1,48 +1,21 @@
 <?php
-require_once('../db.inc.php');
+require('../func/func-getAllItems.php');
 
 $data = json_decode(file_get_contents('php://input'), true);
-global $data, $pdo, $sql, $arrParam, $rid, $vid, $cid;
 $rid = $data['rid'];
 $cid = $data['cid'];
 $vid = $data['vid'];
 
-$sql = "SELECT i.`sId`, i.`itemName`, i.`breId`, i.`vId`, b.`bId`, b.`breName`, b.`rId`, r.`rId`, r.`regionName`, b.`pId`, p.`pId`, p.`prefName`, v.`vId`, v.`varieties`, v.`vCatId`, v.`vCatag`, v.`vcId`
-        FROM `sake_items` as i JOIN `sake_breweries` as b JOIN `sake_regions` as r JOIN `sake_prefectures` as p JOIN `sake_varieties` as v 
-        ON i.`breId` = b.`bId` AND i.`vId` = v.`vId` AND b.`rId` = r.`rId` AND p.`pId` = b.`pId` ";
-
 getAll($rid, $cid, $vid);
 
-// pdoExec();
-
 function getAll($rid, $cid, $vid) {
-  global $arr, $pdo, $sql;
-  $sql.= "GROUP BY i.`itemName` 
-          ORDER BY i.`sId` ";
-  $stmt = $pdo->prepare($sql);
-  $stmt->execute();
-  
-  if($stmt->rowCount() > 0) {
-    $arr = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-    if (empty($rid)) {
-    } else if (!empty($rid)) {
-      $arr = ridFilter($rid, $arr);
-    }
-    if (empty($cid)) {
-    } else if (!empty($cid)) {
-      $arr = cidFilter($cid, $arr);
-    }
-    if (empty($vid)) {
-    } else if (!empty($vid)) {
-      $arr = vidFilter($vid, $arr);
-    }
-  };
-  
+  global $arr;
+  $arr = ridFilter($rid, $arr);
+  $arr = cidFilter($cid, $arr);
+  $arr = vidFilter($vid, $arr);
   $result = urldecode(json_encode($arr));
   echo $result;
 }
-
 
 function ridFilter($rid, $arr) {
   global $data, $ridArr;
@@ -94,17 +67,6 @@ function pdoExec() {
   $sql.= "GROUP BY i.`itemName` 
           ORDER BY i.`sId` ";
   $stmt = $pdo->prepare($sql);
-
-  // $stmt->execute();
-  // $arr = $stmt->fetchAll(PDO::FETCH_ASSOC);
-  // echo "<pre>";
-
-  // ridFilter($rid, $arr);
-  // print_r(ridFilter($rid, $arr));
-
-  // print_r($arr);
-  // echo "</pre>";
-  // exit;
 
   if (isset($arrParam)) {
     $stmt->execute($arrParam);
