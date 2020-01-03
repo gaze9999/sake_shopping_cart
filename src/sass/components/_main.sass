@@ -22,9 +22,13 @@ main
     background: $mainBgColor
     min-height: 100vh
   .main_logoSec, .main_article_center
-    background: transparent !important    
+    background: transparent !important
     font-family: 'Noto Sans TC', serif
     writing-mode: vertical-rl
+
+.main_subtitle  
+  font-size: $font_subtitle
+  font-weight: 500
 
 // logo section
 .main_logoSec
@@ -34,12 +38,14 @@ main
   animation: mainTitle 2s infinite alternate both ease-out
   h1
     +noPaddingMargin
+    width: 75px
     font-size: $font_title
   figure
     +noPaddingMargin
-  .main_logo
-    max-width: 150px
-    max-height: 150px
+
+.main_logo
+  max-width: 150px
+  max-height: 150px
 
 // main article section
 .main_article_about
@@ -49,20 +55,22 @@ main
 
 // news section
 .main_news
-  *
-    font-size: $font_tinyContent
-  h2
-    font-size: $font_subtitle
-    font-weight: 500
-  min-height: 50vh !important
-  height: 65vh
+  min-height: 65vh !important
+  height: 100vh
   color: $titleColor
-  +contentSpaceAround
+  justify-content: center
 
 .main_news_items
   +contentSpaceAround
+  *
+    font-size: $font_tinyContent
   .news_card
-    max-width: 100%
+    max-width: 20rem
+
+@media screen and ( max-width:  768px)
+  .main_news_items
+    justify-content: center
+  
 
 // knowledge section
 .main_knowledge
@@ -98,3 +106,56 @@ main
   .main_know_cardMore > *
     margin: .5rem
   
+// recommand
+.main_recommand
+  justify-content: center
+  color: #000
+  .main_rec_card
+    min-width: 10rem
+    max-width: 15rem
+    color: #fff
+    img
+      min-width: 10rem
+      max-width: 15rem
+      height: 10rem
+      overflow: hidden
+      object-fit: cover
+      border-radius: 10px
+      filter: brightness(.5)
+    figure
+      +noPaddingMargin
+      max-width: 20rem
+      max-height: 20rem
+
+//recommand cloud
+.cloud_bg_big
+  background: url('../../img/bgs/seigaiwa.svg')
+  background-repeat: no-repeat
+  background-size: contain
+  background-position: left
+
+.cloud_bg_sm
+  background: url('../../img/bgs/seigaiwa-sm.svg')
+  background-repeat: no-repeat
+  background-size: contain
+  background-position: left
+
+.cloud_1, .cloud_2, .cloud_3, .cloud_4, .cloud_5
+  top: 20%
+  left: -40%
+  width: 100%
+  height: 10%
+.cloud_2
+  top: 30%
+  left: -30%
+  height: 25%
+.cloud_3
+  top: 0%
+  left: 70%
+  height: 20%
+.cloud_4
+  left: 80%
+.cloud_5
+  top: 50%
+  left: 70%
+  height: 20%
