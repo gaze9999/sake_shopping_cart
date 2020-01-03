@@ -33,3 +33,9 @@
   border-radius: 0
   padding: .5rem 1rem
   @content
+
+=contentSpaceAround
+  justify-content: space-around
+  &::before, &::after
+    content: ''
+  @content

@@ -1,49 +1,83 @@
 <?php
-require_once('../db.inc.php');
+require('../func/func-getAllItems.php');
 
 $data = json_decode(file_get_contents('php://input'), true);
+$rid = $data['rid'];
+$cid = $data['cid'];
+$vid = $data['vid'];
 
-$sql = "SELECT i.`sId`, i.`itemName`, i.`breId`, i.`vId`, b.`bId`, b.`breName`, b.`rId`, r.`rId`, r.`regionName`, b.`pId`, p.`pId`, p.`prefName`, v.`vId`, v.`varieties`, v.`vCatId`, v.`vCatag` 
-        FROM `sake_items` as i JOIN `sake_breweries` as b JOIN `sake_regions` as r JOIN `sake_prefectures` as p JOIN `sake_varieties` as v 
-        ON i.`breId` = b.`bId` AND i.`vId` = v.`vId` AND b.`rId` = r.`rId` AND p.`pId` = b.`pId` ";
+getAll($rid, $cid, $vid);
 
-if ($data['cid'] > 0) {
-  $sql.= "WHERE v.`vId` = ? OR v.`vCatId` = ? 
-          GROUP BY i.`itemName` 
-          ORDER BY i.`sId` ";
-  $arrParam = [$data['cid'], $data['cid']];
-  $stmt = $pdo->prepare($sql);
-  $stmt->execute($arrParam);
+function getAll($rid, $cid, $vid) {
+  global $arr;
+  $arr = ridFilter($rid, $arr);
+  $arr = cidFilter($cid, $arr);
+  $arr = vidFilter($vid, $arr);
+  $result = urldecode(json_encode($arr));
+  echo $result;
+}
 
-  if($stmt->rowCount() > 0) {
-    $arr = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    if ($data['vid'] > 0) {
-      $sql = "SELECT i.`sId`, i.`itemName`, i.`breId`, i.`vId`, b.`bId`, b.`breName`, b.`rId`, r.`rId`, r.`regionName`, b.`pId`, p.`pId`, p.`prefName`, v.`vId`, v.`varieties`, v.`vCatId`, v.`vCatag` 
-              FROM `sake_items` as i JOIN `sake_breweries` as b JOIN `sake_regions` as r JOIN `sake_prefectures` as p JOIN `sake_varieties` as v 
-              ON i.`breId` = b.`bId` AND i.`vId` = v.`vId` AND b.`rId` = r.`rId` AND p.`pId` = b.`pId` 
-              WHERE i.`vId` = ? AND v.`vId` = ? 
-              GROUP BY i.`itemName` 
-              ORDER BY i.`sId` ";
-      $arrParam = [$data['vid'], $data['vid']];
-      $stmt = $pdo->prepare($sql);
-      $stmt->execute($arrParam);
-      $arr = $stmt->fetchAll(PDO::FETCH_ASSOC);
+function ridFilter($rid, $arr) {
+  global $data, $ridArr;
+  $ridArr = array();
+  if (!empty($data['rid'])) {
+    foreach ($arr as $k => $v) {
+      if (in_array($arr[$k]['rId'], $rid)) {
+        array_push($ridArr, $v);
       }
     }
-    $result = urldecode(json_encode($arr));
-    echo $result;
+    return $ridArr;
+  } else {
+    return $arr;
+  }
+}
 
-} else {
+function cidFilter($cid, $arr) {
+  global $data, $cidArr;
+  $cidArr = array();
+  if (!empty($data['cid'])) {
+    foreach ($arr as $k => $v) {
+      if ($arr[$k]['vcId'] == $cid) {
+        array_push($cidArr, $v);
+      }
+    }
+    return $cidArr;
+  } else {
+    return $arr;
+  }
+}
+
+function vidFilter($vid, $arr) {
+  global $data, $vidArr;
+  $vidArr = array();
+  if (!empty($data['vid'])) {
+    foreach ($arr as $k => $v) {
+      if ($arr[$k]['vId'] == $vid) {
+        array_push($vidArr, $v);
+      }
+    }
+    return $vidArr;
+  } else {
+    return $arr;
+  }
+}
+
+function pdoExec() {
+  global $pdo, $sql, $arrParam, $rid;
   $sql.= "GROUP BY i.`itemName` 
           ORDER BY i.`sId` ";
-
   $stmt = $pdo->prepare($sql);
-  $stmt->execute();
-        
+
+  if (isset($arrParam)) {
+    $stmt->execute($arrParam);
+  } else {
+    $stmt->execute();
+  };
+
   if($stmt->rowCount() > 0) {
     $arr = $stmt->fetchAll(PDO::FETCH_ASSOC);
     $result = urldecode(json_encode($arr));
     echo $result;
-  }
-}
+  };
+};
 ?>
