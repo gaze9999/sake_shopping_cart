@@ -6,7 +6,5 @@
 <script defer src="./src/js/AosInclude.js"></script>
 <script src="./src/js/variables/navbar.js"></script>
 <script src="./src/js/navbarFilter.js"></script>
-<!-- <script src="./src/js/changePage.js"></script> -->
-<!-- <script src="./src/js/itemlistRegions.js"></script> -->
 </body>
 </html>
