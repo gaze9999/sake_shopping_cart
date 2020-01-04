@@ -3,7 +3,6 @@ session_start();
 require_once('./db.inc.php');
 require_once('./tpl/tpl-html-head.php');
 require_once('./tpl/tpl-header.php');
-// require_once('./tpl/func-getRecursiveCategoryIds.php'); 
 ?>
 <h1 class="hidden_obj">本格清酒</h1>
 <main class="my-5 itemList_frame h-100 d-flex center_all">

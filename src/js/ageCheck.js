@@ -1,12 +1,8 @@
 let pageAc = $('.page_ac'),
-    acBtn = $('.ac_btn')
+    acBtn = $('.ac_btn'),
+    yoo = new Audio()
+    yoo.src = './audio/yoo_119.mp3'
 
-function checkAge() {
-  
+yoo.onended = () => {
+  location = './main.php'
 }
-
-acBtn.on('mouseup', function(){
-  console.log($(this).attr('checked'))
-  // $('.page_ac').html('')
-  // $('.page_ac').load('./main.php')
-})

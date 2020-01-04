@@ -11,7 +11,3 @@
   </header>
 </div>
 <script defer src="./src/js/ageCheck.js"></script>
-<script>
-    var yoo = new Audio();
-    yoo.src="./audio/yoo_119.mp3";
-</script>
