@@ -22,39 +22,40 @@ function getVarieties(cid = "", vid = "", pid = "", rid = "",price = "") {
     }
   }).then(json => {
       itemList.html("")
-      dataLength = json.length
+      let dataLength = json.length
       // console.log(json)
     // json.forEach(e => {
       for (let i in json) {
-      regionName[i] = json[i]['regionName']
-      varieties[i] = json[i]['varieties']
-      itemName[i] = json[i]['itemName']
-      breName[i] = json[i]['breName']
-      vCatag[i] = json[i]['vCatag']
-      bId[i] = json[i]['bId']
-      sId[i] = json[i]['sId']
-      vId[i] = json[i]['vId']
-
-      picPath[i] = `<img class="img-fluid item_card_img" src="./img/items/pics/${bId[i]}/${sId[i]}/1.png">`
+      let
+      regionName = json[i]['regionName'],
+      varieties = json[i]['varieties'],
+      itemName = json[i]['itemName'],
+      breName = json[i]['breName'],
+      vCatag = json[i]['vCatag'],
+      price = json[i]['price'],
+      bId = json[i]['bId'],
+      sId = json[i]['sId'],
+      vId = json[i]['vId'],
+      picPath = `<img class="img-fluid item_card_img" src="./img/items/pics/${bId}/${sId}/1.png">`
 
       // if (picPath[i]) {
       //   picPath[i] = `<i class="fas fa-images"></i>`
       // }
 
-      vid == "" ? itemInfo.html(`日本清酒`) : itemInfo.html(varieties[i]);
-      cid == "" ? itemInfo.html(`日本清酒`) : itemInfo.html(varieties[i]);
-      
+      vid == "" ? itemInfo.html(`日本清酒`) : itemInfo.html(varieties);
+      cid == "" ? itemInfo.html(`日本清酒`) : itemInfo.html(varieties);
+
       itemList.append(`
           <div class="card shadow-sm item_card" data-aos="fade-up">
             <div class="card-img-top d-flex center_all">
-              <a class="" href="./itemDetails.php?id=${sId[i]}">
-                ${picPath[i]}
+              <a class="" href="./itemDetails.php?id=${sId}">
+                ${picPath}
               </a>
             </div>
             <div class="card-body d-flex center_all flex-column">
-              <p class="card-text item_card_bre">${breName[i]}</p>
-              <p class="card-text item_card_name">${itemName[i]}</p>
-              <p class="card-text item_card_price"></p>
+              <p class="card-text item_card_bre">${breName}</p>
+              <p class="card-text item_card_name">${itemName}</p>
+              <p class="card-text item_card_price">${price}</p>
             </div>
           </div>
       `);
