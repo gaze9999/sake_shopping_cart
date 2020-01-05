@@ -31,14 +31,19 @@ function getVarieties(cid = "", vid = "", pid = "", rid = "",price = "") {
       itemName[i] = json[i]['itemName']
       breName[i] = json[i]['breName']
       vCatag[i] = json[i]['vCatag']
+      bId[i] = json[i]['bId']
       sId[i] = json[i]['sId']
       vId[i] = json[i]['vId']
+
+      // pic[i] = `./img/items/pics/${bId[i]}/${sId[i]}/1.png`
+      picPath[i] = `<img class="img-fluid item_card_img" src="./img/items/pics/${bId[i]}/${sId[i]}/1.png">`
+
       vid == "" ? itemInfo.html(`日本清酒`) : itemInfo.html(varieties[i]);
       itemList.append(`
           <div class="card shadow-sm item_card" data-aos="fade-up">
             <div class="card-img-top d-flex center_all">
               <a class="" href="./itemDetails.php?id=${sId[i]}">
-                <img class="img-fluid item_card_img" src="./img/items/item_20191216030246.jpg">
+                ${picPath[i]}
               </a>
             </div>
             <div class="card-body d-flex center_all flex-column">
