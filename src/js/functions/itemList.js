@@ -35,10 +35,15 @@ function getVarieties(cid = "", vid = "", pid = "", rid = "",price = "") {
       sId[i] = json[i]['sId']
       vId[i] = json[i]['vId']
 
-      // pic[i] = `./img/items/pics/${bId[i]}/${sId[i]}/1.png`
       picPath[i] = `<img class="img-fluid item_card_img" src="./img/items/pics/${bId[i]}/${sId[i]}/1.png">`
 
+      // if (picPath[i]) {
+      //   picPath[i] = `<i class="fas fa-images"></i>`
+      // }
+
       vid == "" ? itemInfo.html(`日本清酒`) : itemInfo.html(varieties[i]);
+      cid == "" ? itemInfo.html(`日本清酒`) : itemInfo.html(varieties[i]);
+      
       itemList.append(`
           <div class="card shadow-sm item_card" data-aos="fade-up">
             <div class="card-img-top d-flex center_all">
