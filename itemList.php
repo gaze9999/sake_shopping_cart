@@ -5,8 +5,8 @@ require_once('./tpl/tpl-html-head.php');
 require_once('./tpl/tpl-header.php');
 ?>
 <h1 class="hidden_obj">本格清酒</h1>
-<main class="my-5 itemList_frame h-100 d-flex center_all">
-  <header class="row w-100 d-flex center_all fixed-top itemList_header">
+<main class="my-5 h-100 d-flex center_all itemList_frame">
+  <header class="row w-100 center_all fixed-top itemList_header">
     <section class="col-md-12 col-sm-12 d-flex center_all list_info">
       <h2 class="list_info_title"></h2>
       <!-- add title and breadcrumb here -->
