@@ -1,0 +1,61 @@
+*{
+    font-family: 'Fjalla One', sans-serif;
+}
+
+svg{
+    max-width: 60vw;
+    max-height: 80vh;
+    margin-top: 10vh;
+    margin-right: 30%;
+}
+
+body{
+    background-color: #222;
+}
+
+path{
+   stroke: white;
+   fill:transparent;
+   transition: 0.8s;
+   cursor: pointer;
+}
+
+path:hover {
+    fill: #B99362;
+    -webkit-transform: translate(-5px, -5px);
+            transform: translate(-5px, -5px);
+  }
+
+.title_area{
+    position: absolute;
+    right: 20px;
+    top:20px;
+    color: #B99362;
+    font-size: 30px;
+    /* border-bottom:1px solid white ; */
+}
+
+h1, .forcast h4, h5{
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+hr{
+    width: 100px;
+    margin-left: 0;
+    border:none;
+    border-bottom: 2px solid white;
+}
+
+.forcast h2, .forcast h4, .forcast{
+    margin: 0;
+  }
+
+.forcast h2 {
+    margin-top: 20px;
+  }
+
+a{
+    font-size: 16px;
+    text-decoration: none;
+    color: #B99362;
+}
