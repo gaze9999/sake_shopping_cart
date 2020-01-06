@@ -5,26 +5,26 @@ require_once('./tpl/tpl-html-head.php');
 require_once('./tpl/tpl-header.php');
 ?>
 <h1 class="hidden_obj">本格清酒</h1>
-<main class="my-5 h-100 d-flex center_all itemList_frame">
+<main class="my-5 h-100 center_all itemList_frame">
   <header class="row w-100 center_all fixed-top itemList_header">
-    <section class="col-md-12 col-sm-12 d-flex center_all list_info">
+    <section class="col-12 d-flex center_all list_info">
       <h2 class="list_info_title"></h2>
       <!-- add title and breadcrumb here -->
     </section>
   </header>
   <div class="row w-100 page_itemList">
 <!-- Catagory Tree -->
-    <aside class="col-md-2 col-sm-2 itemList_tree itemList_navbar">
+    <aside class="col-2 itemList_tree itemList_navbar">
       <?php require_once('./tpl/tpl-itemlist-tree.php'); ?>
     </aside>
 
 <!-- main field -->
-    <section class="col-md-8 col-sm-8 d-flex flex-wrap itemList_list">
+    <section class="col-8 d-flex flex-wrap itemList_list">
       <?php require_once('./tpl/tpl-itemlist.php'); ?>
     </section>
 
 <!-- filter -->
-    <aside class="col-md-2 col-sm-2 itemList_filter itemList_navbar">
+    <aside class="col-2 itemList_filter itemList_navbar">
       <?php require_once('./func/func-filters.php'); ?>
       <?php require_once('./tpl/tpl-filters.php'); ?>
     </aside>
