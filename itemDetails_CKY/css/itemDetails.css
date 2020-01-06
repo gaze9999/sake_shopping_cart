@@ -12,6 +12,11 @@ body {
     overflow-x: hidden;
     height: 300vh;
 }
+@media screen and (max-width:768px) {
+    body{
+        background-repeat: repeat; 
+    }
+}
 
 li {
     list-style-type: none;
