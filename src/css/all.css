@@ -1054,6 +1054,13 @@ main {
           animation: hoverMoveUp 0.4s 0.2s both ease-in-out;
 }
 
+.detail_header {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  height: 10rem;
+}
+
 .know_bg {
   position: relative;
   background: url(../../img/bgs/fuji002.png) no-repeat center center;
