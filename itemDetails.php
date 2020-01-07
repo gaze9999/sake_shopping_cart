@@ -11,12 +11,12 @@ require_once('./tpl/tpl-header.php');
     <section class="col-12 d-flex center_all detail_header_title">
       <figure class="d-flex center_all" data-aos="zoom-in" data-aos-delay="200">
         <img class="img-fluid" src="./img/test/pic051.png" alt="">
-        <h2 class="list_info_title detail_brewName">酒造名稱 </h2>
+        <h2 class="list_info_title detail_brewName">酒造名稱</h2>
       </figure>
       <img class="position-absolute detail_titleCloud" data-aos="fade-left" data-aos-delay="200" src="./img/bgs/seigaiwa-sm.svg" alt="">
     </section>
     <section class="col-12 detail_header_breadcrumb">
-      <h6 class="detail_breadcrumb"> 首頁 &GT 朝開酒藏 &GT 南部流傳承造</h6>
+      <h6 class="detail_breadcrumb"> 首頁 &GT OO &GT OO</h6>
     </section>
   </header>
 
@@ -35,9 +35,9 @@ require_once('./tpl/tpl-header.php');
         <div class="col-md-6 col-sm-12 detail_item">
           <figure class="d-flex center_all detail_item_title">
             <img class="position-absolute" src="./img/test/pic051.png" alt="">
-            <h2 clas="detail_item_name"></h2>
+            <h2 class="detail_item_name">商品名稱</h2>
           </figure>
-          <article class="py-3 detail_item_content text-justify">
+          <article class="py-3 text-justify detail_item_content">
             產品介紹
           </article>
           <form class="row py-3 m-0 d-flex flex-column detail_item_function">
@@ -96,23 +96,23 @@ require_once('./tpl/tpl-header.php');
           <div class="row">
             <dl class="col-md-6 d-flex flex-wrap">
               <dt data-aos="zoom-in" data-aos-delay="200">酒造名稱</dt>
-              <dd data-aos="zoom-in" data-aos-delay="200">BrewName</dd>
+              <dd data-aos="zoom-in" data-aos-delay="200" class="detail_brewName">BrewName</dd>
               <dt data-aos="zoom-in" data-aos-delay="400">酒款名稱</dt>
-              <dd data-aos="zoom-in" data-aos-delay="400">ItemName</dd>
+              <dd data-aos="zoom-in" data-aos-delay="400" class="detail_item_name">ItemName</dd>
               <dt data-aos="zoom-in" data-aos-delay="600">生產地方</dt>
-              <dd data-aos="zoom-in" data-aos-delay="600">Region</dd>
+              <dd data-aos="zoom-in" data-aos-delay="600" class="detail_item_region">Region</dd>
               <dt data-aos="zoom-in" data-aos-delay="800">生產縣市</dt>
-              <dd data-aos="zoom-in" data-aos-delay="800">Prefecture</dd>
+              <dd data-aos="zoom-in" data-aos-delay="800" class="detail_item_pref">Prefecture</dd>
             </dl>
             <dl class="col-md-6 d-flex flex-wrap">
               <dt data-aos="zoom-in" data-aos-delay="300">清酒等級</dt>
-              <dd data-aos="zoom-in" data-aos-delay="300">variety</dd>
+              <dd data-aos="zoom-in" data-aos-delay="300" class="detail_item_var">Variety</dd>
               <dt data-aos="zoom-in" data-aos-delay="500">清酒原料</dt>
-              <dd data-aos="zoom-in" data-aos-delay="500">Rice</dd>
+              <dd data-aos="zoom-in" data-aos-delay="500" class="detail_item_rice">Rice</dd>
               <dt data-aos="zoom-in" data-aos-delay="700">日本酒度</dt>
-              <dd data-aos="zoom-in" data-aos-delay="700">Nihonshudo</dd>
+              <dd data-aos="zoom-in" data-aos-delay="700" class="detail_item_shudo">Nihonshudo</dd>
               <dt data-aos="zoom-in" data-aos-delay="900">商品容量</dt>
-              <dd data-aos="zoom-in" data-aos-delay="900">Capacity</dd>
+              <dd data-aos="zoom-in" data-aos-delay="900" class="detail_item_cap">Capacity</dd>
             </dl>
           </div>
         </div>
@@ -180,23 +180,23 @@ require_once('./tpl/tpl-header.php');
       <div class="row">
       <div class="col-md-12 owl-carousel owl-theme recommand_carousel">
         <figure class="d-flex flex-column item_rec_fig" data-aos="zoom-in" data-aos-delay="200">
-          <img class="item_rec_img" src="./img/test/otherItems/otherItems01.png">
+          <img class="item_rec_img" src="./img/icons/main_icon.svg">
           <h6 class="text-center item_rec_title">品名</h6>
         </figure>
         <figure class="d-flex flex-column item_rec_fig" data-aos="zoom-in" data-aos-delay="300">
-          <img class="item_rec_img" src="./img/test/otherItems/otherItems02.png">
+          <img class="item_rec_img" src="./img/icons/main_icon.svg">
           <h6 class="text-center item_rec_title">品名</h6>
         </figure>
         <figure class="d-flex flex-column item_rec_fig" data-aos="zoom-in" data-aos-delay="400">
-          <img class="item_rec_img" src="./img/test/otherItems/otherItems03.png">
+          <img class="item_rec_img" src="./img/icons/main_icon.svg">
           <h6 class="text-center item_rec_title">品名</h6>
         </figure>
         <figure class="d-flex flex-column item_rec_fig" data-aos="zoom-in" data-aos-delay="500">
-          <img class="item_rec_img" src="./img/test/otherItems/otherItems04.png">
+          <img class="item_rec_img" src="./img/icons/main_icon.svg">
           <h6 class="text-center item_rec_title">品名</h6>
         </figure>
         <figure class="d-flex flex-column item_rec_fig" data-aos="zoom-in" data-aos-delay="600">
-          <img class="item_rec_img" src="./img/test/otherItems/otherItems05.png">
+          <img class="item_rec_img" src="./img/icons/main_icon.svg">
           <h6 class="text-center item_rec_title">品名</h6>
         </figure>
       </div>
