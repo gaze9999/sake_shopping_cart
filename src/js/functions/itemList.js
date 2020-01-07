@@ -24,23 +24,19 @@ function getVarieties(cid = "", vid = "", pid = "", rid = "",price = "") {
       itemList.html("")
       let dataLength = json.length
       // console.log(json)
-    // json.forEach(e => {
       for (let i in json) {
       let
       regionName = json[i]['regionName'],
       varieties = json[i]['varieties'],
       itemName = json[i]['itemName'],
       breName = json[i]['breName'],
+      imgName = json[i]['imgName'],
       vCatag = json[i]['vCatag'],
       price = json[i]['price'],
       bId = json[i]['bId'],
       sId = json[i]['sId'],
       vId = json[i]['vId'],
-      picPath = `<img class="img-fluid item_card_img" src="./img/items/pics/${bId}/${sId}/1.png">`
-
-      // if (picPath[i]) {
-      //   picPath[i] = `<i class="fas fa-images"></i>`
-      // }
+      picPath = `<img class="img-fluid item_card_img" src="./img/items/pics/${bId}/${sId}/${imgName}">`
 
       vid == "" ? itemInfo.html(`日本清酒`) : itemInfo.html(varieties);
       cid == "" ? itemInfo.html(`日本清酒`) : itemInfo.html(varieties);
