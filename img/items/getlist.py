@@ -5,38 +5,53 @@ import os
 path = './pics'
 path_to_json = './json'
 
-folderList = []
+optList = []
+sqlList = []
 bId = []
 bIdList = []
 sId = []
 sIdList = []
 imgId = []
 imgIdList = []
- 
+
 files = os.listdir(path)
 newFiles = ''
 
 for bid in files:
 	bId.append(bid)
-  
+
 for bid in bId:
-  sIdItems = os.listdir(path + '/' + bid)
-  sIdList.append(sIdItems)
+  files = os.listdir(path + '/' + bid)
+  bIdItem = path + '/' + bid
+  bIdList.append(files)
+  # print(bIdItem)
+  for sid in files:
+    files = os.listdir(path + '/' + bid + '/' + sid)
+    sIdPath = bIdItem + '/' + sid
+    sIdList.append(sIdPath)
+    sId.append(sid)
+    for iId in files:
+      imgIdPath = sIdPath + '/' + iId
+      optPath = '"bId":' + bid + ',"sId":' + sid + ',"imgId":' + iId
+      sqlPath = '(\'' + iId + '\'' + "," + bid + "," + sid + ')'
+      imgIdList.append(imgIdPath)
+      imgId.append(iId)
+      optList.append(optPath)
+      sqlList.append(sqlPath)
 
-for sid in sIdList:
-  for i in sid:
-    sIdPath = '/' + i
-    imgIdList.append(sIdPath)
+# print(optPath)
 
-print(imgIdList)
+with open(path_to_json + "/output.json", "w") as f:
+  f.write('{\n' + '"path":[\n')
 
+  for i in optList:
+    opt = '{' + i + '}'
+    f.write(opt + ",\n")
+      
+  f.write(']\n}')
 
+with open(path_to_json + "/sql.txt", "w") as f:
+  f.write('INSERT INTO `sake_img`(`imgName`, `bId`, `sId`)\nVALUES\n')
 
-# with open(path_to_json + "/output.json", "w") as f:
-#   f.write('{\n' + '"path":[\n')
-
-#   for p in bId:
-#     opt = '{"pics":' + '"/' + p + '"}'
-#   for 
-
-#   f.write(']\n}')
+  for i in sqlList:
+    f.write(i + ",\n")
