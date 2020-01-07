@@ -18,6 +18,19 @@ function getDetails() {
     for (i in json) {
       if (json[i]['sId'] == detailId.val()) {
         console.log(json[i])
+        brewName.html(json[i]['breName'])
+        itemPics.html(`
+          <picture class="d-flex detail_carousel_item" data-aos="fade-right" data-aos-delay="200">
+            <img class="detail_carousel_img" src="./img/items/pics/${json[i]['bId']}/${json[i]['sId']}/${json[i]['imgName']}" alt="">
+          </picture>
+        `)
+        // breadCrumb.html(`首頁`)
+        itemDescript.html('test')
+        itemName.html(json[i]['itemName'])
+        itemPrice.html(json[i]['price'])
+        itemRegion.html(json[i]['regionName'])
+        itemPref.html(json[i]['prefName'])
+        itemVCatag.html(json[i]['vCatag'])
       }
     }
 
