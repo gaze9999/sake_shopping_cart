@@ -5,17 +5,18 @@ require_once('./tpl/tpl-html-head.php');
 require_once('./tpl/tpl-header.php');
 ?>
 <h1 class="hidden_obj">本格清酒</h1>
+<input type="hidden" id="detailId" value="<?php echo $_GET['id'] ?>">
 <main class="container detail_frame">
   <header class="row w-100 center_all detail_header">
     <section class="col-12 d-flex center_all detail_header_title">
       <figure class="d-flex center_all" data-aos="zoom-in" data-aos-delay="200">
         <img class="img-fluid" src="./img/test/pic051.png" alt="">
-        <h2 class="list_info_title">朝開酒藏</h2>
+        <h2 class="list_info_title detail_brewName">酒造名稱 </h2>
       </figure>
       <img class="position-absolute detail_titleCloud" data-aos="fade-left" data-aos-delay="200" src="./img/bgs/seigaiwa-sm.svg" alt="">
     </section>
     <section class="col-12 detail_header_breadcrumb">
-      <h6 class=""> 首頁 &GT 朝開酒藏 &GT 南部流傳承造</h6>
+      <h6 class="detail_breadcrumb"> 首頁 &GT 朝開酒藏 &GT 南部流傳承造</h6>
     </section>
   </header>
 
@@ -34,16 +35,14 @@ require_once('./tpl/tpl-header.php');
         <div class="col-md-6 col-sm-12 detail_item">
           <figure class="d-flex center_all detail_item_title">
             <img class="position-absolute" src="./img/test/pic051.png" alt="">
-            <h2 clas="detail_item_name">南部流伝承造り</h2>
+            <h2 clas="detail_item_name"></h2>
           </figure>
           <article class="py-3 detail_item_content text-justify">
-            採用岩手當地酒米「吟銀河」與百大名水「大慈清水」，以傳統釀造法重現岩手地酒之經典風味。
-            帶有清涼的華麗香氣與柔軟乾淨的口感，與漸入層次的尾韻恰到好處地調和。搭配辛香漬物，
-            更顯奔放。適合與洋蔥沙拉、紫蘇蘋果等辛香料理搭配。
+            產品介紹
           </article>
           <form class="row py-3 m-0 d-flex flex-column detail_item_function">
             <div class="d-flex center_all detail_item_counts">
-              <h2 class="col-6 text-center detail_item_price">$9999</h2>
+              <h2 class="col-6 text-center detail_item_price">價格</h2>
               <!-- can change to fontawesome -->
               <input class="detail_item_minus item_counts_btn" type="button" value="-">
               <!-- using js to show numbers -->
@@ -52,8 +51,8 @@ require_once('./tpl/tpl-header.php');
             </div>
 
             <select class="my-3" name="capacity" id="">
-              <option value="720">720ml</option>
-              <option value="1800">1800ml</option>
+              <option value="720">容量1</option>
+              <option value="1800">容量2</option>
             </select>
           </form>
 
@@ -97,23 +96,23 @@ require_once('./tpl/tpl-header.php');
           <div class="row">
             <dl class="col-md-6 d-flex flex-wrap">
               <dt data-aos="zoom-in" data-aos-delay="200">酒造名稱</dt>
-              <dd data-aos="zoom-in" data-aos-delay="200">朝開酒藏</dd>
+              <dd data-aos="zoom-in" data-aos-delay="200">BrewName</dd>
               <dt data-aos="zoom-in" data-aos-delay="400">酒款名稱</dt>
-              <dd data-aos="zoom-in" data-aos-delay="400">南部流伝承造り</dd>
+              <dd data-aos="zoom-in" data-aos-delay="400">ItemName</dd>
               <dt data-aos="zoom-in" data-aos-delay="600">生產地方</dt>
-              <dd data-aos="zoom-in" data-aos-delay="600">東北地方</dd>
+              <dd data-aos="zoom-in" data-aos-delay="600">Region</dd>
               <dt data-aos="zoom-in" data-aos-delay="800">生產縣市</dt>
-              <dd data-aos="zoom-in" data-aos-delay="800">岩手縣</dd>
+              <dd data-aos="zoom-in" data-aos-delay="800">Prefecture</dd>
             </dl>
             <dl class="col-md-6 d-flex flex-wrap">
               <dt data-aos="zoom-in" data-aos-delay="300">清酒等級</dt>
-              <dd data-aos="zoom-in" data-aos-delay="300">大吟醸酒</dd>
+              <dd data-aos="zoom-in" data-aos-delay="300">variety</dd>
               <dt data-aos="zoom-in" data-aos-delay="500">清酒原料</dt>
-              <dd data-aos="zoom-in" data-aos-delay="500">吟銀河</dd>
+              <dd data-aos="zoom-in" data-aos-delay="500">Rice</dd>
               <dt data-aos="zoom-in" data-aos-delay="700">日本酒度</dt>
-              <dd data-aos="zoom-in" data-aos-delay="700">15</dd>
+              <dd data-aos="zoom-in" data-aos-delay="700">Nihonshudo</dd>
               <dt data-aos="zoom-in" data-aos-delay="900">商品容量</dt>
-              <dd data-aos="zoom-in" data-aos-delay="900">720ml</dd>
+              <dd data-aos="zoom-in" data-aos-delay="900">Capacity</dd>
             </dl>
           </div>
         </div>
@@ -149,14 +148,13 @@ require_once('./tpl/tpl-header.php');
             <dt data-aos="flip-left" data-aos-delay="500">胺基酸度</dt>
           </dl>
           <dl class="d-flex detail_item_feature item_feture_data">
-            <dd data-aos="flip-left" data-aos-delay="200">1.35</dd>
-            <dd data-aos="flip-left" data-aos-delay="300">4</dd>
-            <dd data-aos="flip-left" data-aos-delay="400">50%</dd>
-            <dd data-aos="flip-left" data-aos-delay="500">0.9</dd>
+            <dd data-aos="flip-left" data-aos-delay="200">Acidity</dd>
+            <dd data-aos="flip-left" data-aos-delay="300">Nihonshudo</dd>
+            <dd data-aos="flip-left" data-aos-delay="400">Seimaibuai</dd>
+            <dd data-aos="flip-left" data-aos-delay="500">Amino</dd>
           </dl>
           <article class="pt-3">
-            華麗及奔放的花果香，在入口前就能充份感受到，是一支能有似葡萄酒香氣的酒款，入口能感受到酸口感，平衡了口中酒體，順口又帶有豐富的口感讓人不會忘記。一度被譽為「十四代接班人」的飛露喜，在國際競賽中屢獲殊榮，更於今年
-            IWC 中大放異彩獲得金賞殊榮！許多人對於飛露喜的印象就是「極難入手」。
+            產品介紹2
           </article>
         </div>
       </div>
@@ -183,23 +181,23 @@ require_once('./tpl/tpl-header.php');
       <div class="col-md-12 owl-carousel owl-theme recommand_carousel">
         <figure class="d-flex flex-column item_rec_fig" data-aos="zoom-in" data-aos-delay="200">
           <img class="item_rec_img" src="./img/test/otherItems/otherItems01.png">
-          <h6 class="text-center item_rec_title">醉心氷わり本醸造原酒</h6>
+          <h6 class="text-center item_rec_title">品名</h6>
         </figure>
         <figure class="d-flex flex-column item_rec_fig" data-aos="zoom-in" data-aos-delay="300">
           <img class="item_rec_img" src="./img/test/otherItems/otherItems02.png">
-          <h6 class="text-center item_rec_title">謙信大吟釀</h6>
+          <h6 class="text-center item_rec_title">品名</h6>
         </figure>
         <figure class="d-flex flex-column item_rec_fig" data-aos="zoom-in" data-aos-delay="400">
           <img class="item_rec_img" src="./img/test/otherItems/otherItems03.png">
-          <h6 class="text-center item_rec_title">久保田 生原酒</h6>
+          <h6 class="text-center item_rec_title">品名</h6>
         </figure>
         <figure class="d-flex flex-column item_rec_fig" data-aos="zoom-in" data-aos-delay="500">
           <img class="item_rec_img" src="./img/test/otherItems/otherItems04.png">
-          <h6 class="text-center item_rec_title">冬将軍　純米にごり酒</h6>
+          <h6 class="text-center item_rec_title">品名</h6>
         </figure>
         <figure class="d-flex flex-column item_rec_fig" data-aos="zoom-in" data-aos-delay="600">
           <img class="item_rec_img" src="./img/test/otherItems/otherItems05.png">
-          <h6 class="text-center item_rec_title">獺祭 50</h6>
+          <h6 class="text-center item_rec_title">品名</h6>
         </figure>
       </div>
     </div>
@@ -211,6 +209,7 @@ require_once('./tpl/tpl-warning.php');
 require_once('./tpl/tpl-footer.php');
 require_once('./tpl/tpl-html-foot.php');
 ?>
+<script src="./src/js/variables/detail.js"></script>
 <script src="./src/js/functions/itemDetail.js"></script>
 <script defer src="./dist/js/owl.carousel.min.js"></script>
 <script defer src="./src/js/owlCarousel.js"></script>
