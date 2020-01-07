@@ -54,6 +54,8 @@
     flex-grow: 1
   .detail_item_price
     color: $ageCheckColor
+    &::before
+      content: '$'
   input[type=number]::-webkit-outer-spin-button,
   input[type=number]::-webkit-inner-spin-button
     appearance: none
@@ -98,6 +100,7 @@
 
 .detail_item_feature
   dt, dd
+    +noPaddingMargin
     color: $ageCheckColor
     position: relative
     flex-basis: 50%
@@ -110,7 +113,7 @@
     top: 50%
     left: 50%
     border: 2px solid $ageCheckColor
-    transform: translate(-50%, -35%) rotate(45deg)
+    transform: translate(-50%, -25%) rotate(45deg)
     transform-origin: center center
 
 .recommand_carousel
