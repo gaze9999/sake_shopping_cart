@@ -1,0 +1,1 @@
+let detailId = $('#detailId')
