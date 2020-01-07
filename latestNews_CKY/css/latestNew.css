@@ -1,0 +1,356 @@
+/* html 標籤的CSS */
+body{
+    background: #6f1013 !important;
+    position: relative;
+    width: 100%;
+    height: 350vh;
+    font-family: 'Noto Serif TC', serif !important;
+}
+a:link{
+    text-decoration: none !important;
+}
+a{
+    color:black !important;
+}
+li{
+    /* list-style-type: none; */
+}
+@media screen and (max-width:768px) {
+    ol{
+        padding-left:0 !important
+    }
+}
+/*  html 標籤的CSS 結束 */
+
+/* 蓋掉bootstrap css */
+.del-padding-left-cky{
+    padding-left: 0 !important;
+}
+.del-margin-cky{
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+.del-display-cky{
+    display: block !important;
+}
+
+/* 蓋掉bootstrap css 結束 */
+
+/* 主頁面 */
+.treeLeft-cky{
+    width: 480px;
+    height: 543px;
+    position: absolute;
+    display: block;
+    background-image: url(../images/web/treeLeft.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+    top:0;
+    left:0;
+}
+@media screen and (max-width: 768px) {
+    .treeLeft-cky{
+        width: 150px;
+        left: -60px;
+    }
+}
+.treeRight-cky{
+    width: 520px;
+    height: 700px;
+    position: absolute;
+    display: block;
+    background-image: url(../images/web/treeRight.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+    top: 0;
+    right: 0;
+}
+@media screen and (max-width: 768px) {
+    .treeRight-cky{
+        width: 150px;
+        right: 0px;
+    }
+}
+.glow-cky{
+    width: 100%;
+    height: 800px;
+    position: absolute;
+    display: block;
+    background-image: url(../images/web/glow.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+    top:0;
+}
+@media screen and (max-width: 768px){
+    .glow-cky{
+        max-width: 100%;
+        left:0%;
+        top:0%
+    }
+}
+.tagline-cky{
+    background-image: url(../images/web/mainPic.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    width: 100%;
+    height: 0;
+    padding-bottom: 53%;
+    display: block;
+    position: relative;
+    z-index: 100;
+}
+@media screen and (max-width: 768px){
+    .tagline-cky{
+    padding-bottom: 155%;
+    background-size: contain;
+    }
+}
+
+/* 主頁面 結束 */
+
+/* 活動時間 */
+.date-cky{
+    width: 100%;
+    height: 0;
+    padding-bottom: 28.7%;
+    position: relative;
+    z-index: 99;
+    background-image: url(../images/web/activeContactBg.png);
+    background-size: cover;
+    margin-top: -409px
+}
+
+.dateBanner-cky{
+    color: #d02733;
+    width: 100%;
+    height: 149px;
+    position: absolute;
+    bottom: 0;
+    margin-left: 50%;
+    left: -300px;
+    z-index: 90;
+    background-image: url(../images/web/dateTimeBg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding:3rem 0 3rem 9rem;;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+@media screen and (max-width: 768px) {
+    .dateBanner-cky{
+        font-size: 1rem;
+        width: 300px;
+        left: -150px;
+        bottom: -30px;
+        height: 80px;
+        padding: 1.25rem 0rem 0rem 3rem;
+
+    }
+}
+/* 主頁面 結束 */
+
+/* 活動描述 */
+.buySection-cky{
+    padding: 2rem;
+    background-color: #f93334;
+    position: relative;
+    z-index: 90;
+}
+@media screen and (max-width: 768px) {
+    .buySection-cky{
+        padding:1rem;
+    }
+}
+.buySection-cky p{
+    color: #fff;
+    font-size: 1.2rem;
+    display: inline-block;
+    width: 92%;
+    line-height: 1.9rem;
+    padding-top: 4em;
+    padding-left: 4em;
+    font-weight: 700;
+}
+@media screen and (max-width: 768px) {
+    .buySection-cky p{
+        display: block;
+        font-size: 1rem;
+        width: 100%;
+        padding-top: 0em ;
+        padding-left: 0em ;
+    }
+}
+.promo-package-cky{
+    width: 220px;
+    height: 220px;
+    background-image: url(../images/web/promoPackage.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 2rem;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+}
+@media screen and (max-width: 768px) {
+    .promo-package-cky{
+        display: block;
+        margin: 0 auto;
+    }
+}
+/* 活動描述 結束 */
+
+/* 選擇商品 */
+.selectContainer-cky{
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #a81a23;
+    margin-bottom: 2rem;
+}
+.selecTtitle-cky{
+    background: #f1bd7a;
+}
+.selecTtitle-cky h2{
+    margin: 0;
+    font-weight: 700;
+    color: #292245;
+    font-size: 24px;
+    padding:8px 16px;
+}
+@media screen and (max-width: 768px) {
+    .selecTtitle-cky h2{
+        font-size: 18px;
+        padding:20px
+    }
+}
+/* 商品卡 */
+.shop-cart-cky{
+    padding:.25em;
+    align-items: center;
+    justify-content: center;
+}
+.product-cky{
+    /* position: relative; */
+    transition: box-shadow .3s ease;
+    padding-top: 15px;
+    border: 1px solid #eaeaea;
+    background-color: #fff;
+    border-radius: 4px;
+    margin: 1em;
+}
+.product-cky:hover{
+    box-shadow: 0 2px 11px 3px hsla(0,0%,83.1%,.67);
+}
+.product-cky figure{
+    /* margin-bottom: .5rem !important; */
+    /* position: relative; */
+    background: radial-gradient(ellipse at top,#fff9f6,#ffecdc)!important;
+}
+.product-cky figure img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover !important;
+}
+.productName-cky{
+    font-size: 14px;
+    margin-bottom: 1px;
+    line-height: 1.2rem;
+    max-height: 1.2rem;
+    overflow: hidden;
+}
+.price-cky{
+    color:#ff6645;
+    font-size: 20px;
+    font-weight: 500;
+}
+.inputNumber-cky{
+    width: 100%;
+    line-height: 50px;
+}
+@media screen and (max-width:768px) {
+    .inputNumber-cky{
+        width:145%;
+    }
+}
+.input-cky{
+    text-align: left!important;
+    padding-left: 0!important;
+    border: 0;
+    color: #ff6645;
+    font-size: 1.1rem;
+    padding-right: 50px;
+    background-color: #fff;
+    background-image: none;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: inline-block;
+    height: 40px;
+    padding: 0 15px;
+    transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+    width: 40%;
+}
+.minusBtn-cky{
+    right: 40px !important;
+    left: auto !important;
+    background: #fff;
+    border: 1px solid #eaeaea;
+    color: #c0c4cc;
+    cursor: not-allowed;
+    padding:5px 7px 5px 10px;
+    border-radius: 4px;
+}
+.plusBtn-cky{
+    padding:5px 10px;
+    cursor:pointer
+}
+/* 商品卡 結束 */
+
+/* 選擇商品按鈕及背景 */
+.center-cky{
+    background: #8f161e;
+    padding:1rem 0;
+    text-align: center;
+}
+.selectBtn-cky{
+    background: #aaa;
+    cursor: not-allowed;
+    color: #fff;
+    border:0;
+    border-radius: 4px;
+    padding:8px;
+    min-height: 35px;
+    min-width: 180px;
+    margin: 10px;
+    transition: background-color .3s ease;
+    font-size: 14px;
+}
+.selectBtn-cky:hover{
+    background:#ff6645;
+}
+/* 選擇商品按鈕及背景 結束 */
+
+/* 活動規則說明 */
+.noice-cky{
+    background: #201d3f;
+    margin-top: 4rem;
+    padding:2rem 0;
+}
+.noice-cky h5{
+    color:#fff;
+}
+.noice-cky ol li{
+    color:#fff;
+    margin-top: .5rem;
+}
+@media screen and (max-width:768px) {
+    .noice-cky ol{
+        list-style-position:outside !important;
+    }
+    .noice-cky ol li{
+        font-size: 14px;
+        text-align: justify;
+
+    }
+}
