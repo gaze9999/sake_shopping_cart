@@ -79,5 +79,6 @@ require_once('./tpl/tpl-warning.php');
 require_once('./tpl/tpl-footer.php');
 require_once('./tpl/tpl-html-foot.php');
 ?>
+<script src="./src/js/functions/itemDetail.js"></script>
 <script defer src="./dist/js/owl.carousel.min.js"></script>
 <script defer src="./src/js/owlCarousel.js"></script>
