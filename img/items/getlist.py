@@ -3,15 +3,17 @@ from __future__ import print_function
 import os
 
 path = './pics'
-path_to_json = './json'
+path_to_output = './json'
 
+bId = []
+sId = []
+imgId = []
+
+bIdList = []
+sIdList = []
 optList = []
 sqlList = []
-bId = []
-bIdList = []
-sId = []
-sIdList = []
-imgId = []
+jsonList = []
 imgIdList = []
 
 files = os.listdir(path)
@@ -32,26 +34,39 @@ for bid in bId:
     sId.append(sid)
     for iId in files:
       imgIdPath = sIdPath + '/' + iId
-      optPath = '"bId":' + bid + ',"sId":' + sid + ',"imgId":' + iId
+      optPath = '"' + path + '/' + bid + '/' + sid + '/' + iId + '"'
+      jsonPath = '"bId":' + bid + ',"sId":' + sid + ',"imgId":' + iId
       sqlPath = '(\'' + iId + '\'' + "," + bid + "," + sid + ')'
       imgIdList.append(imgIdPath)
       imgId.append(iId)
       optList.append(optPath)
+      jsonList.append(jsonPath)
       sqlList.append(sqlPath)
+
+# no use this time
+def buildPath():
+  for i in files:
+    path  = path + '/' + i
+    files = os.listdir(path)
+    optList.append(i)
 
 # print(optPath)
 
-with open(path_to_json + "/output.json", "w") as f:
-  f.write('{\n' + '"path":[\n')
-
-  for i in optList:
+with open(path_to_output + "/item.json", "w") as f:
+  f.write('{\n' + '"items":[\n')
+  for i in jsonList:
     opt = '{' + i + '}'
-    f.write(opt + ",\n")
-      
+    f.write(opt + ",\n")      
   f.write(']\n}')
 
-with open(path_to_json + "/sql.txt", "w") as f:
+with open(path_to_output + "/sql.txt", "w") as f:
   f.write('INSERT INTO `sake_img`(`imgName`, `bId`, `sId`)\nVALUES\n')
-
   for i in sqlList:
     f.write(i + ",\n")
+
+with open(path_to_output + "/path.json", "w") as f:
+  f.write('{\n' + '"items":[\n')
+  for i in optList:
+    opt = '{"path": ' + i + '}'
+    f.write(opt + ",\n")      
+  f.write(']\n}')
