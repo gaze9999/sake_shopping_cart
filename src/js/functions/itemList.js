@@ -1,4 +1,8 @@
-function getVarieties(cid = "", vid = "", pid = "", rid = "",price = "") {
+function getList(cid = "", vid = "", rid = "") {
+  if (cid != "") {}
+}
+
+function getVarieties(cid = "", vid = "", pid = "", rid = "") {
   fetch('./func/func-getItems.php', {
     method: "PUT",
     headers: {'Content-Type': 'application/json',
@@ -8,8 +12,7 @@ function getVarieties(cid = "", vid = "", pid = "", rid = "",price = "") {
         'vid': vid,
         'cid': cid,
         'pid': pid,
-        'rid': rid,
-        'pri': price
+        'rid': rid
       })
     ]
   }).then(res => {
@@ -26,12 +29,10 @@ function getVarieties(cid = "", vid = "", pid = "", rid = "",price = "") {
       // console.log(json)
       for (let i in json) {
       let
-      regionName = json[i]['regionName'],
       varieties = json[i]['varieties'],
       itemName = json[i]['itemName'],
       breName = json[i]['breName'],
-      imgName = json[i]['imgName'],
-      vCatag = json[i]['vCatag'],
+      imgName = json[i]['imgName']
       price = json[i]['price'],
       bId = json[i]['bId'],
       sId = json[i]['sId'],
@@ -42,18 +43,22 @@ function getVarieties(cid = "", vid = "", pid = "", rid = "",price = "") {
       cid == "" ? itemInfo.html(`日本清酒`) : itemInfo.html(varieties);
 
       itemList.append(`
-          <div class="card shadow-sm item_card" data-aos="fade-up">
-            <div class="card-img-top d-flex center_all">
-              <a class="" href="./itemDetails.php?id=${sId}">
-                ${picPath}
-              </a>
-            </div>
-            <div class="card-body d-flex center_all flex-column">
-              <p class="card-text item_card_bre">${breName}</p>
-              <p class="card-text item_card_name">${itemName}</p>
-              <p class="card-text item_card_price">${price}</p>
-            </div>
-          </div>
+      <div class="d-flex flex-column item_card">
+        <div class="d-flex position-relative card_mainArea">
+          <figure class="d-flex flex-row item_card_brew">
+            <img class="card_brew_img" src="./img/icons/add_to_fav.svg" alt="">
+            <h6>${breName}</h6>
+          </figure>
+          <a class="d-flex flex-column center_all item_card_mainImg" href="./itemDetails.php?id=${sId}">
+              <img class="item_card_img" src="./img/items/pics/${bId}/${sId}/${imgName}" alt="${itemName}">
+          </a>
+          <figure class="position-absolute item_card_price">
+            <img class="card_price_img" src="./img/icons/item_price_board.svg" alt="">
+            <h6 class="position-absolute">${price}</h6>
+          </figure>
+        </div>
+        <h5 class="text-center item_card_name">${itemName}</h5>
+      </div>
       `);
     };
     treeTotalData.text(dataLength);
