@@ -23,17 +23,7 @@ $(document).ready(() => {
     navText: [$('.owl-navigation .owl-nav-prev'), $('.owl-navigation .owl-nav-next')],
     responsive: owlRes
   })
-
-  $('.detail_carousel').owlCarousel({
-    loop: true,
-    autoplay: true,
-    autoplayTimeout: 5000,
-    dots: true,
-    nav: false,
-    items: 1,
-    navText: [$('.owl-navigation .owl-nav-prev'), $('.owl-navigation .owl-nav-next')]
-  })
-
+  
   $('.recommand_carousel').owlCarousel({
     loop: true,
     autoplay: false,

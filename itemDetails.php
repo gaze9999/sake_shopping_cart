@@ -4,8 +4,7 @@ require_once('./db.inc.php');
 require_once('./tpl/tpl-html-head.php');
 require_once('./tpl/tpl-header.php');
 ?>
-<h1 class="hidden_obj">本格清酒</h1>
-<input type="hidden" id="detailId" value="<?php echo $_GET['id'] ?>">
+<input type="hidden" id="detailId" name="itemId" value="<?php echo $_GET['id'] ?>">
 <main class="container detail_frame">
   <header class="row w-100 center_all detail_header">
     <section class="col-12 d-flex center_all detail_header_title">
@@ -50,7 +49,7 @@ require_once('./tpl/tpl-header.php');
               <input class="detail_item_plus item_counts_btn" type="button" value="+">
             </div>
 
-            <select class="my-3" name="capacity" id="">
+            <select class="my-3" name="capacity" id="item_select_cap">
               <option value="720">容量1</option>
               <option value="1800">容量2</option>
             </select>
@@ -148,10 +147,10 @@ require_once('./tpl/tpl-header.php');
             <dt data-aos="flip-left" data-aos-delay="500">胺基酸度</dt>
           </dl>
           <dl class="d-flex detail_item_feature item_feture_data">
-            <dd data-aos="flip-left" data-aos-delay="200">Acidity</dd>
-            <dd data-aos="flip-left" data-aos-delay="300">Nihonshudo</dd>
-            <dd data-aos="flip-left" data-aos-delay="400">Seimaibuai</dd>
-            <dd data-aos="flip-left" data-aos-delay="500">Amino</dd>
+            <dd data-aos="flip-left" data-aos-delay="200" class="detail_item_acidity">Acidity</dd>
+            <dd data-aos="flip-left" data-aos-delay="300" class="detail_item_shudo">Nihonshudo</dd>
+            <dd data-aos="flip-left" data-aos-delay="400" class="detail_item_seimaibuai">Seimaibuai</dd>
+            <dd data-aos="flip-left" data-aos-delay="500" class="detail_item_amino">Amino</dd>
           </dl>
           <article class="pt-3">
             產品介紹2

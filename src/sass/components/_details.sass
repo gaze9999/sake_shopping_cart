@@ -32,6 +32,7 @@
     max-height: 480px
   .detail_carousel_img
     +noPaddingMargin
+    width: 100%
     object-fit: contain
 
 .detail_item_title
@@ -62,22 +63,20 @@
   input[type=number]
     user-select: none
     appearance: textfield
-  .item_counts_btn
+  .item_counts_btn, .detail_item_hold
     width: 2rem
     height: 2rem
-    background-color: #f7f7f7
     border: 1px solid #e5e5e5
+    color: #777
+  .item_counts_btn
+    background-color: #f7f7f7
     font-size: $font_warn
     line-height: $font_warn
-    color: #777
     border-right: 0 none
     transition: all 0.4s ease-in-out 0s
   .detail_item_hold
-    height: 2rem
-    width: 2rem
     padding: 0 5px
     text-align: center
-    color: #777
     font-weight: bold
     border: 1px solid #e5e5e5
   .item_function_btn
