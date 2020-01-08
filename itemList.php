@@ -15,12 +15,12 @@ require_once('./tpl/tpl-header.php');
   <div class="row w-100 page_itemList">
 <!-- Catagory Tree -->
     <aside class="col-2 itemList_tree itemList_navbar">
-      <?php require_once('./tpl/tpl-itemlist-tree.php'); ?>
+      <?php require_once('./tpl/itemList/tpl-itemlist-tree.php'); ?>
     </aside>
 
 <!-- main field -->
     <section class="col-8 d-flex flex-wrap itemList_list">
-      <?php require_once('./tpl/tpl-itemlist.php'); ?>
+      <?php require_once('./tpl/itemList/tpl-itemlist.php'); ?>
     </section>
 
 <!-- filter -->
