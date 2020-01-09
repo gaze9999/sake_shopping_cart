@@ -4,6 +4,7 @@ require_once('../db.inc.php');
 $data = json_decode(file_get_contents('php://input'), true);
 $sid = $data['itemid'];
 
+// 取得基本資料
 $sql = "SELECT i.`sId`, i.`itemName`, i.`breId`, i.`vId`, i.`price`,
                IFNULL(i.`riceId`, -1) as `riceId`,
                IFNULL(i.`description`, '無介紹') as `description`,
@@ -30,6 +31,7 @@ $sql = "SELECT i.`sId`, i.`itemName`, i.`breId`, i.`vId`, i.`price`,
         WHERE i.`sId` = ?
         ORDER BY i.`sId`";
 
+// 取得圖片資料
 $imgSql ="SELECT i.`sId`,
                  m.`imgId`, m.`imgName`, m.`sId`
           FROM `sake_items` as i
@@ -38,6 +40,7 @@ $imgSql ="SELECT i.`sId`,
           WHERE i.`sId` = ?
           ORDER BY m.`imgId` ";
 
+// 取得容量資料
 $capSql ="SELECT i.`sId`, i.`itemName`,
                  i2.`sId`, i2.`itemName`, i2.`capacity`
           FROM `sake_items` as i
@@ -69,6 +72,7 @@ if($stmt->rowCount() > 0) {
     array_push($capArr, $v);
   };
 
+  // 陣列組合
   array_push($arr, $imgArr, $capArr);
 
   // echo "<pre>";
