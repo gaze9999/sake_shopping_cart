@@ -1,0 +1,41 @@
+// body
+//   overflow: hidden
+//   height: 100vh
+  
+.page_ac
+  height: 100vh
+  background: url('../../img/bgs/section1_bg.jpg') center fixed no-repeat
+  z-index: $zindex-popover
+
+.ac_header
+  h2
+    color: $ageCheckColor
+
+.ac_checkBtn
+  color: #fff
+  & > *
+    user-select: none
+
+.ac_btn
+  width: 100px
+  position: relative
+  padding: 5px 0
+  border: 2px solid $ageCheckColor
+  cursor: pointer
+  transition: 1s all ease
+  overflow: hidden
+  &::before
+    content: ''
+    background: $ageCheckColor
+    width: 50%
+    height: 0
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    z-index: -1
+    transition: all .4s ease
+  &:hover::before
+    height: 100%
+    width: 100%
+    transition-delay: 1ms

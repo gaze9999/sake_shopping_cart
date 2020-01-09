@@ -8,3 +8,28 @@
   width: 100%
   height: 52px
   overflow: hidden
+
+%beforeAfterMiddle
+  content: ''
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  margin: auto
+
+%mouseIcon
+  background: $mouseIcon
+  position: relative
+  width: 52px
+  height: 88px
+  border-radius: 100px
+  background-size: 100% 200%
+  animation: colorSlide 5s infinite linear, nudgeMouse 5s infinite ease-out
+
+%mouseText
+	font-family: "Cabin", sans-serif
+	letter-spacing: 12px
+	text-indent: 12px
+	color: #ffffff
+	animation: colorText 5s ease-out infinite, nudgeText 5s ease-out infinite

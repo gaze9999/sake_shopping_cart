@@ -2,7 +2,9 @@
 *.sql
 *.code-workspace
 
+jsonoutput.json
 package-lock.json
+webpack.config.js
 
 .vscode/
 vendor/
