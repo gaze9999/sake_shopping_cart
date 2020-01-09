@@ -49,21 +49,47 @@ $capSql ="SELECT i.`sId`, i.`itemName`,
           WHERE i.`sId` = ?
           ORDER BY i2.`sId` ";
 
+$recSql = "SELECT i.`sId`, i.`vId`,
+                  v.`vId`, v.`vCatag`,
+                  i2.`sId` as `sId2`, i2.`itemName`, i2.`vId`, i2.`breId` as `bId`,
+                  v2.`vId`, v2.`vCatag`,
+                  i3.`sId`,
+                  m.`imgId`, m.`imgName`, m.`sId`
+          FROM `sake_items` as i
+          JOIN `sake_varieties` as v
+          JOIN `sake_items` as i2
+          JOIN `sake_varieties` as v2
+          JOIN `sake_items` as i3
+          JOIN `sake_img` as m
+          ON i2.`vId`= v2.`vId`
+          AND i.`vId` = v.`vId`
+          AND m.`sId` = i3.`sId`
+          WHERE i.`sId` = ?
+          AND i2.`sId` != ?
+          AND v.`vCatag` = v2.`vCatag`
+          GROUP BY i2.`itemName`
+          ORDER BY i2.`sId` ";
+
 $arrParam = [ $sid ];
+$arrParam2 = [ $sid, $sid ];
 
 $stmt = $pdo->prepare($sql);
 $stmtImg = $pdo->prepare($imgSql);
 $stmtCap = $pdo->prepare($capSql);
+$stmtRec = $pdo->prepare($recSql);
 $stmt->execute($arrParam);
 $stmtImg->execute($arrParam);
 $stmtCap->execute($arrParam);
+$stmtRec->execute($arrParam2);
 
 if($stmt->rowCount() > 0) {
   $imgArr = array();
   $capArr = array();
+  $recArr = array();
   $arr  = $stmt->fetchAll(PDO::FETCH_ASSOC);
   $arr2 = $stmtImg->fetchAll(PDO::FETCH_ASSOC);
   $arr3 = $stmtCap->fetchAll(PDO::FETCH_ASSOC);
+  $arr4 = $stmtRec->fetchAll(PDO::FETCH_ASSOC);
 
   foreach($arr2 as $v) {
     array_push($imgArr, $v);
@@ -71,9 +97,12 @@ if($stmt->rowCount() > 0) {
   foreach($arr3 as $v) {
     array_push($capArr, $v);
   };
+  foreach($arr4 as $v) {
+    array_push($recArr, $v);
+  };
 
   // 陣列組合
-  array_push($arr, $imgArr, $capArr);
+  array_push($arr, $imgArr, $capArr, $recArr);
 
   // echo "<pre>";
   // print_r($arr);

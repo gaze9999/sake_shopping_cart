@@ -23,13 +23,4 @@ $(document).ready(() => {
     navText: [$('.owl-navigation .owl-nav-prev'), $('.owl-navigation .owl-nav-next')],
     responsive: owlRes
   })
-  
-  $('.recommand_carousel').owlCarousel({
-    loop: true,
-    autoplay: false,
-    dots: true,
-    nav: false,
-    items: 5,
-    navText: [$('.owl-navigation .owl-nav-prev'), $('.owl-navigation .owl-nav-next')]
-  })
 })

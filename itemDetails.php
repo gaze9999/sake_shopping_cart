@@ -178,26 +178,6 @@ require_once('./tpl/tpl-header.php');
       </div>
       <div class="row">
       <div class="col-md-12 owl-carousel owl-theme recommand_carousel">
-        <figure class="d-flex flex-column item_rec_fig" data-aos="zoom-in" data-aos-delay="200">
-          <img class="item_rec_img" src="./img/icons/main_icon.svg">
-          <h6 class="text-center item_rec_title">品名</h6>
-        </figure>
-        <figure class="d-flex flex-column item_rec_fig" data-aos="zoom-in" data-aos-delay="300">
-          <img class="item_rec_img" src="./img/icons/main_icon.svg">
-          <h6 class="text-center item_rec_title">品名</h6>
-        </figure>
-        <figure class="d-flex flex-column item_rec_fig" data-aos="zoom-in" data-aos-delay="400">
-          <img class="item_rec_img" src="./img/icons/main_icon.svg">
-          <h6 class="text-center item_rec_title">品名</h6>
-        </figure>
-        <figure class="d-flex flex-column item_rec_fig" data-aos="zoom-in" data-aos-delay="500">
-          <img class="item_rec_img" src="./img/icons/main_icon.svg">
-          <h6 class="text-center item_rec_title">品名</h6>
-        </figure>
-        <figure class="d-flex flex-column item_rec_fig" data-aos="zoom-in" data-aos-delay="600">
-          <img class="item_rec_img" src="./img/icons/main_icon.svg">
-          <h6 class="text-center item_rec_title">品名</h6>
-        </figure>
       </div>
     </div>
   </section>

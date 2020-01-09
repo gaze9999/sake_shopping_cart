@@ -14,4 +14,5 @@ let detailId = $('#detailId'),
     itemAcid = $('.detail_item_acidity'),
     itemAmino = $('.detail_item_amino'),
     itemSeimai = $('.detail_item_seimaibuai'),
-    itemSelCap = $('#item_select_cap')
+    itemSelCap = $('#item_select_cap'),
+    recItem = $('.recommand_carousel')

@@ -77,6 +77,17 @@ function getDetails() {
       itemCap.append(i < json[2].length-1 ? `${iCap}, ` : `${iCap}`)
       itemSelCap.append(`<option value="${iCap}">${iCap}</option>`)
     }
+
+    for (let i in json[3]) {
+      recItem.append(
+        `<figure class="d-flex flex-column item_rec_fig" data-aos="zoom-in" data-aos-delay="200">
+          <a href="./itemDetails.php?id=${json[3][i]['sId2']}">
+            <img class="item_rec_img" src="./img/items/pics/${json[3][i]['bId']}/${json[3][i]['sId2']}/${json[3][i]['imgName']}">
+            <h6 class="text-center item_rec_title">${json[3][i]['itemName']}</h6>
+          </a>
+         </figure>`
+      )
+    }
     
   }).then(e => {    
     $('.detail_carousel').owlCarousel({
@@ -86,6 +97,14 @@ function getDetails() {
       dots: true,
       nav: false,
       items: 1
+    })
+  
+    $('.recommand_carousel').owlCarousel({
+      loop: true,
+      autoplay: false,
+      dots: false,
+      nav: false,
+      items: 5
     })
     
   }).catch(error => {
