@@ -8,10 +8,12 @@ $sid = $data['itemid'];
 $sql = "SELECT i.`sId`, i.`itemName`, i.`breId`, i.`vId`, i.`price`,
                IFNULL(i.`riceId`, -1) as `riceId`,
                IFNULL(i.`description`, '無介紹') as `description`,
-               IFNULL(i.`nihonshudo`, 0) as `nihonshudo`,
-               IFNULL(i.`aminosando`, 0) as `aminosando`,
-               IFNULL(i.`seimaibuai`, 0) as `seimaibuai`,
-               IFNULL(i.`sando`, 0) as `sando`,
+               IFNULL(i.`howTo`, '無介紹') as `howTo`,
+               IFNULL(i.`nearBy`, '無介紹') as `nearBy`,
+               IFNULL(i.`nihonshudo`, '暫無資料') as `nihonshudo`,
+               IFNULL(i.`aminosando`, '暫無資料') as `aminosando`,
+               IFNULL(i.`seimaibuai`, '暫無資料') as `seimaibuai`,
+               IFNULL(i.`sando`, '暫無資料') as `sando`,
                b.`bId`, b.`breName`, b.`rId`, b.`pId`,
                r.`rId`, r.`regionName`,
                p.`pId`, p.`prefName`,
@@ -42,7 +44,7 @@ $imgSql ="SELECT i.`sId`,
 
 // 取得容量資料
 $capSql ="SELECT i.`sId`, i.`itemName`,
-                 i2.`sId`, i2.`itemName`, i2.`capacity`
+                 i2.`sId`, i2.`itemName`, i2.`capacity`, i2.`price`
           FROM `sake_items` as i
           JOIN `sake_items` as i2
           ON i.`itemName`= i2.`itemName`

@@ -15,20 +15,14 @@ require_once('./tpl/tpl-header.php');
       <img class="position-absolute detail_titleCloud" data-aos="fade-left" data-aos-delay="200" src="./img/bgs/seigaiwa-sm.svg" alt="">
     </section>
     <section class="col-12 detail_header_breadcrumb">
-      <h6 class="detail_breadcrumb"> 首頁 &GT OO &GT OO</h6>
+      <h6 class="detail_breadcrumb"> </h6>
     </section>
   </header>
 
   <section class="detail_item_sec">
     <div class="container">
       <div class="row">
-        <div class="col-md-6 col-sm-12 owl-carousel owl-theme d-flex center_all detail_carousel">
-          <picture class="d-flex detail_carousel_item" data-aos="fade-right" data-aos-delay="200">
-            <img class="detail_carousel_img" src="./img/test/slider01.png" alt="">
-          </picture>
-          <picture class="d-flex detail_carousel_item" data-aos="fade-right" data-aos-delay="200">
-            <img class="detail_carousel_img" src="./img/test/slider02.png" alt="">
-          </picture>
+        <div class="col-md-6 col-sm-12 owl-carousel owl-theme d-flex center_all detail_carousel" data-aos="fade-right" data-aos-delay="500">
         </div>
 
         <div class="col-md-6 col-sm-12 detail_item">
@@ -152,7 +146,7 @@ require_once('./tpl/tpl-header.php');
             <dd data-aos="flip-left" data-aos-delay="400" class="detail_item_seimaibuai">Seimaibuai</dd>
             <dd data-aos="flip-left" data-aos-delay="500" class="detail_item_amino">Amino</dd>
           </dl>
-          <article class="pt-3">
+          <article class="pt-3 item_feture_description">
             產品介紹2
           </article>
         </div>
