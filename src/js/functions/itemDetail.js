@@ -16,16 +16,17 @@ function getDetails() {
     }
   }).then(json => {
     // console.log(json)
+    // 給予預設資訊
     itemPics.html('')
-    itemSelCap.html('')
-    itemCap.html('')
-    itemDescript.html('test')
-
+    itemSelCap.html('720ml')
+    itemCap.html('720ml')
+    itemDescript.html('無資訊')
+    itemPrice.html('9999999')
+    
+    // 一般資訊置入
     brewName.html(json[0]['breName'])
-    // breadCrumb.html(`首頁`)
     itemName.html($.trim(json[0]['itemName']))
     itemDescript.html($.trim(json[0]['description']))
-    itemPrice.html(json[0]['price'])
     itemRegion.html(json[0]['regionName'])
     itemPref.html(json[0]['prefName'])
     itemVCatag.html(json[0]['vCatag'])
@@ -34,7 +35,16 @@ function getDetails() {
     itemAcid.html(json[0]['sando'])
     itemAmino.html(json[0]['aminosando'])
     itemSeimai.html(json[0]['seimaibuai'])
+
+    // 麵包屑
+    // breadCrumb.html(`首頁`)
+
+    // 價格換算
+    let iCurr = json[0]['price'].substr(0, 3)
+    let iPrice = json[0]['price'].slice(3)
+    iCurr == 'JPY' ? itemPrice.html(parseInt(iPrice * 0.27)) : itemPrice.html(iPrice)    
   
+    // 圖片置入
     for (let i in json[1]) {
       itemPics.append(
         `<picture class="d-flex detail_carousel_item" data-aos="fade-right" data-aos-delay="200">
@@ -43,6 +53,7 @@ function getDetails() {
       )
     }
     
+    // 容量置入
     for (let i in json[2]) {
       let iCap = json[2][i]['capacity']
       itemCap.append(i < json[2].length-1 ? `${iCap}, ` : `${iCap}`)
