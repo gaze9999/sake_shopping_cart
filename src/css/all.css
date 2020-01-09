@@ -1096,6 +1096,10 @@ main {
   height: 10rem;
 }
 
+.detail_header .detail_breadcrumb a::after {
+  content: ' > ';
+}
+
 .detail_header_title {
   margin: 2.5rem 0;
 }
