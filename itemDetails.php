@@ -4,6 +4,7 @@ require_once('./db.inc.php');
 require_once('./tpl/tpl-html-head.php');
 require_once('./tpl/tpl-header.php');
 ?>
+<script defer src="./dist/js/owl.carousel.min.js"></script>
 <input type="hidden" id="detailId" name="itemId" value="<?php echo $_GET['id'] ?>">
 <main class="container detail_frame">
   <header class="row w-100 center_all detail_header">
@@ -182,7 +183,5 @@ require_once('./tpl/tpl-warning.php');
 require_once('./tpl/tpl-footer.php');
 require_once('./tpl/tpl-html-foot.php');
 ?>
-<script src="./src/js/variables/detail.js"></script>
-<script src="./src/js/functions/itemDetail.js"></script>
-<script defer src="./dist/js/owl.carousel.min.js"></script>
-<script defer src="./src/js/owlCarousel.js"></script>
+<script async src="./src/js/variables/detail.js"></script>
+<script async src="./src/js/functions/itemDetail.js"></script>
