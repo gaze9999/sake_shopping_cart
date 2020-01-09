@@ -63,12 +63,23 @@ function getDetails() {
     // 價格換算
     let iCurr = json[0]['price'].substr(0, 3)
     let iPrice = json[0]['price'].slice(3)
-    iCurr == 'JPY' ? itemPrice.html(parseInt(iPrice * 0.27)) : itemPrice.html(parseInt(iPrice))
+    iCurr == 'JPY' ?
+      itemPrice.html(parseInt(iPrice * 0.27)) :
+      itemPrice.html(parseInt(iPrice))
+    iCurr == 'JPY' ?
+      itemPrice.attr('data-price', parseInt(iPrice * 0.27)) :
+      itemPrice.attr('data-price', iPrice)
+    
 
     itemSelCap.on('change', itemSelCap.val(), function() {
       iCurr = json[2][$(this).val()]['price'].substr(0, 3)
       iPrice = json[2][$(this).val()]['price'].slice(3)
-      iCurr == 'JPY' ? itemPrice.html(parseInt(iPrice * 0.27)) : itemPrice.html(parseInt(iPrice))
+      iCurr == 'JPY' ?
+        itemPrice.html(parseInt(iPrice * 0.27)) :
+        itemPrice.html(parseInt(iPrice))
+      iCurr == 'JPY' ?
+        itemPrice.attr('data-price', parseInt(iPrice * 0.27)) :
+        itemPrice.attr('data-price', iPrice)
     })
 
     // 圖片置入
@@ -129,3 +140,17 @@ function getDetails() {
     console.log(error.response);
   });
 }
+
+minusQty.on('mouseup', ()=> {
+  let qty = parseInt(currectQty.data('qty'))
+  qty > 1 ? qty -= 1 : plusQty
+  currectQty.data('qty', qty)
+  currectQty.html(currectQty.data('qty'))
+})
+
+plusQty.on('mouseup', ()=> {
+  let qty = parseInt(currectQty.data('qty'))
+  qty < 99 ? qty += 1 : qty
+  currectQty.data('qty', qty)
+  currectQty.html(currectQty.data('qty'))
+})

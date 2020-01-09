@@ -16,4 +16,10 @@ let detailId = $('#detailId'),
     itemAmino = $('.detail_item_amino'),
     itemSeimai = $('.detail_item_seimaibuai'),
     itemSelCap = $('#item_select_cap'),
-    recItem = $('.recommand_carousel')
+    recItem = $('.recommand_carousel'),
+
+    addCart = $('.item_addCart'),
+
+    minusQty = $('.detail_item_minus'),
+    plusQty = $('.detail_item_plus'),
+    currectQty = $('.detail_item_hold')
