@@ -15,42 +15,39 @@ function getDetails() {
       throw error.Content-Type;
     }
   }).then(json => {
+    // console.log(json)
     itemPics.html('')
     itemSelCap.html('')
+    itemCap.html('')
+    itemDescript.html('test')
 
     brewName.html(json[0]['breName'])
     // breadCrumb.html(`首頁`)
-    itemDescript.html('test')
-    itemName.html(json[0]['itemName'])
-    itemDescript.html(json[0]['description'])
+    itemName.html($.trim(json[0]['itemName']))
+    itemDescript.html($.trim(json[0]['description']))
     itemPrice.html(json[0]['price'])
     itemRegion.html(json[0]['regionName'])
     itemPref.html(json[0]['prefName'])
     itemVCatag.html(json[0]['vCatag'])
     itemRice.html(json[0]['riceName'])
     itemShudo.html(json[0]['nihonshudo'])
-    itemCap.html(json[0]['capacity'])
     itemAcid.html(json[0]['sando'])
     itemAmino.html(json[0]['aminosando'])
     itemSeimai.html(json[0]['seimaibuai'])
   
-    for (i in json) {
-      itemPics.append(`
-        <picture class="d-flex detail_carousel_item" data-aos="fade-right" data-aos-delay="200">
-          <img class="detail_carousel_img" src="./img/items/pics/${json[i]['bId']}/${json[i]['sId']}/${json[i]['imgName']}" alt="">
-        </picture>
-      `)
-
-      let jcap = json[i]['capacity']
-
-      itemSelCap.append(`
-        <option value="${jcap}">${jcap}</option>
-      `)
-
-      // if (json[i+1]['capacity'] == jcap) {
-      //   jcap = json[i+1]['capacity']
-      // }
-    }      
+    for (let i in json[1]) {
+      itemPics.append(
+        `<picture class="d-flex detail_carousel_item" data-aos="fade-right" data-aos-delay="200">
+          <img class="detail_carousel_img" src="./img/items/pics/${json[0]['bId']}/${json[0]['sId']}/${json[1][i]['imgName']}" alt="${json[0]['itemName']}-${[i]}" onerror="this.onerror=null; this.src='./img/icons/main_icon.svg'">
+        </picture>`
+      )
+    }
+    
+    for (let i in json[2]) {
+      let iCap = json[2][i]['capacity']
+      itemCap.append(i < json[2].length-1 ? `${iCap}, ` : `${iCap}`)
+      itemSelCap.append(`<option value="${iCap}">${iCap}</option>`)
+    }
     
   }).then(e => {    
     $('.detail_carousel').owlCarousel({
