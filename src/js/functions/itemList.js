@@ -25,19 +25,21 @@ function getVarieties(cid = "", vid = "", pid = "", rid = "") {
     }
   }).then(json => {
       itemList.html("")
-      let dataLength = json.length
+      let dataLength = json[0].length
       // console.log(json)
-      for (let i in json) {
+      for (let i in json[0]) {
       let
-      varieties = json[i]['varieties'],
-      itemName = json[i]['itemName'],
-      breName = json[i]['breName'],
-      imgName = json[i]['imgName']
-      price = json[i]['price'],
-      bId = json[i]['bId'],
-      sId = json[i]['sId'],
-      vId = json[i]['vId'],
-      picPath = `<img class="img-fluid item_card_img" src="./img/items/pics/${bId}/${sId}/${imgName}">`
+      varieties = json[0][i]['varieties'],
+      itemName = json[0][i]['itemName'],
+      breName = json[0][i]['breName'],
+      price = json[0][i]['price'],
+      bId = json[0][i]['bId'],
+      sId = json[0][i]['sId'],
+      vId = json[0][i]['vId']
+
+      for (let i in json[1]) {
+        picName = json[1][i]['imgName']
+      }
 
       vid == "" ? itemInfo.html(`日本清酒`) : itemInfo.html(varieties);
       cid == "" ? itemInfo.html(`日本清酒`) : itemInfo.html(varieties);
@@ -50,7 +52,7 @@ function getVarieties(cid = "", vid = "", pid = "", rid = "") {
             <h6>${breName}</h6>
           </figure>
           <a class="d-flex flex-column center_all item_card_mainImg" href="./itemDetails.php?id=${sId}">
-              <img class="item_card_img" src="./img/items/pics/${bId}/${sId}/${imgName}" alt="${itemName}">
+            <img class="item_card_img" src="./img/items/pics/${bId}/${sId}/${picName}" alt="${itemName}" onerror="this.onerror=null; this.src='./img/icons/image.svg'"></img>
           </a>
           <figure class="position-absolute item_card_price">
             <img class="card_price_img" src="./img/icons/item_price_board.svg" alt="">

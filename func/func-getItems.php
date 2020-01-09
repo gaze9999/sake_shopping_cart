@@ -6,7 +6,20 @@ $rid = $data['rid'];
 $cid = $data['cid'];
 $vid = $data['vid'];
 
-getAll($rid, $cid, $vid);
+// echo "<pre>";
+// print_r($arr);
+// echo "</pre>";
+// exit;
+
+getList();
+
+function getList() {
+  global $arr;
+  $result = urldecode(json_encode($arr));
+  echo $result;
+}
+
+// getAll($rid, $cid, $vid);
 
 function getAll($rid, $cid, $vid) {
   global $arr;
@@ -21,7 +34,7 @@ function ridFilter($rid, $arr) {
   global $data, $ridArr;
   $ridArr = array();
   if (!empty($data['rid'])) {
-    foreach ($arr as $k => $v) {
+    foreach ($arr[0] as $k => $v) {
       if (in_array($arr[$k]['rId'], $rid)) {
         array_push($ridArr, $v);
       }
@@ -36,7 +49,7 @@ function cidFilter($cid, $arr) {
   global $data, $cidArr;
   $cidArr = array();
   if (!empty($data['cid'])) {
-    foreach ($arr as $k => $v) {
+    foreach ($arr[0] as $k => $v) {
       if ($arr[$k]['vcId'] == $cid) {
         array_push($cidArr, $v);
       }
@@ -51,7 +64,7 @@ function vidFilter($vid, $arr) {
   global $data, $vidArr;
   $vidArr = array();
   if (!empty($data['vid'])) {
-    foreach ($arr as $k => $v) {
+    foreach ($arr[0] as $k => $v) {
       if ($arr[$k]['vId'] == $vid) {
         array_push($vidArr, $v);
       }
