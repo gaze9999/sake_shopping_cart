@@ -60,8 +60,8 @@ function getDetails() {
     // 價格換算
     let iCurr = json[0]['price'].substr(0, 3)
     let iPrice = json[0]['price'].slice(3)
-    iCurr == 'JPY' ? itemPrice.html(parseInt(iPrice * 0.27)) : itemPrice.html(iPrice)    
-  
+    iCurr == 'JPY' ? itemPrice.html(parseInt(iPrice * 0.27)) : itemPrice.html(iPrice)
+
     // 圖片置入
     for (let i in json[1]) {
       itemPics.append(
@@ -70,7 +70,7 @@ function getDetails() {
         </picture>`
       )
     }
-    
+
     // 容量置入
     for (let i in json[2]) {
       let iCap = json[2][i]['capacity']
@@ -82,14 +82,14 @@ function getDetails() {
       recItem.append(
         `<figure class="d-flex flex-column item_rec_fig" data-aos="zoom-in" data-aos-delay="200">
           <a href="./itemDetails.php?id=${json[3][i]['sId2']}">
-            <img class="item_rec_img" src="./img/items/pics/${json[3][i]['bId']}/${json[3][i]['sId2']}/${json[3][i]['imgName']}">
+            <img class="item_rec_img" src="./img/items/pics/${json[3][i]['bId']}/${json[3][i]['sId2']}/${json[3][i]['imgName']}" alt="${json[3][i]['itemName']}" onerror="this.onerror=null; this.src='./img/icons/main_icon.svg'">
             <h6 class="text-center item_rec_title">${json[3][i]['itemName']}</h6>
           </a>
          </figure>`
       )
     }
-    
-  }).then(e => {    
+
+    // slider生成
     $('.detail_carousel').owlCarousel({
       loop: true,
       autoplay: true,
@@ -98,7 +98,7 @@ function getDetails() {
       nav: false,
       items: 1
     })
-  
+
     $('.recommand_carousel').owlCarousel({
       loop: true,
       autoplay: false,
@@ -106,7 +106,7 @@ function getDetails() {
       nav: false,
       items: 5
     })
-    
+
   }).catch(error => {
     console.log('getDetails() request failed:', error);
     console.log(error.response);
