@@ -4,7 +4,16 @@
     min-height: 100vh
   position: relative
 
-.cart_header  
+.cart_header
   +noPaddingMargin
   background: transparent
   height: 10rem
+
+.cart_list_table
+  +noPaddingMargin
+  .cart_table_pic
+    +noPaddingMargin
+    max-width: 100px
+    .cart_table_img
+      max-height: 100px
+      object-fit: contain

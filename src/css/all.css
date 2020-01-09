@@ -1516,4 +1516,21 @@ hr {
   background: transparent;
   height: 10rem;
 }
+
+.cart_list_table {
+  margin: 0;
+  padding: 0;
+}
+
+.cart_list_table .cart_table_pic {
+  margin: 0;
+  padding: 0;
+  max-width: 100px;
+}
+
+.cart_list_table .cart_table_pic .cart_table_img {
+  max-height: 100px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
 /*# sourceMappingURL=all.css.map */
