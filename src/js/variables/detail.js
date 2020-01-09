@@ -1,4 +1,5 @@
 let detailId = $('#detailId'),
+    capId = $('#capId'),
     breadCrumb = $('.detail_breadcrumb'),
     brewName = $('.detail_brewName'),
     itemName = $('.detail_item_name'),

@@ -5,6 +5,7 @@ addCart.on('mouseup', ()=> {
               'Accept': 'application/json'},
     body: [JSON.stringify({
       'iId': detailId.val(),
+      'cId': capId.val() <= 0 ? detailId.val() : capId.val(),
       'iQty': currectQty.data('qty'),
       'iPrice': itemPrice.data('price')
     })]

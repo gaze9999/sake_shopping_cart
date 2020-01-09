@@ -8,8 +8,11 @@ require_once('./tpl/tpl-header.php');
   .navbar-dark, .navbar-nav, .nav-link, .navbar-brand { color: #000 !important}
 </style>
 <script defer src="./dist/js/owl.carousel.min.js"></script>
-<input type="hidden" id="detailId" name="itemId" value="<?php echo $_GET['id'] ?>">
-<input type="hidden" id="inputPHP" name="inputPHP">
+<div class="hidden">
+  <input type="hidden" id="detailId" name="itemId" value="<?php echo $_GET['id'] ?>">
+  <input type="hidden" id="inputPHP" name="inputPHP">
+  <input type="hidden" id="capId" name="capId">
+</div>
 <main class="container detail_frame">
   <header class="row w-100 center_all detail_header">
     <section class="col-12 d-flex center_all detail_header_title">

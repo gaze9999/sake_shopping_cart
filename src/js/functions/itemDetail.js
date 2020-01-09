@@ -63,23 +63,29 @@ function getDetails() {
     // 價格換算
     let iCurr = json[0]['price'].substr(0, 3)
     let iPrice = json[0]['price'].slice(3)
+    capaid = json[0]['sId']
     iCurr == 'JPY' ?
       itemPrice.html(parseInt(iPrice * 0.27)) :
       itemPrice.html(parseInt(iPrice))
     iCurr == 'JPY' ?
       itemPrice.attr('data-price', parseInt(iPrice * 0.27)) :
       itemPrice.attr('data-price', iPrice)
+      
+    capId.val(capaid)
     
 
     itemSelCap.on('change', itemSelCap.val(), function() {
       iCurr = json[2][$(this).val()]['price'].substr(0, 3)
       iPrice = json[2][$(this).val()]['price'].slice(3)
+      capaid = json[2][$(this).val()]['sId']
       iCurr == 'JPY' ?
         itemPrice.html(parseInt(iPrice * 0.27)) :
         itemPrice.html(parseInt(iPrice))
+        capId.val(capaid)
       iCurr == 'JPY' ?
         itemPrice.attr('data-price', parseInt(iPrice * 0.27)) :
         itemPrice.attr('data-price', iPrice)
+        capId.val(capaid)
     })
 
     // 圖片置入

@@ -18,17 +18,48 @@ require_once('./tpl/tpl-header.php');
     <section class="table-responsive cart_list_table">
       <table class="table table-striped table-bordered cart_table">
         <thead class="thead-light cart_table_head">
-          <th scope="col">#</th>
-          <th scope="col">商品圖</th>
-          <th scope="col">商品名</th>
-          <th scope="col">價格</th>
-          <th scope="col">數量</th>
+          <th scope="col">商品總數</th>
+          <th scope="col">商品總價</th>
         </thead>
-        <tbody class="cart_table_body">
+        <tbody class="cart_table_tbody">
+          <td></td>
+          <td></td>
+        </tbody>
+      </table>
+    </section>
 
+    <section class="table-responsive cart_list_table">
+      <table class="table table-striped table-bordered cart_table">
+        <thead class="thead-light cart_table_head">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">商品圖</th>
+            <th scope="col">商品名</th>
+            <th scope="col">容量</th>
+            <th scope="col">單價</th>
+            <th scope="col">數量</th>
+            <th scope="col">刪除</th>
+          </tr>
+        </thead>
+        <tbody class="cart_table_body cart_table_items">
+        </tbody>
+      </table>
+    </section>
+    
+    <section class="table-responsive cart_list_table">
+      <table class="table table-striped table-bordered cart_table">
+        <thead class="thead-light cart_table_head">
+          <th scope="col">商品總數</th>
+          <th scope="col">數量合計</th>
+          <th scope="col">商品總價</th>
+        </thead>
+        <tbody class="cart_table_tbody">
+          <td></td>
+          <td></td>
+          <td></td>
         </tbody>
         <tfoot class="cart_table_foot">
-
+          <a class="btn btn-primary cart_clearCart" role="button">清空購物車</a>
         </tfoot>
       </table>
     </section>
@@ -40,4 +71,5 @@ require_once('./tpl/tpl-warning.php');
 require_once('./tpl/tpl-footer.php');
 require_once('./tpl/tpl-html-foot.php');
 ?>
-<script src=""></script>
+<script src="./src/js/variables/cart.js"></script>
+<script src="./src/js/cartBtn.js"></script>
