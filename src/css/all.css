@@ -1100,20 +1100,20 @@ main {
   content: ' > ';
 }
 
-.detail_header_title {
+.detail_header .detail_header_title {
   margin: 2.5rem 0;
 }
 
-.detail_header_title * {
+.detail_header .detail_header_title * {
   margin: 0;
   padding: 0;
 }
 
-.detail_header_title figure > img {
+.detail_header .detail_header_title figure > img {
   width: 45px;
 }
 
-.detail_header_title .detail_titleCloud {
+.detail_header .detail_header_title .detail_titleCloud {
   width: 30%;
   bottom: 30%;
 }
@@ -1499,5 +1499,21 @@ hr {
   background: #BC9691;
   border-radius: 5rem;
   margin: .5rem;
+}
+
+.cart_frame {
+  position: relative;
+}
+
+.cart_frame > section {
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+.cart_header {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  height: 10rem;
 }
 /*# sourceMappingURL=all.css.map */

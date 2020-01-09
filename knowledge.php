@@ -4,6 +4,9 @@ require_once('./db.inc.php');
 require_once('./tpl/tpl-html-head.php');
 require_once('./tpl/tpl-header.php');
 ?>
+<style>
+  .navbar-dark, .navbar-nav, .nav-link, .navbar-brand { color: #000 !important}
+</style>
 <header class="know_header know_bg">
   <div class="d-flex flex-column know_title" data-aos="fade-up" data-aos-delay="100">
     <hgroup class="d-flex flex-column center_all">

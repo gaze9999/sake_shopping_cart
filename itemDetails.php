@@ -4,8 +4,12 @@ require_once('./db.inc.php');
 require_once('./tpl/tpl-html-head.php');
 require_once('./tpl/tpl-header.php');
 ?>
+<style>
+  .navbar-dark, .navbar-nav, .nav-link, .navbar-brand { color: #000 !important}
+</style>
 <script defer src="./dist/js/owl.carousel.min.js"></script>
 <input type="hidden" id="detailId" name="itemId" value="<?php echo $_GET['id'] ?>">
+<input type="hidden" id="inputPHP" name="inputPHP">
 <main class="container detail_frame">
   <header class="row w-100 center_all detail_header">
     <section class="col-12 d-flex center_all detail_header_title">
@@ -36,11 +40,11 @@ require_once('./tpl/tpl-header.php');
           </article>
           <form class="row py-3 m-0 d-flex flex-column detail_item_function">
             <div class="d-flex center_all detail_item_counts">
-              <h2 class="col-6 text-center detail_item_price">價格</h2>
+              <h2 class="col-6 text-center detail_item_price" data-price="">價格</h2>
               <!-- can change to fontawesome -->
               <input class="detail_item_minus item_counts_btn" type="button" value="-">
               <!-- using js to show numbers -->
-              <input class="detail_item_hold" type="number" value="1" min="1" max="99" maxlength="4">
+              <div class="d-flex px-4 center_all detail_item_hold" type="number" data-qty="1">1</div>
               <input class="detail_item_plus item_counts_btn" type="button" value="+">
             </div>
 
@@ -52,13 +56,13 @@ require_once('./tpl/tpl-header.php');
 
           <div class="row m-0 detail_item_function">
             <div class="col-6 d-flex center_all">
-              <a class="d-flex center_all item_function_btn">
+              <a class="d-flex center_all item_function_btn item_addFav">
                 <img src="./img/test/heart.svg" alt="">
                 <p>加入收藏</p>
               </a>
             </div>
             <div class="col-6 d-flex center_all">
-              <a class="d-flex center_all item_function_btn">
+              <a class="d-flex center_all item_function_btn item_addCart">
                 <img src="./img/test/shopp_bag.svg" alt="">
                 <p>加入酒袋</p>
               </a>
@@ -185,3 +189,4 @@ require_once('./tpl/tpl-html-foot.php');
 ?>
 <script async src="./src/js/variables/detail.js"></script>
 <script async src="./src/js/functions/itemDetail.js"></script>
+<script async src="./src/js/addToCart.js"></script>
