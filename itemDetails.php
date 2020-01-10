@@ -46,7 +46,6 @@ require_once('./tpl/tpl-header.php');
               <h2 class="col-6 text-center detail_item_price" data-price="">價格</h2>
               <!-- can change to fontawesome -->
               <input class="detail_item_minus item_counts_btn" type="button" value="-">
-              <!-- using js to show numbers -->
               <div class="d-flex px-4 center_all detail_item_hold" type="number" data-qty="1">1</div>
               <input class="detail_item_plus item_counts_btn" type="button" value="+">
             </div>
