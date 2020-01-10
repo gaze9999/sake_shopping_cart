@@ -54,12 +54,14 @@ require_once('./tpl/tpl-header.php');
           <th scope="col">商品總價</th>
         </thead>
         <tbody class="cart_table_tbody">
-          <td></td>
-          <td></td>
-          <td></td>
+          <td class="cart_total_items"></td>
+          <td class="cart_total_qty"></td>
+          <td class="cart_total_price"></td>
         </tbody>
         <tfoot class="cart_table_foot">
-          <a class="btn btn-primary cart_clearCart" role="button">清空購物車</a>
+          <th scope="row"></th>
+          <td><a class="btn cart_clearCart" role="button">清空購物車</a></td>
+          <td><a class="btn cart_checkout" role="button">前往結帳</a></td>
         </tfoot>
       </table>
     </section>
@@ -73,3 +75,4 @@ require_once('./tpl/tpl-html-foot.php');
 ?>
 <script src="./src/js/variables/cart.js"></script>
 <script src="./src/js/cartBtn.js"></script>
+<script src="./src/js/functions/cartFunctions.js"></script>
