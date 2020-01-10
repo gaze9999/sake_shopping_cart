@@ -975,6 +975,55 @@ main {
   height: 20%;
 }
 
+.remove_alert {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #00000070;
+  width: 100vw;
+  height: 100vh;
+}
+
+.remove_alert .remove_box {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 20%;
+  min-height: 10rem;
+  min-width: 20rem;
+  background: #F1F1EE;
+  border-radius: 10px;
+  padding: 2rem;
+  -webkit-box-shadow: 0 2px 4px -2px #fff;
+          box-shadow: 0 2px 4px -2px #fff;
+}
+
+.remove_alert .remove_box .remove_btn_group {
+  padding: 1rem;
+}
+
+.remove_alert .remove_box .remove_btn_group .remove_btn {
+  background: #A06BCC;
+  border-color: #A06BCC;
+  color: #fff;
+  padding: .5rem 2rem;
+  -webkit-box-shadow: 0 0 0 0 #A06BCC;
+          box-shadow: 0 0 0 0 #A06BCC;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.remove_alert .remove_box .remove_btn_group .remove_btn:hover {
+  -webkit-box-shadow: 0 0 8px -4px #000, 0 0 0 #000 inset;
+          box-shadow: 0 0 8px -4px #000, 0 0 0 #000 inset;
+}
+
+.remove_alert .remove_box .remove_btn_group .remove_btn:hover:active {
+  -webkit-box-shadow: 0 0 0 #000, 0 0 8px -4px #000 inset;
+          box-shadow: 0 0 0 #000, 0 0 8px -4px #000 inset;
+}
+
 .itemList_frame {
   overflow-x: hidden;
   position: relative;
@@ -1532,5 +1581,9 @@ hr {
   max-height: 100px;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+.cart_list_table .cart_total_price::after {
+  content: '$';
 }
 /*# sourceMappingURL=all.css.map */

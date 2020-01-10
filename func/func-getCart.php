@@ -10,7 +10,7 @@ require_once('../db.inc.php');
 $sql ="SELECT i.`sId`, i.`itemName`, i.`breId`,
               i.`vId`, i.`price`, i.`capacity`,
               b.`bId`, b.`breName`,
-              m.`imgId`, m.`imgName`, m.`sId`
+              m.`imgId`, m.`imgName`, m.`sId` as `msId`
         FROM `sake_items` as i
               JOIN `sake_breweries` as b
               JOIN `sake_img` as m
