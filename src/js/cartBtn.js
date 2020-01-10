@@ -17,12 +17,13 @@ $(document).ready(()=> {
 
     for (let i in json) {
       // 價格換算
-      let iCurr = json[i][0]['price'].substr(0, 3)
-      let iPrice = json[i][0]['price'].slice(3)
-      capaid = json[i][0]['sId']
-      iCurr == 'JPY' ?
-        iPrice = parseInt(iPrice * 0.27) :
-        iPrice = parseInt(iPrice)
+      let iCurr = json[i][0]['price'].substr(0, 3),
+          iPrice = json[i][0]['price'].slice(3)
+
+          capaid = json[i][0]['sId']
+          iCurr == 'JPY' ?
+          iPrice = parseInt(iPrice * 0.27) :
+          iPrice = parseInt(iPrice)
 
       cartItems.append(
         `<tr class="cart_row_data" data-cartRow="${i}">
@@ -34,10 +35,20 @@ $(document).ready(()=> {
               onerror="this.onerror=null; this.src='./img/icons/main_icon.svg'">
             </picture>
           </td>
-          <td class="cart_item_name" data-row="${i}">${json[i][0]['itemName']}</td>
-          <td class="cart_item_cap" data-row="${i}">${json[i][0]['capacity']}</td>
-          <td class="cart_item_price" data-row="${i}">${iPrice}</td>
-          <td class="cart_item_qty" data-row="${i}">${json[i][1]['itemQty']}</td>
+          <td class="cart_item_name">
+            ${json[i][0]['itemName']}
+          </td>
+          <td class="cart_item_cap">
+            ${json[i][0]['capacity']}
+          </td>
+          <td class="cart_item_price">
+            ${iPrice}
+          </td>
+          <td class="d-flex center_all cart_item_qty">
+            <input class="cart_item_minus item_counts_btn" type="button" value="-">
+            <div class="d-flex px-4 center_all cart_item_hold" type="number" data-qty="${json[i][1]['itemQty']}">${json[i][1]['itemQty']}</div>
+            <input class="cart_item_plus item_counts_btn" type="button" value="+">          
+          </td>
           <td>
             <a class="btn cart_table_remove" data-itemId="${parseInt(i)}" role="button">刪除</a>
           </td>
@@ -45,25 +56,18 @@ $(document).ready(()=> {
         </tr>`
       )
     }
-  itemRemove = $('.cart_table_remove')
-  rowTotal = $('.cart_row_total')
-  rowNum = $('.cart_row_data')
-  let TotalPrice
-
-  rowTotal.each(()=> {
-    TotalPrice += parseInt(rowTotal.value)
-  })
-
-  // console.log($.type(TotalPrice))
-  console.log(TotalPrice)
-  totalPrice.html(TotalPrice)
-
-  }).then(e => {
+  let itemRemove = $('.cart_table_remove'),
+      cartMinus = $('.cart_item_minus'),
+      cartPlus = $('.cart_item_plus'),
+      cartHold = $('.cart_item_hold'),
+      cartTotal = $('.cart_row_total'),
+      cartPrice = $('.cart_item_price')
+  countTotal()
 
   itemRemove.on('mouseup', function() {
     alertTemp('確定要刪除嗎?')
-    let removeE = $('#remove_e')
-    let removeId = $(this).data('itemid')
+    let removeE = $('#remove_e'),
+        removeId = $(this).data('itemid')
     removeE.val( removeId )
     $('.remove_btn').on('mouseup', function(){
       if ($(this).val() == 'yes') {
@@ -72,6 +76,7 @@ $(document).ready(()=> {
       }
       removeId = ""
       $('.remove_alert').remove()
+      countTotal()
     })
   })
 
@@ -81,7 +86,36 @@ $(document).ready(()=> {
     $('.remove_btn').on('mouseup', function(){
       $(this).val() == 'yes' && clearItem()
       $('.remove_alert').remove()
+      countTotal()
     })
+  })
+
+  cartMinus.on('mouseup', function() {
+    let thisRow = $(this).parents('tr').data('cartrow'),
+        thisDiv = cartHold.eq( thisRow ),
+        thisTotal = cartTotal.eq( thisRow ),
+        thisPrice = $.trim( cartPrice.eq( thisRow ).text() ),
+        thisQty = parseInt( thisDiv.data('qty') )
+
+    thisQty > 1 ? thisQty -= 1 : cartPlus
+    thisDiv.data('qty', thisQty)
+    thisDiv.html(thisQty)
+    thisTotal.val( parseInt(thisPrice) * parseInt(thisQty) )
+    countTotal()
+  })
+
+  cartPlus.on('mouseup', function() {
+    let thisRow = $(this).parents('tr').data('cartrow'),
+        thisDiv = cartHold.eq( thisRow ),
+        thisTotal = cartTotal.eq( thisRow ),
+        thisPrice = $.trim( cartPrice.eq( thisRow ).text() ),
+        thisQty = parseInt( thisDiv.data('qty') )
+
+    thisQty < 99 ? thisQty += 1 : cartMinus
+    thisDiv.data('qty', thisQty)
+    thisDiv.html(thisQty)
+    thisTotal.val( parseInt(thisPrice) * parseInt(thisQty) )
+    countTotal()
   })
 
   }).catch(error => {
@@ -89,3 +123,17 @@ $(document).ready(()=> {
   console.log(error.response);
   });
 })
+
+// minusQty.on('mouseup', ()=> {
+//   let qty = parseInt(currectQty.data('qty'))
+//   qty > 1 ? qty -= 1 : plusQty
+//   currectQty.data('qty', qty)
+//   currectQty.html(currectQty.data('qty'))
+// })
+
+// plusQty.on('mouseup', ()=> {
+//   let qty = parseInt(currectQty.data('qty'))
+//   qty < 99 ? qty += 1 : qty
+//   currectQty.data('qty', qty)
+//   currectQty.html(currectQty.data('qty'))
+// })

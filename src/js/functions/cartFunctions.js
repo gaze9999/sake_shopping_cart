@@ -60,3 +60,15 @@ function alertTemp(title) {
   </div>`
   )
 }
+
+function countTotal() {
+  rowTotal = $('.cart_row_total')
+  rowNum = $('.cart_row_data')
+  priceCount = 0
+
+  rowTotal.each(e => {
+    priceCount += parseInt(rowTotal[e].value)
+  })
+
+  totalPrice.html(priceCount)
+}
