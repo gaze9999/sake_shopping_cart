@@ -10,7 +10,7 @@ require_once('../db.inc.php');
 $sql ="SELECT i.`sId`, i.`itemName`, i.`breId`,
               i.`vId`, i.`price`, i.`capacity`,
               b.`bId`, b.`breName`,
-              m.`imgId`, m.`imgName`, m.`sId` as `msId`
+              m.`imgId`, m.`imgName`
         FROM `sake_items` as i
               JOIN `sake_breweries` as b
               JOIN `sake_img` as m
@@ -21,27 +21,21 @@ $sql ="SELECT i.`sId`, i.`itemName`, i.`breId`,
 $arr = array();
 
 for ($i = 0; $i < count($_SESSION['cart']); $i++) {
-  $itemId['itemId'] = $_SESSION['cart'][$i]['itemId'];
-  $capId = $_SESSION['cart'][$i]['capId'];
+  $itemId['itemId']   = $_SESSION['cart'][$i]['itemId'];
+  $capId              = $_SESSION['cart'][$i]['capId'];
   $itemQty['itemQty'] = $_SESSION['cart'][$i]['itemQty'];
-  $itemPrice = $_SESSION['cart'][$i]['itemPrice'];
+  $itemPrice          = $_SESSION['cart'][$i]['itemPrice'];
 
   $arrParam = [$capId];
   $stmt = $pdo->prepare($sql);
   $stmt->execute($arrParam);
-  $arrSid = $stmt->fetchAll(PDO::FETCH_ASSOC);
-  array_push($arr, $arrSid);
-  array_push($arr[$i], $itemQty);
-  array_push($arr[$i], $itemId);
-};
-
-// echo "<pre>";
-// print_r($arr);
-// echo "</pre>";
-// exit;
-
-if($stmt->rowCount() > 0) {
-  $result = urldecode(json_encode($arr));
-  echo $result;
+  if($stmt->rowCount() > 0) {
+    $arrSid = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    array_push($arr, $arrSid);
+    array_push($arr[$i], $itemQty);
+    array_push($arr[$i], $itemId);
+  }
 }
+$result = urldecode(json_encode($arr));
+echo $result;
 ?>
