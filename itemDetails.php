@@ -189,6 +189,6 @@ require_once('./tpl/tpl-warning.php');
 require_once('./tpl/tpl-footer.php');
 require_once('./tpl/tpl-html-foot.php');
 ?>
-<script async src="./src/js/variables/detail.js"></script>
-<script async src="./src/js/functions/itemDetail.js"></script>
-<script async src="./src/js/addToCart.js"></script>
+<script src="./src/js/variables/detail.js"></script>
+<script src="./src/js/functions/itemDetail.js"></script>
+<script src="./src/js/addToCart.js"></script>
