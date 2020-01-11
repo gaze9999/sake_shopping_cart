@@ -787,11 +787,39 @@ main {
   font-weight: 500;
 }
 
-.main_logoSec {
+.main_sakura {
+  margin: 0;
+  padding: 0;
+  min-height: 200vh !important;
+  position: relative;
+  margin-top: -116px;
+  background: transparent !important;
+}
+
+.main_sakura #sakura {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.main_sakura .main_article_center {
+  top: 100vh;
   min-height: 100vh;
-  padding-bottom: 200px;
+}
+
+.main_logoSec {
+  padding: 116px 0 200px;
   -webkit-animation: mainTitle 2s infinite alternate both ease-out;
           animation: mainTitle 2s infinite alternate both ease-out;
+}
+
+.main_logoSec, .main_logoSec .main_article_center {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  min-height: 100vh;
 }
 
 .main_logoSec h1 {

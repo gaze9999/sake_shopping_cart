@@ -30,11 +30,31 @@ main
   font-size: $font_subtitle
   font-weight: 500
 
+.main_sakura
+  +noPaddingMargin
+  min-height: 200vh !important
+  position: relative
+  margin-top: -116px
+  background: transparent !important
+  #sakura
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+  .main_article_center
+    top: 100vh
+    min-height: 100vh
+
 // logo section
 .main_logoSec
-  min-height: 100vh
+  &, .main_article_center
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    min-height: 100vh
   // text-shadow: white 0px 0px 2px
-  padding-bottom: 200px
+  padding: 116px 0 200px
   animation: mainTitle 2s infinite alternate both ease-out
   h1
     +noPaddingMargin
