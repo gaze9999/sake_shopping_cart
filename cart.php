@@ -74,5 +74,4 @@ require_once('./tpl/tpl-footer.php');
 require_once('./tpl/tpl-html-foot.php');
 ?>
 <script src="./src/js/variables/cart.js"></script>
-<script src="./src/js/cartBtn.js"></script>
 <script src="./src/js/functions/cartFunctions.js"></script>
