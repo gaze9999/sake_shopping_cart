@@ -1,0 +1,71 @@
+.delivery_frame
+  & form > section
+    margin-top: 4rem
+  .form-control
+    border: 0
+    border-bottom: 1px solid grey
+    border-radius: 0
+    margin-bottom: 1.5rem
+    background: transparent
+    &:focus
+      border-radius: .1rem .1rem 0 0
+      box-shadow: 0 0 0 0.2rem lighten($mouseIconColor, 20%)
+  .form-check-input[type='radio']
+    height: $font_mintitle
+    width: $font_mintitle
+  .form-check-label
+    font-size: $font_mintitle
+
+.delivery_btn
+  border: 1px solid $mouseIconColor
+  color: $mouseIconColor !important
+  width: 25%
+  text-align: center
+  padding: 1rem 0
+  font-size: $font_mintitle
+  &:hover
+    border: 1px solid lighten($mouseIconColor, 10%)
+    color: lighten($mouseIconColor, 50%) !important
+    background: lighten($mouseIconColor, 10%)
+  &:active
+    border: 1px solid $mouseIconColor
+    color: lighten($mouseIconColor, 100%) !important
+    background: $mouseIconColor
+
+.delivery_order_gender,
+.delivery_reviver_gender
+  &::before, &::after
+    content: ''
+    display: block
+    flex-grow: 1
+
+.checkout_info
+  > section
+    margin: 2rem 0
+  .checkout_info_help,
+  .checkout_price
+    border: 1px solid $highlightColor
+    padding: .75rem
+    border-radius: 4px
+    h5, h6
+      color: $highlightColor
+    h5
+      font-weight: 700
+  .checkout_cart
+    background: lighten($mainColor, 20%)
+    padding: 1rem
+    border-radius: 4px
+    &>div
+      padding: .5rem 1rem
+      .checkout_item_count::before
+        content: 'X'
+      .checkout_item_price::after
+        content: '$'
+.checkout_price
+  ul, ul *
+    +noPaddingMargin
+  li
+    margin-top: 1rem
+    border-bottom: 1px solid $highlightColor
+    p::after
+      content: '$'
