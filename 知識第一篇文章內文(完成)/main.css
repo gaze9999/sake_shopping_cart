@@ -1,0 +1,276 @@
+html {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+}
+
+body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      /* background: #1f1f1f; */
+      background: url(img/bg001.gif);
+      font-family: 'Noto Sans TC', sans-serif;
+      color: #000;
+      font-size: 400px;
+      overflow-x: hidden;
+      height: 300vh;
+}
+
+.wrapper {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 10px;
+      grid-auto-rows: minmax(100px, auto);
+    }
+
+
+.know1-letter1-hyh {
+      position: absolute;
+      top: 30%;
+      left: -4%;
+}
+
+.know1-letter2-hyh {
+      position: absolute;
+      top: 0;
+      left: 20%;
+}
+
+/* .know1-letter3-hyh {
+      position: absolute;
+      top: -95%;
+      left: 70%;
+}
+
+.know1-letter4-hyh {
+      position: absolute;
+      top: 80%;
+      left: 80%;
+}
+
+.know1-letter5-hyh {
+      position: absolute;
+      top: 120%;
+      left: 10%;
+}
+
+.know1-letter6-hyh {
+      position: absolute;
+      top: 130%;
+      left: 20%;
+}
+
+.know1-letter7-hyh {
+      position: absolute;
+      top: 220%;
+      left: 60%;
+} */
+
+.know1-letter8-hyh {
+      position: absolute;
+      top: 180%;
+      left: 46%;
+}
+
+.know1-box0-hyh{
+      font-size:35px ;
+      height: 100px;
+      width: 400px;
+      position: absolute;
+      top: 5%;
+      left: 45%;
+}
+
+.know1-box1-hyh {
+      /* background: #0008fd; */
+      height: 400px;
+      width: 400px;
+      position: absolute;
+      top: 30%;
+      left: 4%;
+}
+
+/* -------------cj是稻米的圖片 */
+.cj{
+      background-image: url(img/酒米.jpg);
+      background-size: cover;
+      box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+      border-radius: 10px;
+}
+
+.cjbtn{
+      text-decoration: none;
+      color: wheat;
+      font-weight: 600;
+      text-align: center;
+      display: inline-block;
+      font-size: 16px;
+      /* display: inline-block; */
+      background-color: brown;
+      padding: 8px;
+      width: 80px;
+      max-height: 80px;
+      border-radius: 5px;
+}
+
+.know1-box2-hyh {
+      font-size: 1.5rem;
+      /* background: #0008fd; */
+      height: 400px;
+      width: 500px;
+      position: absolute;
+      top: 28%;
+      left: 40%;
+}
+
+/* ------酒米地圖圖片 */
+.know1-box3-hyh {
+      background:url(img/map001.jpg) no-repeat;
+      height: 300px;
+      width: 500px;
+      position: absolute;
+      top: 160%;
+      left: 55%;
+      cursor: pointer;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.30), 0 15px 19px rgba(0, 0, 0, 0.22);
+      border-radius: 10px;
+}
+
+
+.know1-box4-hyh {
+      font-size: 20px;
+      /* background: #0008fd; */
+      height: 400px;
+      width: 400px;
+      position: absolute;
+      top: 145%;
+      left: 20%;
+}
+
+/* -----------box5 手上有米的圖片 */
+
+.know1-box5-hyh {
+      background:url(img/handrice.jpg);
+      padding-left: 30%;
+      height: 400px;
+      width: 400px;
+      position: absolute;
+      top: 250%;
+      left: 8%;
+      display:  block;
+       text-align:  center;
+      box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+      border-radius: 10px;
+}
+
+.know1-box6-hyh{
+      font-size: 20px;
+      /* background: #0008fd; */
+      height: 400px;
+      width: 400px;
+      position: absolute;
+      top: 325%;
+      left: 50%;
+}
+
+/* ------------box5RWD會變這張 */
+.know1-box7-hyh{
+      background:url(img/米_mobile.webp);
+      padding-left: 30%;
+      height: 400px;
+      width: 400px;
+      position: absolute;
+      top: 250%;
+      left: 8%;
+      display:  block;
+       text-align:  center;
+      box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+      border-radius: 10px;
+      display: none;
+}
+
+/* ----------------------------------- */
+/* ---------XR RWD */
+
+@media only screen 
+and (device-width : 414px) { 
+      .container{
+           overflow-x: hidden;
+      }
+
+      .know1-box0-hyh{
+            font-size: 25px;
+            left: 18%;
+      }
+
+      .know1-box1-hyh{
+      height: 200px;
+      width: 300px;
+      left: 13%;
+      }
+
+      .know1-box2-hyh{
+      max-width:360px ;
+      font-size: 0.8rem;
+      flex-wrap: wrap;
+      margin-top: 55%;
+      left: 10%;
+      }
+
+      .know1-letter1-hyh img{
+      display: none;
+      }
+
+      .know1-letter3-hyh{
+            display: none;
+      }
+
+      .know1-box3-hyh{
+            height: 200px;
+            width: 300px;
+            top: 155%;
+            left: 13%;
+      }
+
+      .know1-box4-hyh{
+            max-width:360px ;
+            font-size: 0.8rem;
+            flex-wrap: wrap;
+            margin-top: 63%;
+            left: 10%;
+      }
+
+      .know1-box5-hyh{
+            display: none;
+      }
+
+      .know1-box7-hyh{
+            display: inline;
+            width: 180px;
+            height: 200px;
+            top: 260%;
+            left: 13%;
+      }
+
+      .know1-box6-hyh{
+            max-width:360px ;
+      font-size: 0.8rem;
+      flex-wrap: wrap;
+      margin-top: -10%;
+      left: 10%;
+      }
+
+      .know1-letter8-hyh{
+            height: 1%;
+            width: 1%;
+            z-index: -6;
+            top: 30%;
+            left: -36%;
+            transform: rotate(30 deg);
+            display: none;
+      }
+
+
+
+}
