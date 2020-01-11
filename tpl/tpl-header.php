@@ -42,7 +42,7 @@
   </div> -->
     <ul class="navbar-nav my-2 my-md-0 nav_function">
       <li class="nav-item active">
-        <a class="nav-link nav_cart px-2" href="./cart.php">購物車</a>
+        <a class="nav-link nav_cart px-2" href="./cart.php">購物車( <?php echo count($_SESSION['cart']); ?> )</a>
       </li>
       <li class="nav-item active">
         <a class="nav-link nav_account px-2" href="">登入</a>

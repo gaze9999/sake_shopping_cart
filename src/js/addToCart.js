@@ -1,4 +1,10 @@
-addCart.on('mouseup', ()=> {
+let cartCount, num
+
+addCart.on('mouseup', ()=> {  
+  cartCount = $('.nav_cart').html()
+  num = cartCount.substr(5,cartCount.length-7)
+  $('.nav_cart').html( `購物車( ${parseInt(num) + 1} )` )
+  
   fetch('./func/func-addCart.php', {
     method: "POST",
     headers: {'Content-Type': 'application/json',
