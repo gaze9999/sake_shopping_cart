@@ -44,8 +44,19 @@
       <li class="nav-item active">
         <a class="nav-link nav_cart px-2" href="./cart.php">購物車( <?php echo count($_SESSION['cart']); ?> )</a>
       </li>
+
       <li class="nav-item active">
-        <a class="nav-link nav_account px-2" href="">登入</a>
+        <?php if(!isset($_SESSION['userinfo']['username'])): ?>
+          <a class="nav-link nav_account px-2" href="./register.php">註冊</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link nav_account px-2" href="./login.php">登入</a>
+        <?php else: ?>
+          <a class="nav-link px-2" href="./main.php"><?php echo $_SESSION['userinfo']['name']; ?> 您好</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link nav_account px-2" href="./login.php">登出</a>
+        <?php endif; ?>
       </li>
     </ul>
   </div>
