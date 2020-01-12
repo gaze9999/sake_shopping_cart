@@ -1,7 +1,7 @@
 getCart()
 function getCart() {
   fetch('./func/func-getCart.php', {
-    method: "PUT",
+    method: "GET",
     headers: {'Content-Type': 'application/json',
               'Accept': 'application/json'}
   }).then(res => {
@@ -50,13 +50,15 @@ function getCart() {
           </td>
           <td class="d-flex center_all cart_item_qty">
             <input class="cart_item_minus item_counts_btn" type="button" value="-">
-            <input type="number" class="pl-3 text-center cart_item_hold" data-qty="${json[i][1]['itemQty']}" value="${json[i][1]['itemQty']}" disabled>
+            <input type="number" class="pl-3 text-center cart_item_hold" value="${json[i][1]['itemQty']}" disabled>
             <input class="cart_item_plus item_counts_btn" type="button" value="+">
           </td>
           <td>
             <a class="btn cart_table_remove" data-itemId="${parseInt(i)}" role="button">刪除</a>
           </td>
-          <input type="hidden" class="cart_row_total" value="${iPrice * json[i][1]['itemQty']}">
+          <input type="hidden" class="cart_hidden_sid" value="${json[i][0]['sId']}">
+          <input type="hidden" class="cart_hidden_qty" value="${json[i][1]['itemQty']}">
+          <input type="hidden" class="cart_hidden_total" value="${iPrice * json[i][1]['itemQty']}">
         </tr>`
       )
     }
@@ -67,19 +69,23 @@ function getCart() {
   cartMinus = $('.cart_item_minus'),
   cartPlus = $('.cart_item_plus'),
   cartHold = $('.cart_item_hold'),
-  cartTotal = $('.cart_row_total'),
-  cartPrice = $('.cart_item_price')
+  cartTotal = $('.cart_hidden_total'),
+  cartPrice = $('.cart_item_price'),
+  cartHiddenQty = $('.cart_hidden_qty'),
+  cartHiddenSid = $('.cart_hidden_sid')
 
   cartMinus.on('mouseup', function() {
     let thisRow = $(this).parents('tr').data('cartrow'),
         thisQty = cartHold.eq( thisRow ),
         thisTotal = cartTotal.eq( thisRow ),
+        thisHQty = cartHiddenQty.eq( thisRow ),
         thisPrice = $.trim( cartPrice.eq( thisRow ).text() ),
-        thisQtyCount = parseInt( thisQty.data('qty') )
+        thisQtyCount = parseInt( thisQty.val() )
 
     thisQtyCount > 1 ? thisQtyCount -= 1 : cartPlus
     thisQty.data('qty', thisQtyCount)
     thisQty.val(thisQtyCount)
+    thisHQty.val(thisQtyCount)
     thisTotal.val( parseInt(thisPrice) * parseInt(thisQtyCount) )
     countTotal()
   })
@@ -88,12 +94,14 @@ function getCart() {
     let thisRow = $(this).parents('tr').data('cartrow'),
         thisQty = cartHold.eq( thisRow ),
         thisTotal = cartTotal.eq( thisRow ),
+        thisHQty = cartHiddenQty.eq( thisRow ),
         thisPrice = $.trim( cartPrice.eq( thisRow ).text() ),
-        thisQtyCount = parseInt( thisQty.data('qty') )
+        thisQtyCount = parseInt( thisQty.val() )
 
     thisQtyCount < 99 ? thisQtyCount += 1 : cartMinus
     thisQty.data('qty', thisQtyCount)
     thisQty.val(thisQtyCount)
+    thisHQty.val(thisQtyCount)
     thisTotal.val( parseInt(thisPrice) * parseInt(thisQtyCount) )
     countTotal()
   })
@@ -200,7 +208,7 @@ function alertTemp(title) {
 
 function countTotal() {
   let priceCount = 0, qtyCount = 0
-  rowTotal = $('.cart_row_total')
+  rowTotal = $('.cart_hidden_total')
   rowCount = $('.cart_row_count')
   cartHold = $('.cart_item_hold')
 
