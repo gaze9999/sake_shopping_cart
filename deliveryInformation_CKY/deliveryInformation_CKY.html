@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>配送資訊</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- main CSS -->
+    <link rel="stylesheet" href="./css/deliveryInformation.css">
+
+    <!-- google font style (notoSerif) -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+TC:200,300,400,500,600,700,900&display=swap"
+        rel="stylesheet">
+
+    <!-- fontwesome -->
+    <link rel="stylesheet" href="./fontawesome-free-5.11.2-web/css/all.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./css/bootstrap_deliveryInformation.min.css" crossorigin="anonymous">
+
+    <!-- aos -->
+    <link rel="stylesheet" href="./css/aos.css">
+</head>
+
+<body>
+    <!-- 配送資訊大標題 -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="sakeTitle-cky py-5" data-aos="zoom-in" data-aos-delay="100">
+                    <figure class="figureImg-cky hard-light-cky">
+                        <img class="brewIcon-cky " src="./images/web/pic051.png" alt="">
+                    </figure>
+                    <h2 clas="sakeName-cky">配送資訊</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 配送資訊大標題 結束 -->
+    <div class="container ">
+        <div class="row del-margin-cky">
+            <!-- 左邊填寫表單 -->
+            <div class="col-lg-7 left-col">
+                <!-- 運送方式 -->
+                <div class="shippingCart-cky">
+                    <a class="continue-cky">
+                        <span><i class="fas fa-chevron-left"></i></span>
+                        返回上一步
+                    </a>
+                    <h3>配送方式</h3>
+                    <ul>
+                        <li class="btnShippingActive-cky">到店</li>
+                        <li>宅配</li>
+                    </ul>
+                </div>
+                <!-- 運送方式 結束 -->
+                <form action="">
+                    <!-- 訂購人 -->
+                    <div class="shippingDetail-cky">
+                        <h3>訂購人</h3>
+                        <!-- 姓名 + 性別 -->
+                        <div class="form-row">
+                            <!-- 姓名 -->
+                            <div class="form-group col-md-6">
+                                <label for="">姓名</label>
+                                <input type="text" class="form-control formControl-cky" maxlength="10"
+                                    placeholder="請輸入中英文" required="required">
+                            </div>
+                            <!-- 姓名 結束 -->
+                            <!-- 性別 -->
+                            <div class="form-group col-md-6">
+                                <div class="radio-group-cky">
+                                    <label class="radio-cky">
+                                        <input type="radio" value="male" name="gender" required="required"> 
+                                        先生
+                                        <span></span>
+                                    </label>
+                                    <label class="radio-cky">
+                                        <input type="radio" value="female" name="gender" required="required">
+                                        小姐
+                                        <span></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <!-- 性別 結束 -->
+                        </div>
+                        <!-- 姓名 + 性別 結束-->
+                        <!-- 聯絡電話 -->
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="">聯絡手機</label>
+                                <input type="tel" class="form-control formControl-cky" name="phone" required="required"
+                                    placeholder="請輸入聯絡手機">
+                            </div>
+                        </div>
+                        <!-- 連絡電話 結束 -->
+                        <!-- 電子信箱 -->
+                        <div class="form-group">
+                            <label for="">Email</label>
+                            <input type="email" class="form-control formControl-cky" maxlength="60"
+                                placeholder="請輸入電子信箱" required="required">
+                        </div>
+                        <!-- 電子信箱 結束 -->
+                        <!-- 城市 + 市區 + 郵遞區號 -->
+                        <div class="form-row">
+                            <!-- 城市 -->
+                            <div class="form-group col-md-6 ">
+                                <label for="">城市</label>
+                                <select class="mr-sm-2 custom-select " required="required" placeholder="selectCity">
+                                    <option value="01">基隆市</option>
+                                    <option value="02">臺北市</option>
+                                    <option value="03">新北市</option>
+                                    <option value="04">桃園市</option>
+                                    <option value="05">新竹市</option>
+                                    <option value="06">新竹縣</option>
+                                    <option value="07">苗栗縣</option>
+                                    <option value="08">臺中市</option>
+                                    <option value="09">彰化縣</option>
+                                    <option value="10">南投縣</option>
+                                    <option value="11">雲林縣</option>
+                                    <option value="12">嘉義市</option>
+                                    <option value="13">嘉義縣</option>
+                                    <option value="14">臺南市</option>
+                                    <option value="15">高雄市</option>
+                                    <option value="16">屏東縣</option>
+                                    <option value="17">台東縣</option>
+                                    <option value="18">花蓮縣</option>
+                                    <option value="19">宜蘭縣</option>
+                                </select>
+                            </div>
+                            <!-- 城市 結束 -->
+                            <!-- 市區 -->
+                            <div class="form-group col-md-4">
+                                <label for="">市區</label>
+                                <select class="custom-select mr-sm-2" required="required"
+                                    placeholder="selectState"></select>
+                            </div>
+                            <!-- 市區 結束 -->
+                            <!-- 郵遞區號 -->
+                            <div class="form-group col-md-2">
+                                <label for="">郵遞區號</label>
+                                <input type="text" class="form-control" required="required" disabled="disabled">
+                            </div>
+                            <!-- 郵遞區號 結束 -->
+                        </div>
+                        <!-- 城市 + 市區 + 郵遞區號 結束-->
+                        <!-- 詳細地址 -->
+                        <div class="form-group">
+                            <label for="">地址</label>
+                            <input type="text" class="form-control formControl-cky" placeholder="請輸入詳細地址"
+                                required="required">
+                        </div>
+                        <!-- 詳細地址 結束 -->
+                    </div>
+                    <!-- 訂購人 結束 -->
+                    <!-- 收件人 -->
+                    <div class="shippingDetail-cky">
+                        <h3>收件人</h3>
+                            <label class="save-cky">
+                                <input type="checkbox">
+                                同訂購人
+                                <span></span>
+                            </label>
+                        <div class="save-cky">
+                            <!-- 姓名 + 電話 -->
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="">姓名</label>
+                                    <input type="text" class="form-control formControl-cky" placeholder="請輸入中英文"
+                                        maxlength="10" required="required">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="">電話</label>
+                                    <input type="tel" class="form-control formControl-cky" placeholder="手機號碼"
+                                        required="required">
+                                </div>
+                            </div>
+                            <!-- 姓名 + 電話 結束 -->
+                            <!-- 城市 + 地區 + 郵遞區號 -->
+                            <div class="form-row">
+                                <!-- 城市 -->
+                                <div class="form-group col-md-6 ">
+                                    <label for="">城市</label>
+                                    <select class="mr-sm-2 custom-select " required="required" placeholder="selectCity">
+                                        <option value="01">基隆市</option>
+                                        <option value="02">臺北市</option>
+                                        <option value="03">新北市</option>
+                                        <option value="04">桃園市</option>
+                                        <option value="05">新竹市</option>
+                                        <option value="06">新竹縣</option>
+                                        <option value="07">苗栗縣</option>
+                                        <option value="08">臺中市</option>
+                                        <option value="09">彰化縣</option>
+                                        <option value="10">南投縣</option>
+                                        <option value="11">雲林縣</option>
+                                        <option value="12">嘉義市</option>
+                                        <option value="13">嘉義縣</option>
+                                        <option value="14">臺南市</option>
+                                        <option value="15">高雄市</option>
+                                        <option value="16">屏東縣</option>
+                                        <option value="17">台東縣</option>
+                                        <option value="18">花蓮縣</option>
+                                        <option value="19">宜蘭縣</option>
+                                    </select>
+                                </div>
+                                <!-- 城市 結束 -->
+                                <!-- 市區 -->
+                                <div class="form-group col-md-4">
+                                    <label for="">市區</label>
+                                    <select class="custom-select mr-sm-2" required="required"
+                                        placeholder="selectState"></select>
+                                </div>
+                                <!-- 市區 結束 -->
+                                <!-- 郵遞區號 -->
+                                <div class="form-group col-md-2">
+                                    <label for="">郵遞區號</label>
+                                    <input type="text" class="form-control" required="required" disabled="disabled">
+                                </div>
+                                <!-- 郵遞區號 結束 -->
+                            </div>
+                            <!-- 城市 + 地區 + 郵遞區號 結束-->
+                            <!-- 存為常用地址 -->
+                            <div class="form-group">
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input type="checkbox" class="form-check-input">存為常用地址
+                                    </label>
+                                </div>
+                            </div>
+                            <!-- 存為成用地址 結束 -->
+                        </div>
+                    </div>
+                    <!-- 收件人 結束 -->
+                     <!--寄送方式  -->
+                     <div class="sendDetail-cky">
+                        <h3>寄送方式</h3>
+                        <div class="checkbox-group-cky">
+                            <label class="checkbox-cky" for="send2">
+                                <input type="radio" required="required" id="send2" name="sendRadios" value="2">
+                                店到店
+                                <span></span>
+                            </label>
+                            <label class="checkbox-cky" for="send3">
+                                <input type="radio" required="required" id="send3" name="sendRadios" value="3">
+                                宅配
+                                <span></span>
+                            </label>
+                        </div>
+                     </div>    
+                     <!--寄送方式 結束 -->
+                     <!-- 配送方式 -->
+                     <div class="deliveryDetail-cky">
+                        <h3>配送方式</h3>
+                                <div class="checkbox-group-cky">
+                                    <label class="checkbox-cky" for="delivery2">
+                                        <input type="radio" required="required" id="delivery2" name="deliveryRadios" value="2">
+                                        常溫配送
+                                        <span></span>
+                                    </label>
+                                    <label class="checkbox-cky" for="delivery3">
+                                        <input type="radio" required="required" id="delivery3" name="deliveryRadios" value="3">
+                                        低溫配送
+                                        <span></span>
+                                    </label>
+                                </div>
+                     </div> 
+                     <!-- 配送方式 結束-->
+                    <!-- 付款方式 -->
+                    <div class="pickupDetail-cky">
+                        <h3>付款方式</h3>
+                        <div class="checkbox-group-cky">
+                            <label class="checkbox-cky" for="payment2">
+                                <input type="radio" required="required" id="payment2" name="paymentRadios" value="2">
+                                線下付款
+                                <span></span>
+                                <h5 class="call-cky">*小編會與您聯絡</h5> 
+                            </label>
+                            <label class="checkbox-cky" for="payment3">
+                                <input type="radio" required="required" id="payment3" name="paymentRadios" value="3">
+                                貨到付款
+                                <span></span>
+                            </label>
+                        </div>
+                    </div>
+                    <!-- 付款方式 結束 -->
+                    <!-- 發票 -->
+                    <div class="receipt_method-cky">
+                        <h3>發票</h3>
+                        <div class="checkbox-group-cky">
+                            <label class="checkbox-cky" for="electronic-receipt">
+                                <input type="radio" required="required" id="electronic-receipt" name="receiptRadios" value="2">
+                                電子發票
+                                <span></span>
+                            </label>
+                            <label class="checkbox-cky" for="company-receipt">
+                                <input type="radio" required="required" id="company-receipt" name="receiptRadios" value="3">
+                                公司戶發票
+                                <span></span>
+                            </label>
+                            <input type="text" class="tax-num-cky form-control" required="required" placeholder="統編">
+                        </div>
+                    </div>
+                    <!-- 發票 結束-->
+                    <!-- 備註 -->
+                    <div class="form-group">
+                        <textarea class="form-control" rows="2" maxlength="100"></textarea>
+                    </div>
+                    <!-- 備註 結束-->
+                    <!-- 下一步按鈕 -->
+                    <div class="centered-cky">
+                        <button type="submit" class="submitBtn-cky">下一步</button>
+                    </div>
+                    <!-- 下一步按鈕 結束 -->
+            </div>
+            <!-- 左邊填寫表單 結束 -->
+            </form>
+            <!-- 右邊購買清單 -->
+            <div class="col-lg-5 right-col">
+                <div class="total-cky">
+                    <!-- 快速道到貨 -->
+                    <div class="shippingDuration-cky">
+                        <h6>快速到貨</h6>
+                        每日下午 14:00前完成訂單，可於下一個工作天宅配到貨，4個工作天內通知指定門市取貨。
+                    </div>
+                    <!-- 快速到貨 結束 -->
+                                        <!-- 商品清單 -->
+                                        <div class="purchasedItems-cky side-cky">
+                                            <h6>購買商品</h6>
+                                            <div class="productItem-cky">
+                                                <div class="item-cky">
+                                                    <div class="productName-cky">
+                                                        <div class="d-flex">
+                                                            <!-- 產品圖 -->
+                                                            <div class="wine-img">
+                                                                <img src="./images/items/item_000.png" alt="">
+                                                            </div>
+                                                            <!-- 產品圖 結束 -->
+                                                            <!-- 產品規格 -->
+                                                            <div class="wine-info">
+                                                                <p class="prefectures-cky">青森縣</p>
+                                                                <p class="breweries-cky">青森縣酒造組合</p>
+                                                                <p class="product-cky">八甲田 純米大吟醸 華想い40</p>
+                                                                <p class="capacity-cky">720ml</p>
+                                                            </div>
+                                                            <!-- 產品規格 結束 -->
+                                                        </div>
+                                                        <!-- 數量 -->
+                                                        <div class="amount-row">
+                                                            <div class="totalItem-cky">x 1</div>
+                                                            <div class="price-cky">$ 1200</div>
+                                                        </div>
+                                                        <!-- 數量 結束 -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="productItem-cky">
+                                                <div class="item-cky">
+                                                    <div class="productName-cky">
+                                                        <div class="d-flex">
+                                                            <!-- 產品圖 -->
+                                                            <div class="wine-img">
+                                                                <img src="./images/items/item_001.png" alt="">
+                                                            </div>
+                                                            <!-- 產品圖 結束 -->
+                                                            <!-- 產品規格 -->
+                                                            <div class="wine-info">
+                                                                <p class="prefectures-cky">青森縣</p>
+                                                                <p class="breweries-cky">青森縣酒造組合</p>
+                                                                <p class="product-cky">八甲田 純米大吟醸 華想い40</p>
+                                                                <p class="capacity-cky">720ml</p>
+                                                            </div>
+                                                            <!-- 產品規格 結束 -->
+                                                        </div>
+                                                        <!-- 數量 -->
+                                                        <div class="amount-row">
+                                                            <div class="totalItem-cky">x 1</div>
+                                                            <div class="price-cky">$ 1200</div>
+                                                        </div>
+                                                        <!-- 數量 結束 -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- 商品清單 結束 -->
+                    <!-- 總額價格 -->
+                    <ul>
+                        <li class="totalRow-cky">
+                            <span class="label">商品總額</span>
+                            <span class="value">$ 4,250</span>
+                        </li>
+                        <li class="totalRow-cky">
+                            <span class="label">折價</span>
+                            <span class="value">-$ 0</span>
+                        </li>
+                        <li class="totalRow-cky">
+                            <span class="label">折價</span>
+                            <span class="value">-$ 0</span>
+                        </li>
+                        <li class="totalRow-cky">
+                            <span class="label">運費
+                                <button type="button" class="febten-cky btn">運費說明</button>
+                            </span>
+                            <span class="value">$ 0</span>
+                        </li>
+                        <li class="totalRow-cky final-cky">
+                            <span class="label">總額</span>
+                            <span class="value">$ 4,250</span>
+                        </li>
+                    </ul>
+                    <!-- 總額價格 結束 -->
+                </div>
+            </div>
+            <!-- 右邊購買清單 結束 -->
+        </div>
+    </div>
+    </div>
+        <!-- 左右背景圖 -->
+        <div class="bg_wgr-cky bg_wgr01-cky " data-aos="fade-up" data-aos-delay="300"></div>
+        <div class="bg_wgr-cky bg_wgr04-cky "data-aos="fade-down" data-aos-delay="200"></div>
+    
+        <div class="seigaiwa-cky cloud1-1-cky" data-aos="fade-left" data-aos-delay="200"></div>
+        <div class="seigaiwa-cky cloud1-2-cky" data-aos="fade-left" data-aos-delay="300"></div>
+    
+        <div class="seigaiwa-cky cloud2-1-cky"data-aos="fade-right" data-aos-delay="200"></div> 
+        <div class="seigaiwa-cky cloud2-2-cky"data-aos="fade-right" data-aos-delay="300"></div>
+    
+        <div class="seigaiwa-cky cloud3-1-cky" data-aos="fade-left" data-aos-delay="200"></div>
+        <div class="seigaiwa-cky cloud3-2-cky" data-aos="fade-left" data-aos-delay="300"></div>
+        <!-- 左右背景圖 結束 -->
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+
+    <!-- main js -->
+    <script src="./js/deliveryInformation.js"></script>
+
+    <!-- aos -->
+    <script src="./js/aos.js"></script>
+</body>
+
+</html>

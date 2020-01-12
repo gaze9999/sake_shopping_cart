@@ -1,0 +1,533 @@
+/* html 標籤的CSS */
+body{
+    background: url(../images/web/bg001.gif) !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    position: relative;
+    height: 100% ;
+    font-family: 'Noto Serif TC', serif !important;
+    overflow-x: hidden;
+}
+a:link{
+    text-decoration: none !important;
+}
+a{
+    color:black !important;
+}
+li{
+    list-style-type: none;
+}
+/*  html 標籤的CSS 結束 */
+
+/* 蓋掉bootstrap css */
+.del-padding-left-cky{
+    padding-left: 0 !important;
+}
+.del-margin-cky{
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+.del-display-cky{
+    display: block !important;
+}
+.del-ml-5-cky{
+    margin-left: 1rem !important;
+}
+/* 蓋掉bootstrap css 結束 */
+
+/*********** 左邊填寫資料的 CSS ***********/
+.left-col{
+    margin-bottom: 3rem;
+}
+/* 配送資訊大標題 */
+.sakeTitle-cky {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.figureImg-cky {
+    object-fit: contain;
+    width: 40px;
+}
+
+.hard-light-cky {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    opacity: .1;
+}
+
+.brewIcon-cky {
+    width: 100%;
+    height: 100%;
+}
+
+.sakeName-cky {
+    position: absolute;
+}
+/* 配送資訊大標題 結束 */
+
+/* 返回鍵 */
+.continue-cky{
+    background: #eaeaea;
+    padding:.325rem 1rem;
+    /* max-height: 35px; */
+    border-radius: 20px;
+    float: right;
+    font-size: 1rem;
+    letter-spacing: 1px !important;
+    transition: 300ms ease-in-out;
+    cursor: pointer;
+}
+.continue-cky span{
+    margin-right: .5rem;
+}
+.continue-cky:hover{
+    background: #d8d8d8;
+}
+/* 返回鍵 結束 */
+
+/* 配送方式 */
+.left-col h3{
+    border-bottom: 1px solid #4a4a4a;
+    padding-bottom:1rem;
+    margin-bottom: 1.5rem;
+}
+.shippingCart-cky ul{
+    display: flex;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 5rem;
+}
+.shippingCart-cky li{
+    border: 1px solid #b8b8b8;
+    color: #b8b8b8;
+    width: 25%;
+    margin-right: 1rem;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 1rem ;
+    position: relative;
+    cursor: pointer;
+}
+.btnShippingActive-cky{
+    border: 1px solid #C4A28D ;
+    color: #fff !important;
+    background: #C4A28D;
+    border-radius: 4px;
+}
+/* 配送方式 結束 */
+
+/* 訂購人 */
+.shippingDetail-cky, .sendDetail-cky, .deliveryDetail-cky, .pickupDetail-cky, .receipt_method-cky{
+    margin-top: 2rem;
+    padding-bottom: 1.5rem;
+}
+.form-row{
+    display: flex !important;
+    flex-wrap: wrap !important;
+    margin-right: -5px !important;
+    margin-left: -5px !important;
+}
+.form-row>.col {
+    padding-right: 5px;
+    padding-left: 5px;
+}
+.form-group{
+    margin-bottom: 1rem;
+    padding-right: 5px !important;
+    padding-left: 5px !important;
+}
+/* 輸入框 */
+.shippingDetail-cky .formControl-cky{
+    border:0;
+    border-bottom: 1px solid grey;
+    border-radius: 0;
+    margin-bottom: 1.5rem;
+    background: transparent;
+}
+/* 輸入框 結束 */
+/* 訂購人 結束 */
+
+/* 性別按鈕 */
+.radio-group-cky{
+    padding-top: 1.5rem;
+}
+.radio-cky{
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    padding-left: 1.5rem;
+}
+.radio-cky + .radio-cky{
+    margin-left: 1rem ;
+}
+.radio-cky input[type="radio"]{
+    display: none;
+}
+.radio-cky span{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 3px solid #C4A28D;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: .1rem;
+}
+.radio-cky span::after{
+    content: "";
+    display: block;
+    position: absolute;
+    height: 8px;
+    width: 8px;
+    background: #C4A28D;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    transition: 300ms ease-in-out;
+}
+.radio-cky input[type="radio"]:checked ~ span::after{
+    transform: translate(-50%, -50%) scale(1);
+}
+/* 性別按鈕 結束 */
+
+/* 付款選擇紐 */
+.checkbox-cky{
+    padding-top: 1.5rem;
+    display: flex;
+    width: 100%;
+}
+.checkbox-cky{
+    vertical-align: middle;
+    position: relative;
+    padding-left: 1.5rem;
+}
+.checkbox-cky{
+    margin-left: 1rem ;
+}
+input[type="radio"]{
+    display: none;
+}
+.checkbox-cky span{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 3px solid #C4A28D;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 1.6rem;
+}
+.checkbox-cky span::after{
+    content: "";
+    display: block;
+    position: absolute;
+    height: 8px;
+    width: 8px;
+    background: #C4A28D;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    transition: 300ms ease-in-out;
+}
+.checkbox-cky input[type="radio"]:checked ~ span::after{
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.checkbox-group-cky h5{
+    font-size: 1rem;
+    color: #FF7070;
+    margin-left: 1rem;
+    display: inline-flex;
+}
+/* 付款選擇紐 結束*/
+
+/* 下一步按鈕 */
+.centered-cky{
+    text-align: center;
+    margin: 2rem 0;
+}
+.submitBtn-cky{
+    width: 200px;
+    padding: .75rem 0;
+    background: #C4A28D;
+    border: 1px solid #C4A28D;
+    color: rgb(255, 255, 255);
+    border-radius: 4px;
+    min-height: 35px;
+    min-width: 100px;
+    transition: background-color .3s ease;
+}
+/* 下一步按鈕 結束*/
+
+/* 統編 */
+.left-col .tax-num-cky{
+    margin-left: 2.5rem;
+    width:50%;
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+}
+/* 統編 結束 */
+/*********** 左邊填寫資料的 CSS 結束***********/
+
+/*********** 右邊購買清單的 CSS ***********/
+.right-col{
+    justify-content: center !important;
+    align-items: center !important;
+    vertical-align: middle;
+}
+/* 快速到貨 */
+.shippingDuration-cky{
+    border:1px solid #A06BCC;
+    padding: .75rem;
+    border-radius: 4px;
+    margin-bottom: 0.75rem;
+}
+.shippingDuration-cky h6{
+    color: #A06BCC;
+    font-weight: 700;
+}
+/* 快速到貨 結束 */
+
+/* 總額價格 */
+.total-cky ul{
+    border: 1px solid #A06BCC;
+    padding: 0 1rem;
+    border-radius: 4px;
+    margin-top: 0.75rem;
+}
+.total-cky .totalRow-cky{
+    width: 100%;
+    display: block;
+    clear: both;
+    font-size: 1rem ;
+    padding: 1rem 0;
+    border-top: 1px solid #A06BCC;
+}
+.total-cky .totalRow-cky:first-child{
+    border-top: 0;
+}
+.total-cky .totalRow-cky .label{
+    display: inline-block;
+    float: left;
+    color: #4a4a4a;
+}
+.total-cky .totalRow-cky .value{
+    display: inline-block;
+    float: right;
+}
+.total-cky .totalRow-cky.final-cky .value{
+    color:#FF6060;
+    font-weight: 700;
+}
+.total-cky .totalRow-cky.final-cky .label{
+    font-weight: 700;
+}
+.total-cky .totalRow-cky::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+.febten-cky{
+    font-size: 12px !important ;
+    border-bottom: 1px solid #A06BCC !important;
+    padding: 0 !important;
+    position: relative !important;
+    top: -3px !important;
+    margin-left:5px !important;
+    border-radius: 0 !important;
+}
+/* 總額價格 結束*/
+/* 商品清單 */
+.purchasedItems-cky{
+    background: #f4f7fb;
+    padding: 1rem;
+    border-radius: 4px;
+    border: 1px solid #f4f7fb;
+}
+.productItem-cky{
+    border-bottom: 1px solid #d8d8d8;
+    padding-bottom: 1.5rem;
+}
+/* 圖片 */
+.purchasedItems-cky .item-cky{
+    padding: 1rem 0;
+}
+.purchasedItems-cky .item-cky .wine-img{
+    max-width: 70px;
+    min-width: 70px;
+    max-height: 100px;
+    min-height: 100px;
+    background: #fff;
+    margin-right: 1rem;
+    margin-bottom: 0;
+}
+.purchasedItems-cky .wine-img{
+    position: relative;
+}
+.wine-img img{
+    width:100%;
+}
+/* 圖片 結束 */
+/* 規格 */
+.purchasedItems-cky .item-cky .wine-info{
+    width: 100%;
+    margin-bottom:5px;
+}
+.wine-info .prefectures-cky, .wine-info .breweries-cky, .wine-info .capacity-cky{
+    font-size: 14px;
+    color: #515151;
+    margin-bottom: 5px;
+    line-height: 1.2rem;
+    max-height: 1.2rem; 
+    overflow: hidden;
+}
+.wine-info .product-cky{
+    margin-bottom: 5px;
+    font-size: 15px;
+    color: #292245;
+    font-weight: 700;
+    line-height: 1.4rem;
+    max-height: 2.8rem;
+    overflow: hidden;
+}
+/* 規格 結束 */
+/* 數量 */
+.productItem-cky .item-cky .totalItem-cky{
+    font-size: 1rem;
+    float: left;
+    font-weight: 700;
+}
+.productItem-cky .item-cky .price-cky{
+    font-size: 0.9rem;
+    float: right;
+    font-weight: 700;
+}
+/* 數量 結束*/
+/* 商品清單 結束*/
+/*********** 右邊購買清單的 CSS 結束***********/
+
+    /* 網頁左右的青海波 & 和柄 */
+    .seigaiwa-cky {
+        background: url(../images/web/seigaiwa.svg) no-repeat;
+        background-size: contain;
+        object-fit: contain;
+        position: absolute;
+        width: 55%;
+    }
+    .bg_wgr-cky {
+        background: url(../images/web/bg_wgr.svg) no-repeat;
+        background-size: contain;
+        position: absolute;
+        width: 12%;
+        height: 21%;
+
+    }
+    @media screen and (max-width:768px) {
+        .bg_wgr-cky{
+            height: 37%;
+        }
+    }
+    .bg_wgr01-cky{
+        top: 66%;
+        left: -3%;
+    }
+    @media screen and (max-width:768px) {
+        .bg_wgr01-cky{
+            top:0%;
+            left:-2%;
+        }
+    }
+
+    .bg_wgr04-cky{
+        top: 49%;
+        left: 92%;
+    }
+    @media screen and (max-width:768px) {
+        .bg_wgr04-cky{
+            top: 13%;
+            left: 92%;
+        }
+    }
+    .cloud1-1-cky {
+        height: 10%;
+        top: 24%;
+        left: 88%;
+    }
+    @media screen and (max-width:768px) {
+        .cloud1-1-cky {
+            width: 77%;
+            height: 10%;
+            top: 76%;
+            left: 73%;
+        }
+    }
+
+    .cloud1-2-cky {
+        height: 13%;
+        top: 27.5%;
+        left: 81%;
+    }
+    @media screen and (max-width:768px) {
+        .cloud1-2-cky {
+            width: 65%;
+            height: 5%;
+            top: 77%;
+            left: 83%;
+        }
+    }
+
+    .cloud2-1-cky {
+        width: 73%;
+        height: 13%;
+        top: 2%;
+        left: -57%;
+    }
+    @media screen and (max-width:768px) {
+        .cloud2-1-cky {
+            width: 77%;
+            height: 10%;
+            top: 77%;
+            left: -52%;
+        }
+    }
+
+    .cloud2-2-cky {
+        height: 10%;
+        top: 7%;
+        left: -47%;
+    }
+    @media screen and (max-width:768px) {
+        .cloud2-2-cky {
+            width: 65%;
+            height: 10%;
+            top: 76%;
+            left: -52%;
+        }
+    }
+    .cloud3-1-cky{
+        height: 10%;
+        top: 81%;
+        left: 86%;
+    }
+    @media screen and (max-width:768px) {
+        .cloud3-1-cky {
+            display: none;
+        }
+    }
+    .cloud3-2-cky{
+        height: 10%;
+        top: 85%;
+        left: 77%;
+    }
+    @media screen and (max-width:768px) {
+        .cloud3-2-cky {
+            display: none;
+        }
+    }
+     /* 網頁左右的青海波 & 和柄 結束*/
