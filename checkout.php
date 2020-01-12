@@ -5,7 +5,8 @@ require_once('./tpl/tpl-html-head.php');
 require_once('./tpl/tpl-header.php');
 ?>
 <style>
-  .navbar-dark, .navbar-nav, .nav-link, .navbar-brand { color: #000 !important}
+  .navbar { background: url('./img/bgs/bg001.gif') !important }
+  .navbar-dark, .navbar-nav, .nav-link, .navbar-brand { color: #000 !important }
 </style>
 <main class="container checkout_frame">
   <div class="row">
