@@ -1,0 +1,184 @@
+/* <------------全域使用--------------> */
+body{
+    overflow-x: hidden !important;
+}
+
+.absolute_neal{
+    position: absolute;
+}
+.relative_neal{
+    position: relative;
+}
+.pic_fit_neal{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* <------------navbar--------------> */
+
+.navbar{
+  background: transparent !important;
+  /* background: rgba(0, 0, 0, 0.3) !important; */
+  z-index: 1070;
+}
+nav>a>h3{
+    margin-bottom: 0.25rem;
+}
+
+.neal-nav-icon{
+    width: 50px;
+    height: 50px;
+    /* object-fit: contain; */
+    filter: brightness(100);
+}
+
+/* <------------主區域--------------> */
+
+.neal-main{
+    z-index: 1010;
+    /* background: rgba(0, 0, 0, 0.7); */
+    /* background: white; */
+    /* background-image: url(./img/bg000.png); */
+    /* background-image: url(./img/sectionD_bg.jpg); */
+    /* background-size: contain; */
+    /* background-blend-mode: darken; */
+    /* background-attachment: fixed; */
+    /* height: 300vh; */
+}
+.neal-main video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* top: 0%; */
+    position: fixed;
+    /* filter: brightness(.7); */
+    /* transform: scaleY(-1); */
+}
+.video_cover{
+    background: rgba(0, 0, 0, 0.438);
+    /* background: rgba(255, 145, 0, 0.685); */
+    /* background: rgba(255, 0, 0, 0.226); */
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+}
+/* <------------區塊1--------------> */
+.about-section1-neal{
+    /* background: url(./img/pex-1.png); */
+    height: 100vh;
+    width: 100%;
+    /* background-size: cover; */
+    /* background-attachment: fixed; */
+}
+.about-section1-neal header{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    /* flex-direction: column; */
+}
+.neal-main-icon{
+    max-width: 150px;
+    max-height: 150px;
+    /* filter: brightness(100); */
+}
+
+.about-section1-neal header h1{
+    margin: 0;
+    font-family: 'Noto Serif TC', serif;
+    text-shadow: white 0px 0px 20px;
+    font-size: 3.5rem;
+    font-weight: 300;
+    margin: 0;
+    /* writing-mode: vertical-lr; */
+    text-align: center;
+    /* transform: translate(-33.6px,-50px); */
+    color: white;
+}
+/* <------------區塊2--------------> */
+
+.about-section2-neal{
+    /* background: black; */
+    background: url(./img/water_A.png)no-repeat center;
+    background-size: contain;
+    /* opacity: .9; */
+    /* min-height: 10vh; */
+    height: 260vh;
+    width: 100%;
+    /* background-attachment: fixed; */
+}
+
+
+.about-neal{
+    font-family: 'Noto Serif TC', serif;
+    /* height: 90vh; */
+    color: white;
+    writing-mode: vertical-rl;
+    /* text-orientation: upright; */
+    font-size: 1.2rem;
+    letter-spacing: 0.15em;
+    line-height: 5.5;
+}
+
+/* <------------區塊3--------------> */
+
+.about-section3-neal{
+    /* background: black; */
+    background-image: url(./img/pex-1.png);
+    background-size: cover;
+    /* background-blend-mode: hard-light; */
+    height: 300vh;
+    width: 100%;
+}
+/* <------------區塊4--------------> */
+
+.about-section4-neal{
+    background-image: url(./img/pex-2.png);
+    background-size: cover;
+    height: 300vh;
+    width: 100%;
+    top: 150%;
+}
+/* <------------區塊5--------------> */
+
+.about-section5-neal{
+    background-image: url(./img/water_B.png);
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    top: 150%;
+}
+/* <------------區塊6--------------> */
+
+.about-section6-neal{
+    background-image: url(./img/water_A.png);
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    top: 300%;
+}
+/* <------------區塊7--------------> */
+
+.about-section7-neal{
+    background-image: url(./img/water_B.png);
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    top: 300%;
+}
+/* <------------區塊8--------------> */
+
+.about-section8-neal{
+    height: 10vh;
+    width: 100%;
+    top: 500%;
+}
+.about-section8-neal a{
+    color: white;
+}
+
+@media screen and (max-width: 767px){
+    video{
+        height: 100%;
+    }
+    /* 這頁不會demo手機版，RWD就不做了 */
+}

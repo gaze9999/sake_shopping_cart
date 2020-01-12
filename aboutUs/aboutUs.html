@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>關於我們</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+TC:200,300,400,500,600,700,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./dist/bootstrap.min.css">
+    <link href="./dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="aboutUs.css">
+  </head>
+  <body>
+    <header>
+        <nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-dark">
+            
+            <a class="navbar-brand d-flex center-all h-100" href="#">
+                <h3 class="center-all">本格の酒</h3>
+            </a>
+            <a class="navbar-brand d-flex center-all h-100" href="#">
+                <img class="img-fluid d-block neal-nav-icon" src="./img/sake-icon.svg">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarsExample03">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="./index.html">地圖 <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="./index.html">關於我們 <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="./index.html">新手選酒 <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="./index.html">商品列表 <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">清酒知識+</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown03">
+                    <a class="dropdown-item" href="#">清酒起源</a>
+                    <a class="dropdown-item" href="#">清酒分類</a>
+                    <a class="dropdown-item" href="#">清酒喝法</a>
+                    </div>
+                </li>
+            </ul>
+            <ul class="navbar-nav my-2 my-md-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="./index.html">購物車 <span class="sr-only">(current)</span></a>
+                </li>           
+                <li class="nav-item active">
+                    <a class="nav-link" href="./index.html">登入 <span class="sr-only">(current)</span></a>
+                </li>           
+              </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="neal-main relative_neal">
+      <video class="absolute_neal" src="./img/Slow-Fire.mp4" autoplay loop></video>
+      <div class="absolute_neal video_cover"></div>
+        <section class="about-section1-neal rellax relative_neal" data-rellax-speed="-4">
+          <header class="d-flex justify-content-center align-items-center">
+            <img class="img-fluid d-block neal-main-icon" src="./img/main_icon.svg" alt="">
+            <h1>關 於 我 們</h1>
+          </header>
+        </section>
+        <section class="about-section2-neal rellax absolute_neal d-flex justify-content-center align-items-center" data-rellax-speed="-10">
+          <div class="d-flex justify-content-center align-items-center">
+            <article class="about-neal">自二零一九年成立（民國一零八年）以來，<br/>本格の酒一直致力於<br/>在福爾摩沙這塊土地<br/>將清酒的香醇與濃郁推廣到整座島嶼。<br/>推廣的不僅是清酒，還包括有400多年曆史的清酒文化。<br/>就讓我們在酒香與微醺之中<br/>逐步探尋那隱藏在瓶底的百年歷史。</article>
+          </div>
+        </section>
+        <section class="about-section3-neal rellax absolute_neal" data-rellax-speed="-2">
+          <!-- <img class="pic_fit_neal" src="./img/water_A.png" alt=""> -->
+        </section>
+        <section class="about-section4-neal rellax absolute_neal" data-rellax-speed="5">
+        </section>
+        <section class="about-section5-neal rellax absolute_neal" data-rellax-speed="10">
+        </section>
+        <section class="about-section6-neal rellax absolute_neal" data-rellax-speed="10">
+        </section>
+        <section class="about-section7-neal rellax absolute_neal" data-rellax-speed="10">
+        </section>
+        <section class="about-section8-neal absolute_neal d-flex justify-content-center">
+          <a href="./index.html">返回首頁</a>
+        </section>
+    </main>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="./dist/aos.js""></script>
+    <script src="./dist/jquery-3.4.1.min.js"></script>
+    <script src="./dist/rellax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="./dist/bootstrap.min.js"></script>
+    <script>
+      AOS.init();
+      var rellax = new Rellax('.rellax', {
+        // center: true
+        callback: function(position) {
+            // callback every position change
+            console.log(position);
+        }
+      });
+    </script>
+  </body>
+</html>
