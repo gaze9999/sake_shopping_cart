@@ -6,6 +6,7 @@
 
 .cart_header
   +noPaddingMargin
+  position: inherit
   background: transparent
   height: 10rem
 
@@ -22,5 +23,14 @@
   .cart_row_data
     // display: flex
     // flex-direction: column
+    .cart_item_hold
+      width: 20%
     th, td
       vertical-align: middle
+
+.cart_table_bottom
+  background: $mainBgColor
+  position: sticky
+  bottom: 52px
+  .cart_table
+  // position: sticky

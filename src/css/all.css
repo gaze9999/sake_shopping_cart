@@ -1590,6 +1590,7 @@ hr {
 .cart_header {
   margin: 0;
   padding: 0;
+  position: inherit;
   background: transparent;
   height: 10rem;
 }
@@ -1615,8 +1616,19 @@ hr {
   content: '$';
 }
 
+.cart_list_table .cart_row_data .cart_item_hold {
+  width: 20%;
+}
+
 .cart_list_table .cart_row_data th, .cart_list_table .cart_row_data td {
   vertical-align: middle;
+}
+
+.cart_table_bottom {
+  background: #F1F1EE;
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 52px;
 }
 
 .devilery_frame hr {
