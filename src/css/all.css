@@ -746,6 +746,56 @@ a, a:link, a:visited {
           transition-delay: 1ms;
 }
 
+.login_frame {
+  position: relative;
+}
+
+.login_frame > .row {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -25%);
+          transform: translate(-50%, -25%);
+}
+
+.login_frame .form-group {
+  margin: 10px 0;
+}
+
+.login_frame .form-group label {
+  display: block;
+}
+
+.login_frame .form-group input {
+  height: 30px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+
+.login_frame .login_btn, .login_frame .signup_btn {
+  cursor: pointer;
+  padding: 10px 0;
+  color: white;
+  background: #BCAB91;
+  border: none;
+  border-radius: 5px;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.login_frame .login_btn:hover, .login_frame .signup_btn:hover {
+  background: #705f44;
+}
+
+.login_frame .signup_btn {
+  background: #BC9691;
+}
+
+.login_frame .signup_btn:hover {
+  background: #704944;
+}
+
 main {
   min-height: 100vh;
   padding: 116px 0 0;

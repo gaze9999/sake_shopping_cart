@@ -1,0 +1,30 @@
+.login_frame
+  position: relative
+  & > .row
+    position: absolute
+    top: 25%
+    left: 50%
+    transform: translate(-50%, -25%)
+  .form-group
+    margin: 10px 0
+    label
+      display: block
+    input
+      height: 30px
+      padding: 5px 10px
+      border-radius: 5px
+      border: 1px solid gray
+  .login_btn, .signup_btn
+    cursor: pointer
+    padding: 10px 0
+    color: white
+    background: $mainColor
+    border: none
+    border-radius: 5px
+    transition: .4s
+    &:hover
+      background: darken($mainColor, 30%)
+  .signup_btn
+    background: $mouseIconColor
+    &:hover
+      background: darken($mouseIconColor, 30%)
