@@ -1672,15 +1672,15 @@ hr {
   background: #cfb4b1;
 }
 
-.delivery_btn:active {
+.delivery_btn:active, .delivery_btn.btn_active {
   border: 1px solid #BC9691;
   color: white !important;
   background: #BC9691;
 }
 
-.delivery_order_gender::before, .delivery_order_gender::after,
-.delivery_reviver_gender::before,
-.delivery_reviver_gender::after {
+.delivery_order_gen::before, .delivery_order_gen::after,
+.delivery_receiver_gen::before,
+.delivery_receiver_gen::after {
   content: '';
   display: block;
   -webkit-box-flex: 1;
