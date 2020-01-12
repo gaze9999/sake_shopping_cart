@@ -29,6 +29,7 @@ function loginBtn(uid, pwd) {
 login.on('mouseup', ()=> {
   let uid = $.trim( usrid.val().toLowerCase() )
       pwd = $.trim( usrpwd.val().toLowerCase() )
-  // console.log(uid)
+  // add login success alert
   loginBtn(uid, pwd)
+  location.reload()
 })

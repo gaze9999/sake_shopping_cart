@@ -55,7 +55,7 @@
           <a class="nav-link px-2" href="./main.php"><?php echo $_SESSION['userinfo']['name']; ?> 您好</a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link nav_account px-2" href="./login.php">登出</a>
+          <a class="nav-link px-2" id="nav_logout">登出</a>
         <?php endif; ?>
       </li>
     </ul>

@@ -108,23 +108,28 @@ function getCart() {
 
   clearCart.on('mouseup', ()=> {
     alertTemp('確定要全部清除嗎?')
-    $('#remove_e').val($(this).data('itemid'))
-    $('.remove_btn').on('mouseup', function(){
+    let removeE = $('#remove_e'),
+        removeBtn = $('.remove_btn'),
+        removeAlert = $('.remove_alert')
+    removeE.val($(this).data('itemid'))
+    removeBtn.on('mouseup', function(){
       if ($(this).val() == 'yes') {
         clearItem()
         getCart()
         countTotal()
       }
-      $('.remove_alert').remove()
+      removeAlert.remove()
     })
   })
 
   itemRemove.on('mouseup', function() {
     alertTemp('確定要刪除嗎?')
     let removeE = $('#remove_e'),
+        removeBtn = $('.remove_btn'),
+        removeAlert = $('.remove_alert'),
         removeId = $(this).data('itemid')
     removeE.val( removeId )
-    $('.remove_btn').on('mouseup', function(){
+    removeBtn.on('mouseup', function(){
       if ($(this).val() == 'yes') {
         removeItem()
         rowNum.eq( removeId ).remove()
@@ -132,7 +137,7 @@ function getCart() {
         countTotal()
       }
       removeId = ""
-      $('.remove_alert').remove()
+      removeAlert.remove()
     })
   })
 
@@ -187,23 +192,6 @@ function clearItem() {
     console.log('getDetails() request failed:', error);
     console.log(error.response);
   });
-}
-
-function alertTemp(title) {
-  $('main').append(
-    `<div class="fixed-top remove_alert">
-    <div class="row h-100 w-100">
-      <div class="d-flex flex-column col-4 center_all remove_box">
-          <h4>${title}</h4>
-          <div class="btn-group remove_btn_group" role="group" aria-label="Basic example">
-            <button type="button" class="btn remove_btn remove_yes" value="yes">是</button>
-            <button type="button" class="btn remove_btn remove_no" value="no">不</button>
-          </div>
-          <input class="hidden" id="remove_e" type="hidden" value=""></input>
-      </div>
-    </div>
-  </div>`
-  )
 }
 
 function countTotal() {
