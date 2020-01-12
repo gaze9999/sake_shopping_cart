@@ -1,0 +1,199 @@
+/* <------------全域使用--------------> */
+
+body{
+    overflow-x: hidden;
+    background: rgba(240, 240, 240, 0.25);
+    background-image: url(./img/bg000.png);
+}
+.absolute_neal{
+    position: absolute;
+}
+.relative_neal{
+    position: relative;
+}
+.row{
+    margin: 0;
+}
+.pic_fit_neal{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.pic_contain_neal{
+    height: 100%;
+    object-fit: contain;
+}
+
+/* <------------navbar--------------> */
+
+.navbar{
+  background: transparent !important;
+  z-index: 1070;
+}
+nav>a>h3{
+    margin-bottom: 0.25rem;
+}
+.neal-nav-icon{
+    width: 50px;
+    height: 50px;
+}
+
+/* <------------主區域--------------> */
+
+.neal_main{
+    margin-top: 7rem;
+}
+
+/* <------------標題--------------> */
+
+.neal_main header{
+    height: 10vh;
+    background: url(./img/seigaiwa-title.svg)no-repeat center;
+    background-size: 50vh;
+}
+.neal_main header figure{
+    margin: 0;
+    height: 10vh;
+    filter: opacity(.9);
+}
+.neal_main h1{
+    font-family: 'Noto Serif TC', serif;
+    filter: opacity(.9);
+}
+
+/* <------------大區塊--------------> */
+
+
+/* <------------背景區塊＋麵包屑--------------> */
+.itemList_bg_neal{
+    margin-top: 5rem;
+    background: url(./img/bg001.gif);
+    border-radius: 10px;
+    width: 70vw;
+    min-height: 10vh;
+    flex-wrap: wrap;
+}
+.itemList_bg_neal .breadcrumb_neal{
+    top: -3rem;
+}
+.itemList_bg_neal .breadcrumb{
+    background: transparent;
+}
+/* 加上 $breadcrumb-divider: quote(">"); */
+/* 讓/變成> */
+
+/* <------------篩選區塊--------------> */
+.section_filter_neal ul{
+    list-style: none;
+}
+/* <------------木條區塊--------------> */
+
+.bg_board_neal{
+    height: 100%;
+    width: 100%;
+    top: -1.75rem;
+}
+.bg_board_neal figure{
+    width: 95%;
+    height: 3rem;
+}
+.bg_board_neal figure img{
+    border-radius: 15px;
+}
+
+/* <------------商品區塊--------------> */
+
+.section_item_neal{
+    flex-wrap: wrap;
+}
+
+.item_neal{
+    height: 26vh;
+}
+/* <-----酒造名＋收藏紐-----> */
+.y_title_neal{
+    font-family: 'Noto Serif TC', serif;
+    writing-mode: vertical-lr;
+    flex-direction: row;
+}
+.y_title_neal h5{
+    font-size: 1.1rem;
+    letter-spacing: 1rem;
+    color: #7B4A31;
+}
+.y_title_neal img{
+    opacity: .5;
+}
+.y_title_neal img.active{
+    opacity: 1;
+}
+/* <-----照片＋酒名-----> */
+.item_pic_neal figure{
+    min-width: 10vw;
+}
+.item_pic_neal h5{
+    font-family: 'Noto Serif TC', serif;
+    font-size: 1.1rem;
+    color: rgba(0, 0, 0, 0.8);
+    margin: 0;
+    text-align: center;
+    top: 105%;
+    width: 100%;
+}
+/* <-----浮起酒瓶效果-----> */
+.item_pic_neal figure img.active{
+    transform: translateY(-2rem);
+    transition: .5s;
+}
+/* <-----價格木牌-----> */
+
+.item_price_board figure h5{
+    font-size: 100%;
+    font-weight: 300;
+    top: 20%;
+    left: 12%;
+    color: white;
+    width: 100%;
+}
+
+/* <------------背景雲彩＋麻葉--------------> */
+.bg_cloud_r{
+    top: -2rem;
+    right: -5rem;
+    height: 10vh;
+}
+.bg_cloud_l{
+    bottom: -2rem;
+    left: -5rem;
+    height: 10vh;
+}
+.bg_wgr_l{
+    top: 5rem;
+    left: -20rem;
+    height: 50vh;
+}
+.bg_wgr_r{
+    bottom: 5rem;
+    right: -20rem;
+    height: 50vh;
+}
+
+
+/* <------------ＲＷＤ--------------> */
+@media screen and (max-width: 767px){
+    
+    .bg_board_neal figure{
+        height: 2.25rem;
+    }
+    .bg_board_neal figure img{
+        border-radius: 10px;
+    }
+    .bg_wgr_l{
+        top: 25%;
+        left: -10rem;
+    }
+    .bg_wgr_r{
+        bottom: 25%;
+        right: -10rem;
+    }
+}

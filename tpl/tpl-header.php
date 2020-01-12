@@ -17,7 +17,7 @@
         <a class="nav-link" data-page="map">地圖</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" data-page="about">關於我們</a>
+        <a class="nav-link" data-page="about" href="./aboutUs/aboutUs.html">關於我們</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" data-page="newCome">新手選酒</a>
@@ -42,10 +42,21 @@
   </div> -->
     <ul class="navbar-nav my-2 my-md-0 nav_function">
       <li class="nav-item active">
-        <a class="nav-link nav_cart px-2" href="">購物車</a>
+        <a class="nav-link nav_cart px-2" href="./cart.php">購物車( <?php echo count($_SESSION['cart']); ?> )</a>
       </li>
+
       <li class="nav-item active">
-        <a class="nav-link nav_account px-2" href="">登入</a>
+        <?php if(!isset($_SESSION['userinfo']['username'])): ?>
+          <a class="nav-link nav_account px-2" href="./register.php">註冊</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link nav_account px-2" href="./login.php">登入</a>
+        <?php else: ?>
+          <a class="nav-link px-2" href="./main.php"><?php echo $_SESSION['userinfo']['name']; ?> 您好</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link px-2" id="nav_logout">登出</a>
+        <?php endif; ?>
       </li>
     </ul>
   </div>

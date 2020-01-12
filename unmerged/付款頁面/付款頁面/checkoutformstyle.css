@@ -1,0 +1,165 @@
+*{
+  font-family: 'Noto Sans TC', sans-serif;
+}
+body {
+  font-family: Arial;
+  font-size: 17px;
+  padding-top:15vh;
+  overflow-x: hidden;
+  background: url(/img/bg001.gif);
+  
+}
+h2{
+text-align:left;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 -10px;
+}
+
+.p-nowrap-hyh{
+  flex-wrap: nowrap;
+  display:inline-block;
+  margin-right: 50px;
+  margin: 5px 10px;
+}
+
+.far01 input[type="checkbox"]{
+  display: none;
+}
+
+.p-nowrap-hyh{
+  color: #272727;
+  font-weight: 700;
+  background: rgb(0,0,0,0.1);
+  padding: 5px 5px 5px 5px;
+  display: inline-block;
+  position: relative;
+  font-size: 1em;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked + label{
+  padding: 5px 15px;
+  background: rgb(186, 136, 226);
+  border-radius: 2px;
+  color: aliceblue;
+}
+
+.p-nowrap-hyh:hover{
+  background: rgb(186, 136, 226,0.1);
+}
+
+.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  /* height: 50%; */
+}
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.container {
+  background-color: #cfcccc85;
+  padding: 3px 18px 13px 18px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+/* ----btn樣式設定------ */
+
+.p-btn-hyh, .p-prebtn-hyh {
+  background-color: rgb(186, 136, 226);
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 20%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+  transition: 0.5s;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.p-prebtn-hyh{
+  background-color: rgb(248, 164, 153);
+}
+
+.p-prebtn-hyh:hover{
+  background-color: rgb(253, 127, 110);
+}
+
+.p-btnhyh:hover {
+  background-color: #A06BCC;
+}
+/* ---------- */
+a {
+  color: #2196F3;
+}
+
+hr {
+  border: 1px solid lightgrey;
+}
+
+span.p-price-hyh {
+  float: right;
+  color: grey;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
+@media (max-width: 414px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+
+  .p-btn-hyh, .p-prebtn-hyh{
+    width: 100%;
+    margin-left: 0;
+  }
+}

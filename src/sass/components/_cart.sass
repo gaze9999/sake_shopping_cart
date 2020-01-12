@@ -1,0 +1,36 @@
+.cart_frame
+  &>section
+    overflow: hidden
+    min-height: 100vh
+  position: relative
+
+.cart_header
+  +noPaddingMargin
+  position: inherit
+  background: transparent
+  height: 10rem
+
+.cart_list_table
+  +noPaddingMargin
+  .cart_table_pic
+    +noPaddingMargin
+    max-width: 100px
+    .cart_table_img
+      max-height: 100px
+      object-fit: contain
+  .cart_total_price::before
+    content: '$'
+  .cart_row_data
+    // display: flex
+    // flex-direction: column
+    .cart_item_hold
+      width: 20%
+    th, td
+      vertical-align: middle
+
+.cart_table_bottom
+  background: $mainBgColor
+  position: sticky
+  bottom: 52px
+  .cart_table
+  // position: sticky

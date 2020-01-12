@@ -1,6 +1,6 @@
 .itemList_frame
+  overflow-x: hidden
   position: relative
-  background: transparent
 
 .hidden_obj
   display: none
@@ -14,35 +14,52 @@
   height: 10rem
 
 .page_itemList
-  +noPaddingMargin
-  margin-top: 48px
+  background: url(../../img/bgs/bg001.gif)
+  &>div    
+    margin-top: 48px
 
 .itemList_navbar
   // position: sticky
-  top: 10rem
-  height: 100%
-  padding-top: 2rem
-  z-index: $zindex-modal-backdrop
+  // top: 10rem
+  // height: 100%
+  padding-top: 1rem
+  // z-index: $zindex-modal-backdrop
   .tree_btn, .filter_btn
     +noPaddingMargin
 
 .itemList_list
-  justify-content: space-around
   .item_card
     width: 12rem
     height: 20rem
     margin: 1rem
     overflow: hidden
-    .card-img-top
-      height: 12rem
-      overflow: hidden
-      box-shadow: 0 0 8px -2px #000 inset
+    .card_mainArea
+      width: 100%
+      height: 80%
+    .item_card_brew
+      *        
+        +noPaddingMargin
+      font-family: 'Noto Serif TC', serif
+      writing-mode: vertical-lr
+      letter-spacing: .5rem
+      h6
+        line-height: inherit
+      img
+        padding: .5rem 0
+    .item_card_mainImg
+      width: 100%
       .item_card_img
-        transform: scale(.8)
-        &:hover
-          +anime420(hoverScaleAdd)
-    .card-body
-      color: #000
-      transform: translateY(5rem)
-      &:hover
-          +anime420(hoverMoveUp)
+        +noPaddingMargin
+        width: 100%
+        height: 80%
+        object-fit: contain
+    .item_card_price
+      *        
+        +noPaddingMargin
+      right: 0
+      bottom: 0
+      h6
+        color: #fff
+        left: 50%
+        top: 50%
+        transform: translate(-60%, -50%)

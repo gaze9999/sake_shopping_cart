@@ -14,8 +14,7 @@ let owlRes = {
 }
 
 $(document).ready(() => {
-  // owl-crousel for blog
-  $('.owl-carousel').owlCarousel({
+  $('.know_carousel_post').owlCarousel({
     loop: true,
     autoplay: false,
     autoplayTimeout: 3000,
@@ -23,5 +22,5 @@ $(document).ready(() => {
     nav: true,
     navText: [$('.owl-navigation .owl-nav-prev'), $('.owl-navigation .owl-nav-next')],
     responsive: owlRes
-    })
+  })
 })

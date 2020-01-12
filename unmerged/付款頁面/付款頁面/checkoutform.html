@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="checkoutformstyle.css">
+<title>選擇付款方式</title>
+
+<!-- ---上一步是運送方式--- -->
+
+
+</head>
+<body>
+
+<div class="row">
+  <div class="col-75">
+    <div class="container">
+      <form action="/action_page.php">
+      
+        <div class="row">
+          <div class="col-75">
+            <!-- <h3>Billing Address</h3> -->
+            <!-- <label for="fname"><i class="fa fa-user"></i> 名字</label>
+            <input type="text" id="fname" name="firstname" placeholder="王小名">
+            <label for="email"><i class="fa fa-envelope"></i> 信箱</label>
+            <input type="text" id="email" name="email" placeholder="john@example.com">
+
+            <label for="city"><i class="fa fa-institution"></i>居住城市</label>
+            <input type="text" id="city" name="city" placeholder="New York">
+
+            <div class="row">
+              <div class="col-50">
+                <label for="state">State</label>
+                <input type="text" id="state" name="state" placeholder="NY">
+              </div>
+             
+            </div> -->
+          </div>
+
+          <div class="col-50">
+
+<!-- ---付款方式 開始--- -->
+
+            <h3>付款方式</h3>
+              <form action="" class="far01">
+                <input type="checkbox" name="" id="checkbox01">
+                <label class="p-nowrap-hyh" for="p2p">貨到付款</label>
+
+                <input type="checkbox" name="" id="checkbox02">
+                <label class="p-nowrap-hyh" for="p2p">線上付款</label>
+              </form>
+
+            <label for="fname">請填寫信用卡資料</label>
+
+<!-- ---信用卡icon--- -->
+
+            <div class="icon-container">
+              <i class="fa fa-cc-visa" style="color:navy;"></i>
+              <i class="fa fa-cc-amex" style="color:blue;"></i>
+              <i class="fa fa-cc-mastercard" style="color:red;"></i>
+              <i class="fa fa-cc-discover" style="color:orange;"></i>
+            </div>
+            <label for="cname">持卡人姓名</label>
+            <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+  
+            <label for="ccnum">信用卡號</label>
+            <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+  
+            <label for="expmonth">有效日期</label>
+            <input type="text" id="expmonth" name="expmonth" placeholder="MM/YY">
+  
+            <div class="row">
+            <div class="col-50">
+
+                <label for="expyear">Exp Year</label>
+                <input type="text" id="expyear" name="expyear" placeholder="2020">
+              
+            </div>
+              
+            <div class="col-50">
+              
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" name="cvv" placeholder="352">
+              
+            </div>
+            </div>
+
+          </div>
+          
+        </div>
+        <!-- <label>
+          <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+        </label> -->
+        <input type="submit" value="返回上一步" class="p-prebtn-hyh">
+        <input type="submit" value="完成" class="p-btn-hyh">
+      </form>
+    </div>
+  </div>
+
+<!-- ---購物車內容--- -->
+
+  <div class="col-25">
+    <div class="container">
+      <h4>購物車內容 <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> 
+          <b>
+
+          </b>
+      </span>
+      </h4>
+      <p><a href="#">ITEM1</a> <span class="price">$</span></p>
+      <p><a href="#">ITEM2</a> <span class="price">$</span></p>
+      <p><a href="#">ITEM3</a> <span class="price">$</span></p>
+      <!-- <p><a href="#">ITEM4</a> <span class="price">$</span></p> -->
+      <hr>
+      <p>總金額 <span class="p-price-hyh" style="color:black"><b>$</b></span></p>
+    </div>
+  </div>
+
+<!-- ------ -->
+
+</div>
+
+</body>
+</html>

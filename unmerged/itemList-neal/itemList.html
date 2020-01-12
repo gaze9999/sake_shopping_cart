@@ -1,0 +1,517 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>商品列表</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Serif+TC:200,300,400,500,600,700,900&display=swap"
+    rel="stylesheet">
+  <link href="./dist/aos.css" rel="stylesheet">
+  <!-- 標題列icon -->
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="bookmark" href="/favicon.ico" />
+  <link rel="stylesheet" href="itemList_neal.css">
+</head>
+
+<body>
+  <!------------------- navbar -------------------->
+  <header>
+    <nav class="navbar fixed-top navbar-expand-sm navbar-light bg-dark">
+
+      <a class="navbar-brand d-flex center-all h-100" href="#">
+        <h3 class="center-all">本格の酒</h3>
+      </a>
+      <a class="navbar-brand d-flex center-all h-100" href="#">
+        <img class="img-fluid d-block neal-nav-icon" src="./img/sake-icon.svg">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample03"
+        aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExample03">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="./index.html">地圖 <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="./index.html">關於我們 <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="./index.html">新手選酒 <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="./index.html">商品列表 <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-dark" href="#" id="dropdown03" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">清酒知識+</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown03">
+              <a class="dropdown-item" href="#">清酒起源</a>
+              <a class="dropdown-item" href="#">清酒分類</a>
+              <a class="dropdown-item" href="#">清酒喝法</a>
+            </div>
+          </li>
+        </ul>
+        <ul class="navbar-nav my-2 my-md-0">
+          <li class="nav-item active">
+            <a class="nav-link" href="./index.html">購物車 <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="./index.html">登入 <span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!------------------- 主區域 -------------------->
+  <main class="neal_main">
+    <!------------------- 大標題 -------------------->
+    <header class="d-flex justify-content-center relative_neal align-items-center">
+      <figure>
+        <img class="pic_contain_neal" src="./img/sake-icon.svg" alt="">
+      </figure>
+      <h1>所有酒款</h1>
+    </header>
+
+    <!------------------- 排版用大區塊 -------------------->
+    <div class="row d-flex justify-content-center relative_neal pb-5">
+
+      <!------------------- 紋理背景區塊＋麵包屑 -------------------->
+      <div class="itemList_bg_neal d-flex relative_neal">
+
+        <div class="breadcrumb_neal row absolute_neal">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a class="text-dark" href="#">首頁</a></li>
+              <li class="breadcrumb-item active" aria-current="page">商品列表</li>
+            </ol>
+          </nav>
+        </div>
+
+        <!------------------- 篩選區塊 -------------------->
+        <section class="section_filter_neal col-xl-2 col-md-3 col-12">
+          <ul class="py-5">
+            <li>北海道</li>
+            <li>東北</li>
+            <li>關東</li>
+            <li>近畿</li>
+            <li>本州</li>
+            <li>四國</li>
+          </ul>
+        </section>
+        <!------------------- 商品區塊 -------------------->
+        <section class="section_item_neal d-flex col-xl-10 col-md-9 col-12 my-5 relative_neal">
+
+          <!------------------- 木條區塊-用下方js判斷有幾列就生成幾條 -------------------->
+          <div class="bg_board_neal row absolute_neal">
+            <figure class="align-self-end">
+              <img class="pic_fit_neal" src="./img/bg_board.svg" data-aos="flip-down" data-aos-duration="1000" alt="">
+            </figure>
+            <figure class="align-self-end">
+              <img class="pic_fit_neal" src="./img/bg_board.svg" data-aos="flip-down" data-aos-duration="1000" alt="">
+            </figure>
+            <figure class="align-self-end">
+              <img class="pic_fit_neal" src="./img/bg_board.svg" data-aos="flip-down" data-aos-duration="1000" alt="">
+            </figure>
+
+          </div>
+          <!------------------- 重複生成區塊-START -------------------->
+          <div class="item_neal col-xl-3 col-md-6 col-12 d-flex my-5">
+            <!---- 酒造名稱＋收藏按鈕 ---->
+            <div class="y_title_neal d-flex justify-content-center align-items-center">
+              <!--收藏按鈕 hover才會顯示 -->
+              <img class="jq_fav" src="./img/add_to_fav.svg" alt="">
+              <h5 class="m-0 pt-2">高橋酒造</h5>
+            </div>
+            <!---- 商品照片＋名稱 ------>
+            <div class="item_pic_neal col-sm-6 col-7 p-0 relative_neal d-flex align-items-end">
+              <figure class="absolute_neal relative_neal m-0" data-aos="fade-down" data-aos-duration="800">
+                  <img class="pic_fit_neal" src="./img/item_000.png" alt="">
+                  <h5 class="absolute_neal">寒梅酒</h5>
+              </figure>
+            </div>
+            <!-------- 價格圖片 -------->
+            <div class="item_price_board col-sm-6 col-5 p-0 relative_neal d-flex align-self-end">
+              <figure class="relative_neal absolute_neal m-0" data-aos="flip-up" data-aos="flip-up">
+                <img class="pic_fit_neal" src="./img/item_price_board.png" alt="">
+                <h5 class="absolute_neal">$3,270</h5>
+              </figure>
+            </div>
+            <!--------價格圖片-END------>
+          </div>
+          <!------------------- 重複生成區塊-END- -------------------->
+
+          <!------------------- 下面為排版測試用-START- -------------------->
+          <div class="item_neal col-12 col-md-6 col-xl-3 d-flex my-5">
+
+            <div class="y_title_neal d-flex justify-content-center align-items-center">
+              <img class="jq_fav" src="./img/add_to_fav.svg" alt="">
+              <h5 class="m-0 pt-2">高橋酒造</h5>
+            </div>
+
+            <div class="item_pic_neal col-sm-6 col-7 p-0 relative_neal d-flex align-items-end">
+              <figure class="absolute_neal relative_neal m-0" data-aos="fade-down" data-aos-duration="800">
+                <img class="pic_fit_neal" src="./img/item_001.png" alt="">
+                <h5 class="absolute_neal">特撰清酒</h5>
+              </figure>
+            </div>
+
+            <div class="item_price_board col-sm-6 col-5 p-0 relative_neal d-flex align-self-end">
+              <figure class="relative_neal absolute_neal m-0" data-aos="flip-up">
+                <img class="pic_fit_neal" src="./img/item_price_board.png" alt="">
+                <h5 class="absolute_neal">$3,290</h5>
+              </figure>
+            </div>
+
+          </div>
+          <div class="item_neal col-12 col-md-6 col-xl-3 d-flex my-5">
+
+            <div class="y_title_neal d-flex justify-content-center align-items-center">
+              <img class="jq_fav" src="./img/add_to_fav.svg" alt="">
+              <h5 class="m-0 pt-2">高橋酒造</h5>
+            </div>
+
+            <div class="item_pic_neal col-sm-6 col-7 p-0 relative_neal d-flex align-items-end">
+              <figure class="absolute_neal relative_neal m-0" data-aos="fade-down" data-aos-duration="800">
+                <img class="pic_fit_neal" src="./img/item_002.png" alt="">
+                <h5 class="absolute_neal">寒梅酒</h5>
+              </figure>
+            </div>
+
+            <div class="item_price_board col-sm-6 col-5 p-0 relative_neal d-flex align-self-end">
+              <figure class="relative_neal absolute_neal m-0" data-aos="flip-up">
+                <img class="pic_fit_neal" src="./img/item_price_board.png" alt="">
+                <h5 class="absolute_neal">$3,290</h5>
+              </figure>
+            </div>
+
+          </div>
+          <div class="item_neal col-12 col-md-6 col-xl-3 d-flex my-5">
+
+            <div class="y_title_neal d-flex justify-content-center align-items-center">
+              <img class="jq_fav" src="./img/add_to_fav.svg" alt="">
+              <h5 class="m-0 pt-2">高橋酒造</h5>
+            </div>
+
+            <div class="item_pic_neal col-sm-6 col-7 p-0 relative_neal d-flex align-items-end">
+              <figure class="absolute_neal relative_neal m-0" data-aos="fade-down" data-aos-duration="800">
+                <img class="pic_fit_neal" src="./img/item_003.png" alt="">
+                <h5 class="absolute_neal">寒梅酒</h5>
+              </figure>
+            </div>
+
+            <div class="item_price_board col-sm-6 col-5 p-0 relative_neal d-flex align-self-end">
+              <figure class="relative_neal absolute_neal m-0" data-aos="flip-up">
+                <img class="pic_fit_neal" src="./img/item_price_board.png" alt="">
+                <h5 class="absolute_neal">$3,290</h5>
+              </figure>
+            </div>
+
+          </div>
+          <div class="item_neal col-12 col-md-6 col-xl-3 d-flex my-5">
+
+            <div class="y_title_neal d-flex justify-content-center align-items-center">
+              <img class="jq_fav" src="./img/add_to_fav.svg" alt="">
+              <h5 class="m-0 pt-2">高橋酒造</h5>
+            </div>
+
+            <div class="item_pic_neal col-sm-6 col-7 p-0 relative_neal d-flex align-items-end">
+              <figure class="absolute_neal relative_neal m-0" data-aos="fade-down" data-aos-duration="800">
+                <img class="pic_fit_neal" src="./img/item_004.png" alt="">
+                <h5 class="absolute_neal">寒梅酒</h5>
+              </figure>
+            </div>
+
+            <div class="item_price_board col-sm-6 col-5 p-0 relative_neal d-flex align-self-end">
+              <figure class="relative_neal absolute_neal m-0" data-aos="flip-up">
+                <img class="pic_fit_neal" src="./img/item_price_board.png" alt="">
+                <h5 class="absolute_neal">$3,290</h5>
+              </figure>
+            </div>
+
+          </div>
+          <div class="item_neal col-12 col-md-6 col-xl-3 d-flex my-5">
+
+            <div class="y_title_neal d-flex justify-content-center align-items-center">
+              <img class="jq_fav" src="./img/add_to_fav.svg" alt="">
+              <h5 class="m-0 pt-2">高橋酒造</h5>
+            </div>
+
+            <div class="item_pic_neal col-sm-6 col-7 p-0 relative_neal d-flex align-items-end">
+              <figure class="absolute_neal relative_neal m-0" data-aos="fade-down" data-aos-duration="800">
+                <img class="pic_fit_neal" src="./img/item_005.png" alt="">
+                <h5 class="absolute_neal">寒梅酒</h5>
+              </figure>
+            </div>
+
+            <div class="item_price_board col-sm-6 col-5 p-0 relative_neal d-flex align-self-end">
+              <figure class="relative_neal absolute_neal m-0" data-aos="flip-up">
+                <img class="pic_fit_neal" src="./img/item_price_board.png" alt="">
+                <h5 class="absolute_neal">$3,290</h5>
+              </figure>
+            </div>
+
+          </div>
+          <div class="item_neal col-12 col-md-6 col-xl-3 d-flex my-5">
+
+            <div class="y_title_neal d-flex justify-content-center align-items-center">
+              <img class="jq_fav" src="./img/add_to_fav.svg" alt="">
+              <h5 class="m-0 pt-2">高橋酒造</h5>
+            </div>
+
+            <div class="item_pic_neal col-sm-6 col-7 p-0 relative_neal d-flex align-items-end">
+              <figure class="absolute_neal relative_neal m-0" data-aos="fade-down" data-aos-duration="800">
+                <img class="pic_fit_neal" src="./img/item_000.png" alt="">
+                <h5 class="absolute_neal">寒梅酒</h5>
+              </figure>
+            </div>
+
+            <div class="item_price_board col-sm-6 col-5 p-0 relative_neal d-flex align-self-end">
+              <figure class="relative_neal absolute_neal m-0" data-aos="flip-up">
+                <img class="pic_fit_neal" src="./img/item_price_board.png" alt="">
+                <h5 class="absolute_neal">$3,290</h5>
+              </figure>
+            </div>
+
+          </div>
+          <div class="item_neal col-12 col-md-6 col-xl-3 d-flex my-5">
+
+            <div class="y_title_neal d-flex justify-content-center align-items-center">
+              <img class="jq_fav" src="./img/add_to_fav.svg" alt="">
+              <h5 class="m-0 pt-2">高橋酒造</h5>
+            </div>
+
+            <div class="item_pic_neal col-sm-6 col-7 p-0 relative_neal d-flex align-items-end">
+              <figure class="absolute_neal relative_neal m-0" data-aos="fade-down" data-aos-duration="800">
+                <img class="pic_fit_neal" src="./img/item_001.png" alt="">
+                <h5 class="absolute_neal">寒梅酒</h5>
+              </figure>
+            </div>
+
+            <div class="item_price_board col-sm-6 col-5 p-0 relative_neal d-flex align-self-end">
+              <figure class="relative_neal absolute_neal m-0" data-aos="flip-up">
+                <img class="pic_fit_neal" src="./img/item_price_board.png" alt="">
+                <h5 class="absolute_neal">$3,290</h5>
+              </figure>
+            </div>
+
+          </div>
+          <div class="item_neal col-12 col-md-6 col-xl-3 d-flex my-5">
+
+            <div class="y_title_neal d-flex justify-content-center align-items-center">
+              <img class="jq_fav" src="./img/add_to_fav.svg" alt="">
+              <h5 class="m-0 pt-2">高橋酒造</h5>
+            </div>
+
+            <div class="item_pic_neal col-sm-6 col-7 p-0 relative_neal d-flex align-items-end">
+              <figure class="absolute_neal relative_neal m-0" data-aos="fade-down" data-aos-duration="800">
+                <img class="pic_fit_neal" src="./img/item_002.png" alt="">
+                <h5 class="absolute_neal">寒梅酒</h5>
+              </figure>
+            </div>
+
+            <div class="item_price_board col-sm-6 col-5 p-0 relative_neal d-flex align-self-end">
+              <figure class="relative_neal absolute_neal m-0" data-aos="flip-up">
+                <img class="pic_fit_neal" src="./img/item_price_board.png" alt="">
+                <h5 class="absolute_neal">$3,290</h5>
+              </figure>
+            </div>
+
+          </div>
+          <div class="item_neal col-12 col-md-6 col-xl-3 d-flex my-5">
+
+            <div class="y_title_neal d-flex justify-content-center align-items-center">
+              <img class="jq_fav" src="./img/add_to_fav.svg" alt="">
+              <h5 class="m-0 pt-2">高橋酒造</h5>
+            </div>
+
+            <div class="item_pic_neal col-sm-6 col-7 p-0 relative_neal d-flex align-items-end">
+              <figure class="absolute_neal relative_neal m-0" data-aos="fade-down" data-aos-duration="800">
+                <img class="pic_fit_neal" src="./img/item_003.png" alt="">
+                <h5 class="absolute_neal">寒梅酒</h5>
+              </figure>
+            </div>
+
+            <div class="item_price_board col-sm-6 col-5 p-0 relative_neal d-flex align-self-end">
+              <figure class="relative_neal absolute_neal m-0" data-aos="flip-up">
+                <img class="pic_fit_neal" src="./img/item_price_board.png" alt="">
+                <h5 class="absolute_neal">$3,290</h5>
+              </figure>
+            </div>
+
+          </div>
+          <div class="item_neal col-12 col-md-6 col-xl-3 d-flex my-5">
+
+            <div class="y_title_neal d-flex justify-content-center align-items-center">
+              <img class="jq_fav" src="./img/add_to_fav.svg" alt="">
+              <h5 class="m-0 pt-2">高橋酒造</h5>
+            </div>
+
+            <div class="item_pic_neal col-sm-6 col-7 p-0 relative_neal d-flex align-items-end">
+              <figure class="absolute_neal relative_neal m-0" data-aos="fade-down" data-aos-duration="800">
+                <img class="pic_fit_neal" src="./img/item_004.png" alt="">
+                <h5 class="absolute_neal">寒梅酒</h5>
+              </figure>
+            </div>
+
+            <div class="item_price_board col-sm-6 col-5 p-0 relative_neal d-flex align-self-end">
+              <figure class="relative_neal absolute_neal m-0" data-aos="flip-up">
+                <img class="pic_fit_neal" src="./img/item_price_board.png" alt="">
+                <h5 class="absolute_neal">$3,290</h5>
+              </figure>
+            </div>
+
+          </div>
+          <div class="item_neal col-12 col-md-6 col-xl-3 d-flex my-5">
+
+            <div class="y_title_neal d-flex justify-content-center align-items-center">
+              <img class="jq_fav" src="./img/add_to_fav.svg" alt="">
+              <h5 class="m-0 pt-2">高橋酒造</h5>
+            </div>
+
+            <div class="item_pic_neal col-sm-6 col-7 p-0 relative_neal d-flex align-items-end">
+              <figure class="absolute_neal relative_neal m-0" data-aos="fade-down" data-aos-duration="800">
+                <img class="pic_fit_neal" src="./img/item_005.png" alt="">
+                <h5 class="absolute_neal">寒梅酒</h5>
+              </figure>
+            </div>
+
+            <div class="item_price_board col-sm-6 col-5 p-0 relative_neal d-flex align-self-end">
+              <figure class="relative_neal absolute_neal m-0" data-aos="flip-up">
+                <img class="pic_fit_neal" src="./img/item_price_board.png" alt="">
+                <h5 class="absolute_neal">$3,290</h5>
+              </figure>
+            </div>
+
+          </div>
+          <!------------------- 上面為排版測試用-END- -------------------->
+        </section>
+        <!------------------- 商品區塊-end- -------------------->
+
+
+        <!------------------- 背景雲彩＋麻葉 -------------------->
+        <figure class="bg_cloud_r absolute_neal">
+          <img class="pic_contain_neal" src="./img/bg_cloud_r.svg" data-aos="fade-left" data-aos-duration="800" alt="">
+        </figure>
+        <figure class="bg_cloud_l absolute_neal">
+          <img class="pic_contain_neal" src="./img/bg_cloud_l.svg" data-aos="fade-right" alt="">
+        </figure>
+        <figure class="bg_wgr_l absolute_neal">
+          <img class="pic_contain_neal" src="./img/bg_wgr.svg" data-aos="fade-right" alt="">
+        </figure>
+        <figure class="bg_wgr_r absolute_neal">
+          <img class="pic_contain_neal" src="./img/bg_wgr.svg" data-aos="fade-left" alt="">
+        </figure>
+        <!------------------- 背景雲彩 -------------------->
+      </div>
+    </div>
+
+  </main>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="./dist/aos.js""></script>
+  <script src="./dist/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="./dist/bootstrap.min.js"></script>
+  <script>
+    AOS.init();
+
+    // 收藏愛心hover效果
+    $(".jq_fav").hover(function () {
+        $(this).toggleClass("active")
+    })
+    // 酒瓶浮起特效
+    $(".pic_fit_neal").hover(function () {
+      $(this).toggleClass("active")
+    })
+
+
+    // 木條生成判斷式
+    // item總數
+    let $itemNeals = $('.item_neal')
+    // 木條區域
+    let $bgBoardNeal = $('.bg_board_neal')
+    // 要產生的基礎木條元素
+    let baseBoard = createBoard()
+
+    // 計算現在的 size 大小 和木條數量
+    let lastSizeMode = checkSizeMode()
+    let currentSizeMode = checkSizeMode()
+    boardReCalc(currentSizeMode)
+
+    // 當螢幕 resize 時重新計算size的mode與木條的數量
+    window.addEventListener('resize', (e) => {
+      currentSizeMode = checkSizeMode()
+      if (currentSizeMode !== lastSizeMode) {
+        boardReCalc(currentSizeMode)
+        lastSizeMode = currentSizeMode
+      }
+    })
+
+    // 對應 bootstrap 三種size xl xs m 
+    function checkSizeMode() {
+      let mode = ''
+      if (window.innerWidth >= 1200) {
+        mode = 'xl'
+      } else if (window.innerWidth >= 768) {
+        mode = 'm'
+      } else {
+        mode = 'xs'
+      }
+      return mode
+    }
+
+    // 計算木條數量的函數
+    function boardReCalc(mode) {
+      // 對應不同大小的欄位數量
+      let colNum = 0
+      if (mode === 'xl') {
+        colNum = 4
+      } else if (mode === 'm') {
+        colNum = 2
+      } else {
+        colNum = 1
+      }
+      // 現在的木條數量
+      let $boards = $('.bg_board_neal figure')
+      // 計算該有幾列
+      let rowNum = Math.floor($itemNeals.length / colNum) + Math.ceil(($itemNeals.length % colNum) / colNum)
+
+      //計算列的差並增減
+      let deltaRow = rowNum - $boards.length
+      if (deltaRow >= 0) {
+        for (let i = 0; i < deltaRow; i++) {
+          $bgBoardNeal.append(baseBoard.cloneNode(true))
+        }
+      } else {
+        for (let i = 0; i < -deltaRow; i++) {
+          $boards[i].remove()
+        }
+      }
+    }
+
+    // 產生基礎的木條元素
+    function createBoard() {
+      let figure = document.createElement('figure')
+      figure.classList.add('align-self-end')
+      let img = document.createElement('img')
+      img.classList.add('pic_fit_neal')
+      img.src = './img/bg_board.svg'
+      figure.append(img)
+      return figure
+    }
+    
+  </script>
+
+</body>
+
+</html>

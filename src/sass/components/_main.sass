@@ -1,9 +1,9 @@
 // index
-  
+
 // main global
 main
   min-height: 100vh
-  padding: 68px 0 0
+  padding: 116px 0 0
 
 .main_bg
   height: 250vh
@@ -26,19 +26,39 @@ main
     font-family: 'Noto Sans TC', serif
     writing-mode: vertical-rl
 
-.main_subtitle  
+.main_subtitle
   font-size: $font_subtitle
   font-weight: 500
 
+.main_sakura
+  +noPaddingMargin
+  min-height: 200vh !important
+  position: relative
+  margin-top: -116px
+  background: transparent !important
+  #sakura
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+  .main_article_center
+    top: 100vh
+    min-height: 100vh
+
 // logo section
 .main_logoSec
-  min-height: 100vh
-  text-shadow: white 0px 0px 20px
-  padding-bottom: 200px
+  &, .main_article_center
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    min-height: 100vh
+  // text-shadow: white 0px 0px 2px
+  padding: 116px 0 200px
   animation: mainTitle 2s infinite alternate both ease-out
   h1
     +noPaddingMargin
-    width: 75px
+    // width: 75px
     font-size: $font_title
   figure
     +noPaddingMargin
@@ -70,7 +90,7 @@ main
 @media screen and ( max-width:  768px)
   .main_news_items
     justify-content: center
-  
+
 
 // knowledge section
 .main_knowledge
@@ -97,7 +117,7 @@ main
   background: #fff
   padding: 1.5rem
   left: 0
-  bottom: 25% 
+  bottom: 25%
   & > *
     margin: .5rem
   .main_know_cardContent
@@ -105,7 +125,7 @@ main
     font-size: $font_tinyContent
   .main_know_cardMore > *
     margin: .5rem
-  
+
 // recommand
 .main_recommand
   justify-content: center
@@ -159,3 +179,34 @@ main
   top: 50%
   left: 70%
   height: 20%
+
+.remove_alert
+  position: fixed
+  top: 0
+  left: 0
+  background: #00000070
+  width: 100vw
+  height: 100vh
+  &>.row
+  .remove_box
+    +setMiddle
+    height: 20%
+    min-height: 10rem
+    min-width: 20rem
+    background: $mainBgColor
+    border-radius: 10px
+    padding: 2rem
+    box-shadow: 0 2px 4px -2px #fff
+    .remove_btn_group
+      padding: 1rem
+      .remove_btn
+        background: $highlightColor
+        border-color: $highlightColor
+        color: #fff
+        padding: .5rem 2rem
+        box-shadow: 0 0 0 0 $highlightColor
+        transition: .2s
+      .remove_btn:hover
+        box-shadow: 0 0 8px -4px #000, 0 0 0 #000 inset
+        &:active
+          box-shadow: 0 0 0 #000, 0 0 8px -4px #000 inset
