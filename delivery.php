@@ -12,7 +12,7 @@ require_once('./tpl/tpl-header.php');
     <form class="col-md-9 form-row" method="POST" action="">
       <section class="form-group col-md-12 delivery_ship">
         <hgroup class="d-flex justify-content-between align-items-center">
-          <h2>配送方式</h2>
+          <h4>配送方式</h4>
           <a>
             <h5><i class="fas fa-chevron-left"></i> 返回上一步</h5>
           </a>
@@ -26,7 +26,7 @@ require_once('./tpl/tpl-header.php');
       </section>
 
       <section class="form-group col-md-12 delivery_order">
-        <h2>訂購人</h2>
+        <h4>訂購人</h4>
         <hr>
         <div class="form-row">
           <section class="form-group col-md-6">
@@ -74,7 +74,7 @@ require_once('./tpl/tpl-header.php');
 
       <section class="form-group col-md-12 delivery_reciver">
         <div class="delivery_recive">
-          <h3>收件人</h3>
+          <h4>收件人</h4>
           <hr>
           <section class="form-group col-md-12">
             <div class="form-check delivery_recive_same">
@@ -137,7 +137,7 @@ require_once('./tpl/tpl-header.php');
       </section>
 
       <section class="form-group col-md-12 delivery_temperature">
-        <h3>配送方式</h3>
+        <h4>配送方式</h4>
         <hr>
         <div class="d-flex center_all btn-group">
           <input type="button" class="btn delivery_btn delivery_temp" data-temp="0" value="常溫配送" required>
@@ -146,7 +146,7 @@ require_once('./tpl/tpl-header.php');
       </section>
 
       <section class="form-group col-md-12 delivery_payment">
-        <h3>付款方式</h3>
+        <h4>付款方式</h4>
         <hr>
         <div class="d-flex center_all btn-group">
           <input type="button" class="btn delivery_btn delivery_pay" data-temp="0" value="線上刷卡" required>
@@ -155,7 +155,7 @@ require_once('./tpl/tpl-header.php');
       </section>
 
       <section class="form-group col-md-12 delivery_receipt">
-        <h3>發票</h3>
+        <h4>發票</h4>
         <hr>
         <div class="d-flex flex-column">
           <div class="d-flex center_all btn-group">
@@ -169,7 +169,7 @@ require_once('./tpl/tpl-header.php');
       <section class="form-group col-md-12">
         <hr>
         <div class=" d-flex justify-content-between btn-group">
-          <input type="submit" class="btn delivery_btn" value="返回上一步">
+          <input type="button" class="btn delivery_btn" value="返回上一步">
           <input type="submit" class="btn delivery_btn" value="完成">
         </div>
       </section>

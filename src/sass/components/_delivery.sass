@@ -1,6 +1,8 @@
-.delivery_frame
+.devilery_frame
+  hr
+    margin-top: 1rem
   & form > section
-    margin-top: 4rem
+    margin-top: 2rem
   .form-control
     border: 0
     border-bottom: 1px solid grey
@@ -10,9 +12,6 @@
     &:focus
       border-radius: .1rem .1rem 0 0
       box-shadow: 0 0 0 0.2rem lighten($mouseIconColor, 20%)
-  .form-check-input[type='radio']
-    height: $font_mintitle
-    width: $font_mintitle
   .form-check-label
     font-size: $font_mintitle
 
@@ -42,25 +41,28 @@
 .checkout_info
   > section
     margin: 2rem 0
-  .checkout_info_help,
-  .checkout_price
-    border: 1px solid $highlightColor
-    padding: .75rem
-    border-radius: 4px
-    h5, h6
-      color: $highlightColor
-    h5
-      font-weight: 700
-  .checkout_cart
-    background: lighten($mainColor, 20%)
-    padding: 1rem
-    border-radius: 4px
-    &>div
-      padding: .5rem 1rem
-      .checkout_item_count::before
-        content: 'X'
-      .checkout_item_price::after
-        content: '$'
+
+.checkout_info_help,
+.checkout_price
+  border: 1px solid $highlightColor
+  padding: .75rem
+  border-radius: 4px
+  h5, h6
+    color: $highlightColor
+  h5
+    font-weight: 700
+
+.checkout_cart
+  background: lighten($mainColor, 20%)
+  padding: 1rem
+  border-radius: 4px
+  &>div
+    padding: .5rem 1rem
+    .checkout_item_count::before
+      content: 'X'
+    .checkout_item_price::after
+      content: '$'
+
 .checkout_price
   ul, ul *
     +noPaddingMargin

@@ -10,27 +10,21 @@ require_once('./tpl/tpl-header.php');
 <main class="container checkout_frame">
   <div class="row">
     <form class="form-row col-md-9" method="POST" action="">
-      <section class="form-group col-md-12">
+      <section class="form-group col-md-12 checkout_card_selection">
         <h4>付款方式</h4>
         <hr>
-        <section class="form-row">
-          <div class="form-group d-flex col-md-12">
-            <div class="form-check mr-3">
-              <label class="form-check-label" for="p2p"><input class="form-check-input" type="radio" name="shipment" id="p2p" disabled>貨到付款</label>
-            </div>
-            <div class="form-check ml-3">
-              <label class="form-check-label" class="" for="p2o"><input class="form-check-input" type="radio" name="shipment" id="p2o" disabled>線上付款</label>
-            </div>
+        <section class="row px-3">
+          <div class="d-flex col-md-6 p-0 card_type">
+            <a class="d-flex center_all"><i class="w-75 h-75 fab fa-cc-visa" style="color:navy;"></i></a>
+            <a class="d-flex center_all"><i class="w-75 h-75 fab fa-cc-amex" style="color:blue;"></i></a>
           </div>
-          <div class="form-group col-md-12 card_type">
-            <i class="fab fa-cc-visa" style="color:navy;"></i>
-            <i class="fab fa-cc-amex" style="color:blue;"></i>
-            <i class="fab fa-cc-mastercard" style="color:red;"></i>
-            <i class="fab fa-cc-discover" style="color:orange;"></i>
+          <div class="d-flex col-md-6 p-0 card_type">
+            <a class="d-flex center_all"><i class="w-75 h-75 fab fa-cc-mastercard" style="color:red;"></i></a>
+            <a class="d-flex center_all"><i class="w-75 h-75 fab fa-cc-discover" style="color:orange;"></i></a>
           </div>
         </section>
       </section>
-      
+
       <section class="form-group col-md-6 mt-5">
         <h4>請填寫信用卡資料</h4>
         <hr>
@@ -56,12 +50,15 @@ require_once('./tpl/tpl-header.php');
       </section>
 
       <section class="form-group col-md-12">
-        <input class="btn" type="submit" value="返回上一步" class="p-prebtn-hyh">
-        <input class="btn" type="submit" value="完成" class="p-btn-hyh">
+        <hr>
+        <div class=" d-flex justify-content-between btn-group">
+          <input type="button" class="btn delivery_btn" value="返回上一步">
+          <input type="submit" class="btn delivery_btn" value="完成">
+        </div>
       </section>
     </form>
 
-    <div class="col-md-3">      
+    <div class="col-md-3 checkout_info">
       <?php require_once('./tpl/cart/tpl-cart.php'); ?>
     </div>
   </div>
