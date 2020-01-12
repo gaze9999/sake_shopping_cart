@@ -14,4 +14,7 @@ let ccList = $('.checkout_cart_list'),
     shipTemp = $('.delivery_temp'),
     shipPay = $('.delivery_pay'),
     shipReceipt = $('.delivery_receipt'),
-    receiptNumber = $('.delivery_receipt_number')
+    receiptNumber = $('.delivery_receipt_number'),
+
+    sameOrder = $('.same_order'),
+    receiverSec = $('.delivery_receiver_section')    

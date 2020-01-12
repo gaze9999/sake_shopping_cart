@@ -11,3 +11,9 @@ shipReceipt.on('mouseup', ()=> {
   receiptNumber.css('display', 'block') :
   receiptNumber.css('display', 'none')
 })
+
+sameOrder.on('change', function(e) {
+  $(this).prop('checked') ?
+  receiverSec.css('display', 'none') :
+  receiverSec.css('display', 'block')
+})

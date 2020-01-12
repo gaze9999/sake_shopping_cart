@@ -81,13 +81,13 @@ require_once('./tpl/tpl-header.php');
           <section class="form-group col-md-12">
             <div class="form-check delivery_receive_same">
               <label class="form-check-label">
-                <input type="checkbox" class="form-check-input">
+                <input class="same_order" type="checkbox" class="form-check-input">
                 同訂購人
               </label>
             </div>
           </section>
 
-          <section>
+          <section class="delivery_receiver_section">
             <div class="form-row">
               <section class="form-group col-md-6">
                 <label for="delivery_name">姓名</label>
