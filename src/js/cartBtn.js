@@ -10,21 +10,11 @@ carGoCheckout.on('mouseup',(e) => {
     capIds.push(parseInt(cartHiddenSid[e].value))
   })
 
-  console.log(capIds)
-  // console.log(itemPrices)
-  console.log(itemQtys)
-
-  console.log({
-    'orderId': 0,
-    'capIds': capIds,
-    'qtys': itemQtys
-  })
   fetch('./func/func-goDelivery.php', {
     method: "POST",
     headers: {'Content-Type': 'application/json',
               'Accept': 'application/json'},
     body: [JSON.stringify({
-      'orderId': 0,
       'capIds': capIds,
       'qtys': itemQtys
     })]
@@ -42,4 +32,6 @@ carGoCheckout.on('mouseup',(e) => {
     console.log('getDetails() request failed:', error);
     console.log(error.response);
   });
+
+  location.href = './delivery.php';
 })
