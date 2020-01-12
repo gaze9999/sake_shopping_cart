@@ -69,3 +69,6 @@ require_once('./tpl/tpl-warning.php');
 require_once('./tpl/tpl-footer.php');
 require_once('./tpl/tpl-html-foot.php');
 ?>
+<script src="./src/js/variables/delivery.js"></script>
+<script src="./src/js/functions/delivery.js"></script>
+<script src="./src/js/deliveryBtn.js"></script>

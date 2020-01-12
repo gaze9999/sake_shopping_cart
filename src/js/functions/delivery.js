@@ -12,10 +12,9 @@ function getSmallCart() {
       throw error.Content-Type;
     }
   }).then(json => {
-    console.log(json)
+    // console.log(json)
     ccList.html('')
-    let priceRaw = 0,
-        priceTotal = 0
+    let priceRaw = 0
 
     for (let i in json) {
       let sId = json[i][2]['itemId'],
@@ -51,4 +50,20 @@ function getSmallCart() {
     console.log('getDetails() request failed:', error);
     console.log(error.response);
   });
+}
+
+function btnSelector(selector) {
+  selector.on('mouseup', function() {
+    if (selector.hasClass('btn_active')) {
+      selector.removeClass('btn_active')
+    }
+      $(this).addClass('btn_active')
+      btnSelection($(this))
+  })
+}
+
+function btnSelection(selector) {
+  let thisValue = JSON.stringify(selector.data()),
+      thisOutput = selector.parents('section').find(':hidden')
+      thisOutput.val(thisValue.slice(thisValue.length-2, thisValue.length-1))
 }
