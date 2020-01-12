@@ -5,12 +5,17 @@
 }
 
 body {
-    background-image: url(/images/web/itemDetails/bg001.gif);
+    background-image: url(/itemDetails_CKY/images/web/itemDetails/bg001.gif);
     background-repeat: no-repeat;
     background-size: cover;
     font-family: 'Noto Serif TC', serif !important;
     overflow-x: hidden;
     height: 300vh;
+}
+@media screen and (max-width:768px) {
+    body{
+        background-repeat: repeat; 
+    }
 }
 
 li {
@@ -226,13 +231,10 @@ button:nth-child(1){
     }
 }
 
-    .titleBg02-cky img {
-        width: 60%;
-    }
+.titleBg02-cky img {
+    width: 60%;
+}
 
-    .bg2 {
-        background: rgba(214, 255, 196, 0.301) !important;
-    }
 /* 產品細節頁 */
     .break-ward-cky {
         border-bottom: 1px solid rgb(0, 0, 0);
@@ -258,9 +260,6 @@ button:nth-child(1){
     }
     .breakInfoTitleSpaceMi-cky{
         letter-spacing:10px ;
-    }
-    .bg3 {
-        background-color: rgba(197, 246, 246, 0.829);
     }
 
     .feature-cky {
@@ -319,20 +318,17 @@ button:nth-child(1){
         letter-spacing: 10px;
     }
 
-    .bg1 {
-        background-color: cadetblue !important;
-    }
 
     /* 網頁左右的青海波 & 和柄 */
     .seigaiwa-cky {
-        background: url(/images/web/itemDetails/seigaiwa.svg) no-repeat;
+        background: url(/itemDetails_CKY/images/web/itemDetails/seigaiwa.svg) no-repeat;
         background-size: contain;
         object-fit: contain;
         position: absolute;
         width: 55%;
     }
     .bg_wgr-cky {
-        background: url(/images/web/itemDetails/bg_wgr.svg) no-repeat;
+        background: url(/itemDetails_CKY/images/web/itemDetails/bg_wgr.svg) no-repeat;
         background-size: contain;
         position: absolute;
         width: 12%;

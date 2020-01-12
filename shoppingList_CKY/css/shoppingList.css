@@ -1,0 +1,456 @@
+/* html 標籤的CSS */
+body{
+    background: url(../images/web/bg001.gif) !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    position: relative;
+    height: 100vh ;
+    font-family: 'Noto Serif TC', serif !important;
+    overflow-x: hidden;
+}
+a:link{
+    text-decoration: none !important;
+}
+a{
+    color:black !important;
+}
+li{
+    list-style-type: none;
+}
+/*  html 標籤的CSS 結束 */
+
+/* 蓋掉bootstrap css */
+.del-padding-left-cky{
+    padding-left: 0 !important;
+}
+.del-margin-cky{
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+.del-display-cky{
+    display: block !important;
+}
+.del-ml-5-cky{
+    margin-left: 1rem !important;
+}
+/* 蓋掉bootstrap css 結束 */
+
+/* 購物清單大標題 */
+.sakeTitle-cky {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.figureImg-cky {
+    object-fit: contain;
+    width: 40px;
+}
+
+.hard-light-cky {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    opacity: .1;
+}
+
+.brewIcon-cky {
+    width: 100%;
+    height: 100%;
+}
+
+.sakeName-cky {
+    position: absolute;
+}
+/* 購物清單大標題 結束 */
+
+/* 返回鍵 */
+.continue-cky{
+    background: #eaeaea;
+    padding:.325rem 1rem;
+    /* max-height: 35px; */
+    border-radius: 20px;
+    float: right;
+    font-size: 1rem;
+    letter-spacing: 1px !important;
+    transition: 300ms ease-in-out;
+    cursor: pointer;
+}
+.continue-cky span{
+    margin-right: .5rem;
+}
+.continue-cky:hover{
+    background: #d8d8d8;
+}
+/* 返回鍵 結束 */
+
+/* 配送方式 */
+.shippingCart-cky h3{
+    border-bottom: 1px solid #4a4a4a;
+    padding-bottom:1rem;
+    margin-bottom: 1.5rem;
+}
+/* 配送方式 結束 */
+
+/* 商品清單 */
+.purchasedItems-cky{
+    background: #f4f7fb;
+    padding: 1rem;
+    border-radius: 4px;
+    border: 1px solid #f4f7fb;
+}
+@media screen and (max-width:768px) {
+    .purchasedItems-cky{
+        padding:0px 0px 0px 0px;
+    }
+}
+.productItem-cky{
+    border-bottom: 1px solid #d8d8d8;
+    padding-bottom: 1.5rem;
+}
+@media screen and (max-width:768px) {
+.productItem-cky{
+    border-bottom:none;
+    padding-bottom: 0;
+}
+    
+}
+.productName-cky{
+    width: 45%;
+    display: table-cell;
+}
+@media screen and (max-width:768px) {
+    .productName-cky{
+        width: 100%;
+        display: block;
+        }
+    
+    }
+/* 圖片 */
+.purchasedItems-cky .item-cky{
+    width: 100%;
+    padding: 1rem 0;
+    margin: 0;
+    display: table ;
+    position: relative;
+}
+@media screen and (max-width:768px) {
+.purchasedItems-cky .item-cky{
+    display: block;
+    }
+
+}
+.purchasedItems-cky .item-cky .wine-img{
+    max-width: 70px;
+    min-width: 70px;
+    max-height: 100px;
+    min-height: 100px;
+    background: #fff;
+    margin-right: 1rem;
+    margin-bottom: 0;
+}
+@media screen and (max-width:768px) {
+    .purchasedItems-cky .item-cky .wine-img{
+        margin-bottom: 1rem;
+        margin-left: 1rem;
+    }
+}
+.purchasedItems-cky .wine-img{
+    position: relative;
+}
+.wine-img img{
+    width:100%;
+}
+/* 圖片 結束 */
+/* 規格 */
+.purchasedItems-cky .item-cky .wine-info{
+    width: 100%;
+    margin-bottom:5px;
+}
+.wine-info .prefectures-cky, .wine-info .breweries-cky, .wine-info .capacity-cky{
+    font-size: 14px;
+    color: #515151;
+    margin-bottom: 5px;
+    line-height: 1.2rem;
+    max-height: 1.2rem; 
+    overflow: hidden;
+}
+.wine-info .product-cky{
+    margin-bottom: 5px;
+    font-size: 15px;
+    color: #292245;
+    font-weight: 700;
+    line-height: 1.4rem;
+    max-height: 2.8rem;
+    overflow: hidden;
+}
+/* 規格 結束 */
+
+/* 數量選擇按鈕 */
+.counter-cky{
+    width: 22%;
+    display: table-cell;
+    vertical-align: middle !important;
+}
+.inputNumber-cky{
+    width: 240px;
+    position: relative;
+    display: inline-block;
+    line-height: 38px;
+}
+@media screen and (max-width:768px) {
+    .inputNumber-cky{
+        margin-left: 1rem;
+    }
+}
+.input-cky{
+    /* text-align: left!important; */
+    /* padding-left: 10px !important; */
+    margin-left:4px ;
+    border: 1px solid #d8d8d8;
+    text-align: center;
+    font-size: 1.1rem;
+    padding-right: 50px;
+    background-color: #fff;
+    background-image: none;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: inline-block;
+    height: 40px;
+    padding: 0 15px;
+    transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+    width: 40%;
+}
+.minusBtn-cky{
+    /* right: 40px !important; */
+    /* left: auto !important; */
+    background: #fff;
+    border: 1px solid #d8d8d8;
+    color: #c0c4cc;
+    cursor: not-allowed;
+    padding:6px 7px 5px 10px;
+    border-radius: 4px;
+}
+.plusBtn-cky{
+    padding:5px 10px;
+    cursor:pointer
+}
+/* 數量選擇按鈕 結束 */
+
+/* 刪除按鈕 */
+.delete-cky{
+    font-size:1.75rem;
+    width: 7%;
+    display: table;
+    vertical-align: middle;
+    margin-top: 3rem;
+}
+@media screen and (max-width:768px) {
+    .delete-cky{
+        display: table-cell;
+        width: 1%;
+    }
+}
+.deleteBtn-cky{
+    background: url(../images/web/deleteBtn.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: 1px solid #d8d8d8;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    opacity: .8;
+}
+.deleteBtn-cky:hover{
+    opacity: 1;
+}
+@media screen and (max-width:768px) {
+    .deleteBtn-cky{
+        margin-right: 1rem;
+    }
+
+}
+/* 刪除按鈕 結束 */
+/* 產品價格 */
+.itemPrice-cky{
+    width:15%;
+    text-align: right;
+    display: table-cell;
+    font-size: 1.25rem;
+    font-weight: 700;
+    vertical-align: middle;
+    color:#FF6060;
+}
+@media screen and (max-width:768px) {
+    .itemPrice-cky{
+        display: block;
+        width: 100%;
+        border-top: 1px solid #d8d8d8;
+        margin-top:1rem;
+        padding-top: 1rem;
+        padding-right: 1rem;
+        vertical-align: middle;
+    }
+
+}
+/* 產品價格 結束 */
+/* 活動提醒 */
+.promoTitle-cky{
+    background: #A06BCC;
+    width: 40%;
+    border-radius: 5px;
+    padding: 10px 13px;
+    transition: background-color .3s ease;
+}
+@media screen and (max-width:768px) {
+    .promoTitle-cky{
+        width: 100%;
+        border-radius: unset;
+        padding: 5px 10px;
+    }
+
+}
+.promoTitle-cky:hover{
+    background: rgb(134, 91, 170);
+}
+
+.promoTitle-cky a{
+    color:#FFF !important;
+    font-weight: 700;
+    font-size: 1rem ;
+    display: block ;
+}
+.rightLink-cky{
+    float: right;
+}
+.rightLink-cky .fa-chevron-right{
+    margin-left: .5rem;
+}
+/* 活動提醒 結束 */
+/* 商品清單 結束*/
+
+/* 下一步按鈕 */
+.centered-cky{
+    float: right;
+    margin: 2rem 0;
+    width: 35%;
+}
+@media screen and (max-width:768px) {
+    .centered-cky{
+        width:100%;
+    }
+}
+.submitBtn-cky{
+    width: 100%;
+    padding: .75rem 0;
+    background: #C4A28D;
+    border: 1px solid #C4A28D;
+    color: rgb(255, 255, 255);
+    border-radius: 4px;
+    min-height: 35px;
+    min-width: 100px;
+    transition: background-color .3s ease;
+}
+/* 下一步按鈕 結束*/
+
+
+    /* 網頁左右的青海波 & 和柄 */
+    .seigaiwa-cky {
+        background: url(../images/web/seigaiwa.svg) no-repeat;
+        background-size: contain;
+        object-fit: contain;
+        position: absolute;
+        width: 55%;
+    }
+    .bg_wgr-cky {
+        background: url(../images/web/bg_wgr.svg) no-repeat;
+        background-size: contain;
+        position: absolute;
+        width: 12%;
+        height: 46%;
+
+    }
+    @media screen and (max-width:768px) {
+        .bg_wgr-cky{
+            height: 37%;
+        }
+    }
+    .bg_wgr01-cky{
+        top: 54%;
+        left: -2%;
+    }
+    @media screen and (max-width:768px) {
+        .bg_wgr01-cky{
+            display: none;
+        }
+    }
+
+    .bg_wgr04-cky{
+        top: -2%;
+        left: 93%;
+    }
+    @media screen and (max-width:768px) {
+        .bg_wgr04-cky{
+            display: none;
+        }
+    }
+    .cloud1-1-cky {
+        height: 10%;
+        top: 70%;
+        left: 88%;
+    }
+    @media screen and (max-width:768px) {
+        .cloud1-1-cky {
+            width: 77%;
+            height: 10%;
+            top: 7%;
+            left: 73%;
+        }
+    }
+
+    .cloud1-2-cky {
+        height: 13%;
+        top: 80.5%;
+        left: 83%;
+    }
+    @media screen and (max-width:768px) {
+        .cloud1-2-cky {
+            width: 65%;
+            height: 5%;
+            top: 4%;
+            left: 83%;
+        }
+    }
+
+    .cloud2-1-cky {
+        width: 73%;
+        height: 13%;
+        top: 5%;
+        left: -57%;
+    }
+    @media screen and (max-width:768px) {
+        .cloud2-1-cky {
+            width: 77%;
+            height: 10%;
+            top: 4%;
+            left: -52%;
+        }
+    }
+
+    .cloud2-2-cky {
+        height: 10%;
+        top: 18%;
+        left: -47%;
+    }
+    @media screen and (max-width:768px) {
+        .cloud2-2-cky {
+            width: 65%;
+            height: 10%;
+            top: 8%;
+            left: -52%;
+        }
+    }
+     /* 網頁左右的青海波 & 和柄 結束*/
