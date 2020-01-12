@@ -6,12 +6,7 @@ $rid = $data['rid'];
 $cid = $data['cid'];
 $vid = $data['vid'];
 
-// echo "<pre>";
-// print_r($arr);
-// echo "</pre>";
-// exit;
-
-getList();
+getAll($cid, $vid, $rid);
 
 function getList() {
   global $arr;
@@ -19,59 +14,61 @@ function getList() {
   echo $result;
 }
 
-// getAll($rid, $cid, $vid);
+function getAll($cid, $vid, $rid) {
+  global $arr, $imgs;
+  $newArr = array();
+  $newArr[0] = ridFilter($rid, $arr[0]);
+  $newArr[0] = cidFilter($cid, $newArr[0]);
+  $newArr[0] = vidFilter($vid, $newArr[0]);
 
-function getAll($rid, $cid, $vid) {
-  global $arr;
-  $arr = ridFilter($rid, $arr);
-  $arr = cidFilter($cid, $arr);
-  $arr = vidFilter($vid, $arr);
-  $result = urldecode(json_encode($arr));
+  array_push($newArr, $imgs);
+  $result = urldecode(json_encode($newArr));
   echo $result;
 }
 
-function ridFilter($rid, $arr) {
+function ridFilter($rid, $arrr) {
   global $data, $ridArr;
   $ridArr = array();
   if (!empty($data['rid'])) {
-    foreach ($arr[0] as $k => $v) {
-      if (in_array($arr[$k]['rId'], $rid)) {
+    foreach ($arrr as $k => $v) {
+      if (in_array($arrr[$k]['rId'], $rid)) {
         array_push($ridArr, $v);
       }
     }
     return $ridArr;
   } else {
-    return $arr;
+    return $arrr;
   }
 }
 
-function cidFilter($cid, $arr) {
+function cidFilter($cid, $arrc) {
   global $data, $cidArr;
   $cidArr = array();
   if (!empty($data['cid'])) {
-    foreach ($arr[0] as $k => $v) {
-      if ($arr[$k]['vcId'] == $cid) {
+    foreach ($arrc as $k => $v) {
+      if ($arrc[$k]['vcId'] == $cid) {
         array_push($cidArr, $v);
+
       }
     }
     return $cidArr;
   } else {
-    return $arr;
+    return $arrc;
   }
 }
 
-function vidFilter($vid, $arr) {
-  global $data, $vidArr;
+function vidFilter($vid, $arrv) {
+  global $data, $vidArr, $newArr;
   $vidArr = array();
   if (!empty($data['vid'])) {
-    foreach ($arr[0] as $k => $v) {
-      if ($arr[$k]['vId'] == $vid) {
+    foreach ($arrv as $k => $v) {
+      if ($arrv[$k]['vId'] == $vid) {
         array_push($vidArr, $v);
       }
     }
     return $vidArr;
   } else {
-    return $arr;
+    return $arrv;
   }
 }
 

@@ -1,7 +1,3 @@
-function getList(cid = "", vid = "", rid = "") {
-  if (cid != "") {}
-}
-
 function getVarieties(cid = "", vid = "", pid = "", rid = "") {
   fetch('./func/func-getItems.php', {
     method: "PUT",
