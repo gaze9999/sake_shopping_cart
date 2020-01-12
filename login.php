@@ -16,7 +16,7 @@ require_once('./tpl/tpl-header.php');
       <img class="" src="img/pic105.svg" alt="">
     </header>
   
-    <form class="form-row d-flex flex-column m-3 justify-content-center">
+    <section class="form-row d-flex flex-column m-3 justify-content-center">
       <div class="form-group">
         <label class="form-label" for="login">您的帳號</label>
         <input type="text" id="login" class="" name="login" placeholder="您的帳號" required>
@@ -27,7 +27,7 @@ require_once('./tpl/tpl-header.php');
       </div>
       <input type="submit" class="my-3 login_btn" value="登入">
       <input type="button" class="my-3 signup_btn" href="./register.php" value="還不是會員? 註冊">
-    </form>
+    </section>
   </div>
 </main>
 
