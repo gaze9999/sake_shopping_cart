@@ -830,6 +830,7 @@ main {
   -webkit-writing-mode: vertical-rl;
       -ms-writing-mode: tb-rl;
           writing-mode: vertical-rl;
+  z-index: 1050;
 }
 
 .main_subtitle {
