@@ -1,16 +1,5 @@
-getVarieties()
-getTree()
-
-itemTree.on('mouseup', '.tree_btn', function() {
-  // vid  = $(this).data('vid')
-  // vcat = $(this).data('vcat')
-  // filterCheckbox()
-})
-
-treeButton.on('mouseup', ()=> {
-  console.log($(this).val())
-  // filterCheckbox(rid = )
-})
+itemGetList()
+getRTree()
 
 filterRCbox.on('change', function() {
   $(this).toggleClass('checked')

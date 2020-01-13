@@ -1,14 +1,14 @@
-function getVarieties(cid = "", vid = "", pid = "", rid = "") {
+function itemGetList(rid = "", vid = [], cap = [], pri = "") {
   fetch('./func/func-getItems.php', {
     method: "PUT",
     headers: {'Content-Type': 'application/json',
               'Accept': 'application/json'},
     body: [
       JSON.stringify({
+        'rid': rid,
         'vid': vid,
-        'cid': cid,
-        'pid': pid,
-        'rid': rid
+        'cap': cap,
+        'pri': pri
       })
     ]
   }).then(res => {
@@ -27,7 +27,9 @@ function getVarieties(cid = "", vid = "", pid = "", rid = "") {
       let
       varieties = json[0][i]['varieties'],
       itemName = json[0][i]['itemName'],
+      capacity = json[0][i]['cap'],
       breName = json[0][i]['breName'],
+      region = json[0][i]['regionName'],
       price = json[0][i]['price'],
       bId = json[0][i]['bId'],
       sId = json[0][i]['sId'],
@@ -37,8 +39,8 @@ function getVarieties(cid = "", vid = "", pid = "", rid = "") {
         picName = json[1][i]['imgName']
       }
 
-      vid == "" ? itemInfo.html(`日本清酒`) : itemInfo.html(varieties);
-      cid == "" ? itemInfo.html(`日本清酒`) : itemInfo.html(varieties);
+      // 顯示當前分類
+      vid == "" ? itemInfo.html(`日本清酒`) : itemInfo.html(region);
 
       itemList.append(`
       <div class="d-flex flex-column item_card">
@@ -61,22 +63,32 @@ function getVarieties(cid = "", vid = "", pid = "", rid = "") {
     };
     treeTotalData.text(dataLength);
     treeTotalData.data('total', dataLength)
-      
+
   }).catch(error => {
     console.log('getVarieties() request failed:', error);
     console.log(error.response);
   });
 }
 
-function filterItem(cid = "", vid = "", pid = "", rid = "",price = "") {
-  filterItems = new getVarieties(vcat, vid, "", rid)
+function filterItem(rid = "", vid = "", cap = "", price = "") {
+  filterItems = new itemGetList(rid, vid, cap)
 }
 
-function filterCheckbox() {
-  let rids = [];
-  $('.filter_region .filter_checkbox.checked').each( function() {
-    let Selected = $(this).data('region')
-    rids.push(Selected)
-  });
-  filterItem(vcat, vid, "", rids)
+function filterCheckbox(rid) {
+  let vids = [],
+      caps = []
+
+  $('.tree_checked').each( function() {
+    let vidSelected = $(this).data('vid')
+    // vids.push(vidSelected)
+    vidSelected !== undefined ? vids.push(vidSelected) : vids
+  })
+
+  $('.tree_checked').each( function() {
+    let capSelected = $(this).data('cap')
+    // caps.push(capSelected)
+    capSelected !== undefined ? caps.push(capSelected) : caps
+  })
+
+  itemGetList(rid, vids, caps)
 }
