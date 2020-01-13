@@ -56,7 +56,6 @@ function getDetails() {
     // 麵包屑
     breadCrumb.append(`<a href="./main.php">首頁</a>`)
     breadCrumb.append(`<a href="./itemList.php">${iRegi}</a>`)
-    breadCrumb.append(`<a href="./itemList.php">${iPNam}</a>`)
     breadCrumb.append(`<a href="./itemList.php">${bName}</a>`)
     breadCrumb.append(`${iName}`)
 
