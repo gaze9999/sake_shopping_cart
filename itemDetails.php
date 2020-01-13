@@ -77,7 +77,7 @@ require_once('./tpl/tpl-header.php');
               <a class="twitter-share-button" target="_blank" href="https://twitter.com/intent/tweet?text=sake_shopping" data-size="large">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
             </div>
             <div class="col-6 d-flex center_all">
-              <div class="fb-share-button" data-href="" data-layout="button_count" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=sake_shopping" class="fb-xfbml-parse-ignore">分享</a></div>
+              <div class="fb-share-button" data-href="https://www.facebook.com/groups/668307226994677/?multi_permalinks=786823405143058&notif_id=1578756055976079&notif_t=group_activity" data-layout="button_count" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost/sake_shopping/" class="fb-xfbml-parse-ignore">分享</a></div>
             </div>
           </div>
 
