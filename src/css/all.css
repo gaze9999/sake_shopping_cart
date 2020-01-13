@@ -1019,15 +1019,17 @@ main {
 }
 
 .main_recommand .main_rec_card img {
-  min-width: 10rem;
+  min-width: 15rem;
   max-width: 15rem;
-  height: 10rem;
+  height: 15rem;
   overflow: hidden;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 10px;
   -webkit-filter: brightness(0.5);
           filter: brightness(0.5);
+  -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+          clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 }
 
 .main_recommand .main_rec_card figure {
