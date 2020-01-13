@@ -5,7 +5,6 @@ require_once('./tpl/tpl-html-head.php');
 require_once('./tpl/tpl-header.php');
 ?>
 <style>
-  body { background: url(./img/bgs/bg000.png) }
   .navbar-dark, .navbar-nav, .nav-link, .navbar-brand { color: #000 !important}
 </style>
 <main class="container-fluid itemList_frame">
@@ -35,6 +34,6 @@ require_once('./tpl/tpl-footer.php');
 require_once('./tpl/tpl-html-foot.php');
 ?>
 <script src="./src/js/functions/itemList.js"></script>
-<script src="./src/js/functions/itemListTree.js"></script>
 <script src="./src/js/variables/itemList.js"></script>
+<script src="./src/js/functions/itemListTree.js"></script>
 <script src="./src/js/itemlistBtn.js"></script>
