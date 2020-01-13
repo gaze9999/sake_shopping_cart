@@ -25,7 +25,7 @@ require_once('./tpl/tpl-header.php');
       </section>
 
       <section class="col-sm-12 col-md-12 col-xl-12 w-100 d-flex flex-column main_news">
-        <figure class="d-flex flex-column center_all">
+        <figure class="d-flex flex-column center_all index_title">
           <img class="img-fluid main_logo" src="./img/icons/sake_icon.svg" alt="">
           <h2 class="main_subtitle">最新消息</h2>
         </figure>
@@ -37,7 +37,7 @@ require_once('./tpl/tpl-header.php');
       </section>
 
       <section class="col-sm-12 col-md-12 col-xl-12 w-100 d-flex flex-column main_recommand">
-        <figure class="d-flex flex-column center_all">
+        <figure class="d-flex flex-column center_all index_title">
           <img class="img-fluid main_logo" src="./img/icons/sake_icon.svg" alt="">
           <h2 class="main_subtitle">本格推薦</h2>
         </figure>
@@ -46,7 +46,7 @@ require_once('./tpl/tpl-header.php');
       </section>
 
       <section class="col-sm-12 col-md-12 col-xl-12 w-100 d-flex flex-column center_all main_map">
-        <figure class="d-flex flex-column center_all">
+        <figure class="d-flex flex-column center_all index_title">
           <img class="img-fluid main_logo" src="./img/icons/sake_icon.svg" alt="">
           <h2 class="main_subtitle">酒造地圖</h2>
         </figure>
