@@ -830,11 +830,11 @@ main {
   -webkit-writing-mode: vertical-rl;
       -ms-writing-mode: tb-rl;
           writing-mode: vertical-rl;
-  z-index: 1050;
 }
 
 .page_main .main_logoSec h1, .page_main .main_article_center h1 {
   font-family: 'Noto Serif TC', serif !important;
+  z-index: 1050;
 }
 
 .main_subtitle {
@@ -935,8 +935,9 @@ main {
 }
 
 .main_news_items {
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .main_news_items::before, .main_news_items::after {
