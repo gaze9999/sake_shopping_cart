@@ -18,5 +18,11 @@
             "extensionName": ".cpt.css",
             "savePath": "./src/compactCss"
         }
-    ]
+    ],
+
+    "liveSassCompile.settings.excludeList": [ 
+        "**/node_modules/**",
+        ".vscode/**" ,
+        "unmerged/**"
+   ]
 }

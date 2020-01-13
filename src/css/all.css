@@ -830,6 +830,7 @@ main {
   -webkit-writing-mode: vertical-rl;
       -ms-writing-mode: tb-rl;
           writing-mode: vertical-rl;
+  z-index: 1050;
 }
 
 .page_main .main_logoSec h1, .page_main .main_article_center h1 {
