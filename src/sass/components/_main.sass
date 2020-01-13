@@ -8,7 +8,8 @@ main
 .main_bg
   height: 250vh
   position: fixed
-  background: url(../../img/bgs/section1_bg.jpg) center fixed no-repeat
+  // background: url(../../img/bgs/section1_bg.jpg) center fixed no-repeat
+  background: #000
 
 .main_frame
   z-index: $zindex-modal
@@ -23,9 +24,11 @@ main
     min-height: 100vh
   .main_logoSec, .main_article_center
     background: transparent !important
-    font-family: 'Noto Sans TC', serif
+    font-family: 'Noto Serif TC', serif
     writing-mode: vertical-rl
-    z-index: $zindex-modal
+    h1
+      font-family: 'Noto Serif TC', serif !important
+      z-index: $zindex-modal
 
 
 .main_subtitle
@@ -37,7 +40,8 @@ main
   min-height: 200vh !important
   position: relative
   margin-top: -116px
-  background: transparent !important
+  // background: transparent !important
+  background: url(../../img/bgs/section1_bg.jpg) center fixed no-repeat !important
   #sakura
     position: absolute
     top: 0
@@ -100,7 +104,7 @@ main
   justify-content: space-evenly
 
 .main_news_items
-  +contentSpaceAround
+  +contentSpaceEvenly
   *
     font-size: $font_content
     font-family: 'Noto Serif TC', serif
@@ -148,7 +152,7 @@ main
 
 // recommand
 .main_recommand
-  justify-content: center
+  +contentSpaceEvenly
   color: #000
   .main_rec_card
     min-width: 10rem
