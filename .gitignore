@@ -6,7 +6,6 @@ jsonoutput.json
 package-lock.json
 webpack.config.js
 
-.vscode/
 vendor/
 src/compactCss/
 php/
