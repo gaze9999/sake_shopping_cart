@@ -1102,6 +1102,94 @@ main {
           box-shadow: 0 0 0 #000, 0 0 8px -4px #000 inset;
 }
 
+.about_frame {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.about_frame * {
+  font-family: 'Noto Serif TC', serif;
+  color: #fff;
+}
+
+.about_frame .about_video {
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: fixed;
+}
+
+.about_frame .about_video_cover {
+  background: rgba(0, 0, 0, 0.438);
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+}
+
+.about_frame .about_header_sec header {
+  height: 100vh;
+}
+
+.about_frame .about_header_sec .main_icon {
+  max-width: 150px;
+  max-height: 150px;
+}
+
+.about_frame .about_article {
+  background: url(../../img/about/water_A.png) no-repeat center;
+  background-size: contain;
+  height: 260vh;
+  width: 100%;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  font-size: 1.2rem;
+  letter-spacing: 0.15em;
+  line-height: 5.5;
+}
+
+.about_frame .about_water_1,
+.about_frame .about_water_2,
+.about_frame .about_water_3,
+.about_frame .about_water_4,
+.about_frame .about_water_5,
+.about_frame .about_water_6 {
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+
+.about_frame .about_water_1 {
+  background-image: url(../../img/about/pex-1.png);
+  height: 300vh;
+}
+
+.about_frame .about_water_2 {
+  background-image: url(../../img/about/pex-2.png);
+  height: 300vh;
+  top: 150%;
+}
+
+.about_frame .about_water_3 {
+  background-image: url(../../img/about/water_B.png);
+  top: 150%;
+}
+
+.about_frame .about_water_4 {
+  background-image: url(../../img/about/water_A.png);
+  top: 300%;
+}
+
+.about_frame .about_water_5 {
+  background-image: url(../../img/about/water_B.png);
+  top: 300%;
+}
+
+.about_frame .about_water_6 {
+  height: 10vh;
+  top: 500%;
+}
+
 .itemList_frame {
   overflow-x: hidden;
   position: relative;

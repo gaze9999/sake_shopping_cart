@@ -17,7 +17,7 @@
         <a class="nav-link" data-page="map">地圖</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" data-page="about" href="./unmerged/aboutUs/aboutUs.html">關於我們</a>
+        <a class="nav-link" data-page="about" href="./aboutUs.php">關於我們</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" data-page="newCome">新手選酒</a>
@@ -42,7 +42,7 @@
   </div> -->
     <ul class="navbar-nav my-2 my-md-0 nav_function">
       <li class="nav-item active">
-        <a class="nav-link nav_cart px-2" href="./cart.php">購物車( <?php echo count($_SESSION['cart']); ?> )</a>
+        <a class="nav-link nav_cart px-2" href="./cart.php">購物車<?php if (isset($_SESSION['cart'])) { echo '( '.count($_SESSION['cart']).' )'; } else { echo '( 0 )'; } ?></a>
       </li>
 
       <li class="nav-item active">
