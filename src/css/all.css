@@ -1295,6 +1295,11 @@ main {
   padding: 0;
 }
 
+.itemList_list, .itemList_list .item_card {
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
 .itemList_list .item_card {
   width: 12rem;
   height: 20rem;
@@ -1378,8 +1383,13 @@ main {
   height: 10rem;
 }
 
+.detail_header .detail_breadcrumb {
+  letter-spacing: .25rem;
+}
+
 .detail_header .detail_breadcrumb a::after {
-  content: ' > ';
+  content: '>';
+  padding: 0 .5rem;
 }
 
 .detail_header .detail_header_title {
@@ -1446,7 +1456,7 @@ main {
 
 .detail_item_content {
   line-height: 2rem;
-  letter-spacing: .75rem;
+  letter-spacing: .25rem;
 }
 
 .detail_item_function * {
