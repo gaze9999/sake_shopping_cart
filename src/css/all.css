@@ -1249,7 +1249,7 @@ main {
 }
 
 .page_itemList {
-  background: url(../../img/bgs/bg001.gif);
+  background: transparent;
 }
 
 .page_itemList > div {
