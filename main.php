@@ -45,7 +45,7 @@ require_once('./tpl/tpl-header.php');
         <?php require_once('./tpl/main/tpl-main-cloud.php'); ?>
       </section>
 
-      <section class="col-sm-12 col-md-12 col-xl-12 w-100 d-flex flex-column center_all main_map">
+      <section class="col-sm-12 col-md-12 col-xl-12 w-100 d-flex flex-column main_map">
         <figure class="d-flex flex-column center_all index_title">
           <img class="img-fluid main_logo" src="./img/icons/sake_icon.svg" alt="">
           <h2 class="main_subtitle">酒造地圖</h2>
