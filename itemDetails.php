@@ -71,6 +71,15 @@ require_once('./tpl/tpl-header.php');
               </a>
             </div>
           </div>
+          
+          <div class="row my-3 detail_item_share">
+            <div class="col-6 d-flex center_all">
+              <a class="twitter-share-button" target="_blank" href="https://twitter.com/intent/tweet?text=sake_shopping" data-size="large">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+            <div class="col-6 d-flex center_all">
+              <div class="fb-share-button" data-href="" data-layout="button_count" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=sake_shopping" class="fb-xfbml-parse-ignore">分享</a></div>
+            </div>
+          </div>
 
         </div>
       </div>
@@ -185,6 +194,8 @@ require_once('./tpl/tpl-header.php');
   </section>
 </main>
 
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v5.0"></script>
 <?php
 require_once('./tpl/tpl-warning.php');
 require_once('./tpl/tpl-footer.php');
