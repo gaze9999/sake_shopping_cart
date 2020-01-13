@@ -1102,6 +1102,43 @@ main {
           box-shadow: 0 0 0 #000, 0 0 8px -4px #000 inset;
 }
 
+.main_map {
+  color: #000;
+}
+
+.main_map path {
+  stroke: white;
+  fill: transparent;
+  -webkit-transition: .8s;
+  transition: .8s;
+  cursor: pointer;
+  fill: #B99362;
+  -webkit-transform: translate(-5px, -5px);
+          transform: translate(-5px, -5px);
+}
+
+.main_map .title_area {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  color: #B99362;
+  font-size: 30px;
+}
+
+.main_map .forcast h2, .main_map .forcast h4, .main_map .forcast {
+  margin: 0;
+}
+
+.main_map .forcast h2 {
+  margin-top: 20px;
+}
+
+.main_map a {
+  font-size: 16px;
+  text-decoration: none;
+  color: #B99362;
+}
+
 .about_frame {
   margin: 0;
   padding: 0;

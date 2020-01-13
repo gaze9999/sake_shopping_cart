@@ -67,3 +67,4 @@ function btnSelection(selector) {
       thisOutput = selector.parents('section').find(':hidden')
       thisOutput.val(thisValue.slice(thisValue.length-2, thisValue.length-1))
 }
+

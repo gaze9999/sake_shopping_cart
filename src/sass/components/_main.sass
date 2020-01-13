@@ -210,3 +210,29 @@ main
         box-shadow: 0 0 8px -4px #000, 0 0 0 #000 inset
         &:active
           box-shadow: 0 0 0 #000, 0 0 8px -4px #000 inset
+
+.main_map
+  color: #000
+  path
+    stroke: white
+    fill: transparent
+    transition: .8s
+    cursor: pointer
+    &:hover
+    fill: #B99362
+    transform: translate(-5px, -5px)
+
+  .title_area
+    position: absolute
+    right: 20px
+    top: 20px
+    color: #B99362
+    font-size: 30px
+  .forcast h2, .forcast h4, .forcast
+    margin: 0
+  .forcast h2
+    margin-top: 20px
+  a 
+    font-size: 16px
+    text-decoration: none
+    color: #B99362
