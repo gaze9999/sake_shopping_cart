@@ -1,11 +1,12 @@
 let itemList = $('.itemList_list'),
     itemTree = $('.itemList_tree'),
-    itemInfo = $('.list_info_title'),
-    treeTotal = $('.tree_total'),
+    treeList = $('.itemList_tree dl'),
+    treeButton = $('.tree_btn'),
     treeTotalData = $('.tree_totalData'),
     filterR = $('.filter_region'),
-    filterRCbox = $('.filter_region .filter_checkbox'),
-    treeList = $('.itemList_tree dl');
+    itemInfo = $('.list_info_title'),
+    filterRCbox = $('.filter_region .filter_checkbox')
+    
 
 let vid,
     vcat,
