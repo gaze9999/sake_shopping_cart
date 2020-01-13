@@ -804,7 +804,7 @@ main {
 .main_bg {
   height: 250vh;
   position: fixed;
-  background: url(../../img/bgs/section1_bg.jpg) center fixed no-repeat;
+  background: black;
 }
 
 .main_frame {
@@ -826,10 +826,14 @@ main {
 
 .page_main .main_logoSec, .page_main .main_article_center {
   background: transparent !important;
-  font-family: 'Noto Sans TC', serif;
+  font-family: 'Noto Serif TC', serif;
   -webkit-writing-mode: vertical-rl;
       -ms-writing-mode: tb-rl;
           writing-mode: vertical-rl;
+}
+
+.page_main .main_logoSec h1, .page_main .main_article_center h1 {
+  font-family: 'Noto Serif TC', serif !important;
 }
 
 .main_subtitle {
@@ -843,7 +847,7 @@ main {
   min-height: 200vh !important;
   position: relative;
   margin-top: -116px;
-  background: transparent !important;
+  background: url(../../img/bgs/section1_bg.jpg) center fixed no-repeat !important;
 }
 
 .main_sakura #sakura {
@@ -1006,9 +1010,9 @@ main {
 }
 
 .main_recommand {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   color: #000;
 }
 
