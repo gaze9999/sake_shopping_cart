@@ -17,12 +17,12 @@ require_once('./tpl/tpl-header.php');
   <div class="container page_itemList">
     <div class="row">
 <!-- Catagory Tree -->
-      <aside class="col-sm-12 col-md-2 itemList_tree itemList_navbar">
+      <aside class="col-12 col-md-2 itemList_tree itemList_navbar">
         <?php require_once('./tpl/itemList/tpl-itemlist-tree.php'); ?>
       </aside>
 
 <!-- main field -->
-      <section class="col-sm-12 col-md-10 d-flex center_all flex-wrap itemList_list">
+      <section class="col-12 col-md-10 d-flex center_all flex-wrap itemList_list">
         <?php require_once('./tpl/itemList/tpl-itemlist.php'); ?>
       </section>
     </div>

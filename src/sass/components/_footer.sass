@@ -1,26 +1,24 @@
-.footer 
+.footer
   +linkColor
   background-color: #fff
   z-index: $zindex-fixed
-  bottom: 0
-  .footer-container
-    height: 16rem
-  .row
-    padding-top: 2rem
 
 .footer_sec
   font-size: $font_footerContent
   height: 100%
   flex-grow: 1
   padding: 1rem 0
+  dt
+    flex-basis: 100%
   dd
     margin-left: 1rem
+    flex-basis: 100%
     a
       color: lighten(#000, 30%)
 
 .footer_logo
   h2
-    font-size: $font_mintitle
+    font-size: $font_bigContent
   img
     width: 40%
   address
@@ -28,3 +26,14 @@
 
 .warning_space
   @extend %bar52px
+
+@media screen and ( max-width:  375px)
+  .footer_sec
+    padding: 0
+    dl
+      margin-top: 1rem
+    dt, dd
+      text-align: center
+    dd
+      margin-left: 0
+      flex-basis: 50%

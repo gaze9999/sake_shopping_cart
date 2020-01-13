@@ -17,4 +17,6 @@ let ccList = $('.checkout_cart_list'),
     receiptNumber = $('.delivery_receipt_number'),
 
     sameOrder = $('.same_order'),
-    receiverSec = $('.delivery_receiver_section')    
+    receiverRegion = $('.delivery_receiver'),
+    receiverSec = $('.delivery_receiver_section'),
+    receive = $('.delivery_receive')

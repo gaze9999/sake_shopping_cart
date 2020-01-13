@@ -1,9 +1,9 @@
-<nav class="navbar fixed-top navbar-expand-xl navbar-dark bg-dark">
+<nav class="navbar fixed-top navbar-expand-xl">
   <div class="nav_logo d-flex center_all">
     <header class="h-100">
       <a class="navbar-brand d-flex center_all h-100" name="nav_a_home" href="./">
         <h1>本格の酒</h1>
-        <img class="img-fluid d-block" src="./img/icons/main_icon.svg">
+        <img class="img-fluid d-block" src="./img/icons/sake_icon.svg">
       </a>
     </header>
   </div>

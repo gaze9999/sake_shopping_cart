@@ -55,38 +55,38 @@ function getRTree(rId) {
 
   }).then(json => {
     treeList.append(
-      `<dt>分類</dt>
-      <dd>
+      `<dt class="col-12">分類</dt>
+      <dd class="col-12">
         <button class='btn tree_btn'>全部</button>
       </dd>`)
 
     for (let i in json[0]) {
       treeList.append(
-        `<dt>
+        `<dt class="col-3 col-md-12 px-1">
           <button class='btn tree_btn tree_rid' data-rid='${json[0][i]["rId"]}'>${json[0][i]["regionName"]}</button>
         </dt>`)
     }
 
     treeList.append(
-      `<dt>篩選</dt>
-      <dd>
+      `<dt class="col-12">篩選</dt>
+      <dd class="col-12">
         <button class='btn tree_btn'>全選</button>
       </dd>`)
     for (let i in json[1]) {
       treeList.append(
-        `<dt>
+        `<dt class="col-3 col-md-12 px-1">
           <input type="checkbox" class='btn tree_btn tree_vid' name='datavid' id='datavid_${json[1][i]["vcId"]}' data-vid='${json[1][i]["vcId"]}'>
           <label class="btn tree_btn tree_vid_label" for="datavid_${json[1][i]["vcId"]}" data-vid='${json[1][i]["vcId"]}'>${json[1][i]["vCatag"]}</label>
         </dt>`)
     }
     treeList.append(
-      `<dt>容量</dt>
-      <dd>
+      `<dt class="col-12">容量</dt>
+      <dd class="col-12">
         <button class='btn tree_btn'>全選</button>
       </dd>`)
     for (let i in json[2]) {
       treeList.append(
-        `<dt>
+        `<dt class="col-3 col-md-12 px-1">
           <input type="checkbox" class='btn tree_btn tree_cap' name='datacap' id='datacap_${json[2][i]["cap"]}' data-cap='${json[2][i]["cap"]}'>
           <label class="btn tree_btn tree_cap_label" for="datacap_${json[2][i]["cap"]}"data-cap='${json[2][i]["cap"]}'>${json[2][i]["cap"]}ML</label>
         </dt>`)
