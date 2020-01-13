@@ -53,42 +53,6 @@
   
   /* ----------------***----------------- */
   
-
-  
-  .icon-parent {
-    position: relative;
-  }
-  
-  .icon-bullet::after {
-    content: "";
-    position: absolute;
-    top: 7px;
-    left: 15px;
-    height: 12px;
-    width: 12px;
-    background-color: #f44336;
-    border-radius: 50%;
-  }
-  
-  /*---------------- 訂單紀錄 */
-  
-  .mouseoncb{
-    cursor: pointer;
-  }
-
-  .card{
-      border: none;
-  }
-  
-  .card-common {
-    box-shadow: 1px 2px 5px #999;
-    transition: all .4s;
-  }
-  
-  .card-common:hover {
-    box-shadow: 2px 3px 15px #999;
-    transform: translateY(-1px);
-  }
   /*------------ 訂單紀錄結束 ---------------------*/
   
   /* task list */
@@ -97,8 +61,15 @@
   }
   /* end of task list */
   
+
+  .section-title h4{
+    margin-top: 5%;
+    margin-left: 9%;
+  }
+
 /* ---------------step bar--------------------------   */
   .card{
+    border: none;
       background: none;
   }
 
@@ -144,7 +115,6 @@
     background-color: #dfdfdf;
   }
 
-
   .stepped-progress-bar > li.active::before {
     background-color: white;
     color: #55b776;
@@ -185,7 +155,6 @@
   
   @media (max-width: 414px) {
 
-
     .sidebar {
       position: static;
       height: auto;
@@ -202,9 +171,15 @@
       font-size: 10px;
     }
 
+  .section-title h4{
+    margin-top: 5%;
+    padding-bottom: 5%;
+    margin-left: 4%;
+  }
+
 /* ------------step bar----------------- */
 .order-img{
-    margin-top: 41%;
+    margin-top: 23%;
     width: 150px;
     height: 200px;
 }
