@@ -922,11 +922,11 @@ main {
 
 .main_news {
   min-height: 65vh !important;
-  height: 100vh;
+  height: 90vh;
   color: #0A0301;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .main_news_items {
@@ -939,7 +939,8 @@ main {
 }
 
 .main_news_items * {
-  font-size: 0.8rem;
+  font-size: 1rem;
+  font-family: 'Noto Serif TC', serif;
 }
 
 .main_news_items .news_card {

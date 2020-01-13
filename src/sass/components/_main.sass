@@ -45,6 +45,7 @@ main
     top: 100vh
     min-height: 100vh
 
+// 小標題
 .index_title
   position: relative
   // font-family: 'Noto Serif TC', serif
@@ -92,14 +93,15 @@ main
 // news section
 .main_news
   min-height: 65vh !important
-  height: 100vh
+  height: 90vh
   color: $titleColor
-  justify-content: center
+  justify-content: space-evenly
 
 .main_news_items
   +contentSpaceAround
   *
-    font-size: $font_tinyContent
+    font-size: $font_content
+    font-family: 'Noto Serif TC', serif
   .news_card
     max-width: 20rem
 
