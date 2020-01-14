@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>itemsDetails</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- navbar -->
+    <link rel="stylesheet" href="./css/nav-neal.css">
+    <!-- main style -->
+    <link rel="stylesheet" href="./css/itemDetails.css">
+    <!-- fontwesome -->
+    <link rel="stylesheet" href="./fontawesome-free-5.11.2-web/css/all.min.css">
+    <!-- google font style (notoSerif) -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+TC:200,300,400,500,600,700,900&display=swap"
+        rel="stylesheet">
+    <!-- --- Owl-Carousel (其他商品的輪播) --->
+    <link rel="stylesheet" href="./css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./css/owl.theme.default.min.css">
+    <!-- Bootstrap CSS -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="./css/bootstrap_itemDetails.min.css">
+    <!-- AOS 效果 -->
+    <link rel="stylesheet" href="./css/aos.css">
+</head>
+
+<body>
+    <!-- 選單列 -->
+    <header>
+        <nav class="navbar fixed-top navbar-expand-sm navbar-dark ">
+
+            <a class="navbar-brand d-flex center-all h-100" href="#">
+                <h3 class="center-all">本格の酒</h3>
+            </a>
+            <a class="navbar-brand d-flex center-all h-100 " href="#">
+                <img class="img-fluid d-block neal-nav-icon" src="./images/icons/sake-icon.svg">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample03"
+                aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExample03">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="./index.html">地圖 <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="./index.html">關於我們 <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="./index.html">新手選酒 <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="./index.html">商品列表 <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="dropdown03" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">清酒知識+</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown03">
+                            <a class="dropdown-item" href="#">清酒起源</a>
+                            <a class="dropdown-item" href="#">清酒分類</a>
+                            <a class="dropdown-item" href="#">清酒喝法</a>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="navbar-nav my-2 my-md-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="./index.html">購物車 <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="./index.html">登入 <span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 麵包選單-->
+    <div class="container pt-5 ">
+        <div class="row pt-5">
+            <div class="col-md-12 pt-5"> 首頁 &GT 朝開酒藏 &GT 南部流傳承造 </div>
+        </div>
+        <!-- 右側標題 -->
+        <div class="row pb-5">
+            <div class="col-md-12">
+                <div class="brewTitle-cky">
+                    <figure class="figureImg-cky" data-aos="zoom-in"  data-aos-delay="200">
+                        <img class="brewIcon-cky" src="./images/web/pic051.png" alt="">
+                    </figure>
+                    <h2 class="brewName-cky" data-aos="zoom-in"  data-aos-delay="200">朝開酒藏</h2>
+                    <figure class="mainTitleBg-cky" data-aos="fade-left" data-aos-delay="200">
+                        <img src="./images/web/seigaiwa_sm_title.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 產品主頁面 -->
+    <section>
+        <div class="container">
+            <div class="row row_m0-cky">
+                <!-- 產品輪播 -->
+                <div class="col-md-6 py-5">
+                    <div id="carouselExampleControls" class="carousel slide carouselFigure-cky" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active "> <img class="d-block w-70-cky"
+                                    src="./images/items/slider01.png" alt="First slide"> </div>
+                            <div class="carousel-item "> <img class="d-block w-70-cky "
+                                    src="./images/items/slider02.png" alt="Second slide"> </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button"
+                            data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span
+                                class="sr-only">Previous</span> </a> <a class="carousel-control-next"
+                            href="#carouselExampleControls" role="button" data-slide="next"> <span
+                                class="carousel-control-next-icon" aria-hidden="true"></span> <span
+                                class="sr-only">Next</span> </a>
+                    </div>
+                </div>
+
+                <!-- 產品資訊 -->
+                <div class="col-md-6">
+                    <div class="sakeTitle-cky py-5">
+                        <figure class="figureImg-cky hard-light-cky">
+                            <img class="brewIcon-cky " src="./images/web/pic051.png" alt="">
+                        </figure>
+                        <h2 clas="sakeName-cky">南部流伝承造り</h2>
+                    </div>
+                    <p class="itemContec-cky">採用岩手當地酒米「吟銀河」與百大名水「大慈清水」，以傳統釀造法重現岩手地酒之經典風味。
+                        帶有清涼的華麗香氣與柔軟乾淨的口感，與漸入層次的尾韻恰到好處地調和。搭配辛香漬物，
+                        更顯奔放。適合與洋蔥沙拉、紫蘇蘋果等辛香料理搭配。</p>
+                    <div class="row row_m0-cky py-1">
+                        <div class="col-md-6 col-6 price-cky">
+                            <h2>$9999</h2>
+                        </div>
+                        <!-- 選擇數量 -->
+                        <div class="col-md-6 col-6 btn-added-cky ">
+                            <input type="button" value="-" class="minus-cky">
+                            <input type="text" value="1" class="inputText-cky productQuantityInput" size="4">
+                            <input type="button" value="+" class="plus-cky">
+                            <input type="hidden" name="productInfo" id="productInfo"
+                                value="2c9f98c26d9b13ef016eb53d29184fa7">
+                        </div>
+                    </div>
+                    <!-- 購買按鈕 & 收藏按鈕 -->
+                    <div class="row py-5">
+                        <div class="col-md-6">
+                            <div class="btn-wrap-cky">
+                                <a class="btn-cky">
+                                    <img src="./images/web/heart.svg" alt=""> 加入收藏
+                                </a>
+                            </div>
+                            <!-- <button>Liquid Fill</button> -->
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="btn-wrap-cky">
+                                <a class="btn-cky">
+                                    <img src="./images/web/shopp_bag.svg" alt=""> 加入酒袋
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 產品細節 -->
+    <section>
+        <div class="container">
+            <!-- 標題 -->
+            <div class="row ">
+                <div class="col-md-12">
+                    <div class="sakeTitle-cky py-5">
+                        <figure class="figureImg-cky" data-aos="zoom-in" data-aos-delay="100">
+                            <img class="brewIcon-cky " src="./images/web/pic124.svg" alt="">
+                        </figure>
+                        <h2 clas="sakeName-cky" data-aos="zoom-in" data-aos-delay="100">產品細節</h2>
+                        <figure class="titleBg01-cky" data-aos="fade-right" data-aos-delay="200">
+                            <img src="./images/web/seigaiwa_sm_title.svg" alt="">
+                        </figure>
+                        <figure class="titleBg02-cky" data-aos="fade-left" data-aos-delay="200">
+                            <img src="./images/web/seigaiwa_sm_title.svg" alt="">
+                        </figure>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- 產品資訊表 -->
+            <div class="col-md-12">
+                <ul class="row">
+                    <li class="col-sm-6 " data-aos="zoom-in" data-aos-delay="200">
+                        <span class="breakInfoTitle-cky ">酒造名稱</span>
+                        <span class="break-ward-cky">朝開酒藏</span>
+                    </li>
+                    <li class="col-sm-6 " data-aos="zoom-in" data-aos-delay="300">
+                        <span class="breakInfoTitle-cky">酒款名稱</span>
+                        <span class="break-ward-cky">南部流伝承造り</span>
+                    </li>
+                    <li class="col-sm-6 " data-aos="zoom-in" data-aos-delay="400">
+                        <span class="breakInfoTitle-cky breakInfoTitleSpace-cky">地</span></span><span class="breakInfoTitle-cky">區</span>
+                        <span class="break-ward-cky">東北地方</span>
+                    </li>
+                    <li class="col-sm-6 " data-aos="zoom-in" data-aos-delay="500">
+                        <span class="breakInfoTitle-cky breakInfoTitleSpace-cky">產</span></span><span class="breakInfoTitle-cky">地</span>
+                        <span class="break-ward-cky">岩手縣</span>
+                    </li>
+                    <li class="col-sm-6 " data-aos="zoom-in" data-aos-delay="600">
+                        <span class="breakInfoTitle-cky breakInfoTitleSpace-cky">品</span></span><span class="breakInfoTitle-cky">種</span>
+                        <span class="break-ward-cky">大吟醸酒</span>
+                    </li>
+                    <li class="col-sm-6 " data-aos="zoom-in" data-aos-delay="700">
+                        <span class="breakInfoTitle-cky breakInfoTitleSpaceMi-cky">原料</span><span class="breakInfoTitle-cky">米</span>
+                        <span class="break-ward-cky">吟銀河</span>
+                    </li>
+                    <li class="col-sm-6 " data-aos="zoom-in" data-aos-delay="800">
+                        <span class="breakInfoTitle-cky">酒精濃度</span>
+                        <span class="break-ward-cky">15~16</span>
+                    </li>
+                    <li class="col-sm-6 " data-aos="zoom-in" data-aos-delay="900">
+                        <span class="breakInfoTitle-cky breakInfoTitleSpace-cky">容</span><span class="breakInfoTitle-cky">量</span>
+                        <span class="break-ward-cky">320ml & 720ml</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container ">
+            <!-- 標題 -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="sakeTitle-cky py-5">
+                        <figure class="figureImg-cky" data-aos="zoom-in" data-aos-delay="100">
+                            <img class="brewIcon-cky " src="./images/web/pic124.svg" alt="">
+                        </figure>
+                        <figure class="titleBg01-cky " data-aos="fade-right" data-aos-delay="200">
+                            <img src="./images/web/seigaiwa_sm_title.svg" alt="">
+                        </figure>
+                        <figure class="titleBg02-cky" data-aos="fade-left" data-aos-delay="200">
+                            <img src="./images/web/seigaiwa_sm_title.svg" alt="">
+                        </figure>
+                        <h2 clas="sakeName-cky" data-aos="zoom-in" data-aos-delay="100">特色介紹</h2>
+                    </div>
+                </div>
+            </div>
+            <!-- 雷達圖 -->
+            <div class="row">
+                <div class="col-md-4">
+
+                </div>
+                <!-- 特色資訊 -->
+                <div class="col-md-8">
+                    <ul class="feature-cky">
+                        <li data-aos="flip-left" data-aos-delay="200"><span class="hex-cky"><span class="hexIn-cky">酸度<br>1.35</span></span></li>
+                        <li data-aos="flip-left" data-aos-delay="300"><span class="hex-cky"><span class="hexIn-cky">日本酒度<br>4</span></span></li>
+                        <li data-aos="flip-left" data-aos-delay="400"><span class="hex-cky"><span class="hexIn-cky">精米步合<br>50%</span></span></li>
+                        <li data-aos="flip-left" data-aos-delay="500"><span class="hex-cky"><span class="hexIn-cky">胺基酸度<br>0.9</span></span></li>
+
+                    </ul>
+                    <p class="featureInfo-cky">
+                        華麗及奔放的花果香，在入口前就能充份感受到，是一支能有似葡萄酒香氣的酒款，入口能感受到酸口感，平衡了口中酒體，順口又帶有豐富的口感讓人不會忘記。一度被譽為「十四代接班人」的飛露喜，在國際競賽中屢獲殊榮，更於今年
+                        IWC 中大放異彩獲得金賞殊榮！許多人對於飛露喜的印象就是「極難入手」。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 其他酒款 -->
+    <section>
+        <div class="container">
+            <!-- 標題 -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="sakeTitle-cky py-5">
+                        <figure class="figureImg-cky" data-aos="zoom-in" data-aos-delay="100">
+                            <img class="brewIcon-cky " src="./images/web/pic124.svg" alt="">
+                        </figure>
+                        <figure class="titleBg01-cky" data-aos="fade-right" data-aos-delay="200">
+                            <img src="./images/web/seigaiwa_sm_title.svg" alt="">
+                        </figure>
+                        <figure class="titleBg02-cky" data-aos="fade-left" data-aos-delay="200">
+                            <img src="./images/web/seigaiwa_sm_title.svg" alt="">
+                        </figure>
+                        <h2 clas="sakeName-cky" data-aos="zoom-in" data-aos-delay="100">其他酒款</h2>
+                    </div>
+                </div>
+            </div>
+            <!-- 其他酒款輪播 -->
+            <div class="row">
+                <div class="col-md-12 owl-carousel owl-theme">
+                        <div class="otherItemCard-cky " data-aos="zoom-in" data-aos-delay="200">
+                            <figure class="otherItemPic-cky ">
+                                <img src="images/otherItems/otherItems01.png">
+                            </figure>
+                            <h5 class="otherItemName-cky">醉心氷わり本醸造原酒</h5>
+                        </div>
+                        <div class="otherItemCard-cky" data-aos="zoom-in" data-aos-delay="300">
+                            <figure class="otherItemPic-cky">
+                                <img src="images/otherItems/otherItems02.png">
+                            </figure>
+                            <h5 class="otherItemName-cky">謙信大吟釀</h5>
+                        </div>
+                        <div class="otherItemCard-cky" data-aos="zoom-in" data-aos-delay="400">
+                            <figure class="otherItemPic-cky">
+                                <img src="images/otherItems/otherItems03.png">
+                            </figure>
+                            <h5 class="otherItemName-cky">久保田 生原酒</h5>
+                        </div>
+                        <div class="otherItemCard-cky" data-aos="zoom-in" data-aos-delay="500">
+                            <figure class="otherItemPic-cky te">
+                                <img src="images/otherItems/otherItems04.png">
+                            </figure>
+                            <h5 class="otherItemName-cky">冬将軍　純米にごり酒</h5>
+                        </div>
+                        <div class="otherItemCard-cky" data-aos="zoom-in" data-aos-delay="600">
+                            <figure class="otherItemPic-cky">
+                                <img src="images/otherItems/otherItems05.png">
+                            </figure>
+                            <h5 class="otherItemName-cky">獺祭 50</h5>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 左右背景圖 -->
+    <div class="bg_wgr-cky bg_wgr01-cky " data-aos="fade-up" data-aos-delay="300"></div>
+    <div class="bg_wgr-cky bg_wgr04-cky "data-aos="fade-down" data-aos-delay="200"></div>
+
+    <div class="seigaiwa-cky cloud1-1-cky" data-aos="fade-left" data-aos-delay="200"></div>
+    <div class="seigaiwa-cky cloud1-2-cky" data-aos="fade-left" data-aos-delay="300"></div>
+
+    <div class="seigaiwa-cky cloud2-1-cky"data-aos="fade-right" data-aos-delay="200"></div>
+    <div class="seigaiwa-cky cloud2-2-cky"data-aos="fade-right" data-aos-delay="300"></div>
+
+    <div class="bg_wgr-cky bg_wgr02-cky" data-aos="fade-down" data-aos-delay="200"></div>
+    <div class="bg_wgr-cky bg_wgr03-cky" data-aos="fade-up" data-aos-delay="300"></div>
+    <div class="seigaiwa-cky cloud3-1-cky" data-aos="fade-left" data-aos-delay="200"></div>
+    <div class="seigaiwa-cky cloud3-2-cky" data-aos="fade-left" data-aos-delay="300"></div>
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <!-- --- Owl-Carousel js --->
+    <script src="./js/owl.carousel.min.js"></script>
+    <script src="./js/itemDetails.js"></script>
+    <!-- AOS 效果 -->
+    <script src="./js/aos.js"></script>
+</body>
+
+</html>
