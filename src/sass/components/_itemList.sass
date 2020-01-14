@@ -19,9 +19,6 @@
     margin-top: 48px
 
 .itemList_navbar
-  // position: sticky
-  // top: 10rem
-  // height: 100%
   padding-top: 1rem
   // z-index: $zindex-modal-backdrop
   .tree_btn, .filter_btn
@@ -65,3 +62,36 @@
         left: 50%
         top: 50%
         transform: translate(-60%, -50%)
+
+.itemlist_tree
+  dd, dt,
+  .tree_title
+    width: 100%
+    margin: .25rem 0
+    flex-basis: 100%
+    font-size: $font_mintitle
+  .tree_title
+    background: $mainColor
+    border-radius: .25rem
+    user-select: none
+    cursor: pointer
+  .tree_selection
+    .tree_btn
+      width: 100%
+      padding: .25rem .25rem
+      color: #000
+      background-color: $btnColor
+      transition: .4s
+    .tree_checked
+      color: #fff
+      background-color: darken($btnColor, 20%)
+
+@media screen and ( max-width: 375px )
+  .itemlist_tree
+    .tree_wrapper
+      justify-content: space-evenly
+    dt
+      margin: .25rem .25rem
+      flex-basis: 25%
+    .tree_title
+      flex-basis: 100%
