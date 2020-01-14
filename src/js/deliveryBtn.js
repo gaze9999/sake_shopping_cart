@@ -51,6 +51,7 @@ deliSubmit.on('mouseup', function() {
     )
   // console.log(combindItems)
   getDatatoCheckout(combindItems)
+  location.href = './checkout.php'
 })
 
 sameOrder.on('change', function() {
