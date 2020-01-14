@@ -5,7 +5,7 @@
 }
 
 body {
-    background-image: url(/itemDetails_CKY/images/web/itemDetails/bg001.gif);
+    background-image: url(../images/web/bg001.gif);
     background-repeat: no-repeat;
     background-size: cover;
     font-family: 'Noto Serif TC', serif !important;
@@ -38,6 +38,9 @@ a:hover {
 .figureImg-cky {
     object-fit: contain;
     width: 40px;
+}
+.figureImg-cky img{
+    filter: contrast(500%);
 }
 
 .brewIcon-cky {
@@ -146,19 +149,20 @@ a:hover {
     display: block;
     color: #A06BCC !important;
     border: #A06BCC 1px solid;
+    border-radius: 4px;
     padding: 10px;
     transition: .5s;
 }
 .btn-cky img{
     width: 30px;
+    transition: .5s;
 }
 .btn-cky:hover{
     background:#A06BCC ;
     color: #FFF !important;
 }
 .btn-cky:hover img{
-    background-image: linear-gradient(#f00, #00f), url(images/web/itemDetails/heart.svg);
-    background-blend-mode: screen;
+    filter: brightness(500%);
 }
 /* button{
     flex: 1;
@@ -194,9 +198,16 @@ button:nth-child(1){
     right: -10%;
     top: 55%;
 }
+@media screen and (max-width:768px) {
+    .mainTitleBg-cky{
+        right: -26%;
+        top: 49%;
+    }
+    }
 .mainTitleBg-cky img{
     width:45%;
 }
+
 .titleBg01-cky {
     display: flex;
     justify-content: center;
@@ -321,14 +332,14 @@ button:nth-child(1){
 
     /* 網頁左右的青海波 & 和柄 */
     .seigaiwa-cky {
-        background: url(/itemDetails_CKY/images/web/itemDetails/seigaiwa.svg) no-repeat;
+        background: url(../images/web/seigaiwa.svg) no-repeat;
         background-size: contain;
         object-fit: contain;
         position: absolute;
         width: 55%;
     }
     .bg_wgr-cky {
-        background: url(/itemDetails_CKY/images/web/itemDetails/bg_wgr.svg) no-repeat;
+        background: url(../images/web/bg_wgr.svg) no-repeat;
         background-size: contain;
         position: absolute;
         width: 12%;
@@ -346,8 +357,8 @@ button:nth-child(1){
     }
     @media screen and (max-width:768px) {
         .bg_wgr01-cky{
-            top:63%;
-            left:-7%;
+            top:83%;
+            left:-3%;
         }
     }
     .bg_wgr02-cky{
@@ -356,8 +367,8 @@ button:nth-child(1){
     }
     @media screen and (max-width:768px) {
         .bg_wgr02-cky{
-            top:214%;
-            left:86%;
+            top:194%;
+            left:91%;
         }
     }
     .bg_wgr03-cky{
@@ -366,8 +377,8 @@ button:nth-child(1){
     }
     @media screen and (max-width:768px) {
         .bg_wgr03-cky{
-            top: 275%;
-            left: -8%;
+            top: 271%;
+            left: -3%;
         }
     }
     .bg_wgr04-cky{
@@ -376,8 +387,8 @@ button:nth-child(1){
     }
     @media screen and (max-width:768px) {
         .bg_wgr04-cky{
-            top: 25%;
-            left: 86%;
+            top: 0%;
+            left: 91%;
         }
     }
     .cloud1-1-cky {
