@@ -24,6 +24,9 @@
     <link rel="stylesheet" href="./css/bootstrap_itemDetails.min.css">
     <!-- AOS 效果 -->
     <link rel="stylesheet" href="./css/aos.css">
+
+    <!-- 雷達 css -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
 </head>
 
 <body>
@@ -249,10 +252,14 @@
                     </div>
                 </div>
             </div>
-            <!-- 雷達圖 -->
+            
             <div class="row">
+                <!-- 雷達圖 -->
                 <div class="col-md-4">
-
+                    <div class="chartRadarDiv-cky">
+                        <div class="chartRadarBg-cky" data-aos="zoom-in" data-aos-delay="200"></div>
+                        <canvas id="chartRadar" data-aos="zoom-in" data-aos-delay="500"></canvas>
+                    </div>
                 </div>
                 <!-- 特色資訊 -->
                 <div class="col-md-8">
@@ -363,6 +370,9 @@
     <script src="./js/itemDetails.js"></script>
     <!-- AOS 效果 -->
     <script src="./js/aos.js"></script>
+
+    <!-- 雷達 js -->
+    <script src="Chart.bundle.js"></script>
 </body>
 
 </html>

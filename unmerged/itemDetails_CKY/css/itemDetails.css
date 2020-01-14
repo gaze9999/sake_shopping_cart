@@ -277,6 +277,7 @@ button:nth-child(1){
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-bottom: 2em;
     }
 
     .feature-cky li {
@@ -329,6 +330,28 @@ button:nth-child(1){
         letter-spacing: 10px;
     }
 
+    /* 雷達圖 */
+    .chartRadarDiv-cky{
+        position: relative;
+        width: 350px;
+        height: 350px;
+    }
+    @media screen and (max-width:768px) {
+        .chartRadarDiv-cky{
+            margin-left: 61px;
+        }
+    }
+    .chartRadarBg-cky{
+        position: absolute;
+        left: -10%;
+        top: -5%;
+        background: url(../images/web/sixRadar.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 110%;
+        height: 110%;
+    }
+    /* 雷達圖 結束*/
 
     /* 網頁左右的青海波 & 和柄 */
     .seigaiwa-cky {
