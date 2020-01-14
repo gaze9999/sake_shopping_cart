@@ -64,7 +64,6 @@ function btnSelector(selector) {
 
 function btnSelection(selector) {
   let thisValue = JSON.stringify(selector.data()),
-      thisOutput = selector.parents('section').find(':hidden')
+      thisOutput = selector.parents('section').find('input.delivery_input:hidden')
       thisOutput.val(thisValue.slice(thisValue.length-2, thisValue.length-1))
 }
-

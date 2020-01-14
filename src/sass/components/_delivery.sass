@@ -44,35 +44,37 @@
     transform-origin: top center
     transition: .4s
 
-.checkout_info > section
+.checkout_info
+  & > section
     margin: 2rem 0
-
-.checkout_info_help,
-.checkout_price
-  border: 1px solid $highlightColor
-  padding: .75rem
-  border-radius: 4px
-  h5, h6
-    color: $highlightColor
-  h5
-    font-weight: 700
-
-.checkout_cart
-  background: lighten($mainColor, 20%)
-  padding: 1rem
-  border-radius: 4px
-  &>div
-    padding: .5rem 1rem
-    .checkout_item_count::before
-      content: 'X'
-    .checkout_item_price::after
-      content: '$'
-
-.checkout_price
-  ul, ul *
-    +noPaddingMargin
-  li
-    margin-top: 1rem
-    border-bottom: 1px solid $highlightColor
-    p::after
-      content: '$'
+  .checkout_info_help,
+  .checkout_price
+    border: 1px solid $highlightColor
+    padding: .75rem
+    border-radius: 4px
+    h5, h6
+      color: $highlightColor
+    h5
+      font-weight: 700
+  .checkout_cart
+    background: lighten($mainColor, 20%)
+    padding: 1rem
+    border-radius: 4px
+    &>div
+      padding: .5rem 1rem
+      .checkout_item_count::before
+        content: 'X'
+      .checkout_item_price::after
+        content: '$'
+  .checkout_price
+    position: sticky
+    top: 10%
+    ul, ul *
+      +noPaddingMargin
+    li
+      margin-top: 1rem
+      border-bottom: 1px solid $highlightColor
+      p::after
+        content: '$'
+  #receipt_number1
+    color: $mainBgColor
