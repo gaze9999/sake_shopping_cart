@@ -51,22 +51,13 @@ require_once('./tpl/tpl-header.php');
             <label for="delivery_order_email">Email</label>
             <input type="email" class="form-control" id="delivery_order_email" maxlength="60" placeholder="請輸入電子信箱" required>
           </section>
-          <section class="form-group col-md-6">
-            <label for="delivery_order_city">城市</label>
-            <select class="mr-sm-2 custom-select" id="delivery_order_city" placeholder="selectCity" required>
-              <option value="19">宜蘭縣</option>
-            </select>
+
+          <section class="form-group row col-md-12 twzipcode">
+            <div class="col-md-6" data-role="county" data-name="delivery_order_city" data-value="0" data-style="mr-sm-2 custom-select delivery_order_city"></div>
+            <div class="col-md-4" data-role="district" data-name="delivery_order_district" data-value="0" data-style="mr-sm-2 custom-select delivery_order_district"></div>
+            <div class="col-md-2" data-role="zipcode" data-name="delivery_order_zipcode" data-value="0" data-style="form-control delivery_order_zipcode"></div>
           </section>
-          <section class="form-group col-md-4">
-            <label for="delivery_order_state">市區</label>
-            <select class="mr-sm-2 custom-select" id="delivery_order_state" placeholder="selectState" required>
-              <option value=""></option>
-            </select>
-          </section>
-          <section class="form-group col-md-2">
-            <label for="delivery_order_post">郵遞區號</label>
-            <input type="text" id="delivery_order_post" class="form-control" required disabled>
-          </section>
+
           <section class="form-group col-md-12">
             <label for="delivery_order_address">地址</label>
             <input type="text" class="form-control" id="delivery_order_address" placeholder="請輸入詳細地址" required>
@@ -95,6 +86,7 @@ require_once('./tpl/tpl-header.php');
                 <label for="delivery_tel">聯絡手機</label>
                 <input type="tel" class="form-control" id="delivery_tel2" placeholder="請輸入聯絡手機" name="phone" required>
               </section>
+
               <section class="form-group d-flex col-md-6 m-0 justify-content-between delivery_receiver_gen">
                 <div class="d-flex h-100 flex-grow-1 center_all btn-group">
                   <input type="button" class="btn delivery_btn delivery_receiver_gender" value="先生" data-gender="0">
@@ -109,29 +101,21 @@ require_once('./tpl/tpl-header.php');
                 <label for="delivery_receiver_email">Email</label>
                 <input type="email" class="form-control" id="delivery_receiver_email" maxlength="60" placeholder="請輸入電子信箱" required>
               </section>
-              <section class="form-group col-md-6">
-                <label for="delivery_receiver_city">城市</label>
-                <select class="mr-sm-2 custom-select" id="delivery_receiver_city" placeholder="selectCity" required>
-                  <option value="19">宜蘭縣</option>
-                </select>
+
+              <section class="form-group row col-md-12 twzipcode">
+                <div class="col-md-6" data-role="county" data-name="delivery_receiver_city" data-value="0" data-style="mr-sm-2 custom-select delivery_receiver_city"></div>
+                <div class="col-md-4" data-role="district" data-name="delivery_receiver_district" data-value="0" data-style="mr-sm-2 custom-select delivery_receiver_district"></div>
+                <div class="col-md-2" data-role="zipcode" data-name="delivery_receiver_zipcode" data-value="0" data-style="form-control delivery_receiver_zipcode"></div>
               </section>
-              <section class="form-group col-md-4">
-                <label for="delivery_receiver_state">市區</label>
-                <select class="mr-sm-2 custom-select" id="delivery_receiver_state" placeholder="selectState" required>
-                  <option value=""></option>
-                </select>
-              </section>
-              <section class="form-group col-md-2">
-                <label for="delivery_receiver_post">郵遞區號</label>
-                <input type="text" id="delivery_receiver_post" class="form-control" required disabled>
-              </section>
+
               <section class="form-group col-md-12">
                 <label for="delivery_receiver_address">地址</label>
                 <input type="text" class="form-control" id="delivery_receiver_address" placeholder="請輸入詳細地址" required>
               </section>
+
               <section class="form-group col-md-12">
                 <div class="form-check">
-                  <label class="form-check-label"><input type="checkbox" class="form-check-input">存為常用地址</label>
+                  <label class="form-check-label"><input type="checkbox" class="form-check-input save_address">存為常用地址</label>
                 </div>
               </section>
             </div>
@@ -182,7 +166,7 @@ require_once('./tpl/tpl-header.php');
         <hr>
         <div class=" d-flex justify-content-between btn-group">
           <input type="button" class="btn delivery_btn goBack" value="返回上一步">
-          <input type="submit" class="btn delivery_btn" value="完成">
+          <input type="submit" class="btn delivery_btn" id="delivery_submit" value="完成">
         </div>
       </section>
     </form>
@@ -207,3 +191,14 @@ require_once('./tpl/tpl-html-foot.php');
 <script src="./src/js/variables/delivery.js"></script>
 <script src="./src/js/functions/delivery.js"></script>
 <script defer src="./src/js/deliveryBtn.js"></script>
+<script src="./dist/js/jquery.twzipcode.min.js"></script>
+<script>
+$('.twzipcode').twzipcode()
+  submitCity = $('select.delivery_order_city'),
+  submitDist = $('select.delivery_order_district'),
+  submitZip  = $('input.delivery_order_zipcode'),
+
+  RsubmitCity = $('select.delivery_receiver_city'),
+  RsubmitDist = $('select.delivery_receiver_district'),
+  RsubmitZip  = $('input.delivery_receiver_zipcode')
+</script>

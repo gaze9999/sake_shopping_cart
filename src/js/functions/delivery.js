@@ -16,7 +16,7 @@ function getSmallCart() {
     ccList.html('')
     let priceRaw = 0
 
-    for (let i in json) {
+    for (let i=0; i<5; i++) {
       let sId = json[i][2]['itemId'],
           qty = json[i][1]['itemQty'],
           name = json[i][0]['itemName']
@@ -28,7 +28,6 @@ function getSmallCart() {
       iPrice = parseInt(iPrice * 0.27) :
       iPrice = parseInt(iPrice)
 
-
       ccList.append(
         `<a class="d-flex flex-wrap justify-content-between checkout_cart_item">
           <span class="w-100 checkout_item_name">${name}</span>
@@ -36,8 +35,9 @@ function getSmallCart() {
           <span class="checkout_item_price">${iPrice * qty}</span>
         </a>
         <hr>`
-      )
+      )      
     }
+    json.length > 5 && ccList.append(`<h6 class="text-center">商品數量大於5</h6>`)
 
     ccPrice = $('.checkout_item_price')
     for (i=0; i<ccPrice.length; i++) {

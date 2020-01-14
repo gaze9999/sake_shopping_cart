@@ -19,4 +19,28 @@ let ccList = $('.checkout_cart_list'),
     sameOrder = $('.same_order'),
     receiverRegion = $('.delivery_receiver'),
     receiverSec = $('.delivery_receiver_section'),
-    receive = $('.delivery_receive')
+    receive = $('.delivery_receive'),
+
+    deliSubmit = $('#delivery_submit'),
+
+
+    sameOrder  = $('input.same_order'),
+    saveAddr   = $('input.save_address'),
+
+    submitShip = $('input.delivery_ship_select[type="hidden"]'),
+    submitName = $('#delivery_name'),
+    submitTel  = $('#delivery_tel'),
+    submitMail = $('#delivery_order_email'),
+    submitGen  = $('input.delivery_order_gender[type="hidden"]'),
+    submitAddr = $('#delivery_order_address'),
+
+    RsubmitName = $('#delivery_name2'),
+    RsubmitTel  = $('#delivery_tel2'),
+    RsubmitMail = $('#delivery_receiver_email'),
+    RsubmitGen  = $('input.delivery_receiver_gender[type="hidden"]'),
+    RsubmitAddr = $('#delivery_receiver_address'),
+
+    shipSelTemp = $('input.delivery_temp[type="hidden"]'),
+    shipSelPay  = $('input.delivery_pay[type="hidden"]'),
+    shipSelRec  = $('input.delivery_receipt[type="hidden"]'),
+    shipSelNumb = $('input.receipt_number_input')
