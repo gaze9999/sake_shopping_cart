@@ -1,19 +1,38 @@
-// owl-carousel
-$('.owl-carousel').owlCarousel({
+// 主要產品輪播
+$('.main-carousel').owlCarousel({
   loop:true,
-  margin:10,
+  // margin:10,
   responsive:{
       0:{
           items:1
       },
       600:{
-          items:3
+          items:1
+      },
+      1000:{
+          items:1
+      }
+  }
+})
+// 主要產品輪播 結束
+
+// 其他產品輪播圖
+$('.otherItem-carousel').owlCarousel({
+  loop:true,
+  // margin:10,
+  responsive:{
+      0:{
+          items:1
+      },
+      600:{
+          items:1
       },
       1000:{
           items:5
       }
   }
 })
+// 其他產品輪播圖 結束
 
 // AOS特效
 $(document).ready(function (){
