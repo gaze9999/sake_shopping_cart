@@ -76,25 +76,70 @@ function getRTree(rId) {
     treeRidButton = $('.tree_rid'),
     treeVidButton = $('.tree_vid'),
     treeCapButton = $('.tree_cap'),
-    treeCapButton = $('.tree_rid_all'),
-    treeCapButton = $('.tree_vid_all'),
-    treeCapButton = $('.tree_cap_all')
+    treeRidAll = $('.tree_rid_all'),
+    treeVidAll = $('.tree_vid_all'),
+    treeCapAll = $('.tree_cap_all'),
+    treeChked = $('.tree_checked')
 
-    treeButton.on('mouseup', function() {
+    treeRidButton.on('mouseup', function() {
+      let thisBtn = $(this)
       let rid = $(this).data('rid')
-      $(this).toggleClass('tree_checked')
-      treeCapButton.removeClass('tree_checked')
+      treeBtnSelect(treeRidButton, thisBtn)
       filterCheckbox(rid)
     })
-    
-    treeRidButton.on('mouseup', function() {
-      if (treeRidButton.hasClass('tree_checked')) {
-        treeRidButton.removeClass('tree_checked')
-      }
-        $(this).addClass('tree_checked')
-        btnSelection($(this))
+
+    treeVidButton.on('mouseup', function() {
+      let thisBtn = $(this)
+      treeRidCheck()
+      treeBtnMulti(thisBtn, treeVidButton, treeVidAll)
+      filterCheckbox(rid)
     })
 
+    treeCapButton.on('mouseup', function() {
+      let thisBtn = $(this)
+      treeRidCheck()
+      treeBtnMulti(thisBtn, treeCapButton, treeCapAll)
+      filterCheckbox(rid)
+    })
+
+    // treeRidAll.on('mouseup', function() {
+    //   treeButton.removeClass('tree_checked')
+    //   $(this).addClass('tree_checked')
+    //   treeVidAll.addClass('tree_checked')
+    //   treeCapAll.addClass('tree_checked')
+    //   filterCheckbox()
+    // })
+
+
+    treeRidAll.on('mouseup', function() {
+      let thisBtn = $(this)
+      treeRidCheck()
+      treeBtnAll(thisBtn, treeRidButton)
+      filterCheckbox(rid)
+    })
+
+    treeVidAll.on('mouseup', function() {
+      let thisBtn = $(this)
+      treeRidCheck()
+      treeBtnAll(thisBtn, treeVidButton)
+      filterCheckbox(rid)
+    })
+
+    treeCapAll.on('mouseup', function() {
+      let thisBtn = $(this)
+      treeRidCheck()
+      treeBtnAll(thisBtn, treeCapButton)
+      filterCheckbox(rid)
+    })
+
+    function treeRidCheck() {
+      treeRidButton.each( function() {
+        if ($(this).hasClass('tree_checked')) {
+          rid = $(this).data('rid')
+        }
+      })
+      return rid
+    }
 
   }).catch(error => {
     console.log('getTree() request failed:', error);
