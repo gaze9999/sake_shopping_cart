@@ -6,32 +6,58 @@ btnSelector(shipTemp)
 btnSelector(shipPay)
 btnSelector(shipReceipt)
 
-// deliSubmit.on('mouseup', function() {
-//   console.log('ship: ' + submitShip.val())
-//   console.log('name: ' + submitName.val())
-//   console.log('tel : ' + submitTel.val() )
-//   console.log('mail: ' + submitMail.val())
-//   console.log('gen : ' + submitGen.val() )
-//   console.log('city: ' + submitCity.val())
-//   console.log('dist: ' + submitDist.val())
-//   console.log('zip : ' + submitZip.val() )
-//   console.log('addr: ' + submitAddr.val())
-  
-//   console.log('name: ' + RsubmitName.val())
-//   console.log('tel : ' + RsubmitTel.val() )
-//   console.log('mail: ' + RsubmitMail.val())
-//   console.log('gen : ' + RsubmitGen.val() )
-//   console.log('city: ' + RsubmitCity.val())
-//   console.log('dist: ' + RsubmitDist.val())
-//   console.log('zip : ' + RsubmitZip.val() )
-//   console.log('addr: ' + RsubmitAddr.val())
+// 元件表(僅供複製)
+// submitShip
+// submitName
+// submitTel
+// submitMail
+// submitGen
+// submitAddr
+// submitCity
+// submitDist
+// submitZip
 
-//   console.log('temp: ' + shipSelTemp.val())
-//   console.log('pay : ' + shipSelPay.val())
-//   console.log('rec : ' + shipSelRec.val())
-//   console.log('num : ' + shipSelNumb.val())
-// })
+// RsubmitName
+// RsubmitTel
+// RsubmitMail
+// RsubmitGen
+// RsubmitAddr
+// RsubmitCity
+// RsubmitDist
+// RsubmitZip 
+
+// shipSelTemp
+// shipSelPay
+// shipSelRec
+// shipSelNumb
+
 
 deliSubmit.on('mouseup', function() {
+  let savAdd = 0,
+      combindItems = []
   
+  combindItems.push({orderData: getOrderData()})
+  saveAddr.prop('checked') &&
+    (savAdd = 1)
+  sameOrder.prop('checked') ?
+    combindItems.push({recData: getOrderData()   }) :
+    combindItems.push({recData: getReceiverData()}) &
+    (savAdd = 0)
+
+  combindItems.push(
+    {shipData : getShipData()},
+    {saveAddr : savAdd       },
+    {itemData : itemData     }
+    )
+  // console.log(combindItems)
+  getDatatoCheckout(combindItems)
+})
+
+sameOrder.on('change', function() {
+  sameOrder.prop('checked') ?
+    $('.delivery_receiver_section').find(':required').prop('required', '') :
+    RsubmitName.prop('required', 'required') &
+     RsubmitTel.prop('required', 'required') &
+    RsubmitMail.prop('required', 'required') &
+    RsubmitAddr.prop('required', 'required')
 })

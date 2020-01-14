@@ -10,7 +10,7 @@ require_once('./tpl/tpl-header.php');
 </style>
 <main class="container devilery_frame">
   <div class="row">
-    <form class="col-md-9 form-row" method="POST" action="">
+    <div class="col-md-9 form-row">
       <section class="form-group col-md-12 delivery_ship">
         <hgroup class="d-flex justify-content-between align-items-center">
           <h4>配送方式</h4>
@@ -20,10 +20,10 @@ require_once('./tpl/tpl-header.php');
         </hgroup>
         <hr>
         <div class="d-flex center_all btn-group">
-          <input type="button" class="btn delivery_btn delivery_ship_select" value="店到店" data-ship="0">
+          <input type="button" class="btn delivery_btn delivery_ship_select btn_active" value="店到店" data-ship="0">
           <input type="button" class="btn delivery_btn delivery_ship_select" value="宅配" data-ship="1">
         </div>
-        <input type="hidden" class="delivery_ship_select delivery_input" value="">
+        <input type="hidden" class="delivery_ship_select delivery_input" value="0">
       </section>
 
       <section class="form-group col-md-12 delivery_order">
@@ -39,10 +39,10 @@ require_once('./tpl/tpl-header.php');
 
           <section class="form-group d-flex col-md-6 m-0 justify-content-between delivery_order_gen">
             <div class="d-flex h-100 flex-grow-1 center_all btn-group">
-              <input type="button" class="btn delivery_btn delivery_order_gender" value="先生" data-gender="0">
+              <input type="button" class="btn delivery_btn delivery_order_gender btn_active" value="先生" data-gender="0">
               <input type="button" class="btn delivery_btn delivery_order_gender" value="小姐" data-gender="1">
             </div>
-            <input type="hidden" class="delivery_order_gender delivery_input" value="">
+            <input type="hidden" class="delivery_order_gender delivery_input" value="0">
           </section>
         </div>
 
@@ -89,10 +89,10 @@ require_once('./tpl/tpl-header.php');
 
               <section class="form-group d-flex col-md-6 m-0 justify-content-between delivery_receiver_gen">
                 <div class="d-flex h-100 flex-grow-1 center_all btn-group">
-                  <input type="button" class="btn delivery_btn delivery_receiver_gender" value="先生" data-gender="0">
+                  <input type="button" class="btn delivery_btn delivery_receiver_gender btn_active" value="先生" data-gender="0">
                   <input type="button" class="btn delivery_btn delivery_receiver_gender" value="小姐" data-gender="1">
                 </div>
-                <input type="hidden" class="delivery_receiver_gender delivery_input" value="">
+                <input type="hidden" class="delivery_receiver_gender delivery_input" value="0">
               </section>
             </div>
 
@@ -137,10 +137,10 @@ require_once('./tpl/tpl-header.php');
         <h4>付款方式</h4>
         <hr>
         <div class="d-flex center_all btn-group">
-          <input type="button" class="btn delivery_btn delivery_pay" data-temp="0" value="線上刷卡" required>
+          <input type="button" class="btn delivery_btn delivery_pay btn_active" data-temp="0" value="線上刷卡" required>
           <input type="button" class="btn delivery_btn delivery_pay" data-temp="1" value="貨到付款" required>
         </div>
-        <input type="hidden" class="delivery_pay delivery_input" value="">
+        <input type="hidden" class="delivery_pay delivery_input" value="0">
       </section>
 
       <section class="form-group col-md-12 accordion delivery_recpt" id="delivery_receipts">
@@ -148,10 +148,10 @@ require_once('./tpl/tpl-header.php');
         <hr>
         <div class="d-flex flex-column">
           <div class="d-flex center_all btn-group">
-            <input type="button" class="btn delivery_btn delivery_receipt" id="receipt_label1" data-rec="0" value="電子發票" data-toggle="collapse" data-target="#receipt_number1" aria-expanded="true" aria-controls="receipt_number1">
+            <input type="button" class="btn delivery_btn delivery_receipt btn_active" id="receipt_label1" data-rec="0" value="電子發票" data-toggle="collapse" data-target="#receipt_number1" aria-expanded="true" aria-controls="receipt_number1">
             <input type="button" class="btn delivery_btn delivery_receipt collapsed" id="receipt_label2" data-rec="1" value="公司發票" data-toggle="collapse" data-target="#receipt_number2" aria-expanded="false" aria-controls="receipt_number2">
           </div>
-          <input type="hidden" class="delivery_receipt delivery_input" value="">
+          <input type="hidden" class="delivery_receipt delivery_input" value="0">
         </div>
         <div class="collapse show" aria-labelledby="receipt_label1" id="receipt_number1" data-parent="#delivery_receipts">
           <h4 class="text-center py-3">發票將隨件附上</h4>
@@ -169,7 +169,7 @@ require_once('./tpl/tpl-header.php');
           <input type="submit" class="btn delivery_btn" id="delivery_submit" value="完成">
         </div>
       </section>
-    </form>
+    </div>
 
     <div class="col-md-3 checkout_info">
       <section class="checkout_info_help">

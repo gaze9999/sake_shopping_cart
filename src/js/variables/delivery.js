@@ -16,13 +16,15 @@ let ccList = $('.checkout_cart_list'),
     shipReceipt = $('.delivery_receipt'),
     receiptNumber = $('.delivery_receipt_number'),
 
-    sameOrder = $('.same_order'),
     receiverRegion = $('.delivery_receiver'),
     receiverSec = $('.delivery_receiver_section'),
     receive = $('.delivery_receive'),
 
     deliSubmit = $('#delivery_submit'),
 
+
+    // order and receiver data
+    itemData = [],
 
     sameOrder  = $('input.same_order'),
     saveAddr   = $('input.save_address'),
