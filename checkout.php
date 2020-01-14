@@ -51,6 +51,12 @@ require_once('./tpl/tpl-header.php');
       </section>
 
       <section class="form-group col-md-12">
+        <div class="form-check">
+          <label class="form-check-label"><input type="checkbox" class="form-check-input save_address">存為常用資訊</label>
+        </div>
+      </section>
+
+      <section class="form-group col-md-12">
         <hr>
         <div class=" d-flex justify-content-between btn-group">
           <input type="button" class="btn delivery_btn" value="返回上一步">
