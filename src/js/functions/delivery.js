@@ -70,7 +70,7 @@ function getDatatoCheckout(arr) {
     )]
   }).then(res => {
     if (res.status >= 200 && res.status < 300) {
-      return res.json();
+      // return res.json();
     } else {
       let error = new Error(res.statusText);
       error.response = response;
