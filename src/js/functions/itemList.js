@@ -35,6 +35,14 @@ function itemGetList(rid = "", vid = [], cap = [], pri = "") {
       sId = json[0][i]['sId'],
       vId = json[0][i]['vId']
 
+      // 價格換算
+      let iCurr = price.substr(0, 3),
+      iPrice = price.slice(3)
+
+      iCurr == 'JPY' ?
+      iPrice = parseInt(iPrice * 0.27) :
+      iPrice = parseInt(iPrice)
+
       // for (let i in json[1]) {
       //   json[1][i]['imgName'] !== undefined ?
       //   picPath = `./img/items/pics/${bId}/${sId}/${json[1][i]['imgName']}` :
@@ -59,7 +67,7 @@ function itemGetList(rid = "", vid = [], cap = [], pri = "") {
           </a>
           <figure class="position-absolute item_card_price">
             <img class="card_price_img" src="./img/icons/item_price_board.svg" alt="">
-            <h6 class="position-absolute">${price}</h6>
+            <h6 class="position-absolute itemList_price">${iPrice}</h6>
           </figure>
         </div>
         <h5 class="text-center item_card_name">${itemName}</h5>
