@@ -146,8 +146,11 @@ require_once('./tpl/tpl-header.php');
         </div>
       </div>
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-4" id="detailChart">
+
         </div>
+        <script defer src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+        <!-- <script defer src="./src/js/functions/detailCharts.js"></script> -->
 
         <div class="col-md-8">
           <dl class="d-flex detail_item_feature">
