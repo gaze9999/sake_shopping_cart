@@ -652,7 +652,7 @@ a, a:link, a:visited {
   z-index: 1070;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 415px) {
   .footer_warning h3 {
     font-size: 1rem;
   }
@@ -703,7 +703,7 @@ a, a:link, a:visited {
   font-size: 1.1rem;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 415px) {
   .footer_sec {
     padding: 0;
   }
@@ -1456,7 +1456,7 @@ main {
   background-color: #7f7f7f;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 415px) {
   .itemlist_tree {
     margin: 0;
     padding: 0;
