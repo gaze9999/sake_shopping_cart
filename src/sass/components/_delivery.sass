@@ -64,7 +64,7 @@
       padding: .5rem 1rem
       .checkout_item_count::before
         content: 'X'
-      .checkout_item_price::after
+      .checkout_item_price::before
         content: '$'
   .checkout_price
     position: sticky
@@ -74,7 +74,7 @@
     li
       margin-top: 1rem
       border-bottom: 1px solid $highlightColor
-      p::after
+      p::before
         content: '$'
   #receipt_number1
     color: $mainBgColor
