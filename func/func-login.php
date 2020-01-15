@@ -24,7 +24,7 @@ if( !empty($uId) || !empty($pwd) ) {
   if($stmt->rowCount() > 0) {
     $arr = $stmt->fetchAll(PDO::FETCH_ASSOC);
     $_SESSION['userinfo']['status'] = 1;
-    $_SESSION['userinfo']['userid'] = $arr[0]['username'];
+    $_SESSION['userinfo']['userid'] = $arr[0]['id'];
     $_SESSION['userinfo']['username'] = $arr[0]['username'];
     $_SESSION['userinfo']['name'] = $arr[0]['name'];
     $_SESSION['userinfo']['email'] = $arr[0]['email'];

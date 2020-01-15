@@ -18,7 +18,7 @@ if (isset($_SESSION['userinfo']['userid'])) {
           FROM `users`
           WHERE `username` = ? ";
 
-  $arrParam = [ $_SESSION['userinfo']['userid'] ];
+  $arrParam = [ $_SESSION['userinfo']['username'] ];
 
   $stmt = $pdo->prepare($sql);
   $stmt->execute($arrParam);

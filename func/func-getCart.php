@@ -19,6 +19,8 @@ $sql ="SELECT i.`sId`, i.`itemName`, i.`breId`,
         GROUP BY i.`itemName` ";
 
 $arr = array();
+$userId   = $_SESSION['userinfo']['userid'];
+$userName = $_SESSION['userinfo']['name'];
 
 for ($i = 0; $i < count($_SESSION['cart']); $i++) {
   $itemId['itemId']   = $_SESSION['cart'][$i]['itemId'];
@@ -34,6 +36,8 @@ for ($i = 0; $i < count($_SESSION['cart']); $i++) {
     array_push($arr, $arrSid);
     array_push($arr[$i], $itemQty);
     array_push($arr[$i], $itemId);
+    array_push($arr[$i], $userId);
+    array_push($arr[$i], $userName);
   }
 }
 $result = urldecode(json_encode($arr));
