@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- main CSS -->
+  <link href="littleGame.css" rel="stylesheet">
+
+  <!-- google font -->
+  <link href="https://fonts.googleapis.com/css?family=Kosugi+Maru|Sawarabi+Mincho&display=swap" rel="stylesheet">
+
+  <!-- main js -->
+  <script src="littleGame.js" async></script>
+  <title>littleGame</title>
+</head>
+<body>
+  <h1 class="page-title">小遊戲</h1>
+  <div class="overlay-text visible">
+    Click to Start
+  </div>
+  <div id="game-over-text" class="overlay-text game-over-style">
+    GAME OVER
+    <span class="overlay-text-small">Click to Restart</span>
+  </div>
+  <div id="victory-text" class="overlay-text">
+    VICTORY
+    <span class="overlay-text-small">Click to Restart</span>
+  </div>
+
+  <div class="game-container">
+    <div class="game-info-container">
+      <div class="game-info">
+        時間：<span id="time-remaining">100</span>
+      </div>
+      <div class="game-info">
+        翻牌：<span id="flips">0</span>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/sakura.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/sakura.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/sakura.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/sakura.png">
+        <img class="sake" src="Assets/Images/sake.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/sakuraGrey.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/sakuraGrey.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/sakuraGrey.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/sakuraGrey.png">
+        <img class="card-value" src="Assets/Images/1.png">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/sakura.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/sakura.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/sakura.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/sakura.png">
+        <img class="sake" src="Assets/Images/sake.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/sakuraGrey.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/sakuraGrey.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/sakuraGrey.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/sakuraGrey.png">
+        <img class="card-value" src="Assets/Images/1.png">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/sakura.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/sakura.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/sakura.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/sakura.png">
+        <img class="sake" src="Assets/Images/sake.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/sakuraGrey.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/sakuraGrey.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/sakuraGrey.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/sakuraGrey.png">
+        <img class="card-value" src="Assets/Images/2.png">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/sakura.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/sakura.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/sakura.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/sakura.png">
+        <img class="sake" src="Assets/Images/sake.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/sakuraGrey.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/sakuraGrey.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/sakuraGrey.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/sakuraGrey.png">
+        <img class="card-value" src="Assets/Images/2.png">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/sakura.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/sakura.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/sakura.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/sakura.png">
+        <img class="sake" src="Assets/Images/sake.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/sakuraGrey.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/sakuraGrey.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/sakuraGrey.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/sakuraGrey.png">
+        <img class="card-value" src="Assets/Images/3.png">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/sakura.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/sakura.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/sakura.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/sakura.png">
+        <img class="sake" src="Assets/Images/sake.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/sakuraGrey.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/sakuraGrey.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/sakuraGrey.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/sakuraGrey.png">
+        <img class="card-value" src="Assets/Images/3.png">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/sakura.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/sakura.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/sakura.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/sakura.png">
+        <img class="sake" src="Assets/Images/sake.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/sakuraGrey.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/sakuraGrey.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/sakuraGrey.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/sakuraGrey.png">
+        <img class="card-value" src="Assets/Images/4.png">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/sakura.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/sakura.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/sakura.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/sakura.png">
+        <img class="sake" src="Assets/Images/sake.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/sakuraGrey.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/sakuraGrey.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/sakuraGrey.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/sakuraGrey.png">
+        <img class="card-value" src="Assets/Images/4.png">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/sakura.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/sakura.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/sakura.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/sakura.png">
+        <img class="sake" src="Assets/Images/sake.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/sakuraGrey.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/sakuraGrey.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/sakuraGrey.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/sakuraGrey.png">
+        <img class="card-value" src="Assets/Images/5.png">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/sakura.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/sakura.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/sakura.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/sakura.png">
+        <img class="sake" src="Assets/Images/sake.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/sakuraGrey.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/sakuraGrey.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/sakuraGrey.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/sakuraGrey.png">
+        <img class="card-value" src="Assets/Images/5.png">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/sakura.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/sakura.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/sakura.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/sakura.png">
+        <img class="sake" src="Assets/Images/sake.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/sakuraGrey.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/sakuraGrey.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/sakuraGrey.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/sakuraGrey.png">
+        <img class="card-value" src="Assets/Images/6.png">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/sakura.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/sakura.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/sakura.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/sakura.png">
+        <img class="sake" src="Assets/Images/sake.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/sakuraGrey.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/sakuraGrey.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/sakuraGrey.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/sakuraGrey.png">
+        <img class="card-value" src="Assets/Images/6.png">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/sakura.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/sakura.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/sakura.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/sakura.png">
+        <img class="sake" src="Assets/Images/sake.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/sakuraGrey.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/sakuraGrey.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/sakuraGrey.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/sakuraGrey.png">
+        <img class="card-value" src="Assets/Images/7.png">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/sakura.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/sakura.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/sakura.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/sakura.png">
+        <img class="sake" src="Assets/Images/sake.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/sakuraGrey.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/sakuraGrey.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/sakuraGrey.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/sakuraGrey.png">
+        <img class="card-value" src="Assets/Images/7.png">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/sakura.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/sakura.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/sakura.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/sakura.png">
+        <img class="sake" src="Assets/Images/sake.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/sakuraGrey.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/sakuraGrey.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/sakuraGrey.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/sakuraGrey.png">
+        <img class="card-value" src="Assets/Images/8.png">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/sakura.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/sakura.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/sakura.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/sakura.png">
+        <img class="sake" src="Assets/Images/sake.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/sakuraGrey.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/sakuraGrey.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/sakuraGrey.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/sakuraGrey.png">
+        <img class="card-value" src="Assets/Images/8.png">
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
