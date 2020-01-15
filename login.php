@@ -25,8 +25,10 @@ require_once('./tpl/tpl-header.php');
         <label class="form-label" for="password">您的密碼</label>
       <input type="password" id="password" class="" name="login" placeholder="您的密碼" required>
       </div>
-      <input type="submit" class="my-3 login_btn" value="登入">
-      <input type="button" class="my-3 signup_btn" href="./register.php" value="還不是會員? 註冊">
+      <div class="d-flex flex-column col-12">
+        <input type="submit" class="my-3 login_btn" value="登入">
+        <a type="button" class="my-3 text-center signup_btn" href="./register.php" value="">還不是會員? 註冊</a>
+      </div>
     </section>
   </div>
 </main>

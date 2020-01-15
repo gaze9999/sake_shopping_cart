@@ -8,7 +8,7 @@ $pwd = $data['userPwd'];
 $status = array();
 
 if( !empty($uId) || !empty($pwd) ) {
-  $sql = "SELECT `id`, `username`, `pwd`, `name`
+  $sql = "SELECT `id`, `username`, `pwd`, `name`, `email`
           FROM `users`
           WHERE `username` = ?
           AND `pwd` = ? ";
@@ -27,6 +27,7 @@ if( !empty($uId) || !empty($pwd) ) {
     $_SESSION['userinfo']['userid'] = $arr[0]['username'];
     $_SESSION['userinfo']['username'] = $arr[0]['username'];
     $_SESSION['userinfo']['name'] = $arr[0]['name'];
+    $_SESSION['userinfo']['email'] = $arr[0]['email'];
     $_SESSION['userinfo']['identity'] = 'user';
 
     $status = 1;
@@ -36,7 +37,7 @@ if( !empty($uId) || !empty($pwd) ) {
     echo $status;
   }
 } else {
-  $status = 0;
+  $status = 3;
   echo $status;
 }
 ?>

@@ -70,3 +70,10 @@ function btnAll(thisBtn, btnList) {
   btnList.removeClass('btn_selected')
   thisBtn.addClass('btn_selected')
 }
+
+function checkNotInput(thisVal) {
+  if ($.trim(thisVal.val()) == "") {
+    return '2'
+  }
+  return '1'
+}
