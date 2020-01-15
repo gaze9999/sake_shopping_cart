@@ -12,7 +12,7 @@ function getSmallCart() {
       throw error.Content-Type;
     }
   }).then(json => {
-    console.log(json)
+    // console.log(json)
     ccList.html('')
     let priceRaw = 0
 

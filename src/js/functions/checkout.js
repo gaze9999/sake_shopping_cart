@@ -55,6 +55,7 @@ function checkCardInfo() {
         {savCard : savCard }
       )
       getDatatoFinal(cardData)
+      location.href = './finalCheck.php'
       break;
     case 1:
       alertTemp2('持卡人姓名未填')
