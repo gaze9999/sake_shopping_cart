@@ -50,7 +50,7 @@ function getCart() {
           </td>
           <td class="d-flex center_all cart_item_qty">
             <input class="cart_item_minus item_counts_btn" type="button" value="-">
-            <input type="number" class="pl-3 text-center cart_item_hold" value="${json[i][1]['itemQty']}" disabled>
+            <input type="number" class="text-center cart_item_hold" value="${json[i][1]['itemQty']}" disabled>
             <input class="cart_item_plus item_counts_btn" type="button" value="+">
           </td>
           <td>
@@ -210,4 +210,53 @@ function countTotal() {
   totalQty.html(qtyCount)
   totalItems.html(rowCount.length)
   totalPrice.html(priceCount)
+}
+
+function getLoginStatus() {
+  fetch('./func/func-checkStatus.php', {
+    method: "GET",
+    headers: {'Content-Type': 'application/json',
+              'Accept': 'application/json'}
+  }).then(res => {
+    if (res.status >= 200 && res.status < 300) {
+      return res.json();
+    } else {
+      let error = new Error(res.statusText);
+      error.response = response;
+      throw error.Content-Type;
+    }
+  }).then(json => {
+    // console.log(json[0])
+    json[0] == 1 ? 
+    location.href = './delivery.php' :
+    alertTemp2('你還沒登入哦')
+
+  }).catch(error => {
+    console.log('getDetails() request failed:', error);
+    console.log(error.response);
+  });
+}
+
+function updateSession(capIds, itemQtys) {
+  fetch('./func/func-updateSession.php', {
+    method: "POST",
+    headers: {'Content-Type': 'application/json',
+              'Accept': 'application/json'},
+    body: [JSON.stringify({
+      'capIds': capIds,
+      'qtys': itemQtys
+    })]  
+  }).then(res => {
+    if (res.status >= 200 && res.status < 300) {
+      // return res.json();
+    } else {
+      let error = new Error(res.statusText);
+      error.response = response;
+      throw error.Content-Type;
+    }
+
+  }).catch(error => {
+    console.log('getDetails() request failed:', error);
+    console.log(error.response);
+  });
 }

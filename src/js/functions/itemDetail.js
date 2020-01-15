@@ -54,33 +54,34 @@ function getDetails() {
     itemSeimai.html(iSimi)
 
     // 雷達生成
-    console.log(iSndo)
-    console.log(iSndo)
-    console.log(iAmno)
-    console.log(iSimi)
-    iSndo == '暫無資料' && 50
-    iShdo == '暫無資料' && 50
-    iAmno == '暫無資料' && 50
-    iSimi == '暫無資料' && 50
+    // console.log(iSndo)
+    // console.log(iShdo)
+    // console.log(iAmno)
+    // console.log(iSimi)
+    // iSndo == '暫無資料' && 50
+    // iShdo == '暫無資料' && 50
+    // iAmno == '暫無資料' && 50
+    // iSimi == '暫無資料' && 50
 
-    var options = {
-      series: [{
-        name: 'Series 1',
-        data: [iSndo * 10, iShdo, iSimi, iAmno],
-      }],
-      chart: {
-        height: 300,
-        type: 'radar',
-      },
-      title: {
-        // text: 'Basic Radar Chart'
-      },
-      xaxis: {
-        categories: ['酸度', '日本酒度', '精米步合', '胺基酸度']
-      }
-    };
-    var chart = new ApexCharts(document.querySelector("#detailChart"), options);
-        chart.render();
+    // var options = {
+    //   series: [{
+    //     name: 'Series 1',
+    //     data: [iSndo * 10, iShdo, iSimi, iAmno],
+    //   }],
+    //   chart: {
+    //     height: 300,
+    //     type: 'radar',
+    //   },
+    //   title: {
+    //     // text: 'Basic Radar Chart'
+    //   },
+    //   xaxis: {
+    //     categories: ['酸度', '日本酒度', '精米步合', '胺基酸度']
+    //   }
+    // };
+
+    // var chart = new ApexCharts(document.querySelector("#detailChart"), options);
+    //     chart.render();
 
     // 麵包屑
     breadCrumb.append(`<a href="./main.php">首頁</a>`)

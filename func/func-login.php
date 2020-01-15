@@ -7,7 +7,7 @@ $uId = $data['userId'];
 $pwd = $data['userPwd'];
 $status = array();
 
-if( !empty($uId) || !empty($pwd) ){
+if( !empty($uId) || !empty($pwd) ) {
   $sql = "SELECT `id`, `username`, `pwd`, `name`
           FROM `users`
           WHERE `username` = ?
@@ -23,6 +23,7 @@ if( !empty($uId) || !empty($pwd) ){
 
   if($stmt->rowCount() > 0) {
     $arr = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $_SESSION['userinfo']['status'] = 1;
     $_SESSION['userinfo']['userid'] = $arr[0]['username'];
     $_SESSION['userinfo']['username'] = $arr[0]['username'];
     $_SESSION['userinfo']['name'] = $arr[0]['name'];

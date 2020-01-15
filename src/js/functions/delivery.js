@@ -12,7 +12,7 @@ function getSmallCart() {
       throw error.Content-Type;
     }
   }).then(json => {
-    // console.log(json)
+    console.log(json)
     ccList.html('')
     let priceRaw = 0
 
@@ -24,7 +24,7 @@ function getSmallCart() {
       )
     }
 
-    for (let i=0; i<5; i++) {
+    for (let i=0; i<json.length & i<5; i++) {
       let sId = json[i][2]['itemId'],
           qty = json[i][1]['itemQty'],
           name = json[i][0]['itemName']
@@ -83,9 +83,6 @@ function getDatatoCheckout(arr) {
     console.log(error.response);
   });
 }
-
-
-
 
 function btnSelector(selector) {
   selector.on('mouseup', function() {
