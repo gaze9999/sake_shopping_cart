@@ -8,7 +8,8 @@ main
 .main_bg
   height: 250vh
   position: fixed
-  background: url(../../img/bgs/section1_bg.jpg) center fixed no-repeat
+  // background: url(../../img/bgs/section1_bg.jpg) center fixed no-repeat
+  background: #000
 
 .main_frame
   z-index: $zindex-modal
@@ -20,11 +21,14 @@ main
   .row > section
     overflow: hidden
     background: $mainBgColor
-    min-height: 100vh
   .main_logoSec, .main_article_center
     background: transparent !important
-    font-family: 'Noto Sans TC', serif
+    font-family: 'Noto Serif TC', serif
     writing-mode: vertical-rl
+    h1
+      font-family: 'Noto Serif TC', serif !important
+      z-index: $zindex-modal
+
 
 .main_subtitle
   font-size: $font_subtitle
@@ -35,7 +39,8 @@ main
   min-height: 200vh !important
   position: relative
   margin-top: -116px
-  background: transparent !important
+  // background: transparent !important
+  background: url(../../img/bgs/section1_bg.jpg) center fixed no-repeat !important
   #sakura
     position: absolute
     top: 0
@@ -44,6 +49,23 @@ main
   .main_article_center
     top: 100vh
     min-height: 100vh
+
+// 小標題
+.index_title
+  position: relative
+  // font-family: 'Noto Serif TC', serif
+  display: flex
+  justify-content: center
+  height: 200px
+  img
+    filter: opacity(.1)
+  h2
+    font-family: 'Noto Serif TC', serif
+    font-size: 3rem
+    height: 100%
+    position: absolute
+    top: 35%
+    filter: opacity(.7)
 
 // logo section
 .main_logoSec
@@ -76,14 +98,14 @@ main
 // news section
 .main_news
   min-height: 65vh !important
-  height: 100vh
   color: $titleColor
-  justify-content: center
+  justify-content: space-evenly
 
 .main_news_items
-  +contentSpaceAround
+  +contentSpaceEvenly
   *
-    font-size: $font_tinyContent
+    font-size: $font_content
+    font-family: 'Noto Serif TC', serif
   .news_card
     max-width: 20rem
 
@@ -128,20 +150,23 @@ main
 
 // recommand
 .main_recommand
-  justify-content: center
+  +contentSpaceEvenly
   color: #000
+  figure
+    z-index: $zindex-fixed
   .main_rec_card
     min-width: 10rem
     max-width: 15rem
     color: #fff
     img
-      min-width: 10rem
+      min-width: 15rem
       max-width: 15rem
-      height: 10rem
+      height: 15rem
       overflow: hidden
       object-fit: cover
       border-radius: 10px
       filter: brightness(.5)
+      clip-path: polygon(50% 0%,100% 50%,50% 100%,0% 50%)
     figure
       +noPaddingMargin
       max-width: 20rem
@@ -210,3 +235,35 @@ main
         box-shadow: 0 0 8px -4px #000, 0 0 0 #000 inset
         &:active
           box-shadow: 0 0 0 #000, 0 0 8px -4px #000 inset
+
+.main_map
+  color: #000
+  path
+    stroke: white
+    fill: transparent
+    transition: .8s
+    cursor: pointer
+    &:hover
+    fill: #B99362
+    transform: translate(-5px, -5px)
+
+  .title_area
+    color: #B99362
+    font-size: 30px
+  .forcast h2, .forcast h4, .forcast
+    margin: 0
+  .forcast h2
+    margin-top: 20px
+  a
+    font-size: 16px
+    text-decoration: none
+    color: #B99362
+
+@media screen and ( min-width:  376px)
+  .main_map
+    .map_area
+      flex-basis: 50%
+      height: 75vh
+      padding: 2rem 0
+    .title_area
+      flex-basis: 20%

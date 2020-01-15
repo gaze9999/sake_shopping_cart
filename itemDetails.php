@@ -5,7 +5,6 @@ require_once('./tpl/tpl-html-head.php');
 require_once('./tpl/tpl-header.php');
 ?>
 <style>
-  .navbar { background: url('./img/bgs/bg001.gif') !important }
   .navbar-dark, .navbar-nav, .nav-link, .navbar-brand { color: #000 !important }
 </style>
 <script defer src="./dist/js/owl.carousel.min.js"></script>
@@ -69,6 +68,15 @@ require_once('./tpl/tpl-header.php');
                 <img src="./img/test/shopp_bag.svg" alt="">
                 <p>加入酒袋</p>
               </a>
+            </div>
+          </div>
+          
+          <div class="row my-3 detail_item_share">
+            <div class="col-6 d-flex center_all">
+              <a class="twitter-share-button" target="_blank" href="https://twitter.com/intent/tweet?text=sake_shopping" data-size="large">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+            <div class="col-6 d-flex center_all">
+              <div class="fb-share-button" data-href="https://www.facebook.com/groups/668307226994677/?multi_permalinks=786823405143058&notif_id=1578756055976079&notif_t=group_activity" data-layout="button_count" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost/sake_shopping/" class="fb-xfbml-parse-ignore">分享</a></div>
             </div>
           </div>
 
@@ -138,8 +146,11 @@ require_once('./tpl/tpl-header.php');
         </div>
       </div>
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-4" id="detailChart">
+
         </div>
+        <script defer src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+        <!-- <script defer src="./src/js/functions/detailCharts.js"></script> -->
 
         <div class="col-md-8">
           <dl class="d-flex detail_item_feature">
@@ -185,6 +196,8 @@ require_once('./tpl/tpl-header.php');
   </section>
 </main>
 
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v5.0"></script>
 <?php
 require_once('./tpl/tpl-warning.php');
 require_once('./tpl/tpl-footer.php');

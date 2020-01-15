@@ -2,11 +2,12 @@
 require('../func/func-getAllItems.php');
 
 $data = json_decode(file_get_contents('php://input'), true);
-$rid = $data['rid'];
-$cid = $data['cid'];
-$vid = $data['vid'];
+$rid   = $data['rid'];
+$vids  = $data['vid'];
+$caps  = $data['cap'];
+$price = $data['pri'];
 
-getAll($cid, $vid, $rid);
+listSelect($rid, $vids, $caps);
 
 function getList() {
   global $arr;
@@ -14,61 +15,46 @@ function getList() {
   echo $result;
 }
 
-function getAll($cid, $vid, $rid) {
+function listSelect($rid, $vids, $caps) {
   global $arr, $imgs;
   $newArr = array();
-  $newArr[0] = ridFilter($rid, $arr[0]);
-  $newArr[0] = cidFilter($cid, $newArr[0]);
-  $newArr[0] = vidFilter($vid, $newArr[0]);
+  $newArr[0] = idFilter($rid, $arr[0], 'rId', 'rid');
+  $newArr[0] = idsFilter($vids, $newArr[0], 'vcId', 'vid');
+  $newArr[0] = idsFilter($caps, $newArr[0], 'cap', 'cap');
 
   array_push($newArr, $imgs);
   $result = urldecode(json_encode($newArr));
   echo $result;
 }
 
-function ridFilter($rid, $arrr) {
-  global $data, $ridArr;
-  $ridArr = array();
-  if (!empty($data['rid'])) {
-    foreach ($arrr as $k => $v) {
-      if (in_array($arrr[$k]['rId'], $rid)) {
-        array_push($ridArr, $v);
+function idsFilter($inputId, $thatArr, $idName, $dataName) {
+  global $data;
+  $idArr = array();
+  if (!empty($data[$dataName])) {
+    foreach ($thatArr as $k => $v) {
+      if (in_array($thatArr[$k][$idName], $inputId)) {
+        array_push($idArr, $v);
       }
     }
-    return $ridArr;
+    return $idArr;
   } else {
-    return $arrr;
+    return $thatArr;
   }
 }
 
-function cidFilter($cid, $arrc) {
-  global $data, $cidArr;
-  $cidArr = array();
-  if (!empty($data['cid'])) {
-    foreach ($arrc as $k => $v) {
-      if ($arrc[$k]['vcId'] == $cid) {
-        array_push($cidArr, $v);
+function idFilter($inputIds, $thatArr, $idName, $dataName) {
+  global $data, $idsArr;
+  $idsArr = array();
+  if (!empty($data[$dataName])) {
+    foreach ($thatArr as $k => $v) {
+      if ($thatArr[$k][$idName] == $inputIds) {
+        array_push($idsArr, $v);
 
       }
     }
-    return $cidArr;
+    return $idsArr;
   } else {
-    return $arrc;
-  }
-}
-
-function vidFilter($vid, $arrv) {
-  global $data, $vidArr, $newArr;
-  $vidArr = array();
-  if (!empty($data['vid'])) {
-    foreach ($arrv as $k => $v) {
-      if ($arrv[$k]['vId'] == $vid) {
-        array_push($vidArr, $v);
-      }
-    }
-    return $vidArr;
-  } else {
-    return $arrv;
+    return $thatArr;
   }
 }
 

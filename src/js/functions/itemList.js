@@ -1,14 +1,14 @@
-function getVarieties(cid = "", vid = "", pid = "", rid = "") {
+function itemGetList(rid = "", vid = [], cap = [], pri = "") {
   fetch('./func/func-getItems.php', {
     method: "PUT",
     headers: {'Content-Type': 'application/json',
               'Accept': 'application/json'},
     body: [
       JSON.stringify({
+        'rid': rid,
         'vid': vid,
-        'cid': cid,
-        'pid': pid,
-        'rid': rid
+        'cap': cap,
+        'pri': pri
       })
     ]
   }).then(res => {
@@ -27,18 +27,25 @@ function getVarieties(cid = "", vid = "", pid = "", rid = "") {
       let
       varieties = json[0][i]['varieties'],
       itemName = json[0][i]['itemName'],
+      capacity = json[0][i]['cap'],
       breName = json[0][i]['breName'],
+      region = json[0][i]['regionName'],
       price = json[0][i]['price'],
       bId = json[0][i]['bId'],
       sId = json[0][i]['sId'],
       vId = json[0][i]['vId']
 
+      // for (let i in json[1]) {
+      //   json[1][i]['imgName'] !== undefined ?
+      //   picPath = `./img/items/pics/${bId}/${sId}/${json[1][i]['imgName']}` :
+      //   picPath = `./img/icons/image.svg`
+      // }
       for (let i in json[1]) {
-        picName = json[1][i]['imgName']
+        picPath = `./img/items/pics/${bId}/${sId}/${json[1][i]['imgName']}`
       }
 
-      vid == "" ? itemInfo.html(`日本清酒`) : itemInfo.html(varieties);
-      cid == "" ? itemInfo.html(`日本清酒`) : itemInfo.html(varieties);
+      // 顯示當前分類
+      vid == "" ? itemInfo.html(`日本清酒`) : itemInfo.html(region);
 
       itemList.append(`
       <div class="d-flex flex-column item_card">
@@ -48,7 +55,7 @@ function getVarieties(cid = "", vid = "", pid = "", rid = "") {
             <h6>${breName}</h6>
           </figure>
           <a class="d-flex flex-column center_all item_card_mainImg" href="./itemDetails.php?id=${sId}">
-            <img class="item_card_img" src="./img/items/pics/${bId}/${sId}/${picName}" alt="${itemName}" onerror="this.onerror=null; this.src='./img/icons/image.svg'"></img>
+            <img class="item_card_img" src="${picPath}" alt="${itemName}" onerror="this.onerror=null; this.src='./img/icons/image.svg'"></img>
           </a>
           <figure class="position-absolute item_card_price">
             <img class="card_price_img" src="./img/icons/item_price_board.svg" alt="">
@@ -61,22 +68,49 @@ function getVarieties(cid = "", vid = "", pid = "", rid = "") {
     };
     treeTotalData.text(dataLength);
     treeTotalData.data('total', dataLength)
-      
+
   }).catch(error => {
     console.log('getVarieties() request failed:', error);
     console.log(error.response);
   });
 }
 
-function filterItem(cid = "", vid = "", pid = "", rid = "",price = "") {
-  filterItems = new getVarieties(vcat, vid, "", rid)
+function filterItem(rid = "", vid = "", cap = "", price = "") {
+  filterItems = new itemGetList(rid, vid, cap)
 }
 
-function filterCheckbox() {
-  let rids = [];
-  $('.filter_region .filter_checkbox.checked').each( function() {
-    let Selected = $(this).data('region')
-    rids.push(Selected)
-  });
-  filterItem(vcat, vid, "", rids)
+function filterCheckbox(rid) {
+  let vids = [],
+      caps = []
+
+  treeCheck('vid', vids, treeVidButton)
+  treeCheck('cap', caps, treeCapButton)
+  itemGetList(rid, vids, caps)
+}
+
+function treeCheck(dataName, arr, thisBtn) {
+  thisBtn.each( function() {
+    if ($(this).hasClass('tree_checked')) {
+      let selected = $(this).data(dataName)
+      selected !== undefined ? arr.push(selected) : arr
+    }
+  })
+  return arr
+}
+
+function treeBtnSelect(btn, thisBtn) {  
+  btn.hasClass('tree_checked') &&
+  btn.removeClass('tree_checked')
+  thisBtn.addClass('tree_checked')
+}
+
+function treeBtnMulti(thisBtn, btn, btnAll) {
+  btn.hasClass('tree_checked') &&
+  btnAll.removeClass('tree_checked')
+  thisBtn.toggleClass('tree_checked')
+}
+
+function treeBtnAll(thisBtn, btn) {
+  btn.removeClass('tree_checked')
+  thisBtn.addClass('tree_checked')
 }

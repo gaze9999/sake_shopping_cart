@@ -2,6 +2,7 @@
 require_once('../db.inc.php');
 
 $sql = "SELECT i.`sId`, i.`itemName`, i.`breId`, i.`vId`, i.`price`,
+               CAST(i.`capacity` as decimal(18, 0)) as `cap`,
                b.`bId`, b.`breName`, b.`rId`, b.`pId`,
                r.`rId`, r.`regionName`,
                p.`pId`, p.`prefName`,

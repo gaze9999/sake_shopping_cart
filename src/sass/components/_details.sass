@@ -10,8 +10,11 @@
   +noPaddingMargin
   background: transparent
   height: 10rem
-  .detail_breadcrumb a::after
-    content: ' > '
+  .detail_breadcrumb
+    letter-spacing: .25rem
+    & a::after
+      content: '>'
+      padding: 0 .5rem
   .detail_header_title
     *
       +noPaddingMargin
@@ -47,7 +50,7 @@
 
 .detail_item_content
   line-height: 2rem
-  letter-spacing: .75rem
+  letter-spacing: .25rem
 
 .detail_item_function
   *

@@ -1,5 +1,4 @@
 .itemList_frame
-  overflow-x: hidden
   position: relative
 
 .hidden_obj
@@ -14,20 +13,19 @@
   height: 10rem
 
 .page_itemList
-  background: url(../../img/bgs/bg001.gif)
-  &>div    
+  background: transparent
+  &>div
     margin-top: 48px
 
-.itemList_navbar
-  // position: sticky
-  // top: 10rem
-  // height: 100%
+.itemList_tree
   padding-top: 1rem
   // z-index: $zindex-modal-backdrop
   .tree_btn, .filter_btn
     +noPaddingMargin
 
 .itemList_list
+  &, .item_card
+    transition: .4s
   .item_card
     width: 12rem
     height: 20rem
@@ -37,7 +35,7 @@
       width: 100%
       height: 80%
     .item_card_brew
-      *        
+      *
         +noPaddingMargin
       font-family: 'Noto Serif TC', serif
       writing-mode: vertical-lr
@@ -54,7 +52,7 @@
         height: 80%
         object-fit: contain
     .item_card_price
-      *        
+      *
         +noPaddingMargin
       right: 0
       bottom: 0
@@ -63,3 +61,71 @@
         left: 50%
         top: 50%
         transform: translate(-60%, -50%)
+
+.page_itemList
+  // position: sticky
+  // top: 0
+  > section
+    flex-basis: 85%
+    order: 2
+  > aside
+    flex-basis: 15%
+    order: 1
+    position: sticky
+    top: 10%
+
+.itemList_tree
+  dd, dt,
+  .tree_title
+    width: 100%
+    margin: .25rem 0
+    flex-basis: 100%
+    font-size: $font_mintitle
+  .tree_title
+    background: $mainColor
+    border-radius: .25rem
+    user-select: none
+    cursor: pointer
+  .tree_selection
+    .tree_btn
+      width: 100%
+      padding: .25rem .25rem
+      color: #000
+      background-color: $btnColor
+      transition: .4s
+    .tree_checked
+      color: #fff
+      background-color: darken($btnColor, 20%)
+
+@media screen and ( max-width: 375px )
+  .itemlist_tree
+    +noPaddingMargin
+    .tree_wrapper
+      justify-content: space-evenly
+    dl
+      justify-content: space-evenly
+    dt
+      margin: .25rem .25rem
+      flex-basis: 25%
+      &.tree_title:not(.collapsed)
+        flex-basis: 100%
+    .tree_title
+      flex-basis: 30%
+      transition: .4s
+      font-size: 1rem
+      padding: .25rem 0 !important
+
+  .itemList_list
+    .item_card
+      flex-basis: 50%
+      margin: 0
+
+  .page_itemList
+    > section
+      flex-basis: 100% !important
+      order: 2
+    > aside
+      top: 68px
+      background: url(../../img/bgs/bg001.gif) repeat
+      flex-basis: 100% !important
+      order: 1
