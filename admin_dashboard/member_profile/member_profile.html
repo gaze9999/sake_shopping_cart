@@ -13,8 +13,8 @@
 <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
 
 <!-- ---main css-------     -->
-    <link rel="stylesheet" href="member_recor.css">
-    <title>訂單狀態</title>
+    <link rel="stylesheet" href="member_profile.css">
+    <title>修改個人資料</title>
   </head>
   <body>
     
@@ -38,10 +38,10 @@
               </div>
               <ul class="navbar-nav flex-column mt-4">
                 <li class="nav-item"><a href="../member_main/member_main.html" class="nav-link text-white p-3 mb-2 sidebar-link"><i class="fas fa-home text-light fa-lg mr-3"></i>會員中心</a></li>
-                <li class="nav-item"><a href="../member_profile/member_profile.html" class="nav-link text-white p-3 mb-2 sidebar-link"><i class="fas fa-user text-light fa-lg mr-3"></i>修改個人資料</a></li>
+                <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2  current"><i class="fas fa-user text-light fa-lg mr-3"></i>修改個人資料</a></li>
                 <!--  -->
-                <li class="nav-item"><a href="" class="nav-link text-white p-3 mb-2 current"><i class="fas fa-shopping-cart text-light fa-lg mr-3"></i>訂單狀態</a></li>
-                <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 sidebar-link"><i class="fas fa-file-alt text-light fa-lg mr-3"></i>購買紀錄</a></li>
+                <li class="nav-item"><a href="../member_record/member_record.html" class="nav-link text-white p-3 mb-2 sidebar-link"><i class="fas fa-shopping-cart text-light fa-lg mr-3"></i>訂單狀態</a></li>
+                <li class="nav-item"><a href="../member_purchase_history/member_history.html" class="nav-link text-white p-3 mb-2 sidebar-link"><i class="fas fa-file-alt text-light fa-lg mr-3"></i>購買記錄</a></li>
 
 <!-- ----------------備用--- -->
                 <!-- <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 sidebar-link"><i class="fas fa-envelope text-light fa-lg mr-3"></i>訊息</a></li> -->
@@ -54,11 +54,10 @@
 <!-------------- end of sidebar -->
 
 <!---------------- top-nav -->
-
             <div class="col-xl-10 col-lg-9 col-md-8 ml-auto bg-dark fixed-top py-2 top-navbar">
               <div class="row align-items-center">
                 <div class="col-md-4">
-                  <h4 class="text-light text-uppercase mb-0">訂單狀態</h4>
+                  <h4 class="text-light text-uppercase mb-0">修改個人資料</h4>
                 </div>
                
                 <div class="col-md-3">
@@ -96,51 +95,81 @@
       </div>
     </div> -->
 
-<!-- ----------訂單狀態條-------------------------------------- -->
-<section>
+    <section>
+      <div class="container-fluid ">
+        <div class="row my-lg-5">
+         
+            <div class="col-xl-10 col-lg-9 row pt-md-5 mt-md-3 mb-5 justify-content-center ml-auto">
+              
+                <form>
+                    <div class="row my-lg-3 mb-5"> <a>姓名</a>
+                      <div class="col">
+ 
+                        <input type="text" class="form-control" id="inputLastName" placeholder="姓">
+                      </div>
+                      <div class="col">
+                        <input type="text" class="form-control"  id="inputFirstName" placeholder="名">
+                      </div>
+                    </div>
 
-        <div class="container-fluid">
-        <div class="row">
-            <div class=" d-md-block col-xl-10 offset-xl-1 pb-5">
-            <div class="card">
-                <div class="card-body">
-                <ul class="stepped-progress-bar">
-                    <li>已確認</li>
-                    <li>處理中</li>
-                    <li class="active" >理貨中</li>
-                    <li>送貨中</li>
-                    <!-- <li>到達指定地</li> -->
-                    <li>完成</li>          
-                </ul>
-                </div>
+                    <div class="row pt-md-3 mb-5">
+                    <div class="form-check form-check-inline col-md-3 ">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                        <label class="form-check-label" for="inlineRadio1">生理男</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                        <label class="form-check-label" for="inlineRadio2">生理女</label>
+                      </div>
+                    </div>
+
+                    <div class="row  pt-md-3 mb-5"> <a>信箱</a>
+                        <div class="col">
+                          <input type="text" class="form-control" id="inputEmail" placeholder="@gmal.com">
+                        </div>
+                    </div>
+
+                    <div class="row pt-md-3 mb-5"> <a>重新設定帳號</a>
+                        <div class="col">
+                          <input type="text" class="form-control" id="inputPassword" placeholder="6~12字元">
+                        </div>
+                    </div>
+
+                    <div class="row pt-md-3 mb-5 "> <a>重新設定密碼</a>
+                        <div class="col">
+                          <input type="text" class="form-control" id="inputPassword" placeholder="6~12字元">
+                        </div>
+                    </div>
+
+                    <div class="row pt-md-3 mb-5"> <a>聯繫地址1</a>
+                        <div class="col">
+                          <input type="text" class="form-control" id="inputAddress1" placeholder="請輸入詳細地址">
+                        </div>
+                    </div>
+
+                    <div class="row pt-md-3 mb-5"> <a>聯繫地址2</a>
+                        <div class="col">
+                          <input type="text" class="form-control" id="inputAddress2" placeholder="請輸入詳細地址">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-info">完成</button>
+                  </form>
+
             </div>
-            </div>
+ 
         </div>
-        </div>
+        
+      </div>
+    </section>
+    <!-- end of cards -->
 
-<hr>
-<!-- -----訂單資訊(目前寫死)--------------------------------------------- -->
+    <!-- tables -->
+    
+   
+    
+    <!-- end of activities / quick post -->
 
-<div class="order-info">
-    <h4>訂單資訊</h4>
-    <form  action="">
-        <a class="order-number">訂單編號 ｜ AAA58585</a><br>
-          <a class="order-si">訂單狀態 ｜ 理貨中</a><br>
-        <a class="order-address">收貨地址 ｜台北市中正區</a>
-    </form>
-</div>
-
-<!-- -----下面的圖片--------------------------------------------- -->
-
-<div class="bg-img">
-    <img class="order-img" src="../images/order_img.svg" alt="">
-</div>
-          
-</section>
-
-<!-- end -->
-
-<!-- footer -->
+    <!-- footer -->
     <footer>
     
     </footer>
@@ -152,3 +181,9 @@
     <script src="/member_script.js"></script>
   </body>
 </html>
+
+
+
+
+
+

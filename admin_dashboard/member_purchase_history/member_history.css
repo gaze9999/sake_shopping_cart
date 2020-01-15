@@ -1,0 +1,257 @@
+*{
+    font-family: 'Noto Sans TC', sans-serif !important;
+  }
+  
+  body {
+    height: 130vh;
+    background-color: #eee;
+  }
+  
+  h1, h2, h3, h4, h5, h6{
+    font-weight:bold;
+  }
+  
+  /* navbar */
+  
+  .sidebar {
+    padding-top: 50px;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .9)), url(../images/富士山_d.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 5px 7px 25px #999;
+  }
+  
+  .bottom-border {
+    border-bottom: 1px groove #eee;
+  }
+  
+  .sidebar-link {
+    transition: all .4s;
+  }
+  
+  .sidebar-link:hover {
+    background-color: #444;
+    border-radius: 5px;
+  }
+  
+  .current {
+    background-color: #f44336;
+    border-radius: 7px;
+    box-shadow: 2px 5px 10px #111;
+    transition: all .3s;
+  }
+  
+  .current:hover {
+    background-color: #f66436;
+    border-radius: 7px;
+    box-shadow: 2px 5px 20px #111;
+    transform: translateY(-1px);
+  }
+  
+  /* ---***--- */
+  
+  .btn-info{
+    background-color: #a06bcc !important;
+    border: 0px !important;
+  }
+  
+  .btn-info:hover{
+    background-color: #8144b3 !important;
+    border: 0px !important;
+  }
+  
+  .icon-parent {
+    position: relative;
+  }
+  
+  .icon-bullet::after {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 15px;
+    height: 12px;
+    width: 12px;
+    background-color: #f44336;
+    border-radius: 50%;
+  }
+  
+  
+  /* task list */
+  .task-border {
+    border-left: 3px solid #f66436;
+  }
+  /* end of task list */
+
+  .section-title h3{
+    margin-top: 5%;
+    margin-left: 18%;
+    margin-bottom: 0;
+  }
+
+  /* ------------accordion------------------------------------ */
+
+  .wrapper{
+    width: 700px;
+    margin: 30px auto 0;
+  }
+  
+  .wrapper .accordion_wrap .accordion_header{
+    width: 100%;
+    height: 50px;
+    background: #fff;
+    padding: 15px;
+    color: #a06bcc;
+    font-weight: 700;
+    border-bottom: 2px solid #a06bcc;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .wrapper .accordion_wrap:first-child .accordion_header{
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+  }
+  
+  .wrapper .accordion_wrap:last-child .accordion_header{
+    border-bottom: 2px solid transparent;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+  
+  .wrapper .accordion_wrap:last-child .accordion_header:hover{
+    border-bottom: 2px solid transparent;
+  }
+  
+  .wrapper .accordion_wrap .accordion_header:before,
+  .wrapper .accordion_wrap .accordion_header:after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+    width: 20px;
+    height: 2px;
+    background: #cc9542;
+  }
+  
+  .wrapper .accordion_wrap .accordion_header:hover{
+    color: #cc9542;
+    border-color: #d6a55b;
+  }
+  
+  .wrapper .accordion_wrap .accordion_header:hover:before,
+  .wrapper .accordion_wrap .accordion_header:hover:after{
+    background: #bcab91;
+  }
+  
+  .wrapper .accordion_wrap .accordion_header:after{
+    transform: rotate(-90deg);
+    transition: all 0.5s ease;
+  }
+  
+  .wrapper .accordion_wrap .accordion_body{
+    width: 100%;
+    height: 0px;
+    transition: all 0.5s ease;
+    background: #626262;
+    overflow: hidden;
+  }
+  
+  .wrapper .accordion_wrap .accordion_body p{
+    padding: 15px;
+    font-size: 15px;
+    line-height: 22px;
+    color: #fff;
+  }
+  
+  .wrapper .accordion_wrap .accordion_header.active{
+    color: #5b2686; 
+    border-color: #5a2b80;
+  }
+  
+  .wrapper .accordion_wrap:last-child .accordion_header.active{
+    border-bottom: 2px solid #7436a7;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  
+  .wrapper .accordion_wrap .accordion_header.active:before,
+  .wrapper .accordion_wrap .accordion_header.active:after{
+    background: #5a2b80;
+  }
+  
+  .wrapper .accordion_wrap .accordion_header.active:after{
+    transform: rotate(0deg);
+  }
+  
+  .wrapper .accordion_wrap .accordion_header.active + .accordion_body{
+    height: 180px;
+  }
+
+  /* ------------accordion body reset----------------------- */
+  .wrapper .accordion_wrap .accordion_header.active + .acbh_re{
+    height: 280px !important;
+  }
+
+  .bgt01{
+    background-color: #fff;
+    background-position: right;
+    border: 1px solid #000;
+    padding-right: 6px;
+    height: 40px;
+    width: 30px;
+    margin-top: -138px;
+    margin-left: 250px;
+  }
+
+  .att{
+    border: 1px solid #000;
+    height: 40px;
+    width: 30px;
+    margin-top: -180px;
+    margin-left: 250px;
+  }
+
+/* ----------accordion_margin------------------------- */
+  .acb_marg{
+    margin-top: -80px;
+  }
+
+/* ------------end accordion----------------------------- */
+  
+  /* -------RWD---------------------------------- */
+  
+  @media (max-width: 414px) {
+    .sidebar {
+      position: static;
+      height: auto;
+    }
+  
+    .top-navbar {
+      position: static;
+    }
+  
+    .text-muted th{
+      font-size: 12px;
+    }
+    tbody tr td{
+      font-size: 10px;
+    }
+
+    .section-title h3{
+      font-size: 26px;
+      margin-top: 5%;
+      margin-left: 35%;
+    }
+
+
+
+/* -------accordion--------------------------------- */
+.wrapper{
+  width: 400px;
+}
+  
+  }
+  /* end of navbar */  
