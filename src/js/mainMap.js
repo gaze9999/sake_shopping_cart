@@ -2,8 +2,8 @@ var place_data=[
     {
         tag:"北海道/城市",
         place:"北海道",
-        name101:"國稀酒造",
-        name102:"高砂酒造"
+        name01:"國稀酒造",
+        name02:"高砂酒造"
     },
 
     {
