@@ -257,7 +257,7 @@ class Tokyo {
       return model
     }
 
-    let tokyoModel = await promiseLoader('../assets/littlest_tokyo_gl/scene.gltf')
+    let tokyoModel = await promiseLoader('./assets/littlest_tokyo_gl/scene.gltf')
     tokyoModel.scene.traverse(function (child) {
       if (child.isMesh) {
         roughnessMipmapper.generateMipmaps(child.material);
@@ -266,7 +266,7 @@ class Tokyo {
     // 素材
     this.scene.add(tokyoModel.scene);
 
-    let japaneseTemple = await promiseLoader('../assets/japanese_temple/scene.gltf')
+    let japaneseTemple = await promiseLoader('./assets/japanese_temple/scene.gltf')
     japaneseTemple.scene.traverse(function (child) {
       if (child.isMesh) {
         roughnessMipmapper.generateMipmaps(child.material);
@@ -276,7 +276,7 @@ class Tokyo {
     japaneseTemple.scene.position.set(90, 50, -50);
     this.scene.add(japaneseTemple.scene);
 
-    let cloud_A1 = await promiseLoader('../assets/dubai_clouds/scene.gltf')
+    let cloud_A1 = await promiseLoader('./assets/dubai_clouds/scene.gltf')
     cloud_A1.scene.traverse(function (child) {
       if (child.isMesh) {
         roughnessMipmapper.generateMipmaps(child.material);
@@ -286,7 +286,7 @@ class Tokyo {
     cloud_A1.scene.position.set(0, 100, 0);
     this.scene.add(cloud_A1.scene);
 
-    let cloud_A2 = await promiseLoader('../assets/dubai_clouds/scene.gltf')
+    let cloud_A2 = await promiseLoader('./assets/dubai_clouds/scene.gltf')
     cloud_A2.scene.traverse(function (child) {
       if (child.isMesh) {
         roughnessMipmapper.generateMipmaps(child.material);
@@ -296,7 +296,7 @@ class Tokyo {
     cloud_A2.scene.position.set(-300, -200, 0);
     this.scene.add(cloud_A2.scene);
 
-    let cloud_A3 = await promiseLoader('../assets/dubai_clouds/scene.gltf')
+    let cloud_A3 = await promiseLoader('./assets/dubai_clouds/scene.gltf')
     cloud_A3.scene.traverse(function (child) {
       if (child.isMesh) {
         roughnessMipmapper.generateMipmaps(child.material);
