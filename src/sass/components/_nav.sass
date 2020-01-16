@@ -5,7 +5,7 @@
     cursor: pointer
   .nav-link
     user-select: none
-
+    
 .nav_logo
   height: 52px
   h1
@@ -19,7 +19,17 @@
       line-height: $nav_logosize
       margin: 0 .5rem 0
 
-
-.nav_black
-  height: 100vh
-  background: #000 !important
+@media screen and ( max-width: 415px )
+  .nav_black
+    background: #000 !important
+    .navbar-brand
+      h1
+        color: #fff
+  .navbar-toggler
+    background: #fff
+    opacity: .5
+  #my-nav
+    +noPaddingMargin
+    height: 100vh
+    .nav-link
+      color: #fff !important

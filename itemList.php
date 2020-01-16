@@ -4,9 +4,6 @@ require_once('./db.inc.php');
 require_once('./tpl/tpl-html-head.php');
 require_once('./tpl/tpl-header.php');
 ?>
-<style>
-  .navbar-dark, .navbar-nav, .nav-link, .navbar-brand { color: #000 !important}
-</style>
 <main class="container-fluid itemList_frame">
   <header class="row w-100 center_all itemList_header">
     <section class="col-12 d-flex center_all list_info">

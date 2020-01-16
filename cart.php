@@ -4,10 +4,6 @@ require_once('./db.inc.php');
 require_once('./tpl/tpl-html-head.php');
 require_once('./tpl/tpl-header.php');
 ?>
-<style>
-  .navbar { background: url('./img/bgs/bg001.gif') !important }
-  .navbar-dark, .navbar-nav, .nav-link, .navbar-brand { color: #000 !important }
-</style>
 <main class="container cart_frame">
   <header class="row w-100 center_all fixed-top cart_header">
     <section class="col-12 h-100 d-flex center_all cart_info">

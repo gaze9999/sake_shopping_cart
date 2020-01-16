@@ -4,9 +4,6 @@ require_once('./db.inc.php');
 require_once('./tpl/tpl-html-head.php');
 require_once('./tpl/tpl-header.php');
 ?>
-<style>
-  .navbar-dark, .navbar-nav, .nav-link, .navbar-brand { color: #000 !important }
-</style>
 <script defer src="./dist/js/owl.carousel.min.js"></script>
 <div class="hidden">
   <input type="hidden" id="detailId" name="itemId" value="<?php echo $_GET['id'] ?>">
@@ -70,7 +67,7 @@ require_once('./tpl/tpl-header.php');
               </a>
             </div>
           </div>
-          
+
           <div class="row my-3 detail_item_share">
             <div class="col-6 d-flex center_all">
               <a class="twitter-share-button" target="_blank" href="https://twitter.com/intent/tweet?text=sake_shopping" data-size="large">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -147,24 +144,65 @@ require_once('./tpl/tpl-header.php');
       </div>
       <div class="row">
         <div class="col-md-4" id="detailChart">
-
-        </div>
-        <script defer src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-        <!-- <script defer src="./src/js/functions/detailCharts.js"></script> -->
+          <div class="chartRadarBg" data-aos="zoom-in" data-aos-delay="200"></div>
+          <canvas id="chartRadar" data-aos="zoom-in" data-aos-delay="500"></canvas>
+        </div><script defer src="https://www.jsdelivr.com/package/npm/chart.js"></script>
 
         <div class="col-md-8">
-          <dl class="d-flex detail_item_feature">
-            <dt data-aos="flip-left" data-aos-delay="200">酸度</dt>
-            <dt data-aos="flip-left" data-aos-delay="300">日本酒度</dt>
-            <dt data-aos="flip-left" data-aos-delay="400">精米步合</dt>
-            <dt data-aos="flip-left" data-aos-delay="500">胺基酸度</dt>
-          </dl>
-          <dl class="d-flex detail_item_feature item_feture_data">
-            <dd data-aos="flip-left" data-aos-delay="200" class="detail_item_acidity">Acidity</dd>
-            <dd data-aos="flip-left" data-aos-delay="300" class="detail_item_shudo">Nihonshudo</dd>
-            <dd data-aos="flip-left" data-aos-delay="400" class="detail_item_seimaibuai">Seimaibuai</dd>
-            <dd data-aos="flip-left" data-aos-delay="500" class="detail_item_amino">Amino</dd>
-          </dl>
+          <ul class="d-flex flex-wrap justify-content-between detail_item_features">
+            <li data-aos="flip-left" data-aos-delay="200">
+              <section class="item_feature_border">
+                <div class="water">
+                  <span class="wave1"></span>
+                  <span class="wave2"></span>
+                  <span class="deep-water"></span>
+                </div>
+              </section>
+              <section class="feture_text_area">
+                <p>酸度</p>
+                <p class="detail_item_acidity"></p>
+              </section>
+            </li>
+            <li data-aos="flip-left" data-aos-delay="300">
+              <section class="item_feature_border">
+                <div class="water">
+                  <span class="wave1"></span>
+                  <span class="wave2"></span>
+                  <span class="deep-water"></span>
+                </div>
+              </section>
+              <section class="feture_text_area">
+                <p>日本酒度</p>
+                <p class="detail_item_shudo"></p>
+              </section>
+            </li>
+            <li data-aos="flip-left" data-aos-delay="400">
+              <section class="item_feature_border">
+                <div class="water">
+                  <span class="wave1"></span>
+                  <span class="wave2"></span>
+                  <span class="deep-water"></span>
+                </div>
+              </section>
+              <section class="feture_text_area">
+                <p>精米步合</p>
+                <p class="detail_item_seimaibuai"></p>
+              </section>
+            </li>
+            <li data-aos="flip-left" data-aos-delay="500">
+              <section class="item_feature_border">
+                <div class="water">
+                  <span class="wave1"></span>
+                  <span class="wave2"></span>
+                  <span class="deep-water"></span>
+                </div>
+              </section>
+              <section class="feture_text_area">
+                <p>胺基酸度</p>
+                <p class="detail_item_amino"></p>
+              </section>
+            </li>
+          </ul>
           <article class="pt-3 item_feture_description">
             產品介紹2
           </article>

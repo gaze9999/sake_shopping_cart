@@ -23,4 +23,8 @@ let detailId = $('#detailId'),
 
     minusQty = $('.detail_item_minus'),
     plusQty = $('.detail_item_plus'),
-    currectQty = $('.detail_item_hold')
+    currectQty = $('.detail_item_hold'),
+
+    chartRadarDOM,
+	  chartRadarData,
+	  chartRadarOptions

@@ -1,4 +1,4 @@
-<nav class="navbar fixed-top navbar-expand-xl">
+<nav class="navbar fixed-top navbar-light navbar-expand-xl">
   <div class="nav_logo d-flex center_all">
     <header class="h-100">
       <a class="navbar-brand d-flex center_all h-100" name="nav_a_home" href="./">
@@ -13,7 +13,7 @@
   </div>
   <div id="my-nav" class="collapse navbar-collapse">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active" data-page="map">
+      <li class="nav-item" data-page="map">
         <a class="nav-link" data-page="map">地圖</a>
       </li>
       <li class="nav-item">

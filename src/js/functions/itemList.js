@@ -24,20 +24,20 @@ function itemGetList(rid = "", vid = [], cap = [], pri = "") {
       let dataLength = json[0].length
       // console.log(json)
       for (let i in json[0]) {
-      let
-      varieties = json[0][i]['varieties'],
-      itemName = json[0][i]['itemName'],
-      capacity = json[0][i]['cap'],
-      breName = json[0][i]['breName'],
-      region = json[0][i]['regionName'],
-      price = json[0][i]['price'],
-      bId = json[0][i]['bId'],
-      sId = json[0][i]['sId'],
-      vId = json[0][i]['vId']
+      let varieties = json[0][i]['varieties'],
+          itemName = json[0][i]['itemName'],
+          capacity = json[0][i]['cap'],
+          breName = json[0][i]['breName'],
+          region = json[0][i]['regionName'],
+          price = json[0][i]['price'],
+          bId = json[0][i]['bId'],
+          sId = json[0][i]['sId'],
+          vId = json[0][i]['vId'],
 
       // 價格換算
-      let iCurr = price.substr(0, 3),
-      iPrice = price.slice(3)
+          iCurr = price.substr(0, 3),
+          iPrice = price.slice(3)
+          // console.log(price)
 
       iCurr == 'JPY' ?
       iPrice = parseInt(iPrice * 0.27) :

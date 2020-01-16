@@ -4,11 +4,6 @@ require_once('./db.inc.php');
 require_once('./tpl/tpl-html-head.php');
 require_once('./tpl/tpl-header.php');
 ?>
-<style>
-  .navbar { background: url('./img/bgs/bg001.gif') !important }
-  .navbar-dark, .navbar-nav, .nav-link, .navbar-brand { color: #000 !important }
-  .footer { position: fixed; bottom: 0; left: 0; right: 0 }
-</style>
 <main class="container login_frame">
   <div class="row center_all">
     <header class="col-md-12 d-flex center_all">

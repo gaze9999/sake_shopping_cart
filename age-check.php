@@ -4,9 +4,9 @@
         <h2 class="display-4">Welocme</h2>
         <h1 class="lead mb-4">帶給您前所未有的清酒世界</h1>
       </hgroup>
-      <div class="ac_checkBtn">
-        <a class="px-5 mr-2 ac_btn">未滿18歲</a>
-        <a class="px-5 mr-2 ac_btn" checked onmouseup="yoo.play()">已滿18歲</a>
+      <div class="d-flex ac_checkBtn">
+        <a class="mx-3 text-center ac_btn">未滿18歲</a>
+        <a class="mx-3 text-center ac_btn" checked onmouseup="yoo.play()">已滿18歲</a>
       </div>
   </header>
 </div>

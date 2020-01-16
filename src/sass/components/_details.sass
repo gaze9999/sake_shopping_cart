@@ -67,16 +67,23 @@
   input[type=number]
     user-select: none
     appearance: textfield
-  .item_function_btn
+  .item_function_btn, .item_addFav
+    user-select: none
+    cursor: pointer
     width: 10rem
     color: $highlightColor
     border: 1px solid $highlightColor
     padding: .5rem
     transition: .5s
+    &:active
+      color: #fff
+      background: $highlightColor
+    &:active img
+      filter: brightness(500%)
     img
       width: 30px
       margin-right: 1rem
-
+      transition: .5s
 .detail_info_list
   dt, dd
     flex-basis: 50%
@@ -85,23 +92,28 @@
   dd
     color: $highlightColor
 
-.detail_item_feature
-  dt, dd
-    +noPaddingMargin
-    color: $ageCheckColor
+.detailChart
+.chartRadarBg
+.chartRadar
+
+.detail_item_features
+  .item_feature_border
+    width: 80px
+    height: 80px
+    border: 2px solid #B9A395
+    transform: rotate(45deg)
+    display: block
     position: relative
-    flex-basis: 50%
-    text-align: center
-  dt::before
-    content: ''
-    width: 5rem
-    height: 5rem
-    position: absolute
-    top: 50%
-    left: 50%
-    border: 2px solid $ageCheckColor
-    transform: translate(-50%, -25%) rotate(45deg)
-    transform-origin: center center
+    overflow: hidden
+    border-radius: 4px
+  .feture_text_area,
+    & > p
+      +noPaddingMargin
+    &
+      width: 80px
+      height: 80px
+      text-align: center
+    transform: translateY(-65px)
 
 .recommand_carousel
   *
@@ -116,18 +128,25 @@
     padding: 1rem 0
 
 .item_counts_btn, .detail_item_hold
+  box-shadow: 0 0 1px 1px darken(#f7f7f7, 30%) inset
   width: 2rem
   height: 2rem
   border: 1px solid #e5e5e5
-  color: #777
+  color: #777 
 .item_counts_btn
   background-color: #f7f7f7
   font-size: $font_warn
   line-height: $font_warn
-  border-right: 0 none
   transition: all 0.4s ease-in-out 0s
+  &:active
+    background-color: darken(#e5e5e5, 30%)   
 .detail_item_hold
   padding: 0 5px
   text-align: center
   font-weight: bold
   border: 1px solid #e5e5e5
+
+@media screen and ( max-width: 415px )
+  .detail_item_features
+    li
+      flex-basis: 50%

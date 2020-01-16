@@ -6,10 +6,8 @@ require_once('./tpl/tpl-header.php');
 ?>
 
 <main class="container finelCheck_frame">
+    <header class="final_header"></header>
   <div class="row">
-    <header class="final_header">
-
-    </header>
     <section class="row final_cart">
 
     </section>

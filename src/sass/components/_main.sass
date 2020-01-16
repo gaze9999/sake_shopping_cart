@@ -238,6 +238,8 @@ main
 
 .main_map
   color: #000
+  .map_area
+    order: 2
   path
     stroke: white
     fill: transparent
@@ -250,6 +252,7 @@ main
   .title_area
     color: #B99362
     font-size: 30px
+    order: 1
   .forcast h2, .forcast h4, .forcast
     margin: 0
   .forcast h2
@@ -259,11 +262,19 @@ main
     text-decoration: none
     color: #B99362
 
-@media screen and ( min-width:  376px)
+@media screen and ( min-width: 415px )
   .main_map
     .map_area
       flex-basis: 50%
       height: 75vh
       padding: 2rem 0
+      order: 1
     .title_area
       flex-basis: 20%
+      order: 2
+
+@media screen and ( max-width: 415px )
+  
+  .main_article_about
+    letter-spacing: 0.15em
+    line-height: 2rem

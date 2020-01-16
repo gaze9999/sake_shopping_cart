@@ -53,35 +53,6 @@ function getDetails() {
     itemAmino.html(iAmno)
     itemSeimai.html(iSimi)
 
-    // 雷達生成
-    // console.log(iSndo)
-    // console.log(iShdo)
-    // console.log(iAmno)
-    // console.log(iSimi)
-    // iSndo == '暫無資料' && 50
-    // iShdo == '暫無資料' && 50
-    // iAmno == '暫無資料' && 50
-    // iSimi == '暫無資料' && 50
-
-    // var options = {
-    //   series: [{
-    //     name: 'Series 1',
-    //     data: [iSndo * 10, iShdo, iSimi, iAmno],
-    //   }],
-    //   chart: {
-    //     height: 300,
-    //     type: 'radar',
-    //   },
-    //   title: {
-    //     // text: 'Basic Radar Chart'
-    //   },
-    //   xaxis: {
-    //     categories: ['酸度', '日本酒度', '精米步合', '胺基酸度']
-    //   }
-    // };
-
-    // var chart = new ApexCharts(document.querySelector("#detailChart"), options);
-    //     chart.render();
 
     // 麵包屑
     breadCrumb.append(`<a href="./main.php">首頁</a>`)
@@ -189,3 +160,77 @@ plusQty.on('mouseup', ()=> {
   currectQty.data('qty', qty)
   currectQty.html(currectQty.data('qty'))
 })
+
+function detailChart() {
+	Chart.defaults.global.legend.display = false;
+  Chart.defaults.global.defaultFontColor = '#674300'; //文字顏色
+  Chart.defaults.global.defaultFontFamily = "Noto Serif TC"; //文字樣式
+	chartRadarDOM = document.getElementById("chartRadar");
+	chartRadarData;
+	chartRadarOptions = 
+	{
+		scale: 
+		{
+			ticks: //內圈數值設定
+			{
+				// fontSize: 0, //數值大小
+				// beginAtZero: true,
+        // maxTicksLimit: 0,//中間格線
+        // color: 'transparent',
+				// min:0,
+        // max:100
+        callback: function() {return ""},
+        backdropColor: "rgba(0, 0, 0, 0)",
+
+			},
+			pointLabels: //外圈數值設定
+			{
+				fontSize: 16,
+				color: '#0044BB'
+			},
+			gridLines: //雷達線格
+			{
+        color: 'transparent'
+      },
+      angleLines: 
+      { 
+        color: 'transparent' //雷達線格
+      } 
+		}
+	};
+	
+	console.log("---------Rader Data--------");
+	var graphData =new Array();
+	graphData.push(100);
+	graphData.push(40);
+	graphData.push(65);
+	graphData.push(20);
+  graphData.push(97);
+  graphData.push(75);
+	
+	
+	console.log("--------Rader Create-------------");
+	console.log(graphData);
+		
+	//CreateData 雷達內部值樣式設定
+	chartRadarData = {
+    		labels: ['酸度', '日本酒度', '精米步合', '胺基酸度', '辛口', '甘口'],
+		datasets: [{
+    	label: "Skill Level",
+			backgroundColor: "rgba(255,147,0,0.3)",
+			borderColor: "transparent",
+			pointBackgroundColor: "transparent",//點顏色
+   		pointBorderColor: "rgba(0,0,0,0)",
+			pointHoverBackgroundColor: "#fff",//內顏色
+			pointHoverBorderColor: "#000",//外圈
+			pointBorderWidth: 5,
+			data: graphData}]
+	};
+		
+	//Draw
+	var chartRadar = new Chart(chartRadarDOM, {
+		type: 'radar',
+		data: chartRadarData,
+		options: chartRadarOptions
+  })
+}

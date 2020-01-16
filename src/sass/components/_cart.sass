@@ -36,3 +36,18 @@
   bottom: 52px
   .cart_table
   // position: sticky
+
+@media screen and ( max-width: 415px )
+  .cart_table_head, .cart_row_count
+    display: none
+  .cart_table_body
+    .cart_row_data
+      display: flex
+      flex-flow: column wrap
+      margin-bottom: 1rem
+      td
+        text-align: center
+    .cart_table_pic
+      max-width: 100%
+      justify-content: center
+      align-items: center
