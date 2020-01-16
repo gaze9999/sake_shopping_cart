@@ -1,0 +1,286 @@
+/* <------------全域使用--------------> */
+html{
+    scroll-behavior: smooth;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+body{
+    overflow-x: hidden !important;
+    background: lightskyblue;
+    /* background: black; */
+    /* background: url(./img/sectionD_bg.jpg); */
+    /* background-image: url(./img/bg001.gif); */
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.absolute_neal{
+    position: absolute;
+}
+.relative_neal{
+    position: relative;
+}
+.pic_fit_neal{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* <------------navbar--------------> */
+
+.navbar{
+  background: transparent !important;
+  /* background: rgba(0, 0, 0, 0.3) !important; */
+  z-index: 1070;
+}
+nav>a>h3{
+    margin-bottom: 0.25rem;
+}
+
+.neal-nav-icon{
+    width: 50px;
+    height: 50px;
+    /* object-fit: contain; */
+    filter: brightness(100);
+}
+
+/* <------------視差用區塊--------------> */
+.parallax-section{
+    color: white;
+    /* background: rgba(0, 0, 0, 0.137); */
+    height: 600vh;
+    width: 100%;
+    z-index: 1000;
+    flex-direction: column;
+    justify-content: space-evenly;
+    top: 100vh;
+    background: linear-gradient(rgb(0, 31, 56),lightskyblue 60%,rgb(8, 38, 56)70%,rgb(0, 41, 68));
+
+}
+.parallax-section .row{
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+}
+.parallax-section article{
+    font-family: 'Noto Serif TC', serif;
+    font-size: 1.5rem;
+    width: 70%;
+}
+.parallax2{
+    /* background: linear-gradient(lightskyblue,rgb(0, 48, 136)); */
+}
+/* <------------3D區域--------------> */
+.tokyo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1010;
+  }
+
+/* <------------木頭區域--------------> */
+.wood{
+    z-index: 1020;
+    width: 100%;
+    height: 100vh;
+    /* background: url(./img/wood_1920.png)bottom no-repeat fixed; */
+    background: url(./img/sectionB_bg.jpg) no-repeat;
+    background-attachment:fixed;
+    background-size: cover;
+}
+
+
+/* <------------主區域--------------> */
+
+.neal-main{
+    z-index: 1030;
+    background: rgba(0, 0, 0, 0.137);
+    /* background: url(./img/bg001.gif); */
+    /* background: url(./img/sectionD_bg.jpg); */
+}
+
+
+
+/* <------------區塊1--------------> */
+.select-section1-neal{
+    height: 100vh;
+    width: 100%;
+}
+.select-section1-neal header{
+    width: 100%;
+    height: 100vh;
+    /* flex-direction: column; */
+}
+.neal-main-icon{
+    max-width: 120px;
+    max-height: 120px;
+    filter: brightness(3);
+}
+
+.select-section1-neal header h1{
+    /* margin: 0; */
+    font-family: 'Noto Serif TC', serif;
+    text-shadow: white 0px 0px 20px;
+    font-size: 3.5rem;
+    font-weight: 300;
+    /* writing-mode: vertical-lr; */
+    text-align: center;
+    color: white;
+}
+/* <------------區塊2--------------> */
+
+.select-section2-neal{
+    /* background: lightcoral; */
+    /* opacity: .5; */
+    /* background: url(./img/water_A.png)no-repeat center; */
+    background-size: contain;
+    /* opacity: .9; */
+    /* min-height: 10vh; */
+    height: 100vh;
+    width: 100%;
+    /* background-attachment: fixed; */
+    font-family: 'Noto Serif TC', serif;
+    font-size: 1.25rem;
+}
+.select-section2-neal img{
+    padding-top: 2rem;
+    width: 20rem;
+    height: 7rem;
+}
+.game-start{
+    /* background: white; */
+    width: 50vh;
+    height: 50vh;
+    flex-direction: column;
+    justify-content: space-evenly;
+    color: white;
+    background: radial-gradient(rgb(0, 0, 0),transparent 70%);
+}
+.start-button{
+    background: black;
+    border-radius: 10%;
+}
+/* <------------問題區塊--------------> */
+
+.question1-neal{
+    /* background: black; */
+    width: 50vh;
+    height: 50vh;
+    flex-direction: column;
+    justify-content: space-evenly;
+    color: white;
+    overflow: visible;
+    /* background: url(./img/bg001.gif); */
+    background: radial-gradient(rgb(0, 0, 0),transparent 70%);
+    /* border-radius: 100%; */
+    /* clip-path: polygon(0% 50%,50% 0%,100% 50%,50% 100%); */
+}
+.question1-neal article{
+    font-size: 1.25rem;
+    font-family: 'Noto Serif TC', serif;;
+}
+
+
+.quest-section-neal{
+    /* background: lightsalmon; */
+    /* opacity: .5; */
+    /* background-image: url(./img/pex-1.png); */
+    background-size: cover;
+    /* background-blend-mode: hard-light; */
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+}
+.quest-section-neal img{
+    width: 10rem;
+    height: 10rem;
+    /* filter: brightness(3); */
+}
+.qs-pic{
+    /* filter: brightness(10); */
+}
+
+.start-button5a{
+    opacity: 0;
+}
+.start-button5a.active{
+    opacity: 1;
+    transition: 5s;
+    transition-delay: 7s;
+    z-index: 1010;
+}
+.start-button5a img{
+    height: 100%;
+}
+
+
+.start-button5b{
+    z-index: 1000;
+    height: 100%;
+    opacity: 0;
+}
+.start-button5b.active{
+    opacity: 1;
+    transition: 5s;
+    transition-delay: 8s;
+}
+.start-button5b img{
+    height: 100%;
+    width: 50%;
+}
+/* <------------區塊4--------------> */
+
+.quest-section4-neal{
+    background-image: url(./img/pex-2.png);
+    background-size: cover;
+    height: 300vh;
+    width: 100%;
+    top: 150%;
+}
+/* <------------區塊5--------------> */
+
+.quest-section5-neal{
+    background-image: url(./img/water_B.png);
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    top: 150%;
+}
+/* <------------區塊6--------------> */
+
+.quest-section6-neal{
+    background-image: url(./img/water_A.png);
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    top: 300%;
+}
+/* <------------區塊7--------------> */
+
+.quest-section7-neal{
+    background-image: url(./img/water_B.png);
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    top: 300%;
+}
+/* <------------區塊8--------------> */
+
+.quest-section8-neal{
+    height: 10vh;
+    width: 100%;
+    top: 500%;
+}
+.quest-section8-neal a{
+    color: white;
+}
+
+/* <------------ＲＷＤ--------------> */
+@media screen and (max-width: 767px){
+    video{
+        height: 100%;
+    }
+    /* 這頁不會demo手機版，RWD就不做了 */
+}
