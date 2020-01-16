@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
-  <meta name="author" content="DarrenYang">
   <title>本格の酒</title>
   <!-- bootstrap, google fonts, fontawesome -->
   <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -20,4 +19,4 @@
   <!-- custom css -->
   <link rel="stylesheet" type="text/css" href="./dist/css/all.min.css">
 </head>
-<body class="d-flex flex-column" id="view_frame" name="view_frame">
+<body class="d-flex flex-column position-relative" id="view_frame" name="view_frame">

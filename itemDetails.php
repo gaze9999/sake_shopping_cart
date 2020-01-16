@@ -27,7 +27,7 @@ require_once('./tpl/tpl-header.php');
   <section class="detail_item_sec">
     <div class="container">
       <div class="row">
-        <div class="col-md-6 col-sm-12 owl-carousel owl-theme d-flex center_all detail_carousel" data-aos="fade-right" data-aos-delay="500">
+        <div class="col-md-6 col-sm-12 h-100 owl-carousel owl-theme d-flex center_all detail_carousel" data-aos="fade-right" data-aos-delay="500">
         </div>
 
         <div class="col-md-6 col-sm-12 detail_item">
@@ -103,20 +103,20 @@ require_once('./tpl/tpl-header.php');
             <dl class="col-md-6 d-flex flex-wrap">
               <dt data-aos="zoom-in" data-aos-delay="200">酒造名稱</dt>
               <dd data-aos="zoom-in" data-aos-delay="200" class="detail_brewName">BrewName</dd>
-              <dt data-aos="zoom-in" data-aos-delay="400">酒款名稱</dt>
-              <dd data-aos="zoom-in" data-aos-delay="400" class="detail_item_name">ItemName</dd>
-              <dt data-aos="zoom-in" data-aos-delay="600">生產地方</dt>
-              <dd data-aos="zoom-in" data-aos-delay="600" class="detail_item_region">Region</dd>
-              <dt data-aos="zoom-in" data-aos-delay="800">生產縣市</dt>
-              <dd data-aos="zoom-in" data-aos-delay="800" class="detail_item_pref">Prefecture</dd>
+              <dt data-aos="zoom-in" data-aos-delay="300">酒款名稱</dt>
+              <dd data-aos="zoom-in" data-aos-delay="300" class="detail_item_name">ItemName</dd>
+              <dt data-aos="zoom-in" data-aos-delay="400">生產地方</dt>
+              <dd data-aos="zoom-in" data-aos-delay="400" class="detail_item_region">Region</dd>
+              <dt data-aos="zoom-in" data-aos-delay="500">生產縣市</dt>
+              <dd data-aos="zoom-in" data-aos-delay="500" class="detail_item_pref">Prefecture</dd>
             </dl>
             <dl class="col-md-6 d-flex flex-wrap">
-              <dt data-aos="zoom-in" data-aos-delay="300">清酒等級</dt>
-              <dd data-aos="zoom-in" data-aos-delay="300" class="detail_item_var">Variety</dd>
-              <dt data-aos="zoom-in" data-aos-delay="500">清酒原料</dt>
-              <dd data-aos="zoom-in" data-aos-delay="500" class="detail_item_rice">Rice</dd>
-              <dt data-aos="zoom-in" data-aos-delay="700">日本酒度</dt>
-              <dd data-aos="zoom-in" data-aos-delay="700" class="detail_item_shudo">Nihonshudo</dd>
+              <dt data-aos="zoom-in" data-aos-delay="600">清酒等級</dt>
+              <dd data-aos="zoom-in" data-aos-delay="600" class="detail_item_var">Variety</dd>
+              <dt data-aos="zoom-in" data-aos-delay="700">清酒原料</dt>
+              <dd data-aos="zoom-in" data-aos-delay="700" class="detail_item_rice">Rice</dd>
+              <dt data-aos="zoom-in" data-aos-delay="800">日本酒度</dt>
+              <dd data-aos="zoom-in" data-aos-delay="800" class="detail_item_shudo">Nihonshudo</dd>
               <dt data-aos="zoom-in" data-aos-delay="900">商品容量</dt>
               <dd data-aos="zoom-in" data-aos-delay="900" class="detail_item_cap">Capacity</dd>
             </dl>
@@ -236,11 +236,12 @@ require_once('./tpl/tpl-header.php');
 
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v5.0"></script>
+
+<script defer src="./src/js/variables/detail.js"></script>
+<script defer src="./src/js/functions/itemDetail.js"></script>
+<script defer src="./src/js/addToCart.js"></script>
 <?php
 require_once('./tpl/tpl-warning.php');
 require_once('./tpl/tpl-footer.php');
 require_once('./tpl/tpl-html-foot.php');
 ?>
-<script src="./src/js/variables/detail.js"></script>
-<script src="./src/js/functions/itemDetail.js"></script>
-<script src="./src/js/addToCart.js"></script>

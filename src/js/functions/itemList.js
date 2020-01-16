@@ -55,8 +55,8 @@ function itemGetList(rid = "", vid = [], cap = [], pri = "") {
       // 顯示當前分類
       vid == "" ? itemInfo.html(`日本清酒`) : itemInfo.html(region);
 
-      itemList.append(`
-      <div class="d-flex flex-column item_card">
+      itemList.append(
+      `<div class="d-flex flex-column item_card">
         <div class="d-flex position-relative card_mainArea">
           <figure class="d-flex flex-row item_card_brew">
             <img class="card_brew_img" src="./img/icons/add_to_fav.svg" alt="">
@@ -71,8 +71,8 @@ function itemGetList(rid = "", vid = [], cap = [], pri = "") {
           </figure>
         </div>
         <h5 class="text-center item_card_name">${itemName}</h5>
-      </div>
-      `);
+      </div>`
+      );
     };
     treeTotalData.text(dataLength);
     treeTotalData.data('total', dataLength)

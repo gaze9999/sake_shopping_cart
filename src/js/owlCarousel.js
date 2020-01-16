@@ -13,7 +13,7 @@ let owlRes = {
   }
 }
 
-$(document).ready(() => {
+$(document).onload(function() {
   $('.know_carousel_post').owlCarousel({
     loop: true,
     autoplay: false,

@@ -6,4 +6,6 @@ $('.move-up span').click(function () {
 })
 
 // AOS Instance
-AOS.init()
+$(document).onload(function(){
+    AOS.init()
+})

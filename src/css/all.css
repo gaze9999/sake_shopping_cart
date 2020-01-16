@@ -604,6 +604,10 @@ a, a:link, a:visited {
   display: none;
 }
 
+.hidden_obj {
+  display: none;
+}
+
 .navbar {
   background: inherit;
   z-index: 1070;
@@ -1354,10 +1358,6 @@ main {
   position: relative;
 }
 
-.hidden_obj {
-  display: none;
-}
-
 .itemList_header {
   margin: 0;
   padding: 0;
@@ -1379,6 +1379,7 @@ main {
 }
 
 .itemList_tree {
+  background: transparent;
   padding-top: 1rem;
 }
 

@@ -1,7 +1,7 @@
 <nav class="navbar fixed-top navbar-light navbar-expand-xl">
   <div class="nav_logo d-flex center_all">
     <header class="h-100">
-      <a class="navbar-brand d-flex center_all h-100" name="nav_a_home" href="./">
+      <a class="navbar-brand d-flex center_all h-100" name="nav_a_home" href="./main.php">
         <h1>本格の酒</h1>
         <img class="img-fluid d-block" src="./img/icons/sake_icon.svg">
       </a>
