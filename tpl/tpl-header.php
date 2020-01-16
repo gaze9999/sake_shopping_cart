@@ -20,7 +20,7 @@
         <a class="nav-link" data-page="about" href="./unmerged/aboutUs/aboutUs.html">關於我們</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" data-page="newCome">新手選酒</a>
+        <a class="nav-link" data-page="newCome" href="./unmerged/selectSake/selectSake.html">新手選酒</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" data-page="itemList" href="./itemList.php">商品列表</a>
